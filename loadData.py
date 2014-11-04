@@ -3,9 +3,13 @@
 import xlrd
 import themes
 
+FEATURE_ROW = 0
+START_EXAMPLE_ROW = 1
+
 class Data:
 
 	def __init__(self, spreadsheet):
+		self.spreadsheet = spreadsheet
 		self.features = spreadsheet.features
 		self.examples = spreadsheet.examples
 		self.network_features = themes.network
@@ -38,12 +42,33 @@ class Data:
 
 		return network_indices	
 
+	def extract_examples(self, indices):
+		num_rows = self.spreadsheet.worksheet.nrows
+		thematic_examples = []
+
+		for curr_row in range(START_EXAMPLE_ROW, num_rows):
+			row = []
+			for ind in indices:
+				row.append(self.spreadsheet.get_cell(curr_row, ind))
+			thematic_examples.append(row)	
+
+		assert len(thematic_examples) == len(self.examples)
+
+		return thematic_examples
+
+	def extract_network_examples(self):
+		return self.extract_examples(self.extract_network_indices())	
+
+	def extract_ideology_examples(self):
+		return self.extract_examples(self.extract_ideology_indices())
+		
+	def extract_illness_examples(self):
+		return self.extract_examples(self.extract_illness_indices())		
+
 
 class Spreadsheet:
 
 	SHEET = 'Sheet1'
-	FEATURE_ROW = 0
-	START_EXAMPLE_ROW = 1
 
 	def __init__(self, url):
 		self.workbook = xlrd.open_workbook(url)
@@ -52,13 +77,13 @@ class Spreadsheet:
 		self.examples = self.get_examples()
 
 	def get_cell_names(self):
-		return self.get_row(self.FEATURE_ROW)
+		return self.get_row(FEATURE_ROW)
 
 	def get_examples(self):
 		num_rows = self.worksheet.nrows
 		examples = []
 
-		for curr_row in range(self.START_EXAMPLE_ROW, num_rows):
+		for curr_row in range(START_EXAMPLE_ROW, num_rows):
 			examples.append(self.get_row(curr_row))
 
 		return examples
@@ -71,6 +96,9 @@ class Spreadsheet:
 			cell_value = self.worksheet.cell_value(curr_row, curr_cell)
 			data_row.append(cell_value)
 		return data_row
+
+	def get_cell(self, curr_row, curr_cell):
+		return self.worksheet.cell_value(curr_row, curr_cell)
 
 	
 
