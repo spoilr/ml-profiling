@@ -12,6 +12,31 @@ class Data:
 		self.ideology_features = themes.ideology
 		self.illness_features = themes.illness
 
+	def extract_network_indices(self):
+		network_indices = self.extract_indices(self.network_features)
+		assert len(network_indices) == len(self.network_features)
+		return network_indices
+
+	def extract_ideology_indices(self):
+		ideology_indices = self.extract_indices(self.ideology_features)
+		assert len(ideology_indices) == len(self.ideology_features)
+		return ideology_indices
+		
+	def extract_illness_indices(self):
+		illness_indices = self.extract_indices(self.illness_features)		
+		assert len(illness_indices) == len(self.illness_features)
+		return illness_indices
+
+	def extract_indices(self, thematic_features):
+		network_indices = []
+
+		for x in thematic_features:
+			try:
+				network_indices.append(self.features.index(x))
+			except ValueError:
+				print "Theme Feature is not in the Main Features!"	
+
+		return network_indices	
 
 
 class Spreadsheet:
