@@ -14,7 +14,7 @@ sample = []
 def get_row(curr_row):
 	data_row = []
 	row = worksheet.row(curr_row)
-	for curr_cell in range(4, num_cells):
+	for curr_cell in range(1, num_cells):
 		cell_value = worksheet.cell_value(curr_row, curr_cell)
 		data_row.append(cell_value)
 	return data_row
