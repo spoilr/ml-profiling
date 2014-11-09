@@ -5,12 +5,28 @@ import numpy as np
 
 ignored_features = ['CoderID', 'Name', 'AliasList', 'DOB', 'AttackType', 'Target', 'TargetGroup']
 
-spreadsheet = Spreadsheet('../../Downloads/ip/project data.xlsx')
-data = Data(spreadsheet)
+def string_to_float(x):
+    return float(x)
 
-def numeric_features():
-	return [x for x in data.features if x not in ignored_features]
+string_to_float = np.vectorize(string_to_float)
 
-def examples_from_numeric_features():
-	ignored_columns = [data.features.index(x) for x in ignored_features] # get column index from the whole data set file 	 
-	return np.delete(data.examples, ignored_columns, 1) # remove columns from the data set
+def numeric_features(features):
+	return [x for x in features if x not in ignored_features]
+
+def examples_from_numeric_features(examples, features):
+	ignored_columns = []
+
+	# get column index from the whole data set file 	 
+	for x in ignored_features:
+		try:
+			ignored_columns.append(features.index(x))
+		except ValueError:
+			print "%s to ignore not in features" % x		
+
+	numeric_examples = np.delete(examples, ignored_columns, 1) # remove columns from the data set
+	return string_to_float(numeric_examples)
+
+if __name__ == "__main__":
+	spreadsheet = Spreadsheet('../../Downloads/ip/project data.xlsx')
+	data = Data(spreadsheet)
+
