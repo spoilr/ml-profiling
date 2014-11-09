@@ -121,4 +121,3 @@ class Spreadsheet:
 if __name__ == "__main__":
 	spreadsheet = Spreadsheet('../../Downloads/ip/project data.xlsx')
 	data = Data(spreadsheet)
-	print data.extract_illness_indices()
