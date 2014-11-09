@@ -121,3 +121,15 @@ class Spreadsheet:
 if __name__ == "__main__":
 	spreadsheet = Spreadsheet('../../Downloads/ip/project data.xlsx')
 	data = Data(spreadsheet)
+
+	print 'nr of exampls: %d \n' % len(data.examples)
+	print 'nr of features: %d' % len(data.features)  
+
+	print 'nr network features %d \n' % len(data.network_features)
+	print data.network_features
+
+	print 'nr ideology features %d \n' % len(data.ideology_features)
+	print data.ideology_features
+
+	print 'nr illness features %d \n' % len(data.illness_features)
+	print data.illness_features
