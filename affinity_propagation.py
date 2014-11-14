@@ -1,6 +1,6 @@
 print __doc__
 
-from loadData import *
+from load_data import *
 import numpy as np
 from sklearn.cluster import AffinityPropagation
 from sklearn import metrics
