@@ -38,15 +38,15 @@ class Data:
 		return illness_indices
 
 	def extract_indices_from_themes(self, thematic_features):
-		network_indices = []
+		thematic_indices = []
 
 		for x in thematic_features:
 			try:
-				network_indices.append(self.features.index(x))
+				thematic_indices.append(self.features.index(x))
 			except ValueError:
-				print "Theme Feature is not in the Main Features!"	
+				print "Theme %s is not in the Main Features!" % x	
 
-		return network_indices	
+		return thematic_indices	
 
 	# Return as np array
 	def extract_examples_with_features_from_indices(self, indices):
