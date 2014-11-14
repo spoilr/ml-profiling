@@ -1,5 +1,5 @@
 # Feature Importance
-from load_data import *
+from utils.load_data import *
 from sklearn import datasets
 from sklearn import metrics
 from sklearn.ensemble import RandomTreesEmbedding

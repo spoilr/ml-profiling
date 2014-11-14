@@ -6,9 +6,9 @@ Gradient Boosting regression
 
 print(__doc__)
 
-from load_data import *
-from numeric_data import *
-from highval_civil_targets import *
+from utils.load_data import *
+from utils.numeric_data import *
+from utils.highval_civil_targets import *
 import numpy as np
 import matplotlib.pyplot as plt
 

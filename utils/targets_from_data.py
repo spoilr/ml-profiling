@@ -1,4 +1,4 @@
-from loadData import *
+from load_data import *
 import numpy as np
 
 target = 'Target'

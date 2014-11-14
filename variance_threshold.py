@@ -10,8 +10,8 @@ and can thus be used for unsupervised learning. '''
 
 print(__doc__)
 
+from utils.load_data import *
 from sklearn.utils import validation
-from load_data import *
 from sklearn.feature_selection import VarianceThreshold
 
 
