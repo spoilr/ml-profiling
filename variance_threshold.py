@@ -11,6 +11,7 @@ and can thus be used for unsupervised learning. '''
 print(__doc__)
 
 from utils.load_data import *
+import operator
 import numpy as np
 import matplotlib.pyplot as plt
 from collections import OrderedDict
@@ -38,4 +39,20 @@ variance_per_feature = {}
 for i in range(0, len(feature_variance)):
 	variance_per_feature[features[i]] = feature_variance[i]
 
-print OrderedDict(sorted(variance_per_feature.items(), key=lambda t: t[1], reverse = True))
+decreasing_variance_per_feature = OrderedDict(sorted(variance_per_feature.items(), key=lambda t: t[1], reverse = True))
+
+# create tuples of feature and variance
+variances = sorted(variance_per_feature.items(), key=operator.itemgetter(1), reverse=True)
+
+#######################################################
+# plot feature variance
+N = len(variances)
+x = np.arange(1, N+1)
+y = [num for (s, num) in variances]
+labels = [s for (s, num) in variances]
+width = 1
+bar1 = plt.bar(x, y, width, color="y")
+plt.ylabel('Variance')
+plt.xticks(x + width/2.0, labels, rotation=45)
+plt.gcf().subplots_adjust(bottom=0.25)
+plt.show()
