@@ -10,8 +10,10 @@ and can thus be used for unsupervised learning. '''
 
 print(__doc__)
 
-#from .utils.load_data import *
-from .utils import load_data
+import sys
+sys.path.insert(0, './utils/')
+from load_data import *
+
 import operator
 import numpy as np
 import matplotlib.pyplot as plt
