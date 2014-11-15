@@ -28,6 +28,7 @@ data = Data(spreadsheet)
 targets = data.targets
 
 print len(targets)
+print len([x for x in targets if x == 0])
 print len([x for x in targets if x == 1])
 print len([x for x in targets if x == 2])
 

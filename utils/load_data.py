@@ -88,7 +88,12 @@ class Spreadsheet:
 		return self.get_cell_names()[:-1]
 
 	def get_targets(self):
-		targets = self.examples[:,[-1]] # get column of targest from file 
+		targets = []
+		num_rows = self.worksheet.nrows
+		target_column_index	= self.worksheet.ncols - 1
+		for row in range(1, num_rows): # ignore the feature name
+			targets.append([self.get_cell(row, target_column_index)])
+		targets = np.array(targets)
 		return [float(x) for x in targets[:,0]] # convert strings to floats 
 
 	def get_cell_names(self):
