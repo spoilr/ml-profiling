@@ -1,7 +1,7 @@
 """
-============================
-Variance Threshold
-============================
+================================
+Supervised Variance Threshold
+================================
 """
 
 ''' Feature selector that removes all low-variance features.
@@ -10,8 +10,10 @@ and can thus be used for unsupervised learning. '''
 
 print(__doc__)
 
-#from .utils.load_data import *
-from .utils import load_data
+import sys
+sys.path.insert(0, './utils/')
+from load_data import *
+
 import operator
 import numpy as np
 import matplotlib.pyplot as plt
@@ -23,12 +25,19 @@ from sklearn.feature_selection import VarianceThreshold
 # load the dataset
 spreadsheet = Spreadsheet('../../Downloads/ip/project data.xlsx')
 data = Data(spreadsheet)
+targets = data.targets
+
+print len(targets)
+print len([x for x in targets if x == 1])
+print len([x for x in targets if x == 2])
+
+
 
 dataset = data.extract_illness_examples()
 features = data.illness_features
 
 model = VarianceThreshold(0.2)
-a = model.fit_transform(dataset)
+a = model.fit_transform(dataset, targets)
 
 
 # variance per feature

@@ -1,7 +1,7 @@
 """
-============================
-Variance Threshold
-============================
+================================
+Unsupervised Variance Threshold
+================================
 """
 
 ''' Feature selector that removes all low-variance features.
