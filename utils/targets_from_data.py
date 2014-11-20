@@ -1,6 +1,8 @@
 from load_data import *
 import numpy as np
 
+# high value = 1 ; civilian = 2 ; unknown = 0 
+
 target = 'Target'
 target_group = 'TargetGroup'
 

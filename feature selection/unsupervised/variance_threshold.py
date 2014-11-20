@@ -29,8 +29,8 @@ data = Data(spreadsheet)
 dataset = data.extract_illness_examples()
 features = data.illness_features
 
-model = VarianceThreshold(0.2)
-a = model.fit_transform(dataset)
+# model = VarianceThreshold(0.2)
+# a = model.fit_transform(dataset)
 
 
 # variance per feature
