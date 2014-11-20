@@ -11,6 +11,7 @@ print(__doc__)
 import sys
 sys.path.insert(0, './utils/')
 from load_data import *
+from parse_theme import *
 
 import operator
 import numpy as np
@@ -19,7 +20,7 @@ from collections import OrderedDict
 from sklearn.utils import validation
 
 
-def extract_target_class_examples(target, dataset):
+def extract_target_class_examples(target, dataset, targets):
 	sample = [];
 	for i in range(0, len(targets)):
 		if targets[i] == target:
@@ -53,20 +54,19 @@ def target_class_variance(target_class, features):
 	plt.gcf().subplots_adjust(bottom=0.25)
 	plt.show()
 
+def supervised_variance_threshold(dataset, features):
+	# load the dataset
+	spreadsheet = Spreadsheet('../../Downloads/ip/project data.xlsx')
+	data = Data(spreadsheet)
+	targets = data.targets
+	highval = extract_target_class_examples(1, dataset, targets)
+	civil = extract_target_class_examples(2, dataset, targets)
 
-# load the dataset
-spreadsheet = Spreadsheet('../../Downloads/ip/project data.xlsx')
-data = Data(spreadsheet)
-targets = data.targets
+	target_class_variance(highval, features)
+	target_class_variance(civil, features)
 
+if __name__ == "__main__":
+	[dataset, features] = parse_theme(sys.argv[1])
+	supervised_variance_threshold(dataset, features)
 
-dataset = data.extract_illness_examples()
-features = data.illness_features
-
-
-highval = extract_target_class_examples(1, dataset)
-civil = extract_target_class_examples(2, dataset)
-
-target_class_variance(highval, features)
-target_class_variance(civil, features)
 
