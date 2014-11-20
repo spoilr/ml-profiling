@@ -59,11 +59,6 @@ spreadsheet = Spreadsheet('../../Downloads/ip/project data.xlsx')
 data = Data(spreadsheet)
 targets = data.targets
 
-print len(targets)
-print len([x for x in targets if x == 0])
-print len([x for x in targets if x == 1])
-print len([x for x in targets if x == 2])
-
 
 dataset = data.extract_illness_examples()
 features = data.illness_features
