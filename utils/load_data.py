@@ -94,7 +94,7 @@ class Spreadsheet:
 		for row in range(1, num_rows): # ignore the feature name
 			targets.append([self.get_cell(row, target_column_index)])
 		targets = np.array(targets)
-		return [float(x) for x in targets[:,0]] # convert strings to floats 
+		return [int(x) for x in targets[:,0]] # convert strings to floats 
 
 	def get_cell_names(self):
 		return self.get_row(FEATURE_ROW)

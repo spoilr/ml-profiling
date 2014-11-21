@@ -1,7 +1,7 @@
 from load_data import *
 
 def parse_theme(theme):
-	spreadsheet = Spreadsheet('../../Downloads/ip/project data.xlsx')
+	spreadsheet = Spreadsheet('/home/user/Downloads/ip/project data.xlsx')
 	data = Data(spreadsheet)
 
 	if theme == 'ill':

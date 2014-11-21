@@ -14,7 +14,7 @@ def extract_target_group(features):
 
 
 if __name__ == "__main__":
-	spreadsheet = Spreadsheet('../../Downloads/ip/project data.xlsx')
+	spreadsheet = Spreadsheet('/home/user/Downloads/ip/project data.xlsx')
 	data = Data(spreadsheet)	
 	target_index = extract_target(data.features)
 	target_group_index = extract_target_group(data.features)
