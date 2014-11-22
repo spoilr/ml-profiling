@@ -7,7 +7,7 @@ An example showing univariate feature selection.
 
 For each feature, we plot the p-values for the univariate feature selection and the corresponding
 weights of an SVM. We can see that univariate feature selection selects the informative features 
-nd that these have larger SVM weights.
+and that these have larger SVM weights.
 
 Applying univariate feature selection before the SVM increases the SVM weight attributed to the 
 significant features, and will thus improve classification.
@@ -75,10 +75,12 @@ def univariate_feature_selection(dataset, features):
 	        width=.2, label='SVM weights after selection', color='b')
 
 
+	x = np.arange(0, len(features))
 	plt.title("Comparing feature selection")
 	plt.xlabel('Feature number')
+	plt.xticks(x, features, rotation=45)
 	plt.yticks(())
-	plt.axis('tight')
+	#plt.axis('tight')
 	plt.legend(loc='upper right')
 	plt.show()
 

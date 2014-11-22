@@ -27,7 +27,7 @@ def extract_target_class_examples(target, dataset, targets):
 			sample.append(dataset[i])
 	return np.array(sample)
 
-def target_class_variance(target_class, features):
+def target_class_variance(target_class, features, title):
 	feature_variance = np.var(target_class, axis = 0)
 	assert len(feature_variance) == len(target_class[0])
 
@@ -52,6 +52,7 @@ def target_class_variance(target_class, features):
 	plt.ylabel('Variance')
 	plt.xticks(x + width/2.0, labels, rotation=45)
 	plt.gcf().subplots_adjust(bottom=0.25)
+	plt.title(title)
 	plt.show()
 
 def supervised_variance_threshold(dataset, features):
@@ -62,8 +63,8 @@ def supervised_variance_threshold(dataset, features):
 	highval = extract_target_class_examples(1, dataset, targets)
 	civil = extract_target_class_examples(2, dataset, targets)
 
-	target_class_variance(highval, features)
-	target_class_variance(civil, features)
+	target_class_variance(highval, features, 'High value')
+	target_class_variance(civil, features, 'Civilians')
 
 if __name__ == "__main__":
 	[dataset, features] = parse_theme(sys.argv[1])
