@@ -9,6 +9,14 @@ NOTE: The underlying C implementation uses a random number generator to select f
 It is thus not uncommon, to have slightly different results for the same input data. If that happens, try with a smaller tol parameter.
 """
 
+# The linear models LinearSVC() and SVC(kernel='linear') yield slightly different decision boundaries. 
+# This can be a consequence of the following differences:
+# LinearSVC minimizes the squared hinge loss while SVC minimizes the regular hinge loss.
+# LinearSVC uses the One-vs-All (also known as One-vs-Rest) multiclass reduction while SVC uses the One-vs-One multiclass reduction.
+# Both linear models have linear decision boundaries (intersecting hyperplanes) while the non-linear kernel models 
+# (polynomial or Gaussian RBF) have more flexible non-linear decision boundaries with shapes that depend on 
+# the kind of kernel and its parameters.
+
 print(__doc__)
 
 import sys
