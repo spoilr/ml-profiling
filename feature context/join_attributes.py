@@ -25,7 +25,6 @@ def feature_context(dataset, targets, features):
 			print "%s - %s does NOT provide context" % (features[index1], features[index2])	
 
 
-
 # A derived feature is a candidate for feature selection if 
 # its correlation with the class is higher than both of its constituent features.
 def check_derived_feature_context(attr1, attr2, sys_entropy, targets):
@@ -35,6 +34,7 @@ def check_derived_feature_context(attr1, attr2, sys_entropy, targets):
 	attr1_gain = attribute_info_gain(targets, attr1, sys_entropy)
 	attr2_gain = attribute_info_gain(targets, attr2, sys_entropy)
 	if derived_feature_gain > attr1_gain and derived_feature_gain > attr2_gain:
+		print "%f - %f and %f" % (derived_feature_gain, attr1_gain, attr2_gain)
 		return (attr1, attr2)
 
 def join_features(attr1, attr2, possible_joined_values):
@@ -46,7 +46,7 @@ def join_features(attr1, attr2, possible_joined_values):
 	#return np.asarray(derived_feature_values).reshape(-1, 1) # column vector
 	return np.asarray(derived_feature_values)
 
-def combinations_of_join_features(known_dataset):
+def combinations_of_join_features(dataset):
 	nr_columns = dataset.shape[1]
 	indexes = list(xrange(nr_columns))
 	combinations_of_join_features = []
@@ -61,6 +61,16 @@ def all_possible_values_after_join(attr1, attr2):
 		combinations.append(x)
 	return combinations	
 
+# tennis example
+def test_function():
+	features = ["out", "temp", "humid", "wind"]
+	targets = [0,0,1,1,1,0,1,0,1,1,1,1,1,0]
+	dataset = np.array([[1,1,1,1], [1,1,1,2], [2,1,1,1], [3,3,1,1], [3,2,2,1], [3,2,2,2,], [2,2,2,2], [1,3,1,1], [1,2,2,1], [3,3,2,1], [1,3,2,2], [2,3,1,2], [2,1,2,1], [3,3,1,2]])
+	assert len(dataset) == 14
+	sys_entropy = entropy(targets)
+	print "entropy of system %f" % sys_entropy
+	info_gain(dataset, features, targets, sys_entropy)
+	feature_context(dataset, targets, features)
 
 if __name__ == "__main__":
 	spreadsheet = Spreadsheet('/home/user/Downloads/ip/project data.xlsx')
@@ -70,12 +80,6 @@ if __name__ == "__main__":
 	[dataset, features] = parse_theme(sys.argv[1])
 	[known_dataset, known_targets, unk] = split_dataset(dataset, targets)
 
-	feature_context(known_dataset, known_targets, features)
+	#feature_context(known_dataset, known_targets, features)
 
-	#all_possible_values_after_join(known_dataset[:,0], known_dataset[:,1])
-	#print combinations_of_join_features(known_dataset)
-
-	# sys_entropy = entropy(known_targets)
-	# print "entropy of system %f" % sys_entropy
-
-	# info_gain(dataset, features, targets, sys_entropy)
+	test_function()
