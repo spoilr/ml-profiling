@@ -50,11 +50,36 @@ def info_gain(dataset, features, targets, sys_entropy):
 		print "%s info gain %f" % (features[i], attr_gain)
 	return info_gains	
 
-
 def prob_entropy_for_value(value, attribute_vals, targets):
 	targets_for_value = [targets[i] for i in range(0, len(targets)) if attribute_vals[i] == value]
 	return entropy(targets_for_value) * float(len(targets_for_value)) / len(targets)
 
+def split_info(attribute_vals):
+	values = set(attribute_vals.tolist())
+	prob_for_values = []
+	attribute_vals_list = attribute_vals.tolist()
+	for x in values:
+		prob_for_values.append(float(attribute_vals_list.count(x)) / len(attribute_vals_list)) 
+	log2probs = np.log2(np.array(prob_for_values))	
+	zipped = zip(prob_for_values, log2probs)
+	sum = 0
+	for (x,y) in zipped:
+		sum += x * y
+	return -sum	
+
+def gain_ratio_for_val(targets, attribute_vals, entropy):
+	info_gain = attribute_info_gain(targets, attribute_vals, entropy)
+	attr_split_info = split_info(attribute_vals)
+	return info_gain / attr_split_info
+
+def gain_ratio(dataset, features, targets, sys_entropy):
+	gain_ratios = []
+	nr_columns = dataset.shape[1]
+	for i in range(0, nr_columns):
+		attr_gain_ratio = gain_ratio_for_val(targets, dataset[:,i], sys_entropy)
+		gain_ratios.append(attr_gain_ratio)
+		print "%s gain ration %f" % (features[i], attr_gain_ratio)
+	return gain_ratios	
 
 # tennis example
 def test_function():
@@ -64,7 +89,10 @@ def test_function():
 	assert len(dataset) == 14
 	sys_entropy = entropy(targets)
 	print "entropy of system %f" % sys_entropy
+	print "############ INFO GAIN ############"
 	info_gain(dataset, features, targets, sys_entropy)
+	print "############ GAIN RATIO ############"
+	gain_ratio(dataset, features, targets, sys_entropy)
 
 if __name__ == "__main__":
 	spreadsheet = Spreadsheet('/home/user/Downloads/ip/project data.xlsx')
@@ -79,6 +107,6 @@ if __name__ == "__main__":
 
 	info_gain(dataset, features, targets, sys_entropy)
 
-	# test_function()
+	test_function()
 
 

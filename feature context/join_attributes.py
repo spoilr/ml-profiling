@@ -30,9 +30,9 @@ def feature_context(dataset, targets, features):
 def check_derived_feature_context(attr1, attr2, sys_entropy, targets):
 	possible_joined_values = all_possible_values_after_join(attr1, attr2)
 	derived_feature_values = join_features(attr1, attr2, possible_joined_values)
-	derived_feature_gain = attribute_info_gain(targets, derived_feature_values, sys_entropy)
-	attr1_gain = attribute_info_gain(targets, attr1, sys_entropy)
-	attr2_gain = attribute_info_gain(targets, attr2, sys_entropy)
+	derived_feature_gain = gain_ratio_for_val(targets, derived_feature_values, sys_entropy)
+	attr1_gain = gain_ratio_for_val(targets, attr1, sys_entropy)
+	attr2_gain = gain_ratio_for_val(targets, attr2, sys_entropy)
 	if derived_feature_gain > attr1_gain and derived_feature_gain > attr2_gain:
 		print "%f - %f and %f" % (derived_feature_gain, attr1_gain, attr2_gain)
 		return (attr1, attr2)
@@ -69,7 +69,11 @@ def test_function():
 	assert len(dataset) == 14
 	sys_entropy = entropy(targets)
 	print "entropy of system %f" % sys_entropy
+	print "############ INFO GAIN ############"
 	info_gain(dataset, features, targets, sys_entropy)
+	print "############ GAIN RATIO ############"
+	gain_ratio(dataset, features, targets, sys_entropy)
+	print "############ CONTEXT ############"
 	feature_context(dataset, targets, features)
 
 if __name__ == "__main__":
@@ -80,6 +84,6 @@ if __name__ == "__main__":
 	[dataset, features] = parse_theme(sys.argv[1])
 	[known_dataset, known_targets, unk] = split_dataset(dataset, targets)
 
-	#feature_context(known_dataset, known_targets, features)
+	feature_context(known_dataset, known_targets, features)
 
-	test_function()
+	#test_function()
