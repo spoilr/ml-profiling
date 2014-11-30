@@ -34,25 +34,25 @@ def entropy(targets):
 
 # Information gain IG(A) is the measure of the difference in entropy from before to after the set S is split on an attribute A. 
 # ie How much uncertainty in S was reduced after splitting set S on attribute A.
-def attribute_info_gain(dataset, targets, attribute_col, entropy):
+def attribute_info_gain(targets, attribute_vals, entropy):
 	length = len(targets)
-	values = set(attribute_col.tolist())
+	values = set(attribute_vals.tolist())
 
-	entropies = sum([prob_entropy_for_value(val, attribute_col, targets) for val in values])
+	entropies = sum([prob_entropy_for_value(val, attribute_vals, targets) for val in values])
 	return entropy - entropies
 
 def info_gain(dataset, features, targets, sys_entropy):
 	info_gains = []
 	nr_columns = dataset.shape[1]
 	for i in range(0, nr_columns):
-		attr_gain = attribute_info_gain(dataset, targets, dataset[:,i], sys_entropy)
+		attr_gain = attribute_info_gain(targets, dataset[:,i], sys_entropy)
 		info_gains.append(attr_gain)
 		print "%s info gain %f" % (features[i], attr_gain)
 	return info_gains	
 
 
-def prob_entropy_for_value(value, attribute_col, targets):
-	targets_for_value = [targets[i] for i in range(0, len(targets)) if attribute_col[i] == value]
+def prob_entropy_for_value(value, attribute_vals, targets):
+	targets_for_value = [targets[i] for i in range(0, len(targets)) if attribute_vals[i] == value]
 	return entropy(targets_for_value) * float(len(targets_for_value)) / len(targets)
 
 
