@@ -14,6 +14,7 @@ class Data:
 		self.features = spreadsheet.features
 		self.targets = spreadsheet.targets
 		self.examples = self.extract_examples(spreadsheet)
+		self.selected_features = themes.selected_features
 		self.network_features = themes.network
 		self.ideology_features = themes.ideology
 		self.illness_features = themes.illness
@@ -36,6 +37,11 @@ class Data:
 		illness_indices = self.extract_indices_from_themes(self.illness_features)		
 		assert len(illness_indices) == len(self.illness_features)
 		return illness_indices
+
+	def extract_selected_indices(self):
+		selected_indices = self.extract_indices_from_themes(self.selected_features)
+		assert len(selected_indices) == len(self.selected_features)
+		return selected_indices
 
 	def extract_indices_from_themes(self, thematic_features):
 		thematic_indices = []
@@ -70,7 +76,10 @@ class Data:
 		return self.extract_examples_with_features_from_indices(self.extract_ideology_indices())
 		
 	def extract_illness_examples(self):
-		return self.extract_examples_with_features_from_indices(self.extract_illness_indices())		
+		return self.extract_examples_with_features_from_indices(self.extract_illness_indices())
+
+	def extract_selected_examples(self):
+		return self.extract_examples_with_features_from_indices(self.extract_selected_indices())	
 
 
 class Spreadsheet:

@@ -1,5 +1,6 @@
 """
 SVM C-Support Vector Classification
+Single SVM
 """
 
 print(__doc__)
@@ -35,8 +36,6 @@ def one_fold_measures(X_train, X_test, y_train, y_test):
 	model = svm(X_train, y_train)
 	print 'Model score %f' % model.score(X_test, y_test)
 	y_pred = model.predict(X_test)
-	print y_pred
-	print y_test
 	error_rate = (float(sum((y_pred - y_test)**2)) / len(y_test))
 	error_rate
 	print '##############################################'
@@ -64,7 +63,7 @@ if __name__ == "__main__":
 	targets = data.targets
 
 	[dataset, features] = parse_theme(sys.argv[1])
+
 	[known_dataset, known_targets, unk] = split_dataset(dataset, targets)
-	#svm(known_dataset, known_targets)
 	known_targets = np.asarray(known_targets)
 	cross_validation(known_dataset, known_targets)
