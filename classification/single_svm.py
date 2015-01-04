@@ -12,6 +12,7 @@ from load_data import *
 from parse_theme import *
 from split_dataset import *
 
+from sklearn import preprocessing
 from sklearn.svm import SVC
 from sklearn.cross_validation import KFold
 from sklearn.cross_validation import StratifiedKFold
@@ -62,6 +63,7 @@ if __name__ == "__main__":
 
 	[dataset, features] = parse_theme(sys.argv[1])
 	[known_dataset, known_targets, unk] = split_dataset(dataset, targets)
+	known_dataset_scaled = preprocessing.scale(known_dataset)
 	known_targets = np.asarray(known_targets)
 
-	cross_validation(known_dataset, known_targets)
+	cross_validation(known_dataset_scaled, known_targets)

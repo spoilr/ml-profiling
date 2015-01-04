@@ -13,6 +13,7 @@ from parse_theme import *
 from split_dataset import *
 from labels_fusion import *
 
+from sklearn import preprocessing
 from sklearn.svm import SVC
 from sklearn.cross_validation import KFold
 from sklearn.cross_validation import StratifiedKFold
@@ -71,7 +72,7 @@ def measures(y_test, y_pred):
 	print y_pred
 
 def svm(dataset, targets):
-	model = SVC()
+	model = SVC(class_weight='auto', C=0.7)
 	model.fit(dataset, targets)
 	# print 'Model score: %f' % model.score(known_dataset, known_targets)
 	return model
@@ -88,9 +89,14 @@ def get_thematic_data():
 	net = get_known_data_from_theme(themes[0])
 	ill = get_known_data_from_theme(themes[1])
 	ideo = get_known_data_from_theme(themes[2])
-	dataset.append(net[0])
-	dataset.append(ill[0])
-	dataset.append(ideo[0])
+
+	net_scaled = preprocessing.scale(net[0])
+	ill_scaled = preprocessing.scale(ill[0])
+	ideo_scaled = preprocessing.scale(ideo[0])
+
+	dataset.append(net_scaled)
+	dataset.append(ill_scaled)
+	dataset.append(ideo_scaled)
 
 	# known targets should be all the same for all themes
 	assert np.array_equal(net[1], ill[1])
