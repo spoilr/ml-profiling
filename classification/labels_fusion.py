@@ -1,0 +1,57 @@
+"""
+Combine outputs of X classifiers.
+Each classifier produces a class label.
+"""
+
+print(__doc__)
+
+import scipy.misc as misc
+import sys
+sys.path.insert(0, 'utils/')
+from load_data import *
+from parse_theme import *
+from split_dataset import *
+
+NR_THEMES = 3
+
+# the number of classifiers is odd
+# the classifier outputs are assumed to be independent
+# accuracies must be ordered (increasing)
+def majority_vote(predictions, y_test, accuracies):
+	combined_predictions = []
+	for i in range(0, len(y_test)):
+		data = Counter(predictions[:,i])
+		combined_predictions.append(data.most_common(1)[0][0])
+
+	# accuracy of ensemble
+	acc = 0
+	for i in range (NR_THEMES / 2 + 1, NR_THEMES + 1):
+		acc += misc.comb(NR_THEMES, i, exact=True) * accuracy**i * (1 - accuracy)**(NR_THEMES-i)
+	return acc
+
+
+# upper and lower bounds of the majority vote accuracy in the case of unequal individual accuracies
+def maj_vote_bounds(accuracies):
+	k = (NR_THEMES + 1) / 2
+	print 'Upper bound majority vote accuracy %f' % upper_epsilons(NR_THEMES, k, accuracies)
+	print 'Lower bound majority vote accuracy %f' % lower_epsilons(NR_THEMES, k, accuracies)
+
+
+
+def upper_epsilons(nr_classifiers, k, accuracies):
+	list.sort(accuracies)
+	epsilons = []
+	epsilons.append(1)
+	for m in range (1, k+1):
+		eps = 1/float(m) * sum([accuracies[i] for i in range(nr_classifiers-k+m)])
+		epsilons.append(eps)
+	return min(epsilons)	
+
+def lower_epsilons(nr_classifiers, k, accuracies):
+	list.sort(accuracies)
+	epsilons = []
+	epsilons.append(0)
+	for m in range (1, k+1):
+		eps = 1/float(m) * sum([accuracies[i] for i in range(k-m, nr_classifiers)]) - ((nr_classifiers-k)/float(m))
+		epsilons.append(eps)
+	return max(epsilons)	
