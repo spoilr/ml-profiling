@@ -11,6 +11,7 @@ sys.path.insert(0, 'utils/')
 from load_data import *
 from parse_theme import *
 from split_dataset import *
+from labels_fusion import *
 
 from sklearn.svm import SVC
 from sklearn.cross_validation import KFold
@@ -38,20 +39,20 @@ def cross_validation(known_dataset, known_targets):
 		
 def combine_predictions_one_fold(known_dataset, known_targets, train_index, test_index):
 	predictions = []
+	accuracies = []
 	y_train, y_test = known_targets[train_index], known_targets[test_index]
 	for i in range(0,NR_THEMES):
 		X_train, X_test = known_dataset[i][train_index], known_dataset[i][test_index]
 		model = svm(X_train, y_train)
-		print 'Model score for %s is %f' % (themes[i], model.score(X_test, y_test))
+		accuracy = model.score(X_test, y_test)
+		print 'Model score for %s is %f' % (themes[i], accuracy)
 		y_pred = model.predict(X_test)
 		predictions.append(y_pred)
+		accuracies.append(accuracy)
 	
 	predictions = np.array((predictions[0], predictions[1], predictions[2]), dtype=float)
 
-	combined_predictions = []
-	for i in range(0, len(y_test)):
-		data = Counter(predictions[:,i])
-		combined_predictions.append(data.most_common(1)[0][0])
+	combined_predictions = majority_vote(predictions, y_test, accuracies)
 
 	print predictions
 	print y_test

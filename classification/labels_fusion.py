@@ -11,6 +11,7 @@ sys.path.insert(0, 'utils/')
 from load_data import *
 from parse_theme import *
 from split_dataset import *
+from collections import Counter
 
 NR_THEMES = 3
 
@@ -23,23 +24,10 @@ def majority_vote(predictions, y_test, accuracies):
 		data = Counter(predictions[:,i])
 		combined_predictions.append(data.most_common(1)[0][0])
 
-	# accuracy of ensemble
-	acc = 0
-	for i in range (NR_THEMES / 2 + 1, NR_THEMES + 1):
-		acc += misc.comb(NR_THEMES, i, exact=True) * accuracy**i * (1 - accuracy)**(NR_THEMES-i)
-	return acc
-
-
-# upper and lower bounds of the majority vote accuracy in the case of unequal individual accuracies
-def maj_vote_bounds(accuracies):
-	k = (NR_THEMES + 1) / 2
-	print 'Upper bound majority vote accuracy %f' % upper_epsilons(NR_THEMES, k, accuracies)
-	print 'Lower bound majority vote accuracy %f' % lower_epsilons(NR_THEMES, k, accuracies)
-
-
+	maj_vote_bounds(accuracies)
+	return combined_predictions
 
 def upper_epsilons(nr_classifiers, k, accuracies):
-	list.sort(accuracies)
 	epsilons = []
 	epsilons.append(1)
 	for m in range (1, k+1):
@@ -48,10 +36,19 @@ def upper_epsilons(nr_classifiers, k, accuracies):
 	return min(epsilons)	
 
 def lower_epsilons(nr_classifiers, k, accuracies):
-	list.sort(accuracies)
 	epsilons = []
 	epsilons.append(0)
 	for m in range (1, k+1):
 		eps = 1/float(m) * sum([accuracies[i] for i in range(k-m, nr_classifiers)]) - ((nr_classifiers-k)/float(m))
 		epsilons.append(eps)
 	return max(epsilons)	
+
+# Matan's Limits on the Majority Vote Accuracy
+# upper and lower bounds of the majority vote accuracy in the case of unequal individual accuracies
+def maj_vote_bounds(accuracies):
+	list.sort(accuracies)
+	k = (NR_THEMES + 1) / 2
+	upper_eps = upper_epsilons(NR_THEMES, k, accuracies)
+	lower_eps = lower_epsilons(NR_THEMES, k, accuracies)
+	print 'Upper bound majority vote accuracy %f' % upper_eps
+	print 'Lower bound majority vote accuracy %f' % lower_eps
