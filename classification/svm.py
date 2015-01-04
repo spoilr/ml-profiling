@@ -24,23 +24,25 @@ from sklearn.metrics import average_precision_score
 from collections import Counter
 
 NR_THEMES = 3
+themes = ['net', 'ill', 'ideo']
 
 def cross_validation(known_dataset, known_targets):
 	kf = StratifiedKFold(known_targets, n_folds=10)
 	error_rates = 0
+	# cross validation
 	for train_index, test_index in kf:
-		error_rate = combine_predictions_cross_validation(known_dataset, known_targets, train_index, test_index)
+		error_rate = combine_predictions_one_fold(known_dataset, known_targets, train_index, test_index)
 		
 		error_rates += error_rate
 	print 'Final error rate %f' % (float(error_rates) / kf.n_folds)
 		
-def combine_predictions_cross_validation(known_dataset, known_targets, train_index, test_index):
+def combine_predictions_one_fold(known_dataset, known_targets, train_index, test_index):
 	predictions = []
+	y_train, y_test = known_targets[train_index], known_targets[test_index]
 	for i in range(0,NR_THEMES):
 		X_train, X_test = known_dataset[i][train_index], known_dataset[i][test_index]
-		y_train, y_test = known_targets[train_index], known_targets[test_index]	
 		model = svm(X_train, y_train)
-		print 'Model score %f' % model.score(X_test, y_test)
+		print 'Model score for %s is %f' % (themes[i], model.score(X_test, y_test))
 		y_pred = model.predict(X_test)
 		predictions.append(y_pred)
 	
@@ -81,9 +83,9 @@ def get_known_data_from_theme(theme):
 def get_thematic_data():
 	dataset = []
 
-	net = get_known_data_from_theme('net')
-	ill = get_known_data_from_theme('ill')
-	ideo = get_known_data_from_theme('ideo')
+	net = get_known_data_from_theme(themes[0])
+	ill = get_known_data_from_theme(themes[1])
+	ideo = get_known_data_from_theme(themes[2])
 	dataset.append(net[0])
 	dataset.append(ill[0])
 	dataset.append(ideo[0])
