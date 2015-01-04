@@ -41,7 +41,7 @@ def combine_predictions_one_fold(known_dataset, known_targets, train_index, test
 	predictions = []
 	accuracies = []
 	y_train, y_test = known_targets[train_index], known_targets[test_index]
-	for i in range(0,NR_THEMES):
+	for i in range(0, NR_THEMES):
 		X_train, X_test = known_dataset[i][train_index], known_dataset[i][test_index]
 		model = svm(X_train, y_train)
 		accuracy = model.score(X_test, y_test)
@@ -52,7 +52,8 @@ def combine_predictions_one_fold(known_dataset, known_targets, train_index, test
 	
 	predictions = np.array((predictions[0], predictions[1], predictions[2]), dtype=float)
 
-	combined_predictions = majority_vote(predictions, y_test, accuracies)
+	#combined_predictions = majority_vote(predictions, y_test, accuracies)
+	combined_predictions = weighted_majority(predictions, y_test)
 
 	print predictions
 	print y_test
@@ -96,6 +97,7 @@ def get_thematic_data():
 	assert np.array_equal(net[1], ideo[1])
 	return dataset, net[1]
 
+
 if __name__ == "__main__":
 	spreadsheet = Spreadsheet('/home/user/Downloads/ip/project data.xlsx')
 	data = Data(spreadsheet)
@@ -103,5 +105,3 @@ if __name__ == "__main__":
 
 	dataset, targets = get_thematic_data()
 	cross_validation(dataset, targets)
-
-

@@ -52,3 +52,27 @@ def maj_vote_bounds(accuracies):
 	lower_eps = lower_epsilons(NR_THEMES, k, accuracies)
 	print 'Upper bound majority vote accuracy %f' % upper_eps
 	print 'Lower bound majority vote accuracy %f' % lower_eps
+
+# Littlestone-Warmuth weighted majority
+def	weighted_majority(predictions, y_test):
+	epsilon = 0.7
+	# weights are initialized with 1
+	weights = [1, 1, 1]
+	print predictions
+	print y_test
+	for i in range(0, len(y_test)):
+		# compute prediction
+		out = round(sum([a*b for a,b in zip(predictions[:,i].tolist(), weights)]) / float(sum(weights)))
+		#update weights
+		for j in range(len(weights)):
+			if predictions[j,i] != y_test[i]:
+				weights[j] *= (1-epsilon)
+
+	print weights				
+	combined_predictions = []
+	for i in range(0, len(y_test)):
+		# compute final prediction with updated weights
+		out = round(sum([a*b for a,b in zip(predictions[:,i].tolist(), weights)]) / float(sum(weights)))
+		combined_predictions.append(out)
+
+	return combined_predictions
