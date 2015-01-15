@@ -19,7 +19,6 @@ from sklearn.svm import SVC
 from sklearn.cross_validation import KFold
 from sklearn.cross_validation import StratifiedKFold
 from sklearn.metrics import classification_report
-from sklearn.metrics import confusion_matrix
 
 def cross_validation(known_dataset, known_targets):
 	kf = StratifiedKFold(known_targets, n_folds=10)
@@ -40,18 +39,6 @@ def one_fold_measures(X_train, X_test, y_train, y_test):
 	measures(y_test, y_pred)
 
 	return error_rate
-		
-def measures(y_test, y_pred):
-	print confusion_matrix(y_test, y_pred)
-	#print(classification_report(y_test, y_pred, target_names=['highvalue','civilian']))
-
-	print precision(y_test, y_pred)
-	print recall(y_test, y_pred)
-	print f1(y_test, y_pred)
-	print accuracy(y_test, y_pred)
-
-	print y_test
-	print y_pred
 
 def svm(dataset, targets):
 	model = SVC()
