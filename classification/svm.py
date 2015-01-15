@@ -54,7 +54,8 @@ def combine_predictions_one_fold(known_dataset, known_targets, train_index, test
 	predictions = np.array((predictions[0], predictions[1], predictions[2]), dtype=float)
 
 	#combined_predictions = majority_vote(predictions, y_test, accuracies)
-	combined_predictions = weighted_majority(predictions, y_test)
+	#combined_predictions = weighted_majority(predictions, y_test)
+	combined_predictions = svm_fusion(predictions, y_test)
 
 	print predictions
 	print y_test

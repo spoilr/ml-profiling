@@ -12,6 +12,7 @@ from load_data import *
 from parse_theme import *
 from split_dataset import *
 from collections import Counter
+from sklearn.svm import SVC
 
 NR_THEMES = 3
 
@@ -75,4 +76,13 @@ def	weighted_majority(predictions, y_test):
 		out = round(sum([a*b for a,b in zip(predictions[:,i].tolist(), weights)]) / float(sum(weights)))
 		combined_predictions.append(out)
 
+	return combined_predictions
+
+
+def	svm_fusion(predictions, y_test):
+	model = SVC()
+	pred_input = np.vstack(predictions).T
+	model.fit(pred_input, y_test)
+	# print 'Model score: %f' % model.score(known_dataset, known_targets)
+	combined_predictions = model.predict(pred_input)
 	return combined_predictions
