@@ -11,6 +11,8 @@ sys.path.insert(0, 'utils/')
 from load_data import *
 from parse_theme import *
 from split_dataset import *
+from binary_classification_measures import *
+from cross_validation import *
 
 from sklearn import preprocessing
 from sklearn.svm import SVC
@@ -18,10 +20,6 @@ from sklearn.cross_validation import KFold
 from sklearn.cross_validation import StratifiedKFold
 from sklearn.metrics import classification_report
 from sklearn.metrics import confusion_matrix
-from sklearn.metrics import f1_score
-from sklearn.metrics import precision_score
-from sklearn.metrics import recall_score
-from sklearn.metrics import average_precision_score
 
 def cross_validation(known_dataset, known_targets):
 	kf = StratifiedKFold(known_targets, n_folds=10)
@@ -38,14 +36,19 @@ def one_fold_measures(X_train, X_test, y_train, y_test):
 	print 'Model score %f' % model.score(X_test, y_test)
 	y_pred = model.predict(X_test)
 	error_rate = (float(sum((y_pred - y_test)**2)) / len(y_test))
+
+	measures(y_test, y_pred)
+
 	return error_rate
 		
 def measures(y_test, y_pred):
 	print confusion_matrix(y_test, y_pred)
 	#print(classification_report(y_test, y_pred, target_names=['highvalue','civilian']))
-	print 'f1 %s' % np.array_str(f1_score(y_test, y_pred, average=None))
-	print 'precision %s' % np.array_str(precision_score(y_test, y_pred, average=None))
-	print 'recall %s' % np.array_str(recall_score(y_test, y_pred, average=None))
+
+	print precision(y_test, y_pred)
+	print recall(y_test, y_pred)
+	print f1(y_test, y_pred)
+	print accuracy(y_test, y_pred)
 
 	print y_test
 	print y_pred
@@ -61,9 +64,17 @@ if __name__ == "__main__":
 	data = Data(spreadsheet)
 	targets = data.targets
 
-	[dataset, features] = parse_theme(sys.argv[1])
-	[known_dataset, known_targets, unk] = split_dataset(dataset, targets)
-	known_dataset_scaled = preprocessing.scale(known_dataset)
-	known_targets = np.asarray(known_targets)
+	try:
+		[dataset, features] = parse_theme(sys.argv[1])
 
-	cross_validation(known_dataset_scaled, known_targets)
+		[known_dataset, known_targets, unk] = split_dataset(dataset, targets)
+		
+		# standardize dataset - Gaussian with zero mean and unit variance
+		known_dataset_scaled = preprocessing.scale(known_dataset)
+		known_targets = np.asarray(known_targets)
+
+		cross_validation(known_dataset_scaled, known_targets)
+	except IndexError:
+		print "Error!! Pass 'all' as argument"
+
+	
