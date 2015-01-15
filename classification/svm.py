@@ -29,17 +29,72 @@ from collections import Counter
 NR_THEMES = 3
 themes = ['net', 'ill', 'ideo']
 
-def cross_validation(known_dataset, known_targets):
-	kf = StratifiedKFold(known_targets, n_folds=10)
+def cross_validation(known_dataset, known_targets, fusion_algorithm):
+	kf = StratifiedKFold(known_targets, n_folds=5)
 	error_rates = 0
 	# cross validation
 	for train_index, test_index in kf:
-		error_rate = combine_predictions_one_fold(known_dataset, known_targets, train_index, test_index)
+		error_rate = fusion_outputs(known_dataset, known_targets, train_index, test_index, fusion_algorithm)
 		
 		error_rates += error_rate
 	print 'Final error rate %f' % (float(error_rates) / kf.n_folds)
 		
-def combine_predictions_one_fold(known_dataset, known_targets, train_index, test_index):
+def fusion_outputs(known_dataset, known_targets, train_index, test_index, fusion_algorithm):
+	
+	combined_predictions = []
+	y_test = []
+
+	if fusion_algorithm == 'maj':
+		predictions, y_test, accuracies = combine_predictions_one_fold_using_majority(known_dataset, known_targets, train_index, test_index)
+		combined_predictions = majority_vote(predictions, y_test, accuracies)
+
+	elif fusion_algorithm == 'wmaj':
+		predictions, y_test, accuracies = combine_predictions_one_fold_using_majority(known_dataset, known_targets, train_index, test_index)
+		combined_predictions = weighted_majority(predictions, y_test)
+
+	elif fusion_algorithm == 'svm':
+		y_test, predictions, combined_predictions = svm_fusion(known_dataset, known_targets, train_index, test_index)
+
+	elif fusion_algorithm == 'nn':
+		print 'not done'
+	else:
+		print 'Error parsing algorithm'
+
+	print predictions
+	print y_test
+	print combined_predictions
+
+	measures(y_test, combined_predictions)
+	return (float(sum((combined_predictions - y_test)**2)) / len(y_test))	
+
+# Training and testing sets initially
+# 2/3 are used to train the SVM and 1/3 is used to train(after the output is obtained) the fusion SVM
+def svm_fusion(known_dataset, known_targets, train_index, test_index):
+	training_predictions = []
+	predictions = []
+	y_train, final_y_test = known_targets[train_index], known_targets[test_index]
+	fusion_nr = len(y_train) / 3
+	fusion_Y_train = []
+
+	for i in range(0, NR_THEMES):
+		X_train, final_X_test = known_dataset[i][train_index], known_dataset[i][test_index]
+		
+		svm_X_train, svm_Y_train = X_train[fusion_nr:], y_train[fusion_nr:]
+		fusion_X_train, fusion_Y_train = X_train[:fusion_nr], y_train[:fusion_nr]
+
+		model = svm(svm_X_train, svm_Y_train)
+		training_predictions.append(model.predict(fusion_X_train))
+		predictions.append(model.predict(final_X_test))
+
+	training_pred_input = np.vstack(training_predictions).T
+	fusion_model = svm(training_pred_input, fusion_Y_train)
+
+	pred_input = np.vstack(predictions).T
+	combined_predictions = fusion_model.predict(pred_input)
+
+	return final_y_test, predictions, combined_predictions.tolist()
+
+def combine_predictions_one_fold_using_majority(known_dataset, known_targets, train_index, test_index):
 	predictions = []
 	accuracies = []
 	y_train, y_test = known_targets[train_index], known_targets[test_index]
@@ -53,17 +108,7 @@ def combine_predictions_one_fold(known_dataset, known_targets, train_index, test
 		accuracies.append(accuracy)
 	
 	predictions = np.array((predictions[0], predictions[1], predictions[2]), dtype=float)
-
-	#combined_predictions = majority_vote(predictions, y_test, accuracies)
-	#combined_predictions = weighted_majority(predictions, y_test)
-	combined_predictions = svm_fusion(predictions, y_test)
-
-	print predictions
-	print y_test
-	print combined_predictions
-
-	measures(y_test, y_pred)
-	return (float(sum((combined_predictions - y_test)**2)) / len(y_test))
+	return predictions, y_test, accuracies
 
 def svm(dataset, targets):
 	model = SVC(class_weight='auto', C=0.7)
@@ -104,4 +149,5 @@ if __name__ == "__main__":
 	targets = data.targets
 
 	dataset, targets = get_thematic_data()
-	cross_validation(dataset, targets)
+	fusion_algorithm = raw_input("Enter algorithm. Choose between maj, wmaj, svm, nn")
+	cross_validation(dataset, targets, fusion_algorithm)

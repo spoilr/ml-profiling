@@ -77,12 +77,3 @@ def	weighted_majority(predictions, y_test):
 		combined_predictions.append(out)
 
 	return combined_predictions
-
-
-def	svm_fusion(predictions, y_test):
-	model = SVC()
-	pred_input = np.vstack(predictions).T
-	model.fit(pred_input, y_test)
-	# print 'Model score: %f' % model.score(known_dataset, known_targets)
-	combined_predictions = model.predict(pred_input)
-	return combined_predictions
