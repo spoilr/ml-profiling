@@ -12,6 +12,7 @@ from load_data import *
 from parse_theme import *
 from split_dataset import *
 from labels_fusion import *
+from binary_classification_measures import *
 
 from sklearn import preprocessing
 from sklearn.svm import SVC
@@ -60,17 +61,9 @@ def combine_predictions_one_fold(known_dataset, known_targets, train_index, test
 	print predictions
 	print y_test
 	print combined_predictions
+
+	measures(y_test, y_pred)
 	return (float(sum((combined_predictions - y_test)**2)) / len(y_test))
-
-def measures(y_test, y_pred):
-	print confusion_matrix(y_test, y_pred)
-	#print(classification_report(y_test, y_pred, target_names=['highvalue','civilian']))
-	print 'f1 %s' % np.array_str(f1_score(y_test, y_pred, average=None))
-	print 'precision %s' % np.array_str(precision_score(y_test, y_pred, average=None))
-	print 'recall %s' % np.array_str(recall_score(y_test, y_pred, average=None))
-
-	print y_test
-	print y_pred
 
 def svm(dataset, targets):
 	model = SVC(class_weight='auto', C=0.7)
