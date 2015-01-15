@@ -60,9 +60,11 @@ def fusion_outputs(known_dataset, known_targets, train_index, test_index, fusion
 	else:
 		print 'Error parsing algorithm'
 
+	print '###############'
 	print predictions
 	print y_test
 	print combined_predictions
+	print '###############'
 
 	measures(y_test, combined_predictions)
 	return (float(sum((combined_predictions - y_test)**2)) / len(y_test))	
@@ -72,19 +74,25 @@ def fusion_outputs(known_dataset, known_targets, train_index, test_index, fusion
 def svm_fusion(known_dataset, known_targets, train_index, test_index):
 	training_predictions = []
 	predictions = []
-	y_train, final_y_test = known_targets[train_index], known_targets[test_index]
-	fusion_nr = len(y_train) / 3
 	fusion_Y_train = []
+	y_train, final_y_test = known_targets[train_index], known_targets[test_index]
 
-	for i in range(0, NR_THEMES):
-		X_train, final_X_test = known_dataset[i][train_index], known_dataset[i][test_index]
-		
-		svm_X_train, svm_Y_train = X_train[fusion_nr:], y_train[fusion_nr:]
-		fusion_X_train, fusion_Y_train = X_train[:fusion_nr], y_train[:fusion_nr]
+	kf = StratifiedKFold(y_train, n_folds=3)
+	curr = 0
+	for inner_train_index, inner_test_index in kf:
 
-		model = svm(svm_X_train, svm_Y_train)
-		training_predictions.append(model.predict(fusion_X_train))
-		predictions.append(model.predict(final_X_test))
+		for i in range(0, NR_THEMES):
+			X_train, final_X_test = known_dataset[i][train_index], known_dataset[i][test_index]
+			svm_X_train, svm_Y_train = X_train[inner_train_index], y_train[inner_train_index]
+			fusion_X_train, fusion_Y_train = X_train[inner_test_index], y_train[inner_test_index]
+
+			model = svm(svm_X_train, svm_Y_train)
+			training_predictions.append(model.predict(fusion_X_train))
+			predictions.append(model.predict(final_X_test))
+
+		curr+=1
+		if curr == 1:
+			break
 
 	training_pred_input = np.vstack(training_predictions).T
 	fusion_model = svm(training_pred_input, fusion_Y_train)
