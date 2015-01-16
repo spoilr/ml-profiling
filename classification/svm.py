@@ -16,6 +16,7 @@ from binary_classification_measures import *
 
 from sklearn import preprocessing
 from sklearn.svm import SVC
+from sklearn.grid_search import GridSearchCV
 from sklearn.cross_validation import KFold
 from sklearn.cross_validation import StratifiedKFold
 from sklearn.metrics import classification_report
@@ -157,5 +158,18 @@ if __name__ == "__main__":
 	targets = data.targets
 
 	dataset, targets = get_thematic_data()
-	fusion_algorithm = raw_input("Enter algorithm. Choose between maj, wmaj, svm, nn")
-	cross_validation(dataset, targets, fusion_algorithm)
+	#fusion_algorithm = raw_input("Enter algorithm. Choose between maj, wmaj, svm, nn")
+	#cross_validation(dataset, targets, fusion_algorithm)
+
+	optimize = raw_input('Optimise parameters? y or n')
+	if optimize == 'y':
+		C_range = 0.5 * np.array(range(1, 1000))
+		gamma_range = 0.5 * np.array(range(1, 1000))
+		param_grid = dict(gamma=gamma_range, C=C_range)
+		cv = StratifiedKFold(y=targets, n_folds=3)
+		grid = GridSearchCV(estimator=SVC(), param_grid=param_grid, cv=cv)
+		
+		for i in range(0, NR_THEMES):
+			categ_dataset = dataset[i]	
+			grid.fit(categ_dataset, targets)
+			print("Best classifier: ", grid.best_estimator_)	

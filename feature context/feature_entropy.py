@@ -78,7 +78,7 @@ def gain_ratio(dataset, features, targets, sys_entropy):
 	for i in range(0, nr_columns):
 		attr_gain_ratio = gain_ratio_for_val(targets, dataset[:,i], sys_entropy)
 		gain_ratios.append(attr_gain_ratio)
-		print "%s gain ration %f" % (features[i], attr_gain_ratio)
+		print "%s gain ratio %f" % (features[i], attr_gain_ratio)
 	return gain_ratios	
 
 # tennis example
@@ -105,8 +105,12 @@ if __name__ == "__main__":
 	sys_entropy = entropy(known_targets)
 	print "entropy of system %f" % sys_entropy
 
+	print "\n\n\n############ INFO GAIN ############"
 	info_gain(dataset, features, targets, sys_entropy)
+	print "\n\n\n############ GAIN RATIO ############"
+	gain_ratio(dataset, features, targets, sys_entropy)
 
+	print '\n\n\n######### TEST ###########'
 	test_function()
 
 
