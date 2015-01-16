@@ -39,6 +39,8 @@ def feature_context(dataset, targets, features):
 	print 'selected %d vs %d' % (len([x for x in feature_gain_ratio if x >= avg_gain_ratios]), len(feature_gain_ratio))
 	print orig_feats.difference(feats)
 
+	return feats
+
 
 def get_feature_gain_ratio(dataset, targets, features, sys_entropy):
 	feature_gain_ratio = []
@@ -96,7 +98,7 @@ def test_function():
 	print "############ GAIN RATIO ############"
 	gain_ratio(dataset, features, targets, sys_entropy)
 	print "############ CONTEXT ############"
-	feature_context(dataset, targets, features)
+	feats = feature_context(dataset, targets, features)
 
 if __name__ == "__main__":
 	spreadsheet = Spreadsheet('/home/user/Downloads/ip/project data.xlsx')
@@ -106,6 +108,6 @@ if __name__ == "__main__":
 	[dataset, features] = parse_theme(sys.argv[1])
 	[known_dataset, known_targets, unk] = split_dataset(dataset, targets)
 
-	feature_context(known_dataset, known_targets, features)
+	feats = feature_context(known_dataset, known_targets, features)
 
 	#test_function()

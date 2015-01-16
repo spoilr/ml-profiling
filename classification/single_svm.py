@@ -47,7 +47,7 @@ def svm(dataset, targets):
 	return model
 
 if __name__ == "__main__":
-	spreadsheet = Spreadsheet('/home/user/Downloads/ip/project data.xlsx')
+	spreadsheet = Spreadsheet('/home/user/Downloads/ip/project data no.xlsx')
 	data = Data(spreadsheet)
 	targets = data.targets
 
