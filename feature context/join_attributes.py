@@ -15,27 +15,49 @@ import matplotlib.pyplot as plt
 def feature_context(dataset, targets, features):
 	sys_entropy = entropy(targets)
 	feature_combinations_indexes = combinations_of_join_features(dataset)
+	feature_gain_ratio = get_feature_gain_ratio(dataset, targets, features, sys_entropy)
+
+	avg_gain_ratios = np.mean(np.array(gain_ratio(dataset, features, targets, sys_entropy)))
+	orig_feats = set(features)
+	feats = set()
+
 	for (index1, index2) in feature_combinations_indexes:
 		attr1 = dataset[:, index1]
 		attr2 = dataset[:, index2]
-		res = check_derived_feature_context(attr1, attr2, sys_entropy, targets)
-		if res is not None:
-			print "%s - %s provides context" % (features[index1], features[index2])
-		else:
-			print "%s - %s does NOT provide context" % (features[index1], features[index2])	
+		attr1_gain = feature_gain_ratio[index1]
+		attr2_gain = feature_gain_ratio[index2]
+		selected_derived_feature_gain = check_derived_feature_context(attr1, attr2, attr1_gain, attr2_gain, sys_entropy, targets)
+		if selected_derived_feature_gain is not None:
+			# print "der %f : %s with %f - %s with %f provides context" % (selected_derived_feature_gain, features[index1], attr1_gain, features[index2], attr2_gain)
+			feats.add(features[index1])
+			feats.add(features[index2])
+		# else:
+		# 	print "%s - %s does NOT provide context" % (features[index1], features[index2])	
+
+	print feature_gain_ratio
+	print avg_gain_ratios
+	print 'selected %d vs %d' % (len([x for x in feature_gain_ratio if x >= avg_gain_ratios]), len(feature_gain_ratio))
+	print orig_feats.difference(feats)
+
+
+def get_feature_gain_ratio(dataset, targets, features, sys_entropy):
+	feature_gain_ratio = []
+	for i in range(len(features)):
+		attr = dataset[:, i]
+		feat_gain_ratio = gain_ratio_for_val(targets, attr, sys_entropy)
+		feature_gain_ratio.append(feat_gain_ratio)
+	return feature_gain_ratio
 
 
 # A derived feature is a candidate for feature selection if 
 # its correlation with the class is higher than both of its constituent features.
-def check_derived_feature_context(attr1, attr2, sys_entropy, targets):
+def check_derived_feature_context(attr1, attr2, attr1_gain, attr2_gain, sys_entropy, targets):
 	possible_joined_values = all_possible_values_after_join(attr1, attr2)
 	derived_feature_values = join_features(attr1, attr2, possible_joined_values)
 	derived_feature_gain = gain_ratio_for_val(targets, derived_feature_values, sys_entropy)
-	attr1_gain = gain_ratio_for_val(targets, attr1, sys_entropy)
-	attr2_gain = gain_ratio_for_val(targets, attr2, sys_entropy)
 	if derived_feature_gain > attr1_gain and derived_feature_gain > attr2_gain:
-		print "%f - %f and %f" % (derived_feature_gain, attr1_gain, attr2_gain)
-		return (attr1, attr2)
+		#print "%f - %f and %f" % (derived_feature_gain, attr1_gain, attr2_gain)
+		return derived_feature_gain
 
 def join_features(attr1, attr2, possible_joined_values):
 	assert attr1.shape[0] == attr2.shape[0]
