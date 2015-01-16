@@ -7,6 +7,7 @@ from parse_theme import *
 from split_dataset import *
 from feature_entropy import *
 from join_attributes import *
+from selected_features import *
 
 import numpy as np
 from sklearn import preprocessing
@@ -25,8 +26,10 @@ def cross_validation(known_dataset, known_targets, features):
 		
 		# train to get the selected features
 		selected_features = feature_context(X_train, y_train, features)
-		train_dataset_of_selected_features = extract_data_from_selected_features(X_train, y_train, selected_features, features)
-		test_dataset_of_selected_features = extract_data_from_selected_features(X_test, y_test, selected_features, features)
+		train_sf = SelectedFeatures(X_train, y_train, selected_features, features)
+		test_sf = SelectedFeatures(X_test, y_test, selected_features, features)
+		train_dataset_of_selected_features = train_sf.extract_data_from_selected_features()
+		test_dataset_of_selected_features = test_sf.extract_data_from_selected_features()
 		
 		# check that there are the same number of examples (only features are removed)
 		assert X_test.shape[0] ==  test_dataset_of_selected_features.shape[0]
@@ -42,36 +45,7 @@ def cross_validation(known_dataset, known_targets, features):
 	# for testing
 	print cv_features
 	for x in cv_features:
-		print len(x)
-
-def extract_data_from_selected_features(known_dataset, known_targets, selected_features, features):
-	indices = extract_indices_of_selected_features(selected_features, features)
-	dataset_of_selected_features = extract_examples_of_selected_features(known_dataset, known_targets, indices)
-	return dataset_of_selected_features
-
-def extract_indices_of_selected_features(selected_features, features):
-		indices = []
-
-		for x in selected_features:
-			try:
-				indices.append(features.index(x))
-			except ValueError:
-				print "Theme %s is not in the Features!" % x	
-
-		return indices
-
-def extract_examples_of_selected_features(known_dataset, known_targets, indices):
-		num_rows = len(known_targets)
-		examples = []
-
-		for curr_row in range(num_rows):
-			row = []
-			for ind in indices:
-				row.append(known_dataset[curr_row, ind])
-			examples.append(row)	
-
-		assert len(examples) == len(known_targets)
-		return np.asarray(examples)	
+		print len(x)	
 
 def one_fold_measures(X_train, X_test, y_train, y_test):
 	model = svm(X_train, y_train)
