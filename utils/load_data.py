@@ -14,7 +14,7 @@ class Data:
 		self.features = spreadsheet.features
 		self.targets = spreadsheet.targets
 		self.examples = self.extract_examples(spreadsheet)
-		self.selected_features = themes.selected_features
+		self.selected_features = themes.subset_features
 		self.network_features = themes.network
 		self.ideology_features = themes.ideology
 		self.illness_features = themes.illness

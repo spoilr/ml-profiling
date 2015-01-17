@@ -158,8 +158,8 @@ if __name__ == "__main__":
 	targets = data.targets
 
 	dataset, targets = get_thematic_data()
-	#fusion_algorithm = raw_input("Enter algorithm. Choose between maj, wmaj, svm, nn")
-	#cross_validation(dataset, targets, fusion_algorithm)
+	fusion_algorithm = raw_input("Enter algorithm. Choose between maj, wmaj, svm, nn")
+	cross_validation(dataset, targets, fusion_algorithm)
 
 	optimize = raw_input('Optimise parameters? y or n')
 	if optimize == 'y':

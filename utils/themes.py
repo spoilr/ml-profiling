@@ -1,4 +1,5 @@
 #ideology = ['MilExp', 'Ideology', 'Religion', 'AwareGriev', 'AwareIdeo', 'IdeoChangeInt', 'ReligChangeInt', 'Legitimise', 'WideGroup', 'Tipping', 'LocationNature', 'LocPubPriv', 'Contradict', 'BeliefChange', 'Target', 'TargetGroup', 'RecruitNetGroup', 'Propaganda', 'OwnProp', 'PossessStories']
+
 # ideology = ['MilExp', 'Ideology', 'Religion', 'AwareGriev', 'AwareIdeo', 'IdeoChangeInt', 'ReligChangeInt', 
 # 			'Legitimise', 'WideGroup', 'Tipping', 'LocationNature', 'LocPubPriv', 'Contradict', 'BeliefChange', 
 # 			'RecruitNetGroup', 'Propaganda', 'OwnProp', 'PossessStories']
@@ -7,7 +8,7 @@
 
 # illness = ['SubAbuse', 'MentalIll', 'Isolated', 'HarmVictimHelpless', 'HurtOthers', 'Stress', 'SubstanceUse', 'Obsess', 'Insanity']
 
-selected_features = ['RelatStat', 'Children', 'ParRelatStat', 'Education', 'OccCat', 'MilExp', 'CrimCon', 'Ideology', 'Religion', 
+subset_features = ['RelatStat', 'Children', 'ParRelatStat', 'Education', 'OccCat', 'MilExp', 'CrimCon', 'Ideology', 'Religion', 
 					'WarningLettersStatements', 'AwareGriev', 'AwareIdeo', 'IdeoChangeInt', 'ReligChangeInt', 'LifeAspectChange', 
 					'Legitimise', 'Funds', 'SubAbuse', 'MentalIll', 'Isolated', 'DryRuns', 'WideGroup', 'NewMedia', 'Tipping', 
 					'Interrupt', 'NotCareInjustice', 'HarmVictimHelpless', 'PersRelat', 'Financial', 'HurtOthers', 'Stress', 
