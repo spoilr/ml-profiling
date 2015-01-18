@@ -44,6 +44,8 @@ def feature_context(dataset, targets, features):
 
 
 def get_feature_gain_ratio(dataset, targets, features, sys_entropy):
+	# check that dataset has the same nr of features as features
+	assert dataset.shape[1] == len(features)
 	feature_gain_ratio = []
 	for i in range(len(features)):
 		attr = dataset[:, i]
