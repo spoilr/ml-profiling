@@ -9,6 +9,7 @@ import itertools
 from feature_entropy import *
 from project_data import *
 
+import math as math
 import operator
 import numpy as np
 import matplotlib.pyplot as plt
@@ -21,6 +22,7 @@ def feature_context(dataset, targets, features):
 	avg_gain_ratios = np.mean(np.array(gain_ratio(dataset, features, targets, sys_entropy)))
 	orig_feats = set(features)
 	feats = set()
+	der_feats = dict()
 
 	for (index1, index2) in feature_combinations_indexes:
 		attr1 = dataset[:, index1]
@@ -32,16 +34,32 @@ def feature_context(dataset, targets, features):
 			# print "der %f : %s with %f - %s with %f provides context" % (selected_derived_feature_gain, features[index1], attr1_gain, features[index2], attr2_gain)
 			feats.add(features[index1])
 			feats.add(features[index2])
+			der_feats[(index1, index2)] = selected_derived_feature_gain
 		# else:
 		# 	print "%s - %s does NOT provide context" % (features[index1], features[index2])	
 
+	#### for testing 	
 	print feature_gain_ratio
 	print avg_gain_ratios
 	print 'selected %d vs %d' % (len([x for x in feature_gain_ratio if x >= avg_gain_ratios]), len(feature_gain_ratio))
 	print orig_feats.difference(feats)
 
-	return feats
+	#return feats
+	return final_set_of_features(features, feature_gain_ratio, avg_gain_ratios, der_feats)
 
+def final_set_of_features(features, feature_gain_ratio, avg_gain_ratios, der_feats):
+	selected_features_from_whole_set = [features[i] for i in range(len(feature_gain_ratio)) if feature_gain_ratio[i] >= avg_gain_ratios]
+	selected_features_from_derived = []
+
+	sorted_der_feats = sorted(der_feats.items(), key=operator.itemgetter(1))
+	nr_times = int(math.floor(0.7 * len(der_feats)))
+	
+	for i in range(nr_times):
+		selected_features_from_derived.append(features[sorted_der_feats[i][0][0]])
+		selected_features_from_derived.append(features[sorted_der_feats[i][0][1]])
+
+	#return set(selected_features_from_whole_set).union(selected_features_from_derived)	
+	return set(selected_features_from_derived)
 
 def get_feature_gain_ratio(dataset, targets, features, sys_entropy):
 	# check that dataset has the same nr of features as features

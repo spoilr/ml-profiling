@@ -97,5 +97,7 @@ if __name__ == "__main__":
 	cv_features = features_cross_validation(known_dataset_scaled, known_targets, features)
 
 	print	select_final_features_from_cv(cv_features, 0.9)
+	print '######################'
 	print	select_final_features_from_cv(cv_features, 0.7)
+	print '######################'
 	print	select_final_features_from_cv(cv_features, 0.5)
