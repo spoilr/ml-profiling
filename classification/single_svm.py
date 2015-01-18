@@ -13,6 +13,7 @@ from parse_theme import *
 from split_dataset import *
 from binary_classification_measures import *
 from cross_validation import *
+from optimize_parameters import *
 
 from sklearn import preprocessing
 from sklearn.svm import SVC
@@ -64,4 +65,7 @@ if __name__ == "__main__":
 	except IndexError:
 		print "Error!! Pass 'all' as argument"
 
-	
+	optimize = raw_input('Optimise parameters? y or n')
+	if optimize == 'y':
+		opt_params = OptimizeParameters(dataset, targets)
+		opt_params.all_optimize_parameters()

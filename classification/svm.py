@@ -13,6 +13,7 @@ from parse_theme import *
 from split_dataset import *
 from labels_fusion import *
 from binary_classification_measures import *
+from optimize_parameters import *
 
 from sklearn import preprocessing
 from sklearn.svm import SVC
@@ -163,13 +164,5 @@ if __name__ == "__main__":
 
 	optimize = raw_input('Optimise parameters? y or n')
 	if optimize == 'y':
-		C_range = 0.5 * np.array(range(1, 1000))
-		gamma_range = 0.5 * np.array(range(1, 1000))
-		param_grid = dict(gamma=gamma_range, C=C_range)
-		cv = StratifiedKFold(y=targets, n_folds=3)
-		grid = GridSearchCV(estimator=SVC(), param_grid=param_grid, cv=cv)
-		
-		for i in range(0, NR_THEMES):
-			categ_dataset = dataset[i]	
-			grid.fit(categ_dataset, targets)
-			print("Best classifier: ", grid.best_estimator_)	
+			opt_params = OptimizeParameters(dataset, targets)
+			opt_params.category_optimize_parameters()
