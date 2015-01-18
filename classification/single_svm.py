@@ -14,6 +14,9 @@ from binary_classification_measures import *
 from cross_validation import *
 from optimize_parameters import *
 from standardized_data import *
+from combine_data_from_feature_selection import *
+sys.path.insert(0, 'feature context/')
+from feature_selection_cv import *
 
 from sklearn.svm import SVC
 from sklearn.cross_validation import KFold
@@ -46,6 +49,28 @@ def svm(dataset, targets):
 	# print 'Model score: %f' % model.score(known_dataset, known_targets)
 	return model
 
+def feature_selection_before(val, features, targets, dataset, percentage):
+	if val:
+		[known_dataset, known_targets, unk] = split_dataset(dataset, targets)
+		
+		known_targets = np.asarray(known_targets)
+
+		cv_features = features_cross_validation(known_dataset, known_targets, features)
+		selected_features = select_final_features_from_cv(cv_features, percentage)
+
+		sf = SelectedFeatures(known_dataset, known_targets, selected_features, features)
+		combined_dataset = sf.extract_data_from_selected_features()
+
+		std = StandardizedData(known_targets)
+		combined_dataset = std.standardize_dataset(combined_dataset)  
+
+		cross_validation(np.array(combined_dataset), known_targets)
+	else:
+		std = StandardizedData(targets, dataset)
+		known_dataset_scaled, known_targets = std.split_and_standardize_dataset()
+
+		cross_validation(known_dataset_scaled, known_targets)	
+
 if __name__ == "__main__":
 	spreadsheet = Spreadsheet('/home/user/Downloads/ip/project data no.xlsx')
 	data = Data(spreadsheet)
@@ -53,11 +78,8 @@ if __name__ == "__main__":
 
 	try:
 		[dataset, features] = parse_theme(sys.argv[1])
-
-		std = StandardizedData(targets, dataset)
-		known_dataset_scaled, known_targets = std.split_and_standardize_dataset()
-
-		cross_validation(known_dataset_scaled, known_targets)
+		feature_selection_before(True, features, targets, dataset, 0.9)
+		
 	except IndexError:
 		print "Error!! Pass 'all' as argument"
 
@@ -65,3 +87,8 @@ if __name__ == "__main__":
 	if optimize == 'y':
 		opt_params = OptimizeParameters(dataset, targets)
 		opt_params.all_optimize_parameters()
+
+
+
+
+			
