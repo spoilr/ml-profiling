@@ -10,12 +10,11 @@ import sys
 sys.path.insert(0, 'utils/')
 from load_data import *
 from parse_theme import *
-from split_dataset import *
 from binary_classification_measures import *
 from cross_validation import *
 from optimize_parameters import *
+from standardized_data import *
 
-from sklearn import preprocessing
 from sklearn.svm import SVC
 from sklearn.cross_validation import KFold
 from sklearn.cross_validation import StratifiedKFold
@@ -55,11 +54,8 @@ if __name__ == "__main__":
 	try:
 		[dataset, features] = parse_theme(sys.argv[1])
 
-		[known_dataset, known_targets, unk] = split_dataset(dataset, targets)
-		
-		# standardize dataset - Gaussian with zero mean and unit variance
-		known_dataset_scaled = preprocessing.scale(known_dataset)
-		known_targets = np.asarray(known_targets)
+		std = StandardizedData(targets, dataset, features)
+		known_dataset_scaled, known_targets = std.split_and_standardize_dataset()
 
 		cross_validation(known_dataset_scaled, known_targets)
 	except IndexError:

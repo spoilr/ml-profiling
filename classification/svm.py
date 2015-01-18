@@ -14,6 +14,7 @@ from split_dataset import *
 from labels_fusion import *
 from binary_classification_measures import *
 from optimize_parameters import *
+from standardized_data import *
 
 from sklearn import preprocessing
 from sklearn.svm import SVC
@@ -126,39 +127,13 @@ def svm(dataset, targets):
 	# print 'Model score: %f' % model.score(known_dataset, known_targets)
 	return model
 
-def get_known_data_from_theme(theme):
-	[dataset, features] = parse_theme(theme)
-	[known_dataset, known_targets, unk] = split_dataset(dataset, targets)
-	known_targets = np.asarray(known_targets)
-	return [known_dataset, known_targets]
-
-def get_thematic_data():
-	dataset = []
-
-	net = get_known_data_from_theme(themes[0])
-	ill = get_known_data_from_theme(themes[1])
-	ideo = get_known_data_from_theme(themes[2])
-
-	net_scaled = preprocessing.scale(net[0])
-	ill_scaled = preprocessing.scale(ill[0])
-	ideo_scaled = preprocessing.scale(ideo[0])
-
-	dataset.append(net_scaled)
-	dataset.append(ill_scaled)
-	dataset.append(ideo_scaled)
-
-	# known targets should be all the same for all themes
-	assert np.array_equal(net[1], ill[1])
-	assert np.array_equal(net[1], ideo[1])
-	return dataset, net[1]
-
-
 if __name__ == "__main__":
 	spreadsheet = Spreadsheet('/home/user/Downloads/ip/project data.xlsx')
 	data = Data(spreadsheet)
 	targets = data.targets
 
-	dataset, targets = get_thematic_data()
+	std = StandardizedData(targets)
+	dataset, targets = std.thematic_split_and_standardize_dataset() 
 	fusion_algorithm = raw_input("Enter algorithm. Choose between maj, wmaj, svm, nn")
 	cross_validation(dataset, targets, fusion_algorithm)
 
