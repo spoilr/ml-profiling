@@ -90,11 +90,9 @@ if __name__ == "__main__":
 	[dataset, features] = parse_theme(sys.argv[1])
 	[known_dataset, known_targets, unk] = split_dataset(dataset, targets)
 	
-	# standardize dataset - Gaussian with zero mean and unit variance
-	known_dataset_scaled = preprocessing.scale(known_dataset)
 	known_targets = np.asarray(known_targets)
 
-	cv_features = features_cross_validation(known_dataset_scaled, known_targets, features)
+	cv_features = features_cross_validation(known_dataset, known_targets, features)
 
 	print	select_final_features_from_cv(cv_features, 0.9)
 	print '######################'

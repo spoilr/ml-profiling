@@ -54,7 +54,7 @@ if __name__ == "__main__":
 	try:
 		[dataset, features] = parse_theme(sys.argv[1])
 
-		std = StandardizedData(targets, dataset, features)
+		std = StandardizedData(targets, dataset)
 		known_dataset_scaled, known_targets = std.split_and_standardize_dataset()
 
 		cross_validation(known_dataset_scaled, known_targets)
