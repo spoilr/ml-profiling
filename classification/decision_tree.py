@@ -4,6 +4,7 @@ import sys
 sys.path.insert(0, './utils/')
 from load_data import *
 from parse_theme import *
+from project_data import *
 import os
 
 import operator
@@ -40,7 +41,7 @@ def decision_tree(dataset, targets):
 		### need to dot -Tpdf tree.dot -o tree.pdf
 
 if __name__ == "__main__":
-	spreadsheet = Spreadsheet('/home/user/Downloads/ip/project data.xlsx')
+	spreadsheet = Spreadsheet(project_data_file)
 	data = Data(spreadsheet)
 	targets = data.targets
 

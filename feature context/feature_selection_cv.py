@@ -8,6 +8,7 @@ from split_dataset import *
 from feature_entropy import *
 from join_attributes import *
 from selected_features import *
+from project_data import *
 
 import math as math
 import numpy as np
@@ -82,7 +83,7 @@ def svm(dataset, targets):
 	return model	
 
 if __name__ == "__main__":
-	spreadsheet = Spreadsheet('/home/user/Downloads/ip/project data.xlsx')
+	spreadsheet = Spreadsheet(project_data_file)
 	data = Data(spreadsheet)
 	targets = data.targets
 

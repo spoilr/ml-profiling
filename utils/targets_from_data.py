@@ -1,4 +1,5 @@
 from load_data import *
+from project_data import *
 import numpy as np
 
 # high value = 1 ; civilian = 2 ; unknown = 0 
@@ -14,7 +15,7 @@ def extract_target_group(features):
 
 
 if __name__ == "__main__":
-	spreadsheet = Spreadsheet('/home/user/Downloads/ip/project data.xlsx')
+	spreadsheet = Spreadsheet(project_data_file)
 	data = Data(spreadsheet)	
 	target_index = extract_target(data.features)
 	target_group_index = extract_target_group(data.features)

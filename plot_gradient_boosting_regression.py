@@ -11,6 +11,7 @@ sys.path.insert(0, 'utils/')
 from load_data import *
 from parse_theme import *
 from numeric_data import *
+from project_data import *
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -75,7 +76,7 @@ def gradient_boosting_regression(examples, features, targets):
 
 
 if __name__ == "__main__":
-  spreadsheet = Spreadsheet('/home/user/Downloads/ip/project data.xlsx')
+  spreadsheet = Spreadsheet(project_data_file)
   data = Data(spreadsheet)
   targets = data.targets
 

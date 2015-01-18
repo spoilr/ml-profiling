@@ -5,6 +5,7 @@ sys.path.insert(0, 'utils/')
 from load_data import *
 from parse_theme import *
 from split_dataset import *
+from project_data import *
 
 import operator
 import numpy as np
@@ -95,7 +96,7 @@ def test_function():
 	gain_ratio(dataset, features, targets, sys_entropy)
 
 if __name__ == "__main__":
-	spreadsheet = Spreadsheet('/home/user/Downloads/ip/project data.xlsx')
+	spreadsheet = Spreadsheet(project_data_file)
 	data = Data(spreadsheet)
 	targets = data.targets
 
