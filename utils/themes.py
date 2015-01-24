@@ -14,7 +14,7 @@ subset_features = ['RelatStat', 'Children', 'ParRelatStat', 'Education', 'OccCat
 					'Interrupt', 'NotCareInjustice', 'HarmVictimHelpless', 'PersRelat', 'Financial', 'HurtOthers', 'Stress', 
 					'SubstanceUse', 'Violence', 'TargetTyp', 'LocationNature', 'LocPubPriv', 'Stockpile', 'Contradict', 
 					'Obsess', 'Regret', 'BeliefChange', 'Insanity', 'Implement', 'MultiAttackMeth', 'Discriminate', 'LettersPost', 
-					'Getaway', 'MultiEventTarget', 'Victims', 'Involve', 'InteractNet', 'OtherInv', 'OtherKnowledge', 
+					'Getaway', 'MultiEventTarget', 'Involve', 'InteractNet', 'OtherInv', 'OtherKnowledge', 
 					'RecruitNetGroup', 'Propaganda', 'OwnProp', 'LAKilled', 'FurtherAttacks', 'ClaimResp', 'PossessStories']
 
 ideology = ['RelatStat', 'Children', 'ParRelatStat', 'Education', 'OccCat', 'MilExp', 'CrimCon', 'Ideology', 'Religion', 
@@ -23,8 +23,8 @@ ideology = ['RelatStat', 'Children', 'ParRelatStat', 'Education', 'OccCat', 'Mil
 			'Interrupt', 'NotCareInjustice', 'Financial', 
 			'Violence', 'TargetTyp', 'LocationNature', 'LocPubPriv', 'Stockpile', 'Contradict', 
 			'Regret', 'BeliefChange', 'Implement', 'MultiAttackMeth', 'Discriminate', 'LettersPost', 
-			'Getaway', 'MultiEventTarget', 'Victims', 'OtherKnowledge', 
-			'Propaganda', 'OwnProp', 'LAKilled', 'FurtherAttacks', 'ClaimResp', 'PossessStories']
+			'Getaway', 'MultiEventTarget', 'OtherKnowledge', 
+			'RecruitNetGroup', 'Propaganda', 'OwnProp', 'LAKilled', 'FurtherAttacks', 'ClaimResp', 'PossessStories']
 
 network = ['RelatStat', 'Children', 'ParRelatStat', 'Education', 'OccCat', 'CrimCon', 
 			'WarningLettersStatements', 'LifeAspectChange', 
@@ -32,7 +32,7 @@ network = ['RelatStat', 'Children', 'ParRelatStat', 'Education', 'OccCat', 'Crim
 			'Interrupt', 'NotCareInjustice', 'PersRelat', 'Financial', 
 			'Violence', 'TargetTyp', 'Stockpile', 
 			'Regret', 'Implement', 'MultiAttackMeth', 'Discriminate', 'LettersPost', 
-			'Getaway', 'MultiEventTarget', 'Victims', 'Involve', 'InteractNet', 'OtherInv', 'OtherKnowledge', 
+			'Getaway', 'MultiEventTarget', 'Involve', 'InteractNet', 'OtherInv', 'OtherKnowledge', 
 			'LAKilled', 'FurtherAttacks', 'ClaimResp']
 
 illness = ['RelatStat', 'Children', 'ParRelatStat', 'Education', 'OccCat', 'CrimCon', 
@@ -41,5 +41,5 @@ illness = ['RelatStat', 'Children', 'ParRelatStat', 'Education', 'OccCat', 'Crim
 			'Interrupt', 'NotCareInjustice', 'HarmVictimHelpless', 'Financial', 'HurtOthers', 'Stress', 
 			'SubstanceUse', 'Violence', 'TargetTyp', 'Stockpile', 
 			'Obsess', 'Regret', 'Insanity', 'Implement', 'MultiAttackMeth', 'Discriminate', 'LettersPost', 
-			'Getaway', 'MultiEventTarget', 'Victims', 'OtherKnowledge', 
+			'Getaway', 'MultiEventTarget', 'OtherKnowledge', 
 			'LAKilled', 'FurtherAttacks', 'ClaimResp']
