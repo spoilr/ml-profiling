@@ -45,27 +45,7 @@ class StandardizedData:
 		# standardize dataset - Gaussian with zero mean and unit variance
 		known_dataset_scaled = preprocessing.scale(known_dataset)
 		known_targets = np.asarray(known_targets)
-		return known_dataset_scaled, known_targets	
-
-	def thematic_split_and_standardize_dataset(self):
-		theme_dataset = []
-
-		net = self.get_known_data_from_theme(themes[0])
-		ill = self.get_known_data_from_theme(themes[1])
-		ideo = self.get_known_data_from_theme(themes[2])
-
-		net_scaled = preprocessing.scale(net[0])
-		ill_scaled = preprocessing.scale(ill[0])
-		ideo_scaled = preprocessing.scale(ideo[0])
-
-		theme_dataset.append(net_scaled)
-		theme_dataset.append(ill_scaled)
-		theme_dataset.append(ideo_scaled)
-
-		# known targets should be all the same for all themes
-		assert np.array_equal(net[1], ill[1])
-		assert np.array_equal(net[1], ideo[1])
-		return theme_dataset, net[1]	
+		return known_dataset_scaled, known_targets
 
 	def standardize_dataset(self, data):
 		theme_dataset = []
