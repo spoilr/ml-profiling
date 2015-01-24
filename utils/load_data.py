@@ -18,6 +18,7 @@ class Data:
 		self.network_features = themes.network
 		self.ideology_features = themes.ideology
 		self.illness_features = themes.illness
+		self.ids = spreadsheet.ids
 
 	# Return as np array
 	def extract_examples(self, spreadsheet):
@@ -92,6 +93,14 @@ class Spreadsheet:
 		self.features = self.get_features()
 		self.examples = self.get_examples()
 		self.targets = self.get_targets()
+		self.ids = self.get_ids()
+
+	def get_ids(self):
+		ids = []
+		num_rows = self.worksheet.nrows
+		for curr_row in range(num_rows):
+			ids.append(self.get_cell(curr_row, 0))
+		return ids	
 
 	def get_features(self):
 		return self.get_cell_names()[:-1]

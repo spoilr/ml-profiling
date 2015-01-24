@@ -11,10 +11,9 @@ sys.path.insert(0, 'utils/')
 from load_data import *
 from parse_theme import *
 from binary_classification_measures import *
-from cross_validation import *
 from optimize_parameters import *
 from standardized_data import *
-from combine_data_from_feature_selection import *
+from misclassified_ids import *
 sys.path.insert(0, 'feature context/')
 from feature_selection_cv import *
 
@@ -23,14 +22,20 @@ from sklearn.cross_validation import KFold
 from sklearn.cross_validation import StratifiedKFold
 from sklearn.metrics import classification_report
 
-def cross_validation(known_dataset, known_targets):
+def cross_validation(known_dataset, known_targets, ids):
+	misclassified_ids = []
+
 	kf = StratifiedKFold(known_targets, n_folds=10)
 	error_rates = 0
 	for train_index, test_index in kf:
 		X_train, X_test = known_dataset[train_index], known_dataset[test_index]
 		y_train, y_test = known_targets[train_index], known_targets[test_index]
-		error_rate = one_fold_measures(X_train, X_test, y_train, y_test)
+		error_rate, model = one_fold_measures(X_train, X_test, y_train, y_test)
 		error_rates += error_rate
+		misclassified_ids += add_misclassified_ids(model, test_index, known_dataset, known_targets, ids)
+
+	print '########## MISCLASSIFIED ########## %d' % len(misclassified_ids)
+	print misclassified_ids	
 	print 'Final error rate %f' % (float(error_rates) / kf.n_folds)	
 
 def one_fold_measures(X_train, X_test, y_train, y_test):
@@ -41,7 +46,7 @@ def one_fold_measures(X_train, X_test, y_train, y_test):
 
 	measures(y_test, y_pred)
 
-	return error_rate
+	return error_rate, model
 
 def svm(dataset, targets):
 	model = SVC()
@@ -49,7 +54,7 @@ def svm(dataset, targets):
 	# print 'Model score: %f' % model.score(known_dataset, known_targets)
 	return model
 
-def feature_selection_before(val, features, targets, dataset, percentage):
+def feature_selection_before(val, features, targets, dataset, percentage, ids):
 	if val:
 		[known_dataset, known_targets, unk] = split_dataset(dataset, targets)
 		
@@ -64,21 +69,22 @@ def feature_selection_before(val, features, targets, dataset, percentage):
 		std = StandardizedData(known_targets)
 		combined_dataset = std.standardize_dataset(combined_dataset)  
 
-		cross_validation(np.array(combined_dataset), known_targets)
+		cross_validation(np.array(combined_dataset), known_targets, ids)
 	else:
 		std = StandardizedData(targets, dataset)
 		known_dataset_scaled, known_targets = std.split_and_standardize_dataset()
 
-		cross_validation(known_dataset_scaled, known_targets)	
+		cross_validation(known_dataset_scaled, known_targets, ids)	
 
 if __name__ == "__main__":
-	spreadsheet = Spreadsheet('/home/user/Downloads/ip/project data no.xlsx')
+	spreadsheet = Spreadsheet(project_data_file)
 	data = Data(spreadsheet)
 	targets = data.targets
+	ids = data.ids
 
 	try:
 		[dataset, features] = parse_theme(sys.argv[1])
-		feature_selection_before(True, features, targets, dataset, 0.9)
+		feature_selection_before(True, features, targets, dataset, 0.9, ids)
 		
 	except IndexError:
 		print "Error!! Pass 'all' as argument"
