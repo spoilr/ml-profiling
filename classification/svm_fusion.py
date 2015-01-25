@@ -39,8 +39,7 @@ def cross_validation(known_dataset, known_targets, fusion_algorithm, ids):
 
 
 	misclassified_ids = set(misclassified_ids)	
-	print '########## MISCLASSIFIED ########## %d' % len(misclassified_ids)
-	print misclassified_ids		
+	print '########## MISCLASSIFIED ########## %d \n %s' % (len(misclassified_ids), str(misclassified_ids))
 	print 'Final error rate %f' % (float(error_rates) / kf.n_folds)
 		
 def fusion_outputs(known_dataset, known_targets, train_index, test_index, fusion_algorithm, ids):
@@ -65,9 +64,9 @@ def fusion_outputs(known_dataset, known_targets, train_index, test_index, fusion
 		print 'Error parsing algorithm'
 
 	print '###############'
-	print predictions
-	print y_test
-	print combined_predictions
+	print 'Y_PRED %s' % str(predictions)
+	print 'Y_TEST %s' % str(y_test)
+	print 'COMBINED %s' % str(combined_predictions)
 	print '###############'
 
 	measures(y_test, combined_predictions)
@@ -109,6 +108,7 @@ def svm_fusion(known_dataset, known_targets, train_index, test_index, ids):
 
 	return final_y_test, predictions, combined_predictions.tolist(), misclassified_ids
 
+# called majority because it is used in both cases of majority_voting and weighted_majority voting.
 def combine_predictions_one_fold_using_majority(known_dataset, known_targets, train_index, test_index, ids):
 	misclassified_ids = []
 

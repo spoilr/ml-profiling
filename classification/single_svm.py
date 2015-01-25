@@ -34,8 +34,8 @@ def cross_validation(known_dataset, known_targets, ids):
 		error_rates += error_rate
 		misclassified_ids += add_misclassified_ids(model, test_index, known_dataset, known_targets, ids)
 
-	print '########## MISCLASSIFIED ########## %d' % len(misclassified_ids)
-	print misclassified_ids	
+	print '########## MISCLASSIFIED ########## %d %s' % (len(misclassified_ids), str(misclassified_ids))
+	
 	print 'Final error rate %f' % (float(error_rates) / kf.n_folds)	
 
 def one_fold_measures(X_train, X_test, y_train, y_test):
@@ -70,6 +70,9 @@ def feature_selection_before(val, features, targets, dataset, percentage, ids):
 		combined_dataset = std.standardize_dataset(combined_dataset)  
 
 		cross_validation(np.array(combined_dataset), known_targets, ids)
+
+		print '####### FEATURES ####### %d \n %s' % (len(selected_features), str(selected_features)) 
+
 	else:
 		std = StandardizedData(targets, dataset)
 		known_dataset_scaled, known_targets = std.split_and_standardize_dataset()

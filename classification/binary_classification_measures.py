@@ -1,3 +1,10 @@
+"""
+Binary classification measures. 
+Includes precision, recall, f1, accuracy, and accuracy number.
+"""
+
+print(__doc__)
+
 from sklearn.metrics import accuracy_score
 from sklearn.metrics import f1_score
 from sklearn.metrics import precision_score
@@ -25,21 +32,21 @@ def measures(y_test, y_pred):
 	print confusion_matrix(y_test, y_pred)
 	#print(classification_report(y_test, y_pred, target_names=['highvalue','civilian']))
 
-	print precision(y_test, y_pred)
-	print recall(y_test, y_pred)
-	print f1(y_test, y_pred)
-	print accuracy(y_test, y_pred)
+	print 'PRECISION %s' % str(precision(y_test, y_pred))
+	print 'RECALL %s' % str(recall(y_test, y_pred))
+	print 'F1 %s' % str(f1(y_test, y_pred))
+	print 'ACCURACY %s' % str(accuracy(y_test, y_pred))
 
-	print y_test
-	print y_pred
+	print 'Y_TEST %s' % str(y_test)
+	print 'Y_PRED %s' % str(y_pred)
 
 if __name__ == "__main__":
 	# y_pred = [2, 1, 2, 2]
 	# y_true = [2, 1, 2, 1]
 	y_true = [1, 1, 2, 2, 2, 2, 2, 2]
 	y_pred = [2, 2, 2, 2, 2, 2, 2, 2]
-	print precision(y_true, y_pred)
-	print recall(y_true, y_pred)
-	print f1(y_true, y_pred)
-	print accuracy(y_true, y_pred)
-	print accuracy_number(y_true, y_pred)
+	print 'PRECISION %s' % str(precision(y_true, y_pred))
+	print 'RECALL %s' % str(recall(y_true, y_pred))
+	print 'F1 %s' % str(f1(y_true, y_pred))
+	print 'ACCURACY %s' % str(accuracy(y_true, y_pred))
+	print 'ACCURACY %f' % accuracy_number(y_true, y_pred)

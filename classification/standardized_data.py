@@ -1,3 +1,7 @@
+'''
+Standardize data both for all features and thematic split. 
+'''
+
 import numpy as np
 from split_dataset import *
 from parse_theme import *

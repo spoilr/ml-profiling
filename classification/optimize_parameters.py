@@ -1,3 +1,7 @@
+"""
+Optimize parameters for all features at once and for features split into categories.
+"""
+
 import numpy as np
 from sklearn.svm import SVC
 from sklearn.grid_search import GridSearchCV

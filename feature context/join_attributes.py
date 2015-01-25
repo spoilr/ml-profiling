@@ -39,9 +39,9 @@ def feature_context(dataset, targets, features):
 		# 	print "%s - %s does NOT provide context" % (features[index1], features[index2])	
 
 	#### for testing 	
-	print feature_gain_ratio
-	print avg_gain_ratios
-	print 'selected %d vs %d' % (len([x for x in feature_gain_ratio if x >= avg_gain_ratios]), len(feature_gain_ratio))
+	print 'FEATURE GAIN RATIO %s' % str(feature_gain_ratio)
+	print 'AVG GAIN RATIO %f' % avg_gain_ratios
+	print 'selected %d vs %d that are above avg' % (len([x for x in feature_gain_ratio if x >= avg_gain_ratios]), len(feature_gain_ratio))
 	print orig_feats.difference(feats)
 
 	#return feats
@@ -113,7 +113,7 @@ def test_function():
 	dataset = np.array([[1,1,1,1], [1,1,1,2], [2,1,1,1], [3,3,1,1], [3,2,2,1], [3,2,2,2,], [2,2,2,2], [1,3,1,1], [1,2,2,1], [3,3,2,1], [1,3,2,2], [2,3,1,2], [2,1,2,1], [3,3,1,2]])
 	assert len(dataset) == 14
 	sys_entropy = entropy(targets)
-	print "entropy of system %f" % sys_entropy
+	print "SYSTEM ENTROPY %f" % sys_entropy
 	print "############ INFO GAIN ############"
 	info_gain(dataset, features, targets, sys_entropy)
 	print "############ GAIN RATIO ############"

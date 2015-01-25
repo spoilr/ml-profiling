@@ -48,7 +48,7 @@ def info_gain(dataset, features, targets, sys_entropy):
 	for i in range(0, nr_columns):
 		attr_gain = attribute_info_gain(targets, dataset[:,i], sys_entropy)
 		info_gains.append(attr_gain)
-		print "%s info gain %f" % (features[i], attr_gain)
+		#print "%s info gain %f" % (features[i], attr_gain)
 	return info_gains	
 
 def prob_entropy_for_value(value, attribute_vals, targets):
@@ -79,7 +79,7 @@ def gain_ratio(dataset, features, targets, sys_entropy):
 	for i in range(0, nr_columns):
 		attr_gain_ratio = gain_ratio_for_val(targets, dataset[:,i], sys_entropy)
 		gain_ratios.append(attr_gain_ratio)
-		print "%s gain ratio %f" % (features[i], attr_gain_ratio)
+		#print "%s gain ratio %f" % (features[i], attr_gain_ratio)
 	return gain_ratios	
 
 # tennis example

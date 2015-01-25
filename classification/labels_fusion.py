@@ -1,5 +1,6 @@
 """
 Combine outputs of X classifiers.
+Methods: majority vote and weighted majority vote.
 Each classifier produces a class label.
 """
 
@@ -59,8 +60,8 @@ def	weighted_majority(predictions, y_test):
 	epsilon = 0.7
 	# weights are initialized with 1
 	weights = [1, 1, 1]
-	print predictions
-	print y_test
+	print 'Y_PRED %s' % str(predictions)
+	print 'Y_TEST %s' % str(y_test)
 	for i in range(0, len(y_test)):
 		# compute prediction
 		out = round(sum([a*b for a,b in zip(predictions[:,i].tolist(), weights)]) / float(sum(weights)))
@@ -69,7 +70,7 @@ def	weighted_majority(predictions, y_test):
 			if predictions[j,i] != y_test[i]:
 				weights[j] *= (1-epsilon)
 
-	print weights				
+	print 'WEIGHTS %s' % str(weights)
 	combined_predictions = []
 	for i in range(0, len(y_test)):
 		# compute final prediction with updated weights

@@ -34,7 +34,7 @@ def features_cross_validation(known_dataset, known_targets, features):
 	print 'Final error rate %f' % (float(error_rates) / kf.n_folds)
 
 	# for testing
-	print cv_features
+	print 'CV_FEATURES %s' % str(cv_features)
 	for x in cv_features:
 		print len(x)	
 
@@ -94,8 +94,8 @@ if __name__ == "__main__":
 
 	cv_features = features_cross_validation(known_dataset, known_targets, features)
 
-	print	select_final_features_from_cv(cv_features, 0.9)
+	print select_final_features_from_cv(cv_features, 0.9)
 	print '######################'
-	print	select_final_features_from_cv(cv_features, 0.7)
+	print select_final_features_from_cv(cv_features, 0.7)
 	print '######################'
-	print	select_final_features_from_cv(cv_features, 0.5)
+	print select_final_features_from_cv(cv_features, 0.5)

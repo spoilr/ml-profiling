@@ -28,6 +28,9 @@ def thematic_data_from_feature_selection(theme, percentage):
 	selected_features = select_final_features_from_cv(cv_features, percentage)
 
 	sf = SelectedFeatures(known_dataset, known_targets, selected_features, features)
+
+	print '####### FEATURES ####### %d %s' % (len(selected_features), str(selected_features)) 
+
 	return sf.extract_data_from_selected_features(), known_targets
 
 def combine_data_from_feature_selection(percentage):
@@ -42,6 +45,7 @@ if __name__ == "__main__":
 	spreadsheet = Spreadsheet(project_data_file)
 	data = Data(spreadsheet)
 	targets = data.targets
+	ids = data.ids
 
 	combined_dataset, targets = combine_data_from_feature_selection(0.9)
 
@@ -49,7 +53,7 @@ if __name__ == "__main__":
 	dataset = std.standardize_dataset(combined_dataset)  
 
 	fusion_algorithm = raw_input("Enter algorithm. Choose between maj, wmaj, svm, nn")
-	cross_validation(dataset, targets, fusion_algorithm)
+	cross_validation(dataset, targets, fusion_algorithm, ids)
 
 	optimize = raw_input('Optimise parameters? y or n')
 	if optimize == 'y':
