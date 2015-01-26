@@ -16,6 +16,7 @@ from standardized_data import *
 from misclassified_ids import *
 sys.path.insert(0, 'feature context/')
 from feature_selection_cv import *
+from parameters import CV_PERCENTAGE_OCCURENCE_THRESHOLD
 
 from sklearn.svm import SVC
 from sklearn.cross_validation import KFold
@@ -87,7 +88,7 @@ if __name__ == "__main__":
 
 	try:
 		[dataset, features] = parse_theme(sys.argv[1])
-		feature_selection_before(True, features, targets, dataset, 0.9, ids)
+		feature_selection_before(True, features, targets, dataset, CV_PERCENTAGE_OCCURENCE_THRESHOLD, ids)
 		
 	except IndexError:
 		print "Error!! Pass 'all' as argument"

@@ -15,6 +15,7 @@ from svm_fusion import *
 from selected_features import *
 sys.path.insert(0, 'feature context/')
 from feature_selection_cv import *
+from parameters import CV_PERCENTAGE_OCCURENCE_THRESHOLD
 
 themes = ['net', 'ill', 'ideo']
 
@@ -47,7 +48,7 @@ if __name__ == "__main__":
 	targets = data.targets
 	ids = data.ids
 
-	combined_dataset, targets = combine_data_from_feature_selection(0.9)
+	combined_dataset, targets = combine_data_from_feature_selection(CV_PERCENTAGE_OCCURENCE_THRESHOLD)
 
 	std = StandardizedData(targets)
 	dataset = std.standardize_dataset(combined_dataset)  

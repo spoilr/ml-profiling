@@ -8,6 +8,7 @@ from split_dataset import *
 import itertools
 from feature_entropy import *
 from project_data import *
+from parameters import TOP_FEATURES_PERCENTAGE_THRESHOLD
 
 import math as math
 import operator
@@ -52,7 +53,7 @@ def final_set_of_features(features, feature_gain_ratio, avg_gain_ratios, der_fea
 	selected_features_from_derived = []
 
 	sorted_der_feats = sorted(der_feats.items(), key=operator.itemgetter(1))
-	nr_times = int(math.floor(0.7 * len(der_feats)))
+	nr_times = int(math.floor(TOP_FEATURES_PERCENTAGE_THRESHOLD * len(der_feats)))
 	
 	for i in range(nr_times):
 		selected_features_from_derived.append(features[sorted_der_feats[i][0][0]])
