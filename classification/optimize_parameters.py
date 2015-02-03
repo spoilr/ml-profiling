@@ -19,7 +19,7 @@ class OptimizeParameters:
 		C_range = 0.1 * np.array(range(1, 50))
 		gamma_range = 0.1 * np.array(range(1, 50))
 		param_grid = dict(gamma=gamma_range, C=C_range)
-		cv = StratifiedKFold(y=self.targets, n_folds=3)
+		cv = StratifiedKFold(y=self.targets, n_folds=10)
 		grid = GridSearchCV(estimator=SVC(), param_grid=param_grid, cv=cv)
 		return grid
 
