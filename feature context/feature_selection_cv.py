@@ -77,7 +77,7 @@ def one_fold_measures(X_train, X_test, y_train, y_test):
 	return error_rate	
 
 def svm(dataset, targets):
-	model = SVC()
+	model = SVC(class_weight='auto')
 	model.fit(dataset, targets)
 	# print 'Model score: %f' % model.score(known_dataset, known_targets)
 	return model	

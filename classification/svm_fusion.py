@@ -129,7 +129,7 @@ def combine_predictions_one_fold_using_majority(known_dataset, known_targets, tr
 	return predictions, y_test, accuracies, misclassified_ids
 
 def svm(dataset, targets):
-	model = SVC(class_weight='auto', C=0.7)
+	model = SVC(class_weight='auto')
 	model.fit(dataset, targets)
 	# print 'Model score: %f' % model.score(known_dataset, known_targets)
 	return model
