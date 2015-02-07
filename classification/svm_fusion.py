@@ -28,7 +28,7 @@ themes = ['net', 'ill', 'ideo']
 def cross_validation(known_dataset, known_targets, fusion_algorithm, ids):
 	misclassified_ids = []
 
-	kf = StratifiedKFold(known_targets, n_folds=5)
+	kf = StratifiedKFold(known_targets, n_folds=10)
 	error_rates = 0
 	# cross validation
 	for train_index, test_index in kf:

@@ -19,7 +19,7 @@ from sklearn.cross_validation import StratifiedKFold
 # each fold has selected features
 # after cv, choose the features that were selected at least N% of the repeated cross validation process (50%, 70%, 90%)
 def features_cross_validation(known_dataset, known_targets, features):
-	kf = StratifiedKFold(known_targets, n_folds=5)
+	kf = StratifiedKFold(known_targets, n_folds=10)
 	error_rates = 0
 	cv_features = []
 	for train_index, test_index in kf:
