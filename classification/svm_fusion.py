@@ -8,6 +8,7 @@ from binary_classification_measures import *
 from standardized_data import *
 from misclassified_ids import *
 from project_data import *
+from svms import svm_for_features_fusion
 
 from sklearn import preprocessing
 from sklearn.svm import SVC
@@ -91,7 +92,7 @@ def svm_fusion(known_dataset, known_targets, train_index, test_index, ids):
 			svm_X_train, svm_Y_train = X_train[inner_train_index], y_train[inner_train_index]
 			fusion_X_train, fusion_Y_train = X_train[inner_test_index], y_train[inner_test_index]
 
-			model = svm(svm_X_train, svm_Y_train)
+			model = svm_for_features_fusion(svm_X_train, svm_Y_train)
 			training_predictions.append(model.predict(fusion_X_train))
 			predictions.append(model.predict(final_X_test))
 			misclassified_ids += add_misclassified_ids(model, test_index, known_dataset[i], known_targets, ids)
@@ -101,7 +102,7 @@ def svm_fusion(known_dataset, known_targets, train_index, test_index, ids):
 			break
 
 	training_pred_input = np.vstack(training_predictions).T
-	fusion_model = svm(training_pred_input, fusion_Y_train)
+	fusion_model = svm_for_features_fusion(training_pred_input, fusion_Y_train)
 
 	pred_input = np.vstack(predictions).T
 	combined_predictions = fusion_model.predict(pred_input)
@@ -117,7 +118,7 @@ def combine_predictions_one_fold_using_majority(known_dataset, known_targets, tr
 	y_train, y_test = known_targets[train_index], known_targets[test_index]
 	for i in range(0, NR_THEMES):
 		X_train, X_test = known_dataset[i][train_index], known_dataset[i][test_index]
-		model = svm(X_train, y_train)
+		model = svm_for_features_fusion(X_train, y_train)
 		accuracy = model.score(X_test, y_test)
 		print 'Model score for %s is %f' % (themes[i], accuracy)
 		y_pred = model.predict(X_test)
@@ -127,9 +128,3 @@ def combine_predictions_one_fold_using_majority(known_dataset, known_targets, tr
 	
 	predictions = np.array((predictions[0], predictions[1], predictions[2]), dtype=float)
 	return predictions, y_test, accuracies, misclassified_ids
-
-def svm(dataset, targets):
-	model = SVC(class_weight='auto')
-	model.fit(dataset, targets)
-	# print 'Model score: %f' % model.score(known_dataset, known_targets)
-	return model

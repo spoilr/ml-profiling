@@ -9,6 +9,7 @@ from feature_entropy import *
 from join_attributes import *
 from selected_features import *
 from project_data import *
+from svms import svm_subset_features
 
 import math as math
 import numpy as np
@@ -70,17 +71,11 @@ def selected_feature_one_fold(X_train, y_train, X_test, y_test, features):
 	return error_rate, selected_features
 
 def one_fold_measures(X_train, X_test, y_train, y_test):
-	model = svm(X_train, y_train)
+	model = svm_subset_features(X_train, y_train)
 	print 'Model score %f' % model.score(X_test, y_test)
 	y_pred = model.predict(X_test)
 	error_rate = (float(sum((y_pred - y_test)**2)) / len(y_test))
-	return error_rate	
-
-def svm(dataset, targets):
-	model = SVC(class_weight='auto')
-	model.fit(dataset, targets)
-	# print 'Model score: %f' % model.score(known_dataset, known_targets)
-	return model	
+	return error_rate		
 
 if __name__ == "__main__":
 	spreadsheet = Spreadsheet(project_data_file)

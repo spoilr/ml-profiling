@@ -17,7 +17,7 @@ from misclassified_ids import *
 sys.path.insert(0, 'feature context/')
 from feature_selection_cv import *
 from parameters import CV_PERCENTAGE_OCCURENCE_THRESHOLD
-from svms import svm_all_vars
+from svms import svm_selected_vars
 
 from sklearn.cross_validation import KFold
 from sklearn.cross_validation import StratifiedKFold
@@ -40,14 +40,32 @@ def cross_validation(known_dataset, known_targets, ids):
 	print 'Final error rate %f' % (float(error_rates) / kf.n_folds)	
 
 def one_fold_measures(X_train, X_test, y_train, y_test):
-	model = svm_all_vars(X_train, y_train)
+	model = svm_selected_vars(X_train, y_train)
 	print 'Model score %f' % model.score(X_test, y_test)
 	y_pred = model.predict(X_test)
 	error_rate = (float(sum((y_pred - y_test)**2)) / len(y_test))
 
 	measures(y_test, y_pred)
 
-	return error_rate, model	
+	return error_rate, model
+
+def feature_selection_before(features, targets, dataset, percentage, ids):
+	[known_dataset, known_targets, unk] = split_dataset(dataset, targets)
+		
+	known_targets = np.asarray(known_targets)
+
+	cv_features = features_cross_validation(known_dataset, known_targets, features)
+	selected_features = select_final_features_from_cv(cv_features, percentage)
+
+	sf = SelectedFeatures(known_dataset, known_targets, selected_features, features)
+	combined_dataset = sf.extract_data_from_selected_features()
+
+	std = StandardizedData(known_targets)
+	combined_dataset = std.standardize_dataset(combined_dataset)  
+
+	cross_validation(np.array(combined_dataset), known_targets, ids)
+
+	print '####### FEATURES ####### %d \n %s' % (len(selected_features), str(selected_features)) 	
 
 if __name__ == "__main__":
 	spreadsheet = Spreadsheet(project_data_file)
@@ -57,10 +75,7 @@ if __name__ == "__main__":
 
 	try:
 		[dataset, features] = parse_theme(sys.argv[1])
-		std = StandardizedData(targets, dataset)
-		known_dataset_scaled, known_targets = std.split_and_standardize_dataset()
-
-		cross_validation(known_dataset_scaled, known_targets, ids)
+		feature_selection_before(features, targets, dataset, CV_PERCENTAGE_OCCURENCE_THRESHOLD, ids)
 		
 	except IndexError:
 		print "Error!! Pass 'all' as argument"
