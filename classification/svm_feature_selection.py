@@ -58,5 +58,6 @@ if __name__ == "__main__":
 
 	optimize = raw_input('Optimise parameters? y or n')
 	if optimize == 'y':
+			score = raw_input('Score? accuracy, recall, precision')
 			opt_params = OptimizeParameters(dataset, targets)
-			opt_params.category_optimize_parameters()
+			opt_params.category_optimize_parameters(score)

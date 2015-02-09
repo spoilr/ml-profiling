@@ -67,6 +67,12 @@ def feature_selection_before(features, targets, dataset, percentage, ids):
 
 	print '####### FEATURES ####### %d \n %s' % (len(selected_features), str(selected_features)) 	
 
+	optimize = raw_input('Optimise parameters? y or n')
+	if optimize == 'y':
+		score = raw_input('Score? accuracy, recall, precision')
+		opt_params = OptimizeParameters(np.array(combined_dataset), known_targets)
+		opt_params.all_optimize_parameters(score)
+
 if __name__ == "__main__":
 	spreadsheet = Spreadsheet(project_data_file)
 	data = Data(spreadsheet)
@@ -80,10 +86,7 @@ if __name__ == "__main__":
 	except IndexError:
 		print "Error!! Pass 'all' as argument"
 
-	optimize = raw_input('Optimise parameters? y or n')
-	if optimize == 'y':
-		opt_params = OptimizeParameters(dataset, targets)
-		opt_params.all_optimize_parameters()
+
 
 
 

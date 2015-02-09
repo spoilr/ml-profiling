@@ -1,13 +1,13 @@
 from sklearn.svm import SVC
 
 def svm_all_vars(dataset, targets):
-	model = SVC(class_weight='auto', C=1.20001, gamma=0.30001)
+	model = SVC(class_weight='auto', C=0.90000999999999987, gamma=0.30001)
 	model.fit(dataset, targets)
 	# print 'Model score: %f' % model.score(known_dataset, known_targets)
 	return model
 
 def svm_selected_vars(dataset, targets):
-	model = SVC(class_weight='auto', C=1.20001, gamma=0.30001)
+	model = SVC(class_weight='auto', C=0.90000999999999987, gamma=12.600009999999999)
 	model.fit(dataset, targets)
 	# print 'Model score: %f' % model.score(known_dataset, known_targets)
 	return model
