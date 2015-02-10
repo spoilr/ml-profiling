@@ -27,4 +27,5 @@ if __name__ == "__main__":
 	if optimize == 'y':
 			score = raw_input('Score? accuracy, recall, precision')
 			opt_params = OptimizeParameters(dataset, targets)
-			opt_params.category_optimize_parameters(score)
+			theme_index = int(raw_input('Theme index? 0, 1 or 2'))
+			opt_params.category_optimize_parameters(score, theme_index)

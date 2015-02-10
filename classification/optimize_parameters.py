@@ -8,6 +8,7 @@ from sklearn.grid_search import GridSearchCV
 from sklearn.cross_validation import StratifiedKFold
 
 NR_THEMES = 3
+themes = ['net', 'ill', 'ideo']
 scores = ['recall', 'precision', 'accuracy']
 
 class OptimizeParameters:
@@ -31,17 +32,18 @@ class OptimizeParameters:
 	def all_optimize_parameters(self, score):	
 		grid = self.create_grid(score)
 		grid.fit(self.dataset, self.targets)
-		print '######## %s ########' % score
+		print '######## %f ########' % score
 		print("Best classifier: ", grid.best_estimator_)
 		print("Best params: ", grid.best_params_)		
 		
 
-	def category_optimize_parameters(self, score):
+	def category_optimize_parameters(self, score, theme_index):
 		grid = self.create_grid(score)
-		for i in range(0, NR_THEMES):
-			categ_dataset = self.dataset[i]	
-			grid.fit(categ_dataset, self.targets)
-			print '######## %s ########' % score
-			print("Best classifier: ", grid.best_estimator_)
-			print("Best params: ", grid.best_params_)
+		categ_dataset = self.dataset[theme_index]	
+		grid.fit(categ_dataset, self.targets)
+		print '######## %f ########' % score
+		print 'Category %s' % themes[theme_index]
+		print("Best classifier: ", grid.best_estimator_)
+		print("Best params: ", grid.best_params_)
+			
 			
