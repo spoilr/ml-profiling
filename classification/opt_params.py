@@ -14,10 +14,10 @@ from feature_selection_cv import features_cross_validation
 from feature_selection_cv import select_final_features_from_cv
 
 def params():
-	begin = 10 ** (-5)
-	end = 10 ** 2
-	C_range = np.arange(begin, end, 0.3)
-	gamma_range = np.arange(begin, end, 0.3)
+	begin = 10 ** (-3)
+	end = 16
+	C_range = np.arange(begin, end, 0.1)
+	gamma_range = np.arange(begin, end, 0.1)
 	return C_range, gamma_range
 
 # single svm - no thematic split

@@ -18,10 +18,10 @@ class OptimizeParameters:
 		self.targets = targets
 
 	def create_grid(self, score):
-		begin = 10 ** (-5)
-		end = 10 ** 2
-		C_range = np.arange(begin, end, 0.3)
-		gamma_range = np.arange(begin, end, 0.3)
+		begin = 10 ** (-3)
+		end = 16
+		C_range = np.arange(begin, end, 0.1)
+		gamma_range = np.arange(begin, end, 0.1)
 
 		param_grid = dict(gamma=gamma_range, C=C_range)
 		cv = StratifiedKFold(y=self.targets, n_folds=5)

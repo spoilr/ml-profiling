@@ -92,7 +92,7 @@ def svm_fusion(known_dataset, known_targets, train_index, test_index, ids):
 			svm_X_train, svm_Y_train = X_train[inner_train_index], y_train[inner_train_index]
 			fusion_X_train, fusion_Y_train = X_train[inner_test_index], y_train[inner_test_index]
 
-			model = svm_for_features_fusion(svm_X_train, svm_Y_train)
+			model = inner_svm(svm_X_train, svm_Y_train)
 			training_predictions.append(model.predict(fusion_X_train))
 			predictions.append(model.predict(final_X_test))
 			misclassified_ids += add_misclassified_ids(model, test_index, known_dataset[i], known_targets, ids)
@@ -102,12 +102,17 @@ def svm_fusion(known_dataset, known_targets, train_index, test_index, ids):
 			break
 
 	training_pred_input = np.vstack(training_predictions).T
-	fusion_model = svm_for_features_fusion(training_pred_input, fusion_Y_train)
+	fusion_model = inner_svm(training_pred_input, fusion_Y_train)
 
 	pred_input = np.vstack(predictions).T
 	combined_predictions = fusion_model.predict(pred_input)
 
 	return final_y_test, predictions, combined_predictions.tolist(), misclassified_ids
+
+def inner_svm(dataset, targets):
+	model = SVC(class_weight='auto')
+	model.fit(dataset, targets)
+	return model
 
 # called majority because it is used in both cases of majority_voting and weighted_majority voting.
 def combine_predictions_one_fold_using_majority(known_dataset, known_targets, train_index, test_index, ids):
