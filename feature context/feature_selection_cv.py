@@ -16,6 +16,7 @@ import numpy as np
 from sklearn import preprocessing
 from sklearn.svm import SVC
 from sklearn.cross_validation import StratifiedKFold
+from sklearn.metrics import f1_score
 
 # each fold has selected features
 # after cv, choose the features that were selected at least N% of the repeated cross validation process (50%, 70%, 90%)
@@ -74,7 +75,8 @@ def one_fold_measures(X_train, X_test, y_train, y_test):
 	model = svm_subset_features(X_train, y_train)
 	print 'Model score %f' % model.score(X_test, y_test)
 	y_pred = model.predict(X_test)
-	error_rate = (float(sum((y_pred - y_test)**2)) / len(y_test))
+	# error_rate = (float(sum((y_pred - y_test)**2)) / len(y_test))
+	error_rate = f1_score(y_test, y_pred)
 	return error_rate		
 
 if __name__ == "__main__":

@@ -1,5 +1,6 @@
 import numpy as np
 import itertools
+from sklearn.metrics import f1_score
 from sklearn.svm import SVC
 from sklearn.cross_validation import StratifiedKFold
 from parameters import CV_PERCENTAGE_OCCURENCE_THRESHOLD
@@ -15,7 +16,7 @@ from feature_selection_cv import select_final_features_from_cv
 
 def params():
 	begin = 10 ** (-3)
-	end = 16
+	end = 50
 	C_range = np.arange(begin, end, 0.1)
 	gamma_range = np.arange(begin, end, 0.1)
 	return C_range, gamma_range
@@ -30,28 +31,29 @@ def cross_validation_single(known_dataset, known_targets, model):
 
 		model.fit(X_train, y_train)
 		y_pred = model.predict(X_test)
-		error_rate = (float(sum((y_pred - y_test)**2)) / len(y_test))
+		# error_rate = (float(sum((y_pred - y_test)**2)) / len(y_test))
+		error_rate = f1_score(y_test, y_pred)
 
 		error_rates += error_rate
 
 	return float(error_rates) / kf.n_folds
 
 def opt_params_single(known_dataset, known_targets):
-	c_param = None
-	g_param = None
-	minError = 100
+	c_param = -1
+	g_param = -1
+	maxF1 = 0.0
 	C_range, gamma_range = params()
 	for pair in itertools.product(C_range, gamma_range):
 		c = pair[0]
 		g = pair[1]
 		model = SVC(class_weight='auto', C=c, gamma=g)
-		error = cross_validation_single(known_dataset, known_targets, model)
-		if error < minError:
-			minError = error
+		f1 = cross_validation_single(known_dataset, known_targets, model)
+		if f1 > maxF1:
+			maxF1 = f1
 			c_param = c
 			g_param = g
 
-	print '##### BEST PARAMS #####: C %f and g %f with error %f' % (c_param, g_param, minError)
+	print '##### BEST PARAMS #####: C %f and g %f with f1 %f' % (c_param, g_param, maxF1)
 
 def cross_validation_theme(known_dataset, known_targets, theme_index, model):
 	kf = StratifiedKFold(known_targets, n_folds=10)
@@ -63,28 +65,29 @@ def cross_validation_theme(known_dataset, known_targets, theme_index, model):
 
 		model.fit(X_train, y_train)
 		y_pred = model.predict(X_test)
-		error_rate = (float(sum((y_pred - y_test)**2)) / len(y_test))
+		# error_rate = (float(sum((y_pred - y_test)**2)) / len(y_test))
+		error_rate = f1_score(y_test, y_pred)
 
 		error_rates += error_rate
 
 	return float(error_rates) / kf.n_folds
 
 def opt_params_combined(known_dataset, known_targets, theme_index):
-	c_param = None
-	g_param = None
-	minError = 100
+	c_param = -1
+	g_param = -1
+	maxF1 = 0.0
 	C_range, gamma_range = params()
 	for pair in itertools.product(C_range, gamma_range):
 		c = pair[0]
 		g = pair[1]
 		model = SVC(class_weight='auto', C=c, gamma=g)
-		error = cross_validation_theme(known_dataset, known_targets, theme_index, model)
-		if error < minError:
-			minError = error
+		f1 = cross_validation_theme(known_dataset, known_targets, theme_index, model)
+		if f1 > maxF1:
+			maxF1 = f1
 			c_param = c
 			g_param = g
 
-	print '##### BEST PARAMS #####: C %f and g %f with error %f' % (c_param, g_param, minError)
+	print '##### BEST PARAMS #####: C %f and g %f with f1 %f' % (c_param, g_param, maxF1)
 
 def main_svm():
 	spreadsheet = Spreadsheet(project_data_file)

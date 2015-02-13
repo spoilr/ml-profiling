@@ -22,6 +22,7 @@ from svms import svm_all_vars
 from sklearn.cross_validation import KFold
 from sklearn.cross_validation import StratifiedKFold
 from sklearn.metrics import classification_report
+from sklearn.metrics import f1_score
 
 def cross_validation(known_dataset, known_targets, ids):
 	misclassified_ids = []
@@ -43,8 +44,8 @@ def one_fold_measures(X_train, X_test, y_train, y_test):
 	model = svm_all_vars(X_train, y_train)
 	print 'Model score %f' % model.score(X_test, y_test)
 	y_pred = model.predict(X_test)
-	error_rate = (float(sum((y_pred - y_test)**2)) / len(y_test))
-
+	# error_rate = (float(sum((y_pred - y_test)**2)) / len(y_test))
+	error_rate = f1_score(y_test, y_pred)
 	measures(y_test, y_pred)
 
 	return error_rate, model	
@@ -67,7 +68,7 @@ if __name__ == "__main__":
 
 	optimize = raw_input('Optimise parameters? y or n')
 	if optimize == 'y':
-		score = raw_input('Score? accuracy, recall, precision')
+		score = raw_input('Score? f1, accuracy, recall, precision')
 		opt_params = OptimizeParameters(known_dataset_scaled, known_targets)
 		opt_params.all_optimize_parameters(score)
 
