@@ -19,7 +19,7 @@ class OptimizeParameters:
 
 	def create_grid(self, score):
 		begin = 10 ** (-3)
-		end = 16
+		end = 50
 		C_range = np.arange(begin, end, 0.1)
 		gamma_range = np.arange(begin, end, 0.1)
 
