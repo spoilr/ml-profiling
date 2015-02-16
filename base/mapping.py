@@ -85,3 +85,12 @@ binary_convertor['Occ'] = ['Unemp', 'Student', 'ServInd', 'Prof', 'Constr', 'ClS
 binary_convertor['Ed'] = ['OUnkEd', 'NoHS', 'SomeHS', 'GradHS', 'GED', 'NoDeg', 'Deg', 'NoCol', 'Bac', 'GradNoDeg', 'Msc']
 binary_convertor['ParS'] = ['OUnk', 'PNMarried', 'PMarried', 'PSeparated', 'PDiv', 'PWid']
 binary_convertor['RelS'] = ['Single', 'Partner', 'Married', 'Separated']
+
+inv_binary_convertor = dict()
+
+def reverse_binary_convertor():
+	for k,v in binary_convertor.items():
+		for x in v:
+			inv_binary_convertor[x] = k
+
+reverse_binary_convertor()		

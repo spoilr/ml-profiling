@@ -1,3 +1,7 @@
+import sys
+sys.path.insert(0, 'base/')
+from mapping import *
+
 proxy_all = [
 'LifeNo',
 'NoChIdeo',
@@ -210,3 +214,12 @@ proxy_net = [
 'ValCivil',
 'Discr'
 ]
+
+def get_decoded_features(proxy):
+	decoded_features = []
+	for x in proxy:
+		if x in inv_mapping.keys():
+			decoded_features.append(inv_mapping[x])
+		else:
+			decoded_features.append(inv_binary_convertor[x])
+	return set(decoded_features)
