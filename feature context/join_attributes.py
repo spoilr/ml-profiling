@@ -40,7 +40,7 @@ def feature_context(dataset, targets, features):
 		# 	print "%s - %s does NOT provide context" % (features[index1], features[index2])	
 
 	#### for testing 	
-	print 'FEATURE GAIN RATIO %s' % str(feature_gain_ratio)
+	# print 'FEATURE GAIN RATIO %s' % str(feature_gain_ratio)
 	print 'AVG GAIN RATIO %f' % avg_gain_ratios
 	print 'selected %d vs %d that are above avg' % (len([x for x in feature_gain_ratio if x >= avg_gain_ratios]), len(feature_gain_ratio))
 	

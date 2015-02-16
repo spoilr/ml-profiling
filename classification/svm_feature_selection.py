@@ -30,7 +30,7 @@ def thematic_data_from_feature_selection(orig_targets, theme, percentage):
 
 	sf = SelectedFeatures(known_dataset, known_targets, selected_features, features)
 
-	print '####### FEATURES ####### %d %s' % (len(selected_features), str(selected_features)) 
+	print '####### %s FEATURES ####### %d %s' % (theme, len(selected_features), str(selected_features)) 
 
 	return sf.extract_data_from_selected_features(), known_targets
 

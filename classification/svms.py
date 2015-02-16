@@ -28,8 +28,8 @@ def svm_for_features_fusion(dataset, targets):
 def svm_subset_features(dataset, targets):
 	# model = SVC(class_weight='auto', C=0.101, gamma=0.001)
 	# model = SVC(class_weight='auto', C=1.501000, gamma=0.001)
-	# model = SVC(class_weight='auto', C=2.101, gamma=0.001)
-	model = SVC(class_weight='auto', C=0.60100000000000009, gamma=0.001)
+	model = SVC(class_weight='auto', C=2.101, gamma=0.001)
+	# model = SVC(class_weight='auto', C=0.60100000000000009, gamma=0.001)
 
 	model.fit(dataset, targets)
 	# print 'Model score: %f' % model.score(known_dataset, known_targets)
