@@ -30,18 +30,21 @@ def cross_validation(known_dataset, known_targets, fusion_algorithm, ids):
 	misclassified_ids = []
 
 	kf = StratifiedKFold(known_targets, n_folds=10)
+	f1_scores = 0
 	error_rates = 0
 	# cross validation
 	for train_index, test_index in kf:
-		error_rate, mis_ids = fusion_outputs(known_dataset, known_targets, train_index, test_index, fusion_algorithm, ids)
+		error, f1, mis_ids = fusion_outputs(known_dataset, known_targets, train_index, test_index, fusion_algorithm, ids)
 		
-		error_rates += error_rate
+		f1_scores += f1
+		error_rates += error
 		misclassified_ids += mis_ids
 
 
 	misclassified_ids = set(misclassified_ids)	
 	print '########## MISCLASSIFIED ########## %d \n %s' % (len(misclassified_ids), str(misclassified_ids))
-	print 'Final error rate %f' % (float(error_rates) / kf.n_folds)
+	print 'Final f1 %f' % (float(f1_scores) / kf.n_folds)
+	print 'Final error %f' % (float(error_rates) / kf.n_folds)
 		
 def fusion_outputs(known_dataset, known_targets, train_index, test_index, fusion_algorithm, ids):
 	misclassified_ids = []
@@ -71,7 +74,10 @@ def fusion_outputs(known_dataset, known_targets, train_index, test_index, fusion
 	print '###############'
 
 	measures(y_test, combined_predictions)
-	return (float(sum((combined_predictions - y_test)**2)) / len(y_test)), misclassified_ids	
+
+	error = (float(sum((combined_predictions - y_test)**2)) / len(y_test))
+	f1 = f1_score(combined_predictions, y_test)
+	return error, f1, misclassified_ids
 
 # Training and testing sets initially
 # 2/3 are used to train the SVM and 1/3 is used to train(after the output is obtained) the fusion SVM

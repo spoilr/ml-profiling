@@ -28,28 +28,30 @@ def cross_validation(known_dataset, known_targets, ids):
 	misclassified_ids = []
 
 	kf = StratifiedKFold(known_targets, n_folds=10)
+	f1_scores = 0
 	error_rates = 0
 	for train_index, test_index in kf:
 		X_train, X_test = known_dataset[train_index], known_dataset[test_index]
 		y_train, y_test = known_targets[train_index], known_targets[test_index]
-		error_rate, model = one_fold_measures(X_train, X_test, y_train, y_test)
+		error_rate, f1, model = one_fold_measures(X_train, X_test, y_train, y_test)
+		f1_scores += f1
 		error_rates += error_rate
 		misclassified_ids += add_misclassified_ids(model, test_index, known_dataset, known_targets, ids)
 
 	print '########## MISCLASSIFIED ########## %d %s' % (len(misclassified_ids), str(misclassified_ids))
 	
-	print 'Final error rate %f' % (float(error_rates) / kf.n_folds)	
+	print 'Final f1 %f' % (float(f1_scores) / kf.n_folds)
+	print 'Final error %f' % (float(error_rates) / kf.n_folds)
 
 def one_fold_measures(X_train, X_test, y_train, y_test):
 	model = svm_selected_vars(X_train, y_train)
 	print 'Model score %f' % model.score(X_test, y_test)
 	y_pred = model.predict(X_test)
-	# error_rate = (float(sum((y_pred - y_test)**2)) / len(y_test))
-	error_rate = f1_score(y_test, y_pred)
-
+	error_rate = (float(sum((y_pred - y_test)**2)) / len(y_test))
+	f1 = f1_score(y_test, y_pred)
 	measures(y_test, y_pred)
 
-	return error_rate, model
+	return error_rate, f1, model
 
 def feature_selection_before(features, targets, dataset, percentage, ids):
 	[known_dataset, known_targets, unk] = split_dataset(dataset, targets)

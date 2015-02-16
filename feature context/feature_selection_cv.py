@@ -33,7 +33,7 @@ def features_cross_validation(known_dataset, known_targets, features):
 		
 		cv_features.append(selected_features)
 
-	print 'Final error rate %f' % (float(error_rates) / kf.n_folds)
+	print 'Final error rate in features_cross_validation %f' % (float(error_rates) / kf.n_folds)
 
 	# for testing
 	print 'CV_FEATURES %s' % str(cv_features)
