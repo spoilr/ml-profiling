@@ -14,7 +14,7 @@ from standardized_data import *
 from misclassified_ids import *
 from binary_classification_measures import *
 from selected_features import *
-from ssa_features import ssa_features
+from ssa_features import proxy_all
 from parameters import CV_PERCENTAGE_OCCURENCE_THRESHOLD
 from svms import svm_selected_vars
 
@@ -54,7 +54,7 @@ def feature_selection_before(features, targets, dataset, percentage, ids):
 	[known_dataset, known_targets, unk] = split_dataset(dataset, targets)		
 	known_targets = np.asarray(known_targets)
 
-	sf = SelectedFeatures(known_dataset, known_targets, ssa_features, features)	
+	sf = SelectedFeatures(known_dataset, known_targets, proxy_all, features)	
 	ssa_dataset = sf.extract_data_from_selected_features()
 
 	std = StandardizedData(known_targets)
@@ -62,7 +62,7 @@ def feature_selection_before(features, targets, dataset, percentage, ids):
 
 	cross_validation(np.array(ssa_dataset), known_targets, ids)
 
-	print '####### FEATURES ####### %d \n %s' % (len(ssa_features), str(ssa_features))
+	print '####### FEATURES ####### %d \n %s' % (len(proxy_all), str(proxy_all))
 
 if __name__ == "__main__":
 	spreadsheet = Spreadsheet(project_data_file)
