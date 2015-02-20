@@ -16,7 +16,6 @@ from standardized_data import *
 from misclassified_ids import *
 sys.path.insert(0, 'feature context/')
 from feature_selection_cv import *
-from parameters import CV_PERCENTAGE_OCCURENCE_THRESHOLD
 from svms import svm_all_vars
 
 from sklearn.cross_validation import KFold

@@ -4,7 +4,6 @@ from sklearn.metrics import f1_score
 from sklearn.svm import SVC
 from sklearn.cross_validation import StratifiedKFold
 from parameters import CV_PERCENTAGE_OCCURENCE_THRESHOLD
-from parameters import CV_PERCENTAGE_OCCURENCE_THRESHOLD
 import sys
 sys.path.insert(0, 'utils/')
 from standardized_data import *
@@ -16,7 +15,7 @@ from feature_selection_cv import select_final_features_from_cv
 
 def params():
 	begin = 10 ** (-3)
-	end = 50
+	end = 16
 	C_range = np.arange(begin, end, 0.1)
 	gamma_range = np.arange(begin, end, 0.1)
 	return C_range, gamma_range
