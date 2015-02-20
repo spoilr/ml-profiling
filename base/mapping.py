@@ -71,20 +71,23 @@ inv_mapping = {v: k for k, v in mapping.items()}
 
 binary_convertor = dict()
 binary_convertor['MultiEv'] = ['SingleEv', 'MultiEvNoTarCh', 'MultiEvTarCh']
-binary_convertor['LocNat'] = ['UnkLocNat', 'GovLocNat', 'BusLocNat', 'CitLocNat', 'RelLocNat', 'MilLocNat']
-binary_convertor['TarType'] = ['UnkTarTyp', 'PplTarTyp', 'PropTarTyp']
+binary_convertor['LocNat'] = ['GovLocNat', 'BusLocNat', 'CitLocNat', 'RelLocNat', 'MilLocNat', 'OtherLocNat']
+binary_convertor['TarType'] = ['PplTarTyp', 'PropTarTyp', 'BothTarTyp']
 binary_convertor['Fund'] = ['NoFin', 'IllFin', 'LegFin', 'BothFin']
 binary_convertor['Life'] = ['LifeNo', 'LifeWS', 'LifeFam', 'LifeFin', 'LifeUpEv', 'LifeWSFin', 'LifeWSFam', 'LifeWSUpEv', 'LifeWSFinUpEv']
 binary_convertor['RelCI'] = ['NoChRel', 'NoIntRel', 'YesChRel', 'YesIntRel']
 binary_convertor['IdeoCI'] = ['NoChIdeo', 'NoIntIdeo', 'YesChIdeo', 'YesIntIdeo']
-binary_convertor['Rel'] = ['UnkRel', 'Christian', 'Sikhs', 'Agnostic', 'Atheist']
-binary_convertor['Ideo'] = ['LeftW', 'RightW', 'SingleIs']
+binary_convertor['Rel'] = ['UnkRel', 'Muslim', 'Jewish', 'Atheist', 'OtherRel']
+binary_convertor['Ideo'] = ['RightW', 'SingleIs', 'Religious']
 binary_convertor['Crim'] = ['NoCrimConv', 'YesNoImp', 'YesImp']
 binary_convertor['Mil'] = ['NoMil', 'NoMilRej']
 binary_convertor['Occ'] = ['Unemp', 'Student', 'ServInd', 'Prof', 'Constr', 'ClSAd', 'Agric', 'Other']
-binary_convertor['Ed'] = ['OUnkEd', 'NoHS', 'SomeHS', 'GradHS', 'GED', 'NoDeg', 'Deg', 'NoCol', 'Bac', 'GradNoDeg', 'Msc']
-binary_convertor['ParS'] = ['OUnk', 'PNMarried', 'PMarried', 'PSeparated', 'PDiv', 'PWid']
-binary_convertor['RelS'] = ['Single', 'Partner', 'Married', 'Separated']
+binary_convertor['Ed'] = ['NoHS', 'SomeHS', 'GradHS', 'GED', 'NoDeg', 'Deg', 'NoCol', 'Bac', 'GradNoDeg', 'Msc', 'Phd']
+binary_convertor['ParS'] = ['PNMarried', 'PMarried', 'PSeparated', 'PDiv', 'PWid', 'POther']
+binary_convertor['RelS'] = ['Single', 'Partner', 'Married', 'Separated', 'Divorced']
+
+
+
 
 inv_binary_convertor = dict()
 
