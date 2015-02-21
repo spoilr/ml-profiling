@@ -1,80 +1,53 @@
-'''
-	SVM results with accuracy
-	For combined SVMs, need results for each of the methods used for combination: Majority, Weighted Majority, SVM,
-'''
-
 svm_all_vars = [
-SVC() # 0.303333
-SVC(class_weight='auto') # 0.325833
-
-SVC(class_weight='auto', C=0.90000999999999987, gamma=0.30001) # 0.303333
-SVC(C=0.90000999999999987, gamma=0.30001) # 0.303333
-SVC(class_weight='auto', gamma=0.30001) # 0.303333
-SVC(class_weight='auto', C=0.90000999999999987) # 0.325833
-SVC(C=0.90000999999999987) # 0.303333
-SVC(gamma=0.30001) # 0.303333
-
-SVC(class_weight='auto', C=0.9, gamma=0.303333) # 0.303333
-SVC(C=0.9, gamma=0.303333) # 0.303333
-SVC(class_weight='auto', gamma=0.303333) # 0.303333
-SVC(class_weight='auto', C=0.9) # 0.325833
-SVC(C=0.9) # 0.303333
-SVC(gamma=0.303333) # 0.303333
-
-SVC(class_weight='auto', C=0.801000, gamma=0.101000) # 0.303333
-SVC(C=0.801000, gamma=0.101000) # 0.303333
-SVC(class_weight='auto', gamma=0.101000) # 0.303333
-SVC(class_weight='auto', C=0.801000) # 0.349444
-SVC(gamma=0.101000) # 0.303333
-SVC(C=0.801000) # 0.303333
-]
-
-svm_selected_vars = [
-SVC() # 0.303333
-SVC(class_weight='auto') # 0.395000
-
-SVC(class_weight='auto', C=0.90000999999999987, gamma=12.600009999999999) # 0.313333
-SVC(C=0.90000999999999987, gamma=12.600009999999999) # 0.303333
-SVC(class_weight='auto', gamma=12.600009999999999) # 0.313333
-SVC(class_weight='auto', C=0.90000999999999987) # 0.405000
-SVC(C=0.90000999999999987) # 0.303333
-SVC(gamma=12.600009999999999) # 0.303333
-
-SVC(class_weight='auto', C=0.9, gamma=14.700010) # 0.303333
-SVC(C=0.9, gamma=14.700010) # 0.303333
-SVC(class_weight='auto', gamma=14.700010) # 0.303333
-SVC(class_weight='auto', C=0.9) # 0.405000
-SVC(C=0.9) # 0.303333
-SVC(gamma=14.700010) # 0.303333
-
-SVC(class_weight='auto', C=0.901000, gamma=14.401000) # 0.303333
-SVC(C=0.901000, gamma=14.401000) # 0.303333
-SVC(class_weight='auto', gamma=14.401000) # 0.303333
-SVC(class_weight='auto', C=0.901000) # 0.405000
-SVC(C=0.901000) # 0.303333
-SVC(gamma=14.401000) # 0.303333
+SVC(class_weight='auto', C=2.0009999999999999, gamma=0.001) # 0.290895 ; 0.447778
+SVC(class_weight='auto') 									# 0.244444 ; 0.314444
+SVC(class_weight='auto', C=2.0009999999999999)  			# 0.220000 ; 0.292222
 ]
 
 svm_for_features_fusion = [
-SVC(class_weight='auto', C=0.90000999999999987, gamma=0.30001) # 0.303333
+SVC(class_weight='auto', C=2.5009999999999999, gamma=0.001)   # 0.324127 ; 0.506111    0.441905 ; 0.355556    0.275144 ; 0.402222
+SVC(class_weight='auto') 									  # 0.295000 ; 0.328611    0.345000 ; 0.283611    0.275144 ; 0.402222
+SVC(class_weight='auto', C=2.5009999999999999)				  # 0.243333 ; 0.302500    0.303810 ; 0.271111    0.275144 ; 0.402222	
 ]
 
-svm_subset_features = [
-SVC()
-SVC(class_weight='auto')
-
-SVC(class_weight='auto', C=0.90000999999999987, gamma=0.30001)
-SVC(C=0.90000999999999987, gamma=0.30001)
-SVC(class_weight='auto', gamma=0.30001)
-SVC(class_weight='auto', C=0.90000999999999987)
-SVC(C=0.90000999999999987)
-SVC(C=0.90000999999999987)
-
-SVC(class_weight='auto', C=0.801000, gamma=0.201000)
-SVC(C=0.801000, gamma=0.201000)
-SVC(class_weight='auto', gamma=0.201000)
-SVC(class_weight='auto', C=0.801000)
-SVC(gamma=0.201000)
-SVC(C=0.801000)
+svm_selected_vars_90 = [
+SVC(class_weight='auto', C=0.60000999999999993, gamma=0.30001)   # 90    0.384615 ; 0.596667
+SVC(class_weight='auto')										 # 90    0.290476 ; 0.550833
+SVC(class_weight='auto', C=0.60000999999999993)					 # 90    0.263810 ; 0.560556
 ]
+
+svm_selected_vars_70 = [
+SVC(class_weight='auto', C=0.101, gamma=0.001) 					 # 70    0.464615 ; 0.696667
+SVC(class_weight='auto', gamma=0.001)							 # 70    0.384615 ; 0.596667
+SVC(class_weight='auto')										 # 70    0.306349 ; 0.540833
+SVC(class_weight='auto', C=0.801) 	 				 			 # 70    0.332619 ; 0.530833
+SVC(class_weight='auto', C=0.701)								 # 70    0.316688 ; 0.531944
+]
+
+svm_selected_vars_50 = [
+SVC(class_weight='auto', C=0.101, gamma=0.001) 					 # 50    0.474615 ; 0.671667
+SVC(class_weight='auto') 										 # 50    0.342561 ; 0.509444    
+SVC(class_weight='auto', gamma=0.001) 				 			 # 50    0.384615 ; 0.596667
+SVC(class_weight='auto', C=0.701)							 	 # 50    0.289784 ; 0.539444
+SVC(class_weight='auto', C=0.60000999999999993)				 	 # 50    0.300895 ; 0.536944
+SVC(class_weight='auto', C=0.801) 	 				 		 	 # 50    0.318355 ; 0.529444
+]
+
+svm_subset_features_90 = [
+
+]
+
+svm_subset_features_70 = [
+
+]
+
+svm_subset_features_50 = [
+
+]
+
+
+
+
+	
+
 	
