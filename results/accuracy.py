@@ -34,18 +34,16 @@ SVC(class_weight='auto', C=0.801) 	 				 		 	 # 50    0.318355 ; 0.529444
 ]
 
 svm_subset_features_90 = [
-
+SVC(class_weight='auto', C=2.101, gamma=0.001)  		 # 90   0.073333 ; 0.421944     0.033333 ; 0.366944     0.405937 ; 0.545000
 ]
 
 svm_subset_features_70 = [
-
+SVC(class_weight='auto', C=0.801, gamma=0.201)		 # 70   0.057143 ; 0.420556     0.097143 ; 0.365833     0.403477 ; 0.543611
 ]
 
 svm_subset_features_50 = [
-
+SVC(class_weight='auto', C=0.801, gamma=0.101)	 	 # 50   0.066667 ; 0.386944     0.066667 ; 0.323333     0.420800 ; 0.522778
 ]
-
-
 
 
 	

@@ -10,7 +10,7 @@ def svm_all_vars(dataset, targets):
 	return model
 
 def svm_selected_vars(dataset, targets):
-	model = SVC(class_weight='auto', C=0.60000999999999993, gamma=0.30001) # 90    0.384615 ; 0.596667
+	model = SVC(class_weight='auto', C=0.60000999999999993, gamma=0.30001) 	 # 90    0.384615 ; 0.596667
 	# model = SVC(class_weight='auto')										 # 90    0.290476 ; 0.550833
 	# model = SVC(class_weight='auto', C=0.60000999999999993)				 # 90    0.263810 ; 0.560556
 
@@ -34,9 +34,9 @@ def svm_selected_vars(dataset, targets):
 
 # used to train each theme
 def svm_for_features_fusion(dataset, targets):
-	model = SVC(class_weight='auto', C=2.5009999999999999, gamma=0.001)   # 0.324127 ; 0.506111    0.441905 ; 0.355556    0.275144 ; 0.402222
-	# model = SVC(class_weight='auto') 									  # 0.295000 ; 0.328611    0.345000 ; 0.283611    0.275144 ; 0.402222
-	# model = SVC(class_weight='auto', C=2.5009999999999999)			  # 0.243333 ; 0.302500    0.303810 ; 0.271111    0.275144 ; 0.402222	
+	# model = SVC(class_weight='auto', C=2.5009999999999999, gamma=0.001)   # 0.324127 ; 0.506111    0.441905 ; 0.355556    0.275144 ; 0.402222
+	# model = SVC(class_weight='auto') 									    # 0.295000 ; 0.328611    0.345000 ; 0.283611    0.275144 ; 0.402222
+	model = SVC(class_weight='auto', C=2.5009999999999999)			        # 0.243333 ; 0.302500    0.303810 ; 0.271111    0.275144 ; 0.402222	
 
 	model.fit(dataset, targets)
 	# print 'Model score: %f' % model.score(known_dataset, known_targets)
@@ -44,30 +44,11 @@ def svm_for_features_fusion(dataset, targets):
 
 # used for selecting the features
 def svm_subset_features(dataset, targets):
-	model = SVC(class_weight='auto', C=2.101, gamma=0.001)  		 # 90   0.388462 ; 0.586667    0.396154 ; 0.566667    0.405937 ; 0.545000
-	# model = SVC(class_weight='auto', C=2.101) 					 # 90
-	# model = SVC(class_weight='auto', gamma=0.001) 				 # 90
+	model = SVC(class_weight='auto', C=2.101, gamma=0.001)  		 # 90   0.073333 ; 0.421944     0.033333 ; 0.366944     0.405937 ; 0.545000
 
-	# model = SVC(class_weight='auto', C=0.801, gamma=0.201)	 	 # 70
-	# model = SVC(class_weight='auto')						 		 # 70
-	# model = SVC(class_weight='auto', C=0.801)	 			 		 # 70
-	# model = SVC(class_weight='auto', gamma=0.201)	 		 		 # 70
-	# model = SVC(class_weight='auto', C=0.801, gamma=0.101)	 	 # 70
-	# model = SVC(class_weight='auto', C=0.801)	 					 # 70
-	# model = SVC(class_weight='auto', gamma=0.101)	 				 # 70
-	# model = SVC(class_weight='auto', C=0.101, gamma=0.001)		 # 70
-	# model = SVC(class_weight='auto', C=0.101)				 		 # 70
-	# model = SVC(class_weight='auto', gamma=0.001)	 		 		 # 70
+	# model = SVC(class_weight='auto', C=0.801, gamma=0.201)		 # 70   0.057143 ; 0.420556     0.097143 ; 0.365833     0.403477 ; 0.543611
 
-	# model = SVC(class_weight='auto')						 		 # 50
-	# model = SVC(class_weight='auto', C=0.801)	 			 		 # 50
-	# model = SVC(class_weight='auto', gamma=0.201)	 		 		 # 50
-	# model = SVC(class_weight='auto', C=0.801, gamma=0.101)	 	 # 50
-	# model = SVC(class_weight='auto', C=0.801)	 			 		 # 50
-	# model = SVC(class_weight='auto', gamma=0.101)	 		 		 # 50
-	# model = SVC(class_weight='auto', C=0.101, gamma=0.001)	 	 # 50
-	# model = SVC(class_weight='auto', C=0.101)				 		 # 50
-	# model = SVC(class_weight='auto', gamma=0.001)	 		 		 # 50
+	# model = SVC(class_weight='auto', C=0.801, gamma=0.101)	 	 # 50   0.066667 ; 0.386944     0.066667 ; 0.323333     0.420800 ; 0.522778
 
 
 

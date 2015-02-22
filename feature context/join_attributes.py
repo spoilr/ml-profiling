@@ -41,8 +41,8 @@ def feature_context(dataset, targets, features):
 
 	#### for testing 	
 	# print 'FEATURE GAIN RATIO %s' % str(feature_gain_ratio)
-	print 'AVG GAIN RATIO %f' % avg_gain_ratios
-	print 'selected %d vs %d that are above avg' % (len([x for x in feature_gain_ratio if x >= avg_gain_ratios]), len(feature_gain_ratio))
+	# print 'AVG GAIN RATIO %f' % avg_gain_ratios
+	# print 'selected %d vs %d that are above avg' % (len([x for x in feature_gain_ratio if x >= avg_gain_ratios]), len(feature_gain_ratio))
 	
 	#return feats
 	return final_set_of_features(features, feature_gain_ratio, avg_gain_ratios, der_feats)

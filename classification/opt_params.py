@@ -1,3 +1,9 @@
+"""
+F1
+"""
+
+print(__doc__)
+
 import numpy as np
 import itertools
 from sklearn.metrics import f1_score
