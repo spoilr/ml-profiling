@@ -1,0 +1,364 @@
+
+##############################
+FEATURE RelatStat
+0 highval 13 vs civil 39
+1 highval 3 vs civil 3
+2 highval 9 vs civil 12
+3 highval 1 vs civil 4
+4 highval 2 vs civil 6
+
+##############################
+FEATURE Children
+0 highval 20 vs civil 51
+1 highval 8 vs civil 13
+
+##############################
+FEATURE ParRelatStat
+0 highval 12 vs civil 27
+1 highval 9 vs civil 18
+2 highval 0 vs civil 2
+3 highval 6 vs civil 11
+4 highval 0 vs civil 5
+5 highval 1 vs civil 1
+
+##############################
+FEATURE Education
+0 highval 7 vs civil 20
+1 highval 3 vs civil 5
+2 highval 0 vs civil 2
+3 highval 1 vs civil 1
+4 highval 2 vs civil 8
+5 highval 0 vs civil 2
+6 highval 3 vs civil 8
+7 highval 5 vs civil 7
+8 highval 2 vs civil 3
+9 highval 2 vs civil 6
+10 highval 3 vs civil 2
+
+##############################
+FEATURE OccCat
+0 highval 9 vs civil 31
+1 highval 2 vs civil 5
+2 highval 4 vs civil 14
+3 highval 7 vs civil 3
+4 highval 0 vs civil 2
+5 highval 1 vs civil 3
+6 highval 1 vs civil 0
+7 highval 4 vs civil 6
+
+##############################
+FEATURE MilExp
+1 highval 17 vs civil 52
+2 highval 11 vs civil 12
+
+##############################
+FEATURE CrimCon
+1 highval 15 vs civil 31
+2 highval 5 vs civil 17
+3 highval 8 vs civil 16
+
+##############################
+FEATURE Ideology
+2 highval 6 vs civil 28
+3 highval 8 vs civil 21
+4 highval 14 vs civil 15
+
+##############################
+FEATURE Religion
+0 highval 13 vs civil 43
+1 highval 14 vs civil 15
+5 highval 0 vs civil 1
+7 highval 1 vs civil 5
+
+##############################
+FEATURE WarningLettersStatements
+0 highval 5 vs civil 12
+1 highval 23 vs civil 52
+
+##############################
+FEATURE AwareGriev
+0 highval 8 vs civil 13
+1 highval 20 vs civil 51
+
+##############################
+FEATURE AwareIdeo
+0 highval 9 vs civil 17
+1 highval 19 vs civil 47
+
+##############################
+FEATURE IdeoChangeInt
+1 highval 9 vs civil 30
+2 highval 14 vs civil 22
+3 highval 2 vs civil 3
+4 highval 3 vs civil 9
+
+##############################
+FEATURE ReligChangeInt
+1 highval 18 vs civil 47
+2 highval 4 vs civil 8
+3 highval 1 vs civil 2
+4 highval 5 vs civil 7
+
+##############################
+FEATURE LifeAspectChange
+0 highval 8 vs civil 37
+1 highval 9 vs civil 18
+2 highval 2 vs civil 2
+3 highval 1 vs civil 1
+5 highval 1 vs civil 1
+6 highval 0 vs civil 4
+7 highval 7 vs civil 0
+8 highval 0 vs civil 1
+
+##############################
+FEATURE Legitimise
+0 highval 24 vs civil 54
+1 highval 4 vs civil 10
+
+##############################
+FEATURE Funds
+1 highval 24 vs civil 58
+2 highval 1 vs civil 0
+3 highval 2 vs civil 6
+4 highval 1 vs civil 0
+
+##############################
+FEATURE Denounce
+0 highval 26 vs civil 55
+1 highval 2 vs civil 9
+
+##############################
+FEATURE LiveAlone
+0 highval 20 vs civil 34
+1 highval 8 vs civil 30
+
+##############################
+FEATURE Adoption
+0 highval 18 vs civil 50
+1 highval 10 vs civil 14
+
+##############################
+FEATURE Training
+0 highval 21 vs civil 49
+1 highval 7 vs civil 15
+
+##############################
+FEATURE Virtual
+0 highval 13 vs civil 42
+1 highval 15 vs civil 22
+
+##############################
+FEATURE SubAbuse
+0 highval 22 vs civil 45
+1 highval 6 vs civil 19
+
+##############################
+FEATURE MentalIll
+0 highval 13 vs civil 39
+1 highval 15 vs civil 25
+
+##############################
+FEATURE Isolated
+0 highval 14 vs civil 26
+1 highval 14 vs civil 38
+
+##############################
+FEATURE DryRuns
+0 highval 17 vs civil 44
+1 highval 11 vs civil 20
+
+##############################
+FEATURE BombManuals
+0 highval 16 vs civil 40
+1 highval 12 vs civil 24
+
+##############################
+FEATURE WideGroup
+0 highval 22 vs civil 39
+1 highval 6 vs civil 25
+
+##############################
+FEATURE NewMedia
+0 highval 22 vs civil 45
+1 highval 6 vs civil 19
+
+##############################
+FEATURE Tipping
+0 highval 6 vs civil 23
+1 highval 22 vs civil 41
+
+##############################
+FEATURE Interrupt
+0 highval 23 vs civil 55
+1 highval 5 vs civil 9
+
+##############################
+FEATURE NotCareInjustice
+0 highval 16 vs civil 48
+1 highval 12 vs civil 16
+
+##############################
+FEATURE HarmVictimHelpless
+0 highval 23 vs civil 51
+1 highval 5 vs civil 13
+
+##############################
+FEATURE PersRelat
+0 highval 21 vs civil 44
+1 highval 7 vs civil 20
+
+##############################
+FEATURE Financial
+0 highval 20 vs civil 44
+1 highval 8 vs civil 20
+
+##############################
+FEATURE HurtOthers
+0 highval 12 vs civil 18
+1 highval 16 vs civil 46
+
+##############################
+FEATURE Stress
+0 highval 17 vs civil 40
+1 highval 11 vs civil 24
+
+##############################
+FEATURE SubstanceUse
+0 highval 26 vs civil 60
+1 highval 2 vs civil 4
+
+##############################
+FEATURE Violence
+0 highval 18 vs civil 32
+1 highval 10 vs civil 32
+
+##############################
+FEATURE TargetTyp
+0 highval 16 vs civil 38
+1 highval 3 vs civil 7
+2 highval 9 vs civil 19
+
+##############################
+FEATURE LocationNature
+0 highval 21 vs civil 6
+1 highval 1 vs civil 18
+2 highval 0 vs civil 28
+3 highval 1 vs civil 11
+4 highval 4 vs civil 0
+5 highval 1 vs civil 1
+
+##############################
+FEATURE LocPubPriv
+0 highval 18 vs civil 48
+1 highval 10 vs civil 16
+
+##############################
+FEATURE Stockpile
+0 highval 12 vs civil 29
+1 highval 16 vs civil 35
+
+##############################
+FEATURE Contradict
+0 highval 24 vs civil 57
+1 highval 4 vs civil 7
+
+##############################
+FEATURE Obsess
+0 highval 20 vs civil 45
+1 highval 8 vs civil 19
+
+##############################
+FEATURE Regret
+0 highval 24 vs civil 55
+1 highval 4 vs civil 9
+
+##############################
+FEATURE BeliefChange
+0 highval 26 vs civil 58
+1 highval 2 vs civil 6
+
+##############################
+FEATURE Insanity
+0 highval 19 vs civil 44
+1 highval 9 vs civil 20
+
+##############################
+FEATURE Implement
+0 highval 10 vs civil 20
+1 highval 18 vs civil 44
+
+##############################
+FEATURE MultiAttackMeth
+0 highval 25 vs civil 59
+1 highval 3 vs civil 5
+
+##############################
+FEATURE Discriminate
+0 highval 1 vs civil 11
+1 highval 27 vs civil 53
+
+##############################
+FEATURE LettersPost
+0 highval 19 vs civil 40
+1 highval 9 vs civil 24
+
+##############################
+FEATURE Getaway
+0 highval 26 vs civil 59
+1 highval 2 vs civil 5
+
+##############################
+FEATURE MultiEventTarget
+1 highval 25 vs civil 50
+2 highval 0 vs civil 6
+3 highval 3 vs civil 8
+
+##############################
+FEATURE Involve
+0 highval 20 vs civil 47
+1 highval 8 vs civil 17
+
+##############################
+FEATURE InteractNet
+0 highval 15 vs civil 27
+1 highval 13 vs civil 37
+
+##############################
+FEATURE OtherInv
+0 highval 21 vs civil 54
+1 highval 7 vs civil 10
+
+##############################
+FEATURE OtherKnowledge
+0 highval 14 vs civil 46
+1 highval 14 vs civil 18
+
+##############################
+FEATURE RecruitNetGroup
+0 highval 16 vs civil 30
+1 highval 12 vs civil 34
+
+##############################
+FEATURE Propaganda
+0 highval 11 vs civil 19
+1 highval 17 vs civil 45
+
+##############################
+FEATURE OwnProp
+0 highval 23 vs civil 47
+1 highval 5 vs civil 17
+
+##############################
+FEATURE FurtherAttacks
+0 highval 10 vs civil 31
+1 highval 18 vs civil 33
+
+##############################
+FEATURE ClaimResp
+0 highval 13 vs civil 32
+1 highval 15 vs civil 32
+
+##############################
+FEATURE PossessStories
+0 highval 27 vs civil 60
+1 highval 1 vs civil 4

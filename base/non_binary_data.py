@@ -1,3 +1,7 @@
+'''
+This doesn't remove UNKNOWNS
+'''
+
 non_binary_vars = ['RelatStat', 'ParRelatStat', 'Education', 'OccCat', 'MilExp', 'CrimCon', 'Ideology', 'Religion', 
 					'IdeoChangeInt', 'ReligChangeInt', 'LifeAspectChange', 'Funds', 'TargetTyp', 'LocationNature', 'MultiEventTarget']
 
