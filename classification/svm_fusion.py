@@ -98,7 +98,7 @@ def svm_fusion(known_dataset, known_targets, train_index, test_index, ids):
 			svm_X_train, svm_Y_train = X_train[inner_train_index], y_train[inner_train_index]
 			fusion_X_train, fusion_Y_train = X_train[inner_test_index], y_train[inner_test_index]
 
-			model = inner_svm(svm_X_train, svm_Y_train)
+			model = svm_for_features_fusion(svm_X_train, svm_Y_train)
 			training_predictions.append(model.predict(fusion_X_train))
 			predictions.append(model.predict(final_X_test))
 			misclassified_ids += add_misclassified_ids(model, test_index, known_dataset[i], known_targets, ids)

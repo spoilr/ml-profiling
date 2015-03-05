@@ -8,12 +8,17 @@ from split_dataset import *
 import itertools
 from feature_entropy import *
 from project_data import *
+sys.path.insert(0, 'classification/')
 from parameters import TOP_FEATURES_PERCENTAGE_THRESHOLD
 
 import math as math
 import operator
 import numpy as np
+from collections import Counter
 import matplotlib.pyplot as plt
+
+NR_THEMES = 3
+themes = ['net', 'ill', 'ideo']
 
 def feature_context(dataset, targets, features):
 	sys_entropy = entropy(targets)
@@ -45,15 +50,41 @@ def feature_context(dataset, targets, features):
 	# print 'selected %d vs %d that are above avg' % (len([x for x in feature_gain_ratio if x >= avg_gain_ratios]), len(feature_gain_ratio))
 	
 	#return feats
-	return final_set_of_features(features, feature_gain_ratio, avg_gain_ratios, der_feats)
+
+	# print occurences before filtering out features based on threshold
+	# counter = Counter(elem[0] for elem in der_feats)
+	# for i in range(len(features)):
+	# 	print '%s - %d' % (features[i], counter[i])
+
+	final_features = final_set_of_features(features, feature_gain_ratio, avg_gain_ratios, der_feats)
+
+	# intermediate_status_counter(final_features, der_feats, features)
+
+	return final_features
+
+def intermediate_status_counter(final_features, der_feats, features):
+	intermediate_der_feats = dict()
+	for x in features:
+		intermediate_der_feats[x] = []
+	for (a,b) in der_feats:
+		if features[a] in final_features and features[b] in final_features:
+			intermediate_der_feats[features[a]].append(features[b])
+			intermediate_der_feats[features[b]].append(features[a])
+	
+	for x in intermediate_der_feats.keys():
+		if len(intermediate_der_feats[x]) != 0:
+			print '%s - %s - %d\n' % (x, intermediate_der_feats[x], len(intermediate_der_feats[x]))
+
 
 def final_set_of_features(features, feature_gain_ratio, avg_gain_ratios, der_feats):
-	selected_features_from_whole_set = [features[i] for i in range(len(feature_gain_ratio)) if feature_gain_ratio[i] >= avg_gain_ratios]
+	# selected_features_from_whole_set = [features[i] for i in range(len(feature_gain_ratio)) if feature_gain_ratio[i] >= avg_gain_ratios]
 	selected_features_from_derived = []
 
-	sorted_der_feats = sorted(der_feats.items(), key=operator.itemgetter(1))
-	nr_times = int(math.floor(TOP_FEATURES_PERCENTAGE_THRESHOLD * len(der_feats)))
+	sorted_der_feats = sorted(der_feats.items(), key=operator.itemgetter(1), reverse=True)
 	
+	# if len(der_feats) instead of len(features) then the eliminated set of features is very small ([])
+	nr_times = int(math.floor(TOP_FEATURES_PERCENTAGE_THRESHOLD * len(features)))
+
 	for i in range(nr_times):
 		selected_features_from_derived.append(features[sorted_der_feats[i][0][0]])
 		selected_features_from_derived.append(features[sorted_der_feats[i][0][1]])
@@ -121,14 +152,38 @@ def test_function():
 	print "############ CONTEXT ############"
 	feats = feature_context(dataset, targets, features)
 
+def report_status_selection(selection):
+	[dataset, features] = parse_theme(selection)
+	[known_dataset, known_targets, unk] = split_dataset(dataset, targets)
+
+	feats = feature_context(known_dataset, known_targets, features)
+	print selection
+	print feats
+	print 'Nr selected features %d' % len(feats)
+	print 'Nr total features %d' % len(features)
+	print 'Features eliminated %s' % set(features).difference(feats)
+	return feats
+
+def common_features(net, ideo, ill):
+	all_selected_features = net.union(ideo).union(ill)
+	common_selected_features = []
+	for x in all_selected_features:
+		if x in net and x in ideo and x in ill:
+			common_selected_features.append(x)
+	return common_selected_features		
+
 if __name__ == "__main__":
 	spreadsheet = Spreadsheet(project_data_file)
 	data = Data(spreadsheet)
 	targets = data.targets
 
-	[dataset, features] = parse_theme(sys.argv[1])
-	[known_dataset, known_targets, unk] = split_dataset(dataset, targets)
+	net = report_status_selection('net')
+	ideo = report_status_selection('ideo')
+	ill = report_status_selection('ill')
+	al = report_status_selection('all')
 
-	feats = feature_context(known_dataset, known_targets, features)
+	common_selected_features = common_features(net, ideo, ill)
+
+	print 'Common selected features %d %s' % (len(common_selected_features), common_selected_features)
 
 	#test_function()
