@@ -2,30 +2,30 @@
 Features after svm_feature_selection function
 '''
 
-####### net FEATURES ####### 29 
-net_90 = set(['InteractNet', 'FurtherAttacks', 'LAKilled', 'OtherInv', 'MultiAttackMeth', 'RelatStat', 'DryRuns', 'ClaimResp', 'Interrupt', 'PersRelat', 'WarningLettersStatements', 'LettersPost', 'Violence', 'BombManuals', 'ParRelatStat', 'Getaway', 'Stockpile', 'RecruitNetGroup', 'Implement', 'Financial', 'Regret', 'LiveAlone', 'CrimCon', 'NotCareInjustice', 'Involve', 'NewMedia', 'TargetTyp', 'Education', 'Children'])
-####### ill FEATURES ####### 34 
-ill_90 = set(['FurtherAttacks', 'Stress', 'LAKilled', 'MultiAttackMeth', 'Obsess', 'RelatStat', 'NewMedia', 'Insanity', 'ClaimResp', 'HurtOthers', 'WarningLettersStatements', 'MentalIll', 'LettersPost', 'Violence', 'BombManuals', 'ParRelatStat', 'Getaway', 'Isolated', 'Interrupt', 'Stockpile', 'Implement', 'Tipping', 'SubstanceUse', 'Financial', 'Regret', 'LiveAlone', 'CrimCon', 'SubAbuse', 'DryRuns', 'TargetTyp', 'AwareGriev', 'HarmVictimHelpless', 'Education', 'Children'])
-####### ideo FEATURES ####### 39 
-ideo_90 = set(['FurtherAttacks', 'LettersPost', 'Virtual', 'Denounce', 'LocPubPriv', 'ReligChangeInt', 'LAKilled', 'AwareIdeo', 'PossessStories', 'MultiAttackMeth', 'RelatStat', 'OwnProp', 'NewMedia', 'IdeoChangeInt', 'ClaimResp', 'Interrupt', 'WarningLettersStatements', 'Training', 'ParRelatStat', 'BombManuals', 'Contradict', 'Violence', 'Legitimise', 'Getaway', 'Stockpile', 'RecruitNetGroup', 'Implement', 'Propaganda', 'Financial', 'Regret', 'LiveAlone', 'CrimCon', 'NotCareInjustice', 'DryRuns', 'TargetTyp', 'Adoption', 'Education', 'Children', 'BeliefChange'])
+####### net FEATURES ####### 13 
+net_90 = set(['OtherKnowledge', 'Discriminate', 'LiveAlone', 'MultiEventTarget', 'OccCat', 'ParRelatStat', 'NotCareInjustice', 'ClaimResp', 'MultiAttackMeth', 'Funds', 'Financial', 'LifeAspectChange', 'Education'])
+####### ill FEATURES ####### 15
+ill_90 = set(['OtherKnowledge', 'Discriminate', 'LiveAlone', 'MultiEventTarget', 'RelatStat', 'ParRelatStat', 'NotCareInjustice', 'ClaimResp', 'MultiAttackMeth', 'OccCat', 'Financial', 'LifeAspectChange', 'Education', 'HarmVictimHelpless', 'SubstanceUse'])
+####### ideo FEATURES ####### 13
+ideo_90 = set(['MilExp', 'WideGroup', 'Discriminate', 'MultiEventTarget', 'OccCat', 'ParRelatStat', 'OtherKnowledge', 'IdeoChangeInt', 'Ideology', 'Religion', 'MultiAttackMeth', 'LifeAspectChange', 'Education'])
 
 
 
-####### net FEATURES ####### 30 
-net_70 = set(['InteractNet', 'FurtherAttacks', 'Virtual', 'LAKilled', 'OtherInv', 'MultiAttackMeth', 'RelatStat', 'DryRuns', 'ClaimResp', 'Interrupt', 'PersRelat', 'WarningLettersStatements', 'LettersPost', 'Violence', 'BombManuals', 'ParRelatStat', 'Getaway', 'Stockpile', 'RecruitNetGroup', 'Implement', 'Financial', 'Regret', 'LiveAlone', 'CrimCon', 'NotCareInjustice', 'Involve', 'NewMedia', 'TargetTyp', 'Education', 'Children'])
-####### ill FEATURES ####### 36 
-ill_70 = set(['FurtherAttacks', 'Stress', 'Virtual', 'LAKilled', 'MultiAttackMeth', 'Obsess', 'RelatStat', 'NewMedia', 'Insanity', 'ClaimResp', 'HurtOthers', 'WarningLettersStatements', 'MentalIll', 'LettersPost', 'Violence', 'BombManuals', 'ParRelatStat', 'Getaway', 'Isolated', 'Interrupt', 'Stockpile', 'Implement', 'Tipping', 'SubstanceUse', 'Financial', 'Regret', 'LiveAlone', 'CrimCon', 'NotCareInjustice', 'SubAbuse', 'DryRuns', 'TargetTyp', 'AwareGriev', 'HarmVictimHelpless', 'Education', 'Children'])
-####### ideo FEATURES ####### 40 
-ideo_70 = set(['FurtherAttacks', 'LettersPost', 'Virtual', 'Denounce', 'LocPubPriv', 'ReligChangeInt', 'LAKilled', 'AwareIdeo', 'PossessStories', 'MultiAttackMeth', 'RelatStat', 'OwnProp', 'NewMedia', 'IdeoChangeInt', 'ClaimResp', 'Interrupt', 'WarningLettersStatements', 'Training', 'ParRelatStat', 'BombManuals', 'Contradict', 'Violence', 'Legitimise', 'Getaway', 'Stockpile', 'RecruitNetGroup', 'Implement', 'Propaganda', 'Financial', 'Regret', 'LiveAlone', 'CrimCon', 'WideGroup', 'NotCareInjustice', 'DryRuns', 'TargetTyp', 'Adoption', 'Education', 'Children', 'BeliefChange'])
+####### net FEATURES ####### 16
+net_70 = set(['OtherKnowledge', 'Discriminate', 'LiveAlone', 'MultiEventTarget', 'RelatStat', 'ParRelatStat', 'NotCareInjustice', 'Getaway', 'Funds', 'DryRuns', 'ClaimResp', 'MultiAttackMeth', 'OccCat', 'Financial', 'LifeAspectChange', 'Education'])
+####### ill FEATURES ####### 16
+ill_70 = set(['OtherKnowledge', 'Discriminate', 'LiveAlone', 'MultiEventTarget', 'RelatStat', 'ParRelatStat', 'NotCareInjustice', 'Getaway', 'ClaimResp', 'MultiAttackMeth', 'OccCat', 'Financial', 'LifeAspectChange', 'Education', 'HarmVictimHelpless', 'SubstanceUse'])
+####### ideo FEATURES ####### 19
+ideo_70 = set(['MilExp', 'WideGroup', 'Discriminate', 'LiveAlone', 'MultiEventTarget', 'RelatStat', 'ParRelatStat', 'OtherKnowledge', 'Getaway', 'IdeoChangeInt', 'Ideology', 'Religion', 'Legitimise', 'MultiAttackMeth', 'OccCat', 'Financial', 'LifeAspectChange', 'Education', 'NotCareInjustice'])
 
 
 
-####### net FEATURES ####### 31 
-net_50 = set(['InteractNet', 'OtherKnowledge', 'FurtherAttacks', 'Virtual', 'LAKilled', 'OtherInv', 'MultiAttackMeth', 'RelatStat', 'DryRuns', 'ClaimResp', 'Interrupt', 'PersRelat', 'WarningLettersStatements', 'LettersPost', 'Violence', 'BombManuals', 'ParRelatStat', 'Getaway', 'Stockpile', 'RecruitNetGroup', 'Implement', 'Financial', 'Regret', 'LiveAlone', 'CrimCon', 'NotCareInjustice', 'Involve', 'NewMedia', 'TargetTyp', 'Education', 'Children'])
-####### ill FEATURES ####### 36 
-ill_50 = set(['FurtherAttacks', 'Stress', 'Virtual', 'LAKilled', 'MultiAttackMeth', 'Obsess', 'RelatStat', 'NewMedia', 'Insanity', 'ClaimResp', 'HurtOthers', 'WarningLettersStatements', 'MentalIll', 'LettersPost', 'Violence', 'BombManuals', 'ParRelatStat', 'Getaway', 'Isolated', 'Interrupt', 'Stockpile', 'Implement', 'Tipping', 'SubstanceUse', 'Financial', 'Regret', 'LiveAlone', 'CrimCon', 'NotCareInjustice', 'SubAbuse', 'DryRuns', 'TargetTyp', 'AwareGriev', 'HarmVictimHelpless', 'Education', 'Children'])
-####### ideo FEATURES ####### 43 
-ideo_50 = set(['MilExp', 'NotCareInjustice', 'FurtherAttacks', 'LettersPost', 'Virtual', 'Denounce', 'LocPubPriv', 'ReligChangeInt', 'LAKilled', 'AwareIdeo', 'PossessStories', 'MultiAttackMeth', 'RelatStat', 'OwnProp', 'DryRuns', 'IdeoChangeInt', 'ClaimResp', 'Interrupt', 'WarningLettersStatements', 'Training', 'ParRelatStat', 'BombManuals', 'Contradict', 'Violence', 'Legitimise', 'Getaway', 'Ideology', 'Stockpile', 'RecruitNetGroup', 'Implement', 'Propaganda', 'Financial', 'Regret', 'LiveAlone', 'CrimCon', 'WideGroup', 'OtherKnowledge', 'NewMedia', 'TargetTyp', 'Adoption', 'Education', 'Children', 'BeliefChange'])
+####### net FEATURES ####### 21
+net_50 = set(['OtherKnowledge', 'Funds', 'Discriminate', 'Regret', 'MultiEventTarget', 'RelatStat', 'ParRelatStat', 'NotCareInjustice', 'Getaway', 'Virtual', 'Involve', 'ClaimResp', 'NewMedia', 'OtherInv', 'DryRuns', 'MultiAttackMeth', 'OccCat', 'Financial', 'LifeAspectChange', 'Education', 'LiveAlone'])
+####### ill FEATURES ####### 22
+ill_50 = set(['Discriminate', 'NotCareInjustice', 'Virtual', 'MultiAttackMeth', 'MultiEventTarget', 'RelatStat', 'NewMedia', 'ClaimResp', 'LifeAspectChange', 'Stress', 'OccCat', 'ParRelatStat', 'Getaway', 'SubstanceUse', 'Financial', 'Regret', 'LiveAlone', 'OtherKnowledge', 'DryRuns', 'AwareGriev', 'HarmVictimHelpless', 'Education'])
+####### ideo FEATURES ####### 27
+ideo_50 = set(['MilExp', 'Discriminate', 'NotCareInjustice', 'Virtual', 'Religion', 'MultiAttackMeth', 'MultiEventTarget', 'RelatStat', 'OwnProp', 'Denounce', 'IdeoChangeInt', 'ClaimResp', 'LifeAspectChange', 'OccCat', 'ParRelatStat', 'Legitimise', 'Getaway', 'Ideology', 'Stockpile', 'Financial', 'LiveAlone', 'WideGroup', 'OtherKnowledge', 'ReligChangeInt', 'DryRuns', 'Education', 'Children'])
 
-####### FEATURES ####### 51
- single_features = set(['InteractNet', 'FurtherAttacks', 'Isolated', 'ReligChangeInt', 'LAKilled', 'OtherInv', 'AwareIdeo', 'PossessStories', 'MultiAttackMeth', 'Insanity', 'Obsess', 'SubAbuse', 'LiveAlone', 'RelatStat', 'OwnProp', 'DryRuns', 'IdeoChangeInt', 'ClaimResp', 'HurtOthers', 'PersRelat', 'WarningLettersStatements', 'MentalIll', 'Stress', 'ParRelatStat', 'Training', 'BombManuals', 'Contradict', 'Violence', 'Legitimise', 'Getaway', 'Interrupt', 'Stockpile', 'RecruitNetGroup', 'LettersPost', 'Implement', 'Tipping', 'Propaganda', 'SubstanceUse', 'Financial', 'Regret', 'LocPubPriv', 'CrimCon', 'Involve', 'NewMedia', 'TargetTyp', 'AwareGriev', 'Adoption', 'HarmVictimHelpless', 'Education', 'Children', 'BeliefChange'])
+####### FEATURES ####### 20
+single_features = set(['MilExp', 'Contradict', 'WideGroup', 'Discriminate', 'MultiEventTarget', 'OtherKnowledge', 'ParRelatStat', 'NotCareInjustice', 'Funds', 'IdeoChangeInt', 'Ideology', 'Religion', 'MultiAttackMeth', 'OccCat', 'Financial', 'HarmVictimHelpless', 'Education', 'Tipping', 'LifeAspectChange', 'SubstanceUse'])
