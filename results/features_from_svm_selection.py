@@ -27,5 +27,13 @@ ill_50 = set(['Discriminate', 'NotCareInjustice', 'Virtual', 'MultiAttackMeth', 
 ####### ideo FEATURES ####### 27
 ideo_50 = set(['MilExp', 'Discriminate', 'NotCareInjustice', 'Virtual', 'Religion', 'MultiAttackMeth', 'MultiEventTarget', 'RelatStat', 'OwnProp', 'Denounce', 'IdeoChangeInt', 'ClaimResp', 'LifeAspectChange', 'OccCat', 'ParRelatStat', 'Legitimise', 'Getaway', 'Ideology', 'Stockpile', 'Financial', 'LiveAlone', 'WideGroup', 'OtherKnowledge', 'ReligChangeInt', 'DryRuns', 'Education', 'Children'])
 
+
+
 ####### FEATURES ####### 20
-single_features = set(['MilExp', 'Contradict', 'WideGroup', 'Discriminate', 'MultiEventTarget', 'OtherKnowledge', 'ParRelatStat', 'NotCareInjustice', 'Funds', 'IdeoChangeInt', 'Ideology', 'Religion', 'MultiAttackMeth', 'OccCat', 'Financial', 'HarmVictimHelpless', 'Education', 'Tipping', 'LifeAspectChange', 'SubstanceUse'])
+single_features_90 = set(['MilExp', 'Contradict', 'WideGroup', 'Discriminate', 'MultiEventTarget', 'OtherKnowledge', 'ParRelatStat', 'NotCareInjustice', 'Funds', 'IdeoChangeInt', 'Ideology', 'Religion', 'MultiAttackMeth', 'OccCat', 'Financial', 'HarmVictimHelpless', 'Education', 'Tipping', 'LifeAspectChange', 'SubstanceUse'])
+
+####### FEATURES ####### 26
+single_features_70 = set(['MilExp', 'Discriminate', 'OtherKnowledge', 'Religion', 'MultiAttackMeth', 'MultiEventTarget', 'RelatStat', 'IdeoChangeInt', 'ClaimResp', 'OccCat', 'LifeAspectChange', 'Contradict', 'ParRelatStat', 'Legitimise', 'Getaway', 'Ideology', 'Stockpile', 'Tipping', 'SubstanceUse', 'Financial', 'LiveAlone', 'WideGroup', 'NotCareInjustice', 'Funds', 'HarmVictimHelpless', 'Education'])
+
+####### FEATURES ####### 32
+single_features_50 = set(['MilExp', 'Discriminate', 'NotCareInjustice', 'Virtual', 'Religion', 'MultiAttackMeth', 'MultiEventTarget', 'RelatStat', 'OwnProp', 'Denounce', 'IdeoChangeInt', 'ClaimResp', 'Contradict', 'LifeAspectChange', 'OccCat', 'ParRelatStat', 'Legitimise', 'Getaway', 'ReligChangeInt', 'Ideology', 'Stockpile', 'Tipping', 'SubstanceUse', 'Financial', 'LiveAlone', 'WideGroup', 'OtherKnowledge', 'DryRuns', 'Funds', 'HarmVictimHelpless', 'Education', 'Children'])
