@@ -9,14 +9,23 @@ print(__doc__)
 import sys
 sys.path.insert(0, 'utils/')
 from load_data import *
+from project_data import project_data_file
 from parse_theme import *
+sys.path.insert(0, 'classification/')
+from parameters import TOP_FEATURES_PERCENTAGE_THRESHOLD
 from standardized_data import *
 from misclassified_ids import *
 from binary_classification_measures import *
 from selected_features import *
-from ssa_features import proxy_all
-from parameters import CV_PERCENTAGE_OCCURENCE_THRESHOLD
-from svms import svm_selected_vars
+from ssa_features import civil_all
+from ssa_features import civil_all_x
+from ssa_features import civil_all_y
+from ssa_features import highval_all
+from ssa_features import highval_all_x
+from ssa_features import highval_all_y
+from closest_distance import *
+from svms import svm_all_vars
+import math as math
 
 from sklearn.cross_validation import StratifiedKFold
 from sklearn.metrics import f1_score
@@ -41,7 +50,7 @@ def cross_validation(known_dataset, known_targets, ids):
 	print 'Final error %f' % (float(error_rates) / kf.n_folds)
 
 def one_fold_measures(X_train, X_test, y_train, y_test):
-	model = svm_selected_vars(X_train, y_train)
+	model = svm_all_vars(X_train, y_train)
 	print 'Model score %f' % model.score(X_test, y_test)
 	y_pred = model.predict(X_test)
 	error_rate = (float(sum((y_pred - y_test)**2)) / len(y_test))
@@ -50,11 +59,18 @@ def one_fold_measures(X_train, X_test, y_train, y_test):
 
 	return error_rate, f1, model
 
-def feature_selection_before(features, targets, dataset, percentage, ids):
+def feature_selection_before(features, targets, dataset, percentage, ids, target):
 	[known_dataset, known_targets, unk] = split_dataset(dataset, targets)		
 	known_targets = np.asarray(known_targets)
 
-	sf = SelectedFeatures(known_dataset, known_targets, proxy_all, features)	
+	nr_times = int(math.floor(TOP_FEATURES_PERCENTAGE_THRESHOLD * len(features)))
+
+	if target == 'civil':
+		ssa_features = get_best(civil_all, civil_all_x, civil_all_y, nr_times)
+	else:
+		ssa_features = get_best(highval_all, highval_all_x, highval_all_y, nr_times)
+
+	sf = SelectedFeatures(known_dataset, known_targets, ssa_features, features)	
 	ssa_dataset = sf.extract_data_from_selected_features()
 
 	std = StandardizedData(known_targets)
@@ -62,7 +78,7 @@ def feature_selection_before(features, targets, dataset, percentage, ids):
 
 	cross_validation(np.array(ssa_dataset), known_targets, ids)
 
-	print '####### FEATURES ####### %d \n %s' % (len(proxy_all), str(proxy_all))
+	print '####### FEATURES ####### %d \n %s' % (len(ssa_features), str(ssa_features))
 
 if __name__ == "__main__":
 	spreadsheet = Spreadsheet(project_data_file)
@@ -72,8 +88,13 @@ if __name__ == "__main__":
 
 	try:
 		[dataset, features] = parse_theme(sys.argv[1])
-		feature_selection_before(features, targets, dataset, CV_PERCENTAGE_OCCURENCE_THRESHOLD, ids)
-		
+
+		print '########## CIVIL #####'
+		feature_selection_before(features, targets, dataset, 1, ids, 'civil') # 1 so it doesn't do any feature selection
+
+		print '########## HIGHVAL #####'
+		feature_selection_before(features, targets, dataset, 1, ids, 'highval') # 1 so it doesn't do any feature selection
+
 	except IndexError:
 		print "Error!! Pass 'all' as argument"
 
