@@ -40,7 +40,7 @@ def feature_context(dataset, targets, features):
 			# print "der %f : %s with %f - %s with %f provides context" % (selected_derived_feature_gain, features[index1], attr1_gain, features[index2], attr2_gain)
 			feats.add(features[index1])
 			feats.add(features[index2])
-			der_feats[(index1, index2)] = selected_derived_feature_gain
+			der_feats[(index1, index2)] = max(selected_derived_feature_gain - attr1_gain, selected_derived_feature_gain - attr2_gain)
 		# else:
 		# 	print "%s - %s does NOT provide context" % (features[index1], features[index2])	
 
@@ -82,12 +82,13 @@ def final_set_of_features(features, feature_gain_ratio, avg_gain_ratios, der_fea
 
 	sorted_der_feats = sorted(der_feats.items(), key=operator.itemgetter(1), reverse=True)
 	
-	# if len(der_feats) instead of len(features) then the eliminated set of features is very small ([])
-	nr_times = int(math.floor(TOP_FEATURES_PERCENTAGE_THRESHOLD * len(features)))
+	avg_increase_difference = sum([x[1] for x in sorted_der_feats])
+	avg_increase_difference /= len(sorted_der_feats)
 
-	for i in range(nr_times):
-		selected_features_from_derived.append(features[sorted_der_feats[i][0][0]])
-		selected_features_from_derived.append(features[sorted_der_feats[i][0][1]])
+	for i in range(len(sorted_der_feats)):
+		if sorted_der_feats[i][1] - feature_gain_ratio[sorted_der_feats[i][0][0]] >= avg_increase_difference and sorted_der_feats[i][1] - feature_gain_ratio[sorted_der_feats[i][0][1]] >= avg_increase_difference:
+			selected_features_from_derived.append(features[sorted_der_feats[i][0][0]])
+			selected_features_from_derived.append(features[sorted_der_feats[i][0][1]])	
 
 	#return set(selected_features_from_whole_set).union(selected_features_from_derived)	
 	return set(selected_features_from_derived)
