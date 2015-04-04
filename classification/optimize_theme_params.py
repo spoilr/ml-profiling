@@ -234,7 +234,7 @@ class BestSVM:
 		return model
 
 	def to_string(self):
-		return 'c_subset %f, g_subset %f ||| c_fusion %f, g_fusion %f' % (c_subset, g_subset, c_fusion, g_fusion)	
+		return 'c_subset %f, g_subset %f ||| c_fusion %f, g_fusion %f' % (self.c_subset, self.g_subset, self.c_fusion, self.g_fusion)	
 
 
 def params():
@@ -273,19 +273,19 @@ if __name__ == "__main__":
 		f1_wmaj, error_wmaj = cross_validation(dataset, targets, 'wmaj', ids, current_svm)	
 		f1_svm, error_svm = cross_validation(dataset, targets, 'svm', ids, current_svm)	
 		
-		# with open("result.txt", "a") as myfile:	
-		# 	myfile.write('\n##############################\n')
-		# with open("result.txt", "a") as myfile:
-		# 	myfile.write(current_svm.to_string())
-		# with open("result.txt", "a") as myfile:	
-		# 	myfile.write('\nerror_maj %f' % error_maj)
-		# with open("result.txt", "a") as myfile:	
-		# 	myfile.write('\nerror_wmaj %f' % error_wmaj)
-		# with open("result.txt", "a") as myfile:	
-		# 	myfile.write('\nerror_svm %f' % error_svm)
+		if error_maj <= 0.3 or error_maj <= 0.3 or error_maj <= 0.3:
+			with open("result.txt", "a") as myfile:	
+				myfile.write('\n##############################\n')
+			with open("result.txt", "a") as myfile:
+				myfile.write(current_svm.to_string())
+			with open("result.txt", "a") as myfile:	
+				myfile.write('\nerror_maj %f' % error_maj)
+			with open("result.txt", "a") as myfile:	
+				myfile.write('\nerror_wmaj %f' % error_wmaj)
+			with open("result.txt", "a") as myfile:	
+				myfile.write('\nerror_svm %f' % error_svm)
     	
-
-		
+		print current_svm.to_string()
     	
     	
 

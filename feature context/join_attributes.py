@@ -19,6 +19,10 @@ import matplotlib.pyplot as plt
 
 NR_THEMES = 3
 themes = ['net', 'ill', 'ideo']
+compulsory_net = ['InteractNet']
+compulsory_ideo = ['Ideology', 'Religion']
+compulsory_ill = ['MentalIll']
+compulsory_all = ['InteractNet', 'Ideology', 'Religion', 'MentalIll']
 
 def feature_context(dataset, targets, features):
 	sys_entropy = entropy(targets)
@@ -58,9 +62,20 @@ def feature_context(dataset, targets, features):
 
 	final_features = final_set_of_features(features, feature_gain_ratio, avg_gain_ratios, der_feats)
 
+	if set(compulsory_all).issubset(features):
+		final_features = final_features + compulsory_all
+	elif set(compulsory_ill).issubset(features):
+		final_features = final_features + compulsory_ill
+	elif set(compulsory_ideo).issubset(features):
+		final_features = final_features + compulsory_ideo
+	elif set(compulsory_net).issubset(features):
+		final_features = final_features + compulsory_net
+	else:
+		print 'ERROR - Not subset'		
+
 	# intermediate_status_counter(final_features, der_feats, features)
 
-	return final_features
+	return set(final_features)
 
 def intermediate_status_counter(final_features, der_feats, features):
 	intermediate_der_feats = dict()
@@ -86,12 +101,12 @@ def final_set_of_features(features, feature_gain_ratio, avg_gain_ratios, der_fea
 	avg_increase_difference /= len(sorted_der_feats)
 
 	for i in range(len(sorted_der_feats)):
-		if sorted_der_feats[i][1] - feature_gain_ratio[sorted_der_feats[i][0][0]] >= avg_increase_difference and sorted_der_feats[i][1] - feature_gain_ratio[sorted_der_feats[i][0][1]] >= avg_increase_difference:
+		if sorted_der_feats[i][1] - feature_gain_ratio[sorted_der_feats[i][0][0]] > avg_increase_difference and sorted_der_feats[i][1] - feature_gain_ratio[sorted_der_feats[i][0][1]] > avg_increase_difference:
 			selected_features_from_derived.append(features[sorted_der_feats[i][0][0]])
 			selected_features_from_derived.append(features[sorted_der_feats[i][0][1]])	
 
 	#return set(selected_features_from_whole_set).union(selected_features_from_derived)	
-	return set(selected_features_from_derived)
+	return selected_features_from_derived
 
 def get_feature_gain_ratio(dataset, targets, features, sys_entropy):
 	# check that dataset has the same nr of features as features

@@ -1,6 +1,5 @@
 import sys
 sys.path.insert(0, 'classification/')
-from parameters import TOP_FEATURES_PERCENTAGE_THRESHOLD
 from ssa_features import *
 from operator import itemgetter
 from mapping import *
