@@ -1,18 +1,18 @@
 from sklearn.svm import SVC
 
 def svm_all_vars(dataset, targets):
-	model = SVC(class_weight='auto', C=2.0009999999999999)  		      # 0.220000 ; 0.292222
+	
+	model = SVC(class_weight='auto', C=2.0009999999999999)	# 0.220000 ; 0.292222
 
 	model.fit(dataset, targets)
 	# print 'Model score: %f' % model.score(known_dataset, known_targets)
 	return model
 
 def svm_selected_vars(dataset, targets):
-	model = SVC(class_weight='auto', C=0.60000999999999993, gamma=0.30001) 	 # 90    0.326667 ; 0.328056
 
-	# model = SVC(class_weight='auto', C=0.801) 	 				 		 # 70    0.351429 ; 0.383056
-
-	# model = SVC(class_weight='auto', C=0.701)								 # 50    0.327619 ; 0.383056
+	model = SVC(class_weight='auto', C=0.700000, gamma=0.300000)	#90 	0.050000 ; 0.314444
+	# model = SVC(class_weight='auto', C=1.900000, gamma=0.100000)	#70 	0.040000 ; 0.324444
+	# model = SVC(class_weight='auto', C=0.700000, gamma=0.200000)	#50 	0.050000 ; 0.303333
 
 	model.fit(dataset, targets)
 	# print 'Model score: %f' % model.score(known_dataset, known_targets)
@@ -20,14 +20,13 @@ def svm_selected_vars(dataset, targets):
 
 # used to train each theme
 def svm_for_features_fusion(dataset, targets):
-	# model = SVC(class_weight='auto') 									    # 0.295000 ; 0.328611    0.345000 ; 0.283611    0.275144 ; 0.402222
-	# model = SVC(class_weight='auto', C=2.5009999999999999)			    # 0.243333 ; 0.302500    0.303810 ; 0.271111    0.092308 ; 0.383333
 
-	model = SVC(class_weight='auto', C=0.7, gamma=0.1)	    	# 90	  0.386667 ; 0.330833    0.475238 ; 0.256111    0.385238 ; 0.374444
+	# model = SVC(class_weight='auto', C=2.5009999999999999)	# 0.243333 ; 0.302500	0.303810 ; 0.271111		0.092308 ; 0.383333
 
-	# model = SVC(class_weight='auto', C=0.7, gamma=0.2)			# 70	  0.213333 ; 0.338333    0.353333 ; 0.258611    0.086154 ; 0.376667
 
-	# model = SVC(class_weight='auto', C=0.7, gamma=0.1)			# 50	  0.213333 ; 0.341944    0.280000 ; 0.272222    0.080000 ; 0.348056
+	model = SVC(class_weight='auto', C=1.000000, gamma=0.200000)	#90		0.000000 ; 0.314444		0.263333 ; 0.247500		0.066667 ; 0.311944
+	# model = SVC(class_weight='auto', C=0.700000, gamma=0.200000)	#70 	0.073333 ; 0.370000		0.120000 ; 0.292222		0.291905 ; 0.406111
+	# model = SVC(class_weight='auto', C=2.5009999999999999)		#50 	0.123333 ; 0.408889 	0.260000 ; 0.293333		0.258990 ; 0.481944
 
 	model.fit(dataset, targets)
 	# print 'Model score: %f' % model.score(known_dataset, known_targets)
@@ -36,12 +35,15 @@ def svm_for_features_fusion(dataset, targets):
 # used for selecting the features
 def svm_subset_features(dataset, targets):
 
-	model = SVC(class_weight='auto', C=2.8, gamma=0.9)				 # 90 
+	# model = SVC(class_weight='auto', C=0.7, gamma=0.2)			#90
+	# model = SVC(class_weight='auto', C=0.100000, gamma=0.300000)	#70
+	# model = SVC(class_weight='auto', C=0.1, gamma=0.1)			#50
 
-	# model = SVC(class_weight='auto', C=0.1, gamma=0.1)				 # 70	 
 
-	# model = SVC(class_weight='auto', C=2.8, gamma=0.9)				 # 50 
 
+	model = SVC(class_weight='auto', C=0.100000, gamma=0.100000)	#90
+	# model = SVC(class_weight='auto', C=0.100000, gamma=0.100000)	#70
+	# model = SVC(class_weight='auto', C=0.700000, gamma=0.100000)	#50
 
 	model.fit(dataset, targets)
 	# print 'Model score: %f' % model.score(known_dataset, known_targets)
