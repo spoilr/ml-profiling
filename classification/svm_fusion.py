@@ -32,12 +32,25 @@ def cross_validation(known_dataset, known_targets, fusion_algorithm, ids):
 	kf = StratifiedKFold(known_targets, n_folds=10)
 	f1_scores = 0
 	error_rates = 0
+	hp_rates = 0
+	hr_rates = 0
+	hf_rates = 0
+	cp_rates = 0
+	cr_rates = 0
+	cf_rates = 0
 	# cross validation
 	for train_index, test_index in kf:
-		error, f1, mis_ids = fusion_outputs(known_dataset, known_targets, train_index, test_index, fusion_algorithm, ids)
+		error, f1, mis_ids, (hp, hr, hf), (cp, cr, cf) = fusion_outputs(known_dataset, known_targets, train_index, test_index, fusion_algorithm, ids)
 		
 		f1_scores += f1
 		error_rates += error
+		
+		hp_rates += hp
+		hr_rates += hr
+		hf_rates += hf
+		cp_rates += cp
+		cr_rates += cr
+		cf_rates += cf
 		misclassified_ids += mis_ids
 
 
@@ -45,6 +58,14 @@ def cross_validation(known_dataset, known_targets, fusion_algorithm, ids):
 	print '########## MISCLASSIFIED ########## %d \n %s' % (len(misclassified_ids), str(misclassified_ids))
 	print 'Final f1 %f' % (float(f1_scores) / kf.n_folds)
 	print 'Final error %f' % (float(error_rates) / kf.n_folds)
+
+	print 'Highval precision %f' % (float(hp_rates) / kf.n_folds)
+	print 'Highval recall %f' % (float(hr_rates) / kf.n_folds)
+	print 'Highval f1 %f' % (float(hf_rates) / kf.n_folds)
+	print 'Civil precision %f' % (float(cp_rates) / kf.n_folds)
+	print 'Civil recall %f' % (float(cr_rates) / kf.n_folds)
+	print 'Civil f1 %f' % (float(cf_rates) / kf.n_folds)
+
 		
 def fusion_outputs(known_dataset, known_targets, train_index, test_index, fusion_algorithm, ids):
 	misclassified_ids = []
@@ -73,11 +94,11 @@ def fusion_outputs(known_dataset, known_targets, train_index, test_index, fusion
 	print 'COMBINED %s' % str(combined_predictions)
 	print '###############'
 
-	measures(y_test, combined_predictions)
+	(hp, hr, hf), (cp, cr, cf) = measures(y_test, combined_predictions)
 
 	error = (float(sum((combined_predictions - y_test)**2)) / len(y_test))
 	f1 = f1_score(combined_predictions, y_test)
-	return error, f1, misclassified_ids
+	return error, f1, misclassified_ids, (hp, hr, hf), (cp, cr, cf)
 
 # Training and testing sets initially
 # 2/3 are used to train the SVM and 1/3 is used to train(after the output is obtained) the fusion SVM
