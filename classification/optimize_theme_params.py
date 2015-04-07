@@ -239,9 +239,9 @@ class BestSVM:
 
 def params():
 	begin = 0.1
-	end = 3
+	end = 8
 	C_range = np.arange(begin, end, 0.3)
-	gamma_range = np.arange(begin, 1, 0.1)
+	gamma_range = np.arange(begin, 1, 0.2)
 	return C_range, gamma_range
 
 
@@ -273,7 +273,7 @@ if __name__ == "__main__":
 		f1_wmaj, error_wmaj = cross_validation(dataset, targets, 'wmaj', ids, current_svm)	
 		f1_svm, error_svm = cross_validation(dataset, targets, 'svm', ids, current_svm)	
 		
-		if error_maj <= 0.3 or error_maj <= 0.3 or error_maj <= 0.3:
+		if error_maj <= 0.3 or error_wmaj <= 0.3 or error_svm <= 0.3:
 			with open("result.txt", "a") as myfile:	
 				myfile.write('\n##############################\n')
 			with open("result.txt", "a") as myfile:

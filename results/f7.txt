@@ -1,0 +1,296 @@
+
+##############################
+c_subset 0.100000, g_subset 0.100000 ||| c_fusion 0.100000, g_fusion 0.100000
+error_maj 0.696667
+error_wmaj 0.696667
+error_svm 0.303333
+##############################
+c_subset 0.100000, g_subset 0.100000 ||| c_fusion 0.100000, g_fusion 0.300000
+error_maj 0.696667
+error_wmaj 0.696667
+error_svm 0.303333
+##############################
+c_subset 0.100000, g_subset 0.100000 ||| c_fusion 0.100000, g_fusion 0.500000
+error_maj 0.696667
+error_wmaj 0.696667
+error_svm 0.303333
+##############################
+c_subset 0.100000, g_subset 0.100000 ||| c_fusion 0.100000, g_fusion 0.700000
+error_maj 0.696667
+error_wmaj 0.696667
+error_svm 0.303333
+##############################
+c_subset 0.100000, g_subset 0.100000 ||| c_fusion 0.100000, g_fusion 0.900000
+error_maj 0.696667
+error_wmaj 0.696667
+error_svm 0.303333
+##############################
+c_subset 0.100000, g_subset 0.300000 ||| c_fusion 0.100000, g_fusion 0.100000
+error_maj 0.696667
+error_wmaj 0.696667
+error_svm 0.303333
+##############################
+c_subset 0.100000, g_subset 0.300000 ||| c_fusion 0.100000, g_fusion 0.300000
+error_maj 0.696667
+error_wmaj 0.696667
+error_svm 0.303333
+##############################
+c_subset 0.100000, g_subset 0.300000 ||| c_fusion 0.100000, g_fusion 0.500000
+error_maj 0.696667
+error_wmaj 0.696667
+error_svm 0.303333
+##############################
+c_subset 0.100000, g_subset 0.300000 ||| c_fusion 0.100000, g_fusion 0.700000
+error_maj 0.696667
+error_wmaj 0.696667
+error_svm 0.303333
+##############################
+c_subset 0.100000, g_subset 0.300000 ||| c_fusion 0.100000, g_fusion 0.900000
+error_maj 0.696667
+error_wmaj 0.696667
+error_svm 0.303333
+##############################
+c_subset 0.100000, g_subset 0.500000 ||| c_fusion 0.100000, g_fusion 0.100000
+error_maj 0.696667
+error_wmaj 0.696667
+error_svm 0.303333
+##############################
+c_subset 0.100000, g_subset 0.500000 ||| c_fusion 0.100000, g_fusion 0.300000
+error_maj 0.696667
+error_wmaj 0.696667
+error_svm 0.303333
+##############################
+c_subset 0.100000, g_subset 0.500000 ||| c_fusion 0.100000, g_fusion 0.500000
+error_maj 0.696667
+error_wmaj 0.696667
+error_svm 0.303333
+##############################
+c_subset 0.100000, g_subset 0.500000 ||| c_fusion 0.100000, g_fusion 0.700000
+error_maj 0.696667
+error_wmaj 0.696667
+error_svm 0.303333
+##############################
+c_subset 0.100000, g_subset 0.500000 ||| c_fusion 0.100000, g_fusion 0.900000
+error_maj 0.696667
+error_wmaj 0.696667
+error_svm 0.303333
+##############################
+c_subset 0.100000, g_subset 0.700000 ||| c_fusion 0.100000, g_fusion 0.100000
+error_maj 0.696667
+error_wmaj 0.696667
+error_svm 0.303333
+##############################
+c_subset 0.100000, g_subset 0.700000 ||| c_fusion 0.100000, g_fusion 0.300000
+error_maj 0.696667
+error_wmaj 0.696667
+error_svm 0.303333
+##############################
+c_subset 0.100000, g_subset 0.700000 ||| c_fusion 0.100000, g_fusion 0.500000
+error_maj 0.696667
+error_wmaj 0.696667
+error_svm 0.303333
+##############################
+c_subset 0.100000, g_subset 0.700000 ||| c_fusion 0.100000, g_fusion 0.700000
+error_maj 0.696667
+error_wmaj 0.696667
+error_svm 0.303333
+##############################
+c_subset 0.100000, g_subset 0.700000 ||| c_fusion 0.100000, g_fusion 0.900000
+error_maj 0.696667
+error_wmaj 0.696667
+error_svm 0.303333
+##############################
+c_subset 0.100000, g_subset 0.900000 ||| c_fusion 0.100000, g_fusion 0.100000
+error_maj 0.696667
+error_wmaj 0.696667
+error_svm 0.303333
+##############################
+c_subset 0.100000, g_subset 0.900000 ||| c_fusion 0.100000, g_fusion 0.300000
+error_maj 0.696667
+error_wmaj 0.696667
+error_svm 0.303333
+##############################
+c_subset 0.100000, g_subset 0.900000 ||| c_fusion 0.100000, g_fusion 0.500000
+error_maj 0.696667
+error_wmaj 0.696667
+error_svm 0.303333
+##############################
+c_subset 0.100000, g_subset 0.900000 ||| c_fusion 0.100000, g_fusion 0.700000
+error_maj 0.696667
+error_wmaj 0.696667
+error_svm 0.303333
+##############################
+c_subset 0.100000, g_subset 0.900000 ||| c_fusion 0.100000, g_fusion 0.900000
+error_maj 0.696667
+error_wmaj 0.696667
+error_svm 0.303333
+##############################
+c_subset 0.100000, g_subset 0.100000 ||| c_fusion 0.400000, g_fusion 0.100000
+error_maj 0.587222
+error_wmaj 0.434444
+error_svm 0.523333
+##############################
+c_subset 0.100000, g_subset 0.100000 ||| c_fusion 0.400000, g_fusion 0.300000
+error_maj 0.684167
+error_wmaj 0.650556
+error_svm 0.303333
+##############################
+c_subset 0.100000, g_subset 0.100000 ||| c_fusion 0.400000, g_fusion 0.500000
+error_maj 0.696667
+error_wmaj 0.696667
+error_svm 0.303333
+##############################
+c_subset 0.100000, g_subset 0.100000 ||| c_fusion 0.400000, g_fusion 0.700000
+error_maj 0.696667
+error_wmaj 0.696667
+error_svm 0.303333
+##############################
+c_subset 0.100000, g_subset 0.100000 ||| c_fusion 0.400000, g_fusion 0.900000
+error_maj 0.696667
+error_wmaj 0.696667
+error_svm 0.303333
+##############################
+c_subset 0.100000, g_subset 0.300000 ||| c_fusion 0.400000, g_fusion 0.100000
+error_maj 0.587222
+error_wmaj 0.434444
+error_svm 0.523333
+##############################
+c_subset 0.100000, g_subset 0.300000 ||| c_fusion 0.400000, g_fusion 0.300000
+error_maj 0.684167
+error_wmaj 0.650556
+error_svm 0.303333
+##############################
+c_subset 0.100000, g_subset 0.300000 ||| c_fusion 0.400000, g_fusion 0.500000
+error_maj 0.696667
+error_wmaj 0.696667
+error_svm 0.303333
+##############################
+c_subset 0.100000, g_subset 0.300000 ||| c_fusion 0.400000, g_fusion 0.700000
+error_maj 0.696667
+error_wmaj 0.696667
+error_svm 0.303333
+##############################
+c_subset 0.100000, g_subset 0.300000 ||| c_fusion 0.400000, g_fusion 0.900000
+error_maj 0.696667
+error_wmaj 0.696667
+error_svm 0.303333
+##############################
+c_subset 0.100000, g_subset 0.500000 ||| c_fusion 0.400000, g_fusion 0.100000
+error_maj 0.587222
+error_wmaj 0.434444
+error_svm 0.523333
+##############################
+c_subset 0.100000, g_subset 0.500000 ||| c_fusion 0.400000, g_fusion 0.300000
+error_maj 0.684167
+error_wmaj 0.650556
+error_svm 0.303333
+##############################
+c_subset 0.100000, g_subset 0.500000 ||| c_fusion 0.400000, g_fusion 0.500000
+error_maj 0.696667
+error_wmaj 0.696667
+error_svm 0.303333
+##############################
+c_subset 0.100000, g_subset 0.500000 ||| c_fusion 0.400000, g_fusion 0.700000
+error_maj 0.696667
+error_wmaj 0.696667
+error_svm 0.303333
+##############################
+c_subset 0.100000, g_subset 0.500000 ||| c_fusion 0.400000, g_fusion 0.900000
+error_maj 0.696667
+error_wmaj 0.696667
+error_svm 0.303333
+##############################
+c_subset 0.100000, g_subset 0.700000 ||| c_fusion 0.400000, g_fusion 0.100000
+error_maj 0.587222
+error_wmaj 0.434444
+error_svm 0.523333
+##############################
+c_subset 0.100000, g_subset 0.700000 ||| c_fusion 0.400000, g_fusion 0.300000
+error_maj 0.684167
+error_wmaj 0.650556
+error_svm 0.303333
+##############################
+c_subset 0.100000, g_subset 0.700000 ||| c_fusion 0.400000, g_fusion 0.500000
+error_maj 0.696667
+error_wmaj 0.696667
+error_svm 0.303333
+##############################
+c_subset 0.100000, g_subset 0.700000 ||| c_fusion 0.400000, g_fusion 0.700000
+error_maj 0.696667
+error_wmaj 0.696667
+error_svm 0.303333
+##############################
+c_subset 0.100000, g_subset 0.700000 ||| c_fusion 0.400000, g_fusion 0.900000
+error_maj 0.696667
+error_wmaj 0.696667
+error_svm 0.303333
+##############################
+c_subset 0.100000, g_subset 0.900000 ||| c_fusion 0.400000, g_fusion 0.100000
+error_maj 0.587222
+error_wmaj 0.434444
+error_svm 0.523333
+##############################
+c_subset 0.100000, g_subset 0.900000 ||| c_fusion 0.400000, g_fusion 0.300000
+error_maj 0.684167
+error_wmaj 0.650556
+error_svm 0.303333
+##############################
+c_subset 0.100000, g_subset 0.900000 ||| c_fusion 0.400000, g_fusion 0.500000
+error_maj 0.696667
+error_wmaj 0.696667
+error_svm 0.303333
+##############################
+c_subset 0.100000, g_subset 0.900000 ||| c_fusion 0.400000, g_fusion 0.700000
+error_maj 0.696667
+error_wmaj 0.696667
+error_svm 0.303333
+##############################
+c_subset 0.100000, g_subset 0.900000 ||| c_fusion 0.400000, g_fusion 0.900000
+error_maj 0.696667
+error_wmaj 0.696667
+error_svm 0.303333
+##############################
+c_subset 0.100000, g_subset 0.100000 ||| c_fusion 1.900000, g_fusion 0.100000
+error_maj 0.325000
+error_wmaj 0.248889
+error_svm 0.363333
+##############################
+c_subset 0.100000, g_subset 0.300000 ||| c_fusion 1.900000, g_fusion 0.100000
+error_maj 0.325000
+error_wmaj 0.248889
+error_svm 0.363333
+##############################
+c_subset 0.100000, g_subset 0.500000 ||| c_fusion 1.900000, g_fusion 0.100000
+error_maj 0.325000
+error_wmaj 0.248889
+error_svm 0.363333
+##############################
+c_subset 0.100000, g_subset 0.700000 ||| c_fusion 1.900000, g_fusion 0.100000
+error_maj 0.325000
+error_wmaj 0.248889
+error_svm 0.363333
+##############################
+c_subset 0.100000, g_subset 0.900000 ||| c_fusion 1.900000, g_fusion 0.100000
+error_maj 0.325000
+error_wmaj 0.248889
+error_svm 0.363333
+##############################
+c_subset 0.100000, g_subset 0.100000 ||| c_fusion 2.500000, g_fusion 0.100000
+error_maj 0.326111
+error_wmaj 0.237500
+error_svm 0.352222
+##############################
+c_subset 0.100000, g_subset 0.300000 ||| c_fusion 2.500000, g_fusion 0.100000
+error_maj 0.326111
+error_wmaj 0.237500
+error_svm 0.352222
+##############################
+c_subset 0.100000, g_subset 0.500000 ||| c_fusion 2.500000, g_fusion 0.100000
+error_maj 0.326111
+error_wmaj 0.237500
+error_svm 0.352222
+##############################
+c_subset 0.100000, g_subset 0.700000 ||| c_fusion 2.500000, g_fusion 0.100000
+error_maj 0.326111
+error_wmaj 0.237500
+error_svm 0.352222
