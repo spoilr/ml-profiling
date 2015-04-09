@@ -69,18 +69,18 @@ def create_bayesian_network_structure(theme):
   return bn
   
 
-def inference(evidence):
+def inference(bn, evidence):
+  fn = TableCPDFactorization(bn)
   result = fn.gibbssample(evidence, GIBBS_ITERATIONS)
   agg = SampleAggregator()
   result = agg.aggregate(result)
-  print json.dumps(result, indent=2)
+  return json.dumps(result, indent=2)
 
 
 if __name__ == "__main__":
   theme = raw_input("Enter theme.\n")
   bn = create_bayesian_network_structure(theme)
-  fn = TableCPDFactorization(bn)
   evidence = json.loads(raw_input("Evidence.\n"))
   # evidence = dict(InteractNet=0)
   # query = dict(HighValueCivilian=[1])
-  inference(evidence, query)
+  inference(bn, evidence)
