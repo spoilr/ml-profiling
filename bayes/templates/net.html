@@ -7,36 +7,38 @@
     <body>
         <h1>Network</h1>
         <p>
-            <!-- <ul>
-              {% for email in x %}
-              <li>{{ email }}</li>
-              {% endfor %}
-            </ul>
-            <select>
-              <option>0</option>
-              <option>1</option>
-            </select> -->
-
+            <form action="{{ url_for('bayes_net') }}" method='post'>
             <table>
+              <tr>
+                <td>Variables</td>
+                <td>Evidence</td>
+                <td>Inference</td>
+              </tr>
               {% for key, value in categs.iteritems() %}
               <tr>
                 <td>
-                  <ul>
-                    <li>{{ key }}</li>
-                  </ul>
+                  {{ key }}
                 </td>
                 <td>
-                  <ul>
-                    <select>
+                  <select name="{{ key }}">
+                      <option selected="selected">None</option>
                       {% for k, v in value.iteritems() %}
                       <option>{{ v }}</option>
                       {% endfor %}
                     </select>
-                  </ul>
+                </td>
+                <td>
+                  {% if inference is not none %}
+                    {{ inference[key] }}
+                  {% else %}
+                    n/a
+                  {%endif %}
                 </td>
               </tr>
               {% endfor %}
             </table>
+              <input type="submit" value="Submit">
+            </form>
         </p>
     </body>
 </html>

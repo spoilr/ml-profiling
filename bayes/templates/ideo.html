@@ -7,11 +7,40 @@
     <body>
         <h1>Ideology</h1>
         <p>
-            <ul>
-              {% for email in x %}
-              <li>{{ email }}</li>
+            <form action="{{ url_for('bayes_ideo') }}" method='post'>
+            <table>
+              <tr>
+                <td>Variables</td>
+                <td>Evidence</td>
+                <td>Inference</td>
+              </tr>
+              {% for key, value in categs.iteritems() %}
+              <tr>
+                <td>
+                  {{ key }}
+                </td>
+                <td>
+                  <select name="{{ key }}">
+                      <option selected="selected">None</option>
+                      {% for k, v in value.iteritems() %}
+                      <option>{{ v }}</option>
+                      {% endfor %}
+                    </select>
+                </td>
+                <td>
+                  {% if inference is not none %}
+                    {{ inference[key] }}
+                  {% else %}
+                    n/a
+                  {%endif %}
+                </td>
+              </tr>
               {% endfor %}
-            </ul>
+            </table>
+              <input type="submit" value="Submit">
+            </form>
         </p>
     </body>
 </html>
+
+
