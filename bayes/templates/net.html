@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+    </head>
+    <body>
+        <h1>Network</h1>
+        <p>
+            <!-- <ul>
+              {% for email in x %}
+              <li>{{ email }}</li>
+              {% endfor %}
+            </ul>
+            <select>
+              <option>0</option>
+              <option>1</option>
+            </select> -->
+
+            <table>
+              {% for key, value in categs.iteritems() %}
+              <tr>
+                <td>
+                  <ul>
+                    <li>{{ key }}</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <select>
+                      {% for k, v in value.iteritems() %}
+                      <option>{{ v }}</option>
+                      {% endfor %}
+                    </select>
+                  </ul>
+                </td>
+              </tr>
+              {% endfor %}
+            </table>
+        </p>
+    </body>
+</html>
+
+
