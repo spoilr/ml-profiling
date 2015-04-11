@@ -44,19 +44,19 @@ themes = ['net', 'ill', 'ideo']
 def select_proxy_features(theme, target, nr_times):
 	if theme == 'ill':
 		if target == 'civil':
-			return get_best(civil_all, civil_all_x, civil_all_y, nr_times)
+			return get_best(civil_ill, civil_ill_x, civil_ill_y, nr_times)
 		else:
-			return get_best(highval_all, highval_all_x, highval_all_y, nr_times)
+			return get_best(highval_ill, highval_ill_x, highval_ill_y, nr_times)
 	if theme == 'ideo':
 		if target == 'civil':
-			return get_best(civil_all, civil_all_x, civil_all_y, nr_times)
+			return get_best(civil_ideo, civil_ideo_x, civil_ideo_y, nr_times)
 		else:
-			return get_best(highval_all, highval_all_x, highval_all_y, nr_times)
+			return get_best(highval_ideo, highval_ideo_x, highval_ideo_y, nr_times)
 	if theme == 'net':
 		if target == 'civil':
-			return get_best(civil_all, civil_all_x, civil_all_y, nr_times)
+			return get_best(civil_net, civil_net_x, civil_net_y, nr_times)
 		else:
-			return get_best(highval_all, highval_all_x, highval_all_y, nr_times)
+			return get_best(highval_net, highval_net_x, highval_net_y, nr_times)
 
 def thematic_data_from_feature_selection(orig_targets, theme, percentage, target):
 	[dataset, features] = parse_theme(theme)
