@@ -85,7 +85,7 @@ def feature_selection_before(features, targets, dataset, percentage, ids):
 	std = StandardizedData(known_targets, combined_dataset)
 	known_dataset_scaled, known_targets = std.split_and_standardize_dataset()  
 
-	cross_validation(np.array(combined_dataset), known_targets, ids)
+	cross_validation(np.array(known_dataset_scaled), known_targets, ids)
 
 	print '####### FEATURES ####### %d \n %s' % (len(selected_features), str(selected_features)) 	
 
@@ -101,10 +101,3 @@ if __name__ == "__main__":
 		
 	except IndexError:
 		print "Error!! Pass 'all' as argument"
-
-
-
-
-
-
-			
