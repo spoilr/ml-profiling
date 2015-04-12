@@ -73,10 +73,10 @@ def feature_selection_before(features, targets, dataset, percentage, ids, target
 	sf = SelectedFeatures(known_dataset, known_targets, ssa_features, features)	
 	ssa_dataset = sf.extract_data_from_selected_features()
 
-	std = StandardizedData(known_targets)
-	ssa_dataset = std.standardize_dataset(ssa_dataset)  
+	std = StandardizedData(known_targets, ssa_dataset)
+	ssa_dataset, known_targets = std.split_and_standardize_dataset()  
 
-	cross_validation(np.array(ssa_dataset), known_targets, ids)
+	cross_validation(ssa_dataset, known_targets, ids)
 
 	print '####### FEATURES ####### %d \n %s' % (len(ssa_features), str(ssa_features))
 

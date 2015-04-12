@@ -10,7 +10,6 @@ print(__doc__)
 import sys
 sys.path.insert(0, 'utils/')
 from load_data import *
-from optimize_parameters import *
 from svm_fusion import *
 from selected_features import *
 sys.path.insert(0, 'feature context/')
@@ -56,9 +55,4 @@ if __name__ == "__main__":
 	fusion_algorithm = raw_input("Enter algorithm. Choose between maj, wmaj, svm, nn")
 	cross_validation(dataset, targets, fusion_algorithm, ids)
 
-	optimize = raw_input('Optimise parameters? y or n')
-	if optimize == 'y':
-			score = raw_input('Score? f1, accuracy, recall, precision')
-			opt_params = OptimizeParameters(dataset, targets)
-			theme_index = int(raw_input('Theme index? 0, 1 or 2'))
-			opt_params.category_optimize_parameters(score, theme_index)
+	

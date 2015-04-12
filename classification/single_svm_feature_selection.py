@@ -11,7 +11,6 @@ sys.path.insert(0, 'utils/')
 from load_data import *
 from parse_theme import *
 from binary_classification_measures import *
-from optimize_parameters import *
 from standardized_data import *
 from misclassified_ids import *
 sys.path.insert(0, 'feature context/')
@@ -83,18 +82,12 @@ def feature_selection_before(features, targets, dataset, percentage, ids):
 	sf = SelectedFeatures(known_dataset, known_targets, selected_features, features)
 	combined_dataset = sf.extract_data_from_selected_features()
 
-	std = StandardizedData(known_targets)
-	combined_dataset = std.standardize_dataset(combined_dataset)  
+	std = StandardizedData(known_targets, combined_dataset)
+	known_dataset_scaled, known_targets = std.split_and_standardize_dataset()  
 
 	cross_validation(np.array(combined_dataset), known_targets, ids)
 
 	print '####### FEATURES ####### %d \n %s' % (len(selected_features), str(selected_features)) 	
-
-	optimize = raw_input('Optimise parameters? y or n')
-	if optimize == 'y':
-		score = raw_input('Score? f1, accuracy, recall, precision')
-		opt_params = OptimizeParameters(np.array(combined_dataset), known_targets)
-		opt_params.all_optimize_parameters(score)
 
 if __name__ == "__main__":
 	spreadsheet = Spreadsheet(project_data_file)

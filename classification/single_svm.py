@@ -11,7 +11,6 @@ sys.path.insert(0, 'utils/')
 from load_data import *
 from parse_theme import *
 from binary_classification_measures import *
-from optimize_parameters import *
 from standardized_data import *
 from misclassified_ids import *
 sys.path.insert(0, 'feature context/')
@@ -86,12 +85,6 @@ if __name__ == "__main__":
 		
 	except IndexError:
 		print "Error!! Pass 'all' as argument"
-
-	optimize = raw_input('Optimise parameters? y or n')
-	if optimize == 'y':
-		score = raw_input('Score? f1, accuracy, recall, precision')
-		opt_params = OptimizeParameters(known_dataset_scaled, known_targets)
-		opt_params.all_optimize_parameters(score)
 
 
 

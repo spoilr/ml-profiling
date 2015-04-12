@@ -51,9 +51,10 @@ class StandardizedData:
 		known_targets = np.asarray(known_targets)
 		return known_dataset_scaled, known_targets
 
+	# data comes in 3 themes	
 	def standardize_dataset(self, data):
 		theme_dataset = []
-
+		assert len(data) == 3
 		for i in range(len(data)):
 			d_scaled = preprocessing.scale(data[i])
 			theme_dataset.append(d_scaled)
