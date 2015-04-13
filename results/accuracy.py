@@ -33,6 +33,11 @@ SVC(class_weight='auto', C=0.700000, gamma=0.100000)	#90		0.100000 ; 0.365278		0
 SVC(class_weight='auto', C=0.700000, gamma=0.200000)	#90		0.000000 ; 0.335556		0.166667 ; 0.282222		0.116667 ; 0.367778
 SVC(class_weight='auto', C=1.900000, gamma=0.100000)	#90 	0.000000 ; 0.336667		0.183333 ; 0.291944		0.237143 ; 0.334444
 SVC(class_weight='auto', C=2.5009999999999999)			#90		0.158333 ; 0.380000		0.370000 ; 0.301944		0.270476 ; 0.409444
+SVC(class_weight='auto', C=0.700000, gamma=0.400000)	#90 							0.180000 ; 0.282222
+SVC(class_weight='auto', C=0.700000, gamma=0.500000)	#90 							0.180000 ; 0.271111
+SVC(class_weight='auto', C=1.500000, gamma=0.100000)	#90 							0.183333 ; 0.280833
+SVC(class_weight='auto', C=0.900000, gamma=0.100000)	#90 							0.230000 ; 0.268333
+SVC(class_weight='auto', C=4.900000, gamma=0.100000)	#90 							0.183333 ; 0.280833
 ]
 
 svm_subset_features_90 = [
@@ -42,6 +47,11 @@ SVC(class_weight='auto', C=0.100000, gamma=0.100000)	#90
 SVC(class_weight='auto', C=0.100000, gamma=0.300000)	#90
 SVC(class_weight='auto', C=0.100000, gamma=0.300000)	#90
 SVC(class_weight='auto', C=0.100000, gamma=0.100000)	#90
+SVC(class_weight='auto', C=0.100000, gamma=0.500000)	#90
+SVC(class_weight='auto', C=0.100000, gamma=0.500000)	#90
+SVC(class_weight='auto', C=0.100000, gamma=0.900000)	#90
+SVC(class_weight='auto', C=3.300000, gamma=0.600000)	#90
+SVC(class_weight='auto', C=4.900000, gamma=0.600000)	#90
 ]
 
 svm_for_features_fusion_70 = [

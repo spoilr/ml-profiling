@@ -1,25 +1,10 @@
-"""
-SVM C-Support Vector Classification
-Single SVM
-"""
-
-print(__doc__)
-
-
 import sys
 sys.path.insert(0, 'utils/')
-from load_data import *
-from parse_theme import *
 from binary_classification_measures import *
-from standardized_data import *
 from misclassified_ids import *
-sys.path.insert(0, 'feature context/')
-from feature_selection_cv import *
-from svms import svm_all_vars
 
-from sklearn.cross_validation import KFold
+from sklearn.tree import DecisionTreeClassifier
 from sklearn.cross_validation import StratifiedKFold
-from sklearn.metrics import classification_report
 from sklearn.metrics import f1_score
 
 def cross_validation(known_dataset, known_targets, ids):
@@ -61,7 +46,7 @@ def cross_validation(known_dataset, known_targets, ids):
 	print 'Civil f1 %f' % (float(cf_rates) / kf.n_folds)
 
 def one_fold_measures(X_train, X_test, y_train, y_test):
-	model = svm_all_vars(X_train, y_train)
+	model = dt(X_train, y_train)
 	print 'Model score %f' % model.score(X_test, y_test)
 	y_pred = model.predict(X_test)
 	error_rate = (float(sum((y_pred - y_test)**2)) / len(y_test))
@@ -70,23 +55,7 @@ def one_fold_measures(X_train, X_test, y_train, y_test):
 
 	return error_rate, f1, model, (hp, hr, hf), (cp, cr, cf)	
 
-if __name__ == "__main__":
-	spreadsheet = Spreadsheet(project_data_file)
-	data = Data(spreadsheet)
-	targets = data.targets
-	ids = data.ids
-
-	try:
-		[dataset, features] = parse_theme(sys.argv[1])
-		std = StandardizedData(targets, dataset)
-		known_dataset_scaled, known_targets = std.split_and_standardize_dataset()
-
-		cross_validation(known_dataset_scaled, known_targets, ids)
-		
-	except IndexError:
-		print "Error!! Pass 'all' as argument"
-
-
-
-
-			
+def dt(dataset, targets):
+	model = DecisionTreeClassifier(criterion='entropy', min_samples_split=5)
+	model.fit(dataset, targets)
+	return model

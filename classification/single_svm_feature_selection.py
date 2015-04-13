@@ -50,7 +50,7 @@ def cross_validation(known_dataset, known_targets, ids):
 		cf_rates += cf
 		misclassified_ids += add_misclassified_ids(model, test_index, known_dataset, known_targets, ids)
 
-	print '########## MISCLASSIFIED ########## %d %s' % (len(misclassified_ids), str(misclassified_ids))
+	# print '########## MISCLASSIFIED ########## %d %s' % (len(misclassified_ids), str(misclassified_ids))
 	
 	print 'Final f1 %f' % (float(f1_scores) / kf.n_folds)
 	print 'Final error %f' % (float(error_rates) / kf.n_folds)

@@ -87,8 +87,8 @@ def accuracy_number(y_true, y_pred):
 	return accuracy_score(y_true, y_pred, normalize=False)
 
 def measures(y_test, y_pred):
-	print confusion_matrix(y_test, y_pred)
-	print(classification_report(y_test, y_pred, target_names=['highvalue','civilian']))
+	# print confusion_matrix(y_test, y_pred)
+	# print(classification_report(y_test, y_pred, target_names=['highvalue','civilian']))
 
 	p = precision(y_test, y_pred)
 	r = recall(y_test, y_pred)

@@ -8,19 +8,10 @@ from binary_classification_measures import *
 from standardized_data import *
 from misclassified_ids import *
 from project_data import *
-from svms import svm_for_features_fusion
 
-from sklearn import preprocessing
-from sklearn.svm import SVC
-from sklearn.grid_search import GridSearchCV
-from sklearn.cross_validation import KFold
+from sklearn.tree import DecisionTreeClassifier
 from sklearn.cross_validation import StratifiedKFold
-from sklearn.metrics import classification_report
-from sklearn.metrics import confusion_matrix
 from sklearn.metrics import f1_score
-from sklearn.metrics import precision_score
-from sklearn.metrics import recall_score
-from sklearn.metrics import average_precision_score
 from collections import Counter
 
 NR_THEMES = 3
@@ -119,7 +110,7 @@ def svm_fusion(known_dataset, known_targets, train_index, test_index, ids):
 			svm_X_train, svm_Y_train = X_train[inner_train_index], y_train[inner_train_index]
 			fusion_X_train, fusion_Y_train = X_train[inner_test_index], y_train[inner_test_index]
 
-			model = svm_for_features_fusion(svm_X_train, svm_Y_train)
+			model = dt(svm_X_train, svm_Y_train)
 			training_predictions.append(model.predict(fusion_X_train))
 			predictions.append(model.predict(final_X_test))
 			misclassified_ids += add_misclassified_ids(model, test_index, known_dataset[i], known_targets, ids)
@@ -141,6 +132,11 @@ def inner_svm(dataset, targets):
 	model.fit(dataset, targets)
 	return model
 
+def dt(dataset, targets):
+	model = DecisionTreeClassifier(criterion='entropy', min_samples_split=5)
+	model.fit(dataset, targets)
+	return model
+
 # called majority because it is used in both cases of majority_voting and weighted_majority voting.
 def combine_predictions_one_fold_using_majority(known_dataset, known_targets, train_index, test_index, ids):
 	misclassified_ids = []
@@ -150,7 +146,7 @@ def combine_predictions_one_fold_using_majority(known_dataset, known_targets, tr
 	y_train, y_test = known_targets[train_index], known_targets[test_index]
 	for i in range(0, NR_THEMES):
 		X_train, X_test = known_dataset[i][train_index], known_dataset[i][test_index]
-		model = svm_for_features_fusion(X_train, y_train)
+		model = dt(X_train, y_train)
 		accuracy = model.score(X_test, y_test)
 		print 'Model score for %s is %f' % (themes[i], accuracy)
 		y_pred = model.predict(X_test)
