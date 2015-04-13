@@ -6,6 +6,8 @@ from binary_classification_measures import measures
 from misclassified_ids import *
 from project_data import *
 
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.neighbors import KNeighborsClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.cross_validation import StratifiedKFold
 from sklearn.metrics import f1_score
@@ -14,7 +16,7 @@ from collections import Counter
 NR_THEMES = 3
 themes = ['net', 'ill', 'ideo']
 
-def cross_validation(known_dataset, known_targets, fusion_algorithm, ids):
+def cross_validation(known_dataset, known_targets, fusion_algorithm, ids, algorithm):
 	misclassified_ids = []
 
 	kf = StratifiedKFold(known_targets, n_folds=10)
@@ -28,7 +30,7 @@ def cross_validation(known_dataset, known_targets, fusion_algorithm, ids):
 	cf_rates = 0
 	# cross validation
 	for train_index, test_index in kf:
-		error, f1, mis_ids, (hp, hr, hf), (cp, cr, cf) = fusion_outputs(known_dataset, known_targets, train_index, test_index, fusion_algorithm, ids)
+		error, f1, mis_ids, (hp, hr, hf), (cp, cr, cf) = fusion_outputs(known_dataset, known_targets, train_index, test_index, fusion_algorithm, ids, algorithm)
 		
 		f1_scores += f1
 		error_rates += error
@@ -54,22 +56,22 @@ def cross_validation(known_dataset, known_targets, fusion_algorithm, ids):
 	print 'Civil recall %f' % (float(cr_rates) / kf.n_folds)
 	print 'Civil f1 %f' % (float(cf_rates) / kf.n_folds)
 
-		
-def fusion_outputs(known_dataset, known_targets, train_index, test_index, fusion_algorithm, ids):
+
+def fusion_outputs(known_dataset, known_targets, train_index, test_index, fusion_algorithm, ids, algorithm):
 	misclassified_ids = []
 	combined_predictions = []
 	y_test = []
 
 	if fusion_algorithm == 'maj':
-		predictions, y_test, accuracies, misclassified_ids = combine_predictions_one_fold_using_majority(known_dataset, known_targets, train_index, test_index, ids)
+		predictions, y_test, accuracies, misclassified_ids = combine_predictions_one_fold_using_majority(known_dataset, known_targets, train_index, test_index, ids, algorithm)
 		combined_predictions = majority_vote(predictions, y_test, accuracies)
 
 	elif fusion_algorithm == 'wmaj':
-		predictions, y_test, accuracies, misclassified_ids = combine_predictions_one_fold_using_majority(known_dataset, known_targets, train_index, test_index, ids)
+		predictions, y_test, accuracies, misclassified_ids = combine_predictions_one_fold_using_majority(known_dataset, known_targets, train_index, test_index, ids, algorithm)
 		combined_predictions = weighted_majority(predictions, y_test)
 
 	elif fusion_algorithm == 'svm':
-		y_test, predictions, combined_predictions, misclassified_ids = svm_fusion(known_dataset, known_targets, train_index, test_index, ids)
+		y_test, predictions, combined_predictions, misclassified_ids = svm_fusion(known_dataset, known_targets, train_index, test_index, ids, algorithm)
 
 	elif fusion_algorithm == 'nn':
 		print 'not done'
@@ -88,9 +90,10 @@ def fusion_outputs(known_dataset, known_targets, train_index, test_index, fusion
 	f1 = f1_score(combined_predictions, y_test)
 	return error, f1, misclassified_ids, (hp, hr, hf), (cp, cr, cf)
 
+
 # Training and testing sets initially
-# 2/3 are used to train the SVM and 1/3 is used to train(after the output is obtained) the fusion SVM
-def svm_fusion(known_dataset, known_targets, train_index, test_index, ids):
+# 2/3 are used to train the algorithm and 1/3 is used to train(after the output is obtained) the fusion SVM
+def svm_fusion(known_dataset, known_targets, train_index, test_index, ids, algorithm):
 	misclassified_ids = []
 
 	training_predictions = []
@@ -107,7 +110,7 @@ def svm_fusion(known_dataset, known_targets, train_index, test_index, ids):
 			svm_X_train, svm_Y_train = X_train[inner_train_index], y_train[inner_train_index]
 			fusion_X_train, fusion_Y_train = X_train[inner_test_index], y_train[inner_test_index]
 
-			model = lr(svm_X_train, svm_Y_train)
+			model = algorithm(svm_X_train, svm_Y_train)
 			training_predictions.append(model.predict(fusion_X_train))
 			predictions.append(model.predict(final_X_test))
 			misclassified_ids += add_misclassified_ids(model, test_index, known_dataset[i], known_targets, ids)
@@ -122,10 +125,16 @@ def svm_fusion(known_dataset, known_targets, train_index, test_index, ids):
 	pred_input = np.vstack(predictions).T
 	combined_predictions = fusion_model.predict(pred_input)
 
-	return final_y_test, predictions, combined_predictions.tolist(), misclassified_ids
+	return final_y_test, predictions, combined_predictions.tolist(), misclassified_ids		
+
 
 def inner_svm(dataset, targets):
 	model = SVC(class_weight='auto')
+	model.fit(dataset, targets)
+	return model
+
+def dt(dataset, targets):
+	model = DecisionTreeClassifier(criterion='entropy', min_samples_split=5)
 	model.fit(dataset, targets)
 	return model
 
@@ -134,8 +143,13 @@ def lr(dataset, targets):
 	model.fit(dataset, targets)
 	return model
 
+def knn(dataset, targets):
+	model = KNeighborsClassifier(weights='distance', n_neighbors=3)
+	model.fit(dataset, targets)
+	return model		
+
 # called majority because it is used in both cases of majority_voting and weighted_majority voting.
-def combine_predictions_one_fold_using_majority(known_dataset, known_targets, train_index, test_index, ids):
+def combine_predictions_one_fold_using_majority(known_dataset, known_targets, train_index, test_index, ids, algorithm):
 	misclassified_ids = []
 
 	predictions = []
@@ -143,7 +157,7 @@ def combine_predictions_one_fold_using_majority(known_dataset, known_targets, tr
 	y_train, y_test = known_targets[train_index], known_targets[test_index]
 	for i in range(0, NR_THEMES):
 		X_train, X_test = known_dataset[i][train_index], known_dataset[i][test_index]
-		model = lr(X_train, y_train)
+		model = algorithm(X_train, y_train)
 		accuracy = model.score(X_test, y_test)
 		print 'Model score for %s is %f' % (themes[i], accuracy)
 		y_pred = model.predict(X_test)
@@ -153,3 +167,4 @@ def combine_predictions_one_fold_using_majority(known_dataset, known_targets, tr
 	
 	predictions = np.array((predictions[0], predictions[1], predictions[2]), dtype=float)
 	return predictions, y_test, accuracies, misclassified_ids
+

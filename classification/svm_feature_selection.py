@@ -11,7 +11,8 @@ sys.path.insert(0, 'utils/')
 sys.path.insert(0, 'feature context/')
 from load_data import *
 from project_data import *
-from svm_fusion import cross_validation
+from fusion import cross_validation
+from svms import svm_for_features_fusion
 from standardized_data import *
 from thematic_data_combined import combine_data_from_feature_selection
 from parameters import CV_PERCENTAGE_OCCURENCE_THRESHOLD	
@@ -28,6 +29,6 @@ if __name__ == "__main__":
 	dataset = std.standardize_dataset(combined_dataset)  
 
 	fusion_algorithm = raw_input("Enter algorithm. Choose between maj, wmaj, svm, nn")
-	cross_validation(dataset, targets, fusion_algorithm, ids)
+	cross_validation(dataset, targets, fusion_algorithm, ids, svm_for_features_fusion)
 
 	
