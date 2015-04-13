@@ -6,13 +6,13 @@ Feature selection is applied before
 
 print(__doc__)
 
-
 import sys
 sys.path.insert(0, 'utils/')
-from load_data import *
-from svm_fusion import *
-from selected_features import *
 sys.path.insert(0, 'feature context/')
+from load_data import *
+from project_data import *
+from svm_fusion import cross_validation
+from standardized_data import *
 from thematic_data_combined import combine_data_from_feature_selection
 from parameters import CV_PERCENTAGE_OCCURENCE_THRESHOLD	
 

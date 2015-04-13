@@ -1,6 +1,6 @@
 import sys
 sys.path.insert(0, 'utils/')
-from binary_classification_measures import *
+from binary_classification_measures import measures
 from misclassified_ids import *
 
 from sklearn.linear_model import LogisticRegression

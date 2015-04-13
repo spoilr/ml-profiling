@@ -5,15 +5,14 @@ Single SVM
 
 print(__doc__)
 
-
 import sys
 sys.path.insert(0, 'utils/')
+sys.path.insert(0, 'feature context/')
 from load_data import *
 from parse_theme import *
-from binary_classification_measures import *
+from binary_classification_measures import measures
 from standardized_data import *
 from misclassified_ids import *
-sys.path.insert(0, 'feature context/')
 from feature_selection_cv import *
 from svms import svm_all_vars
 

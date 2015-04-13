@@ -1,14 +1,16 @@
+"""
+Logistic Regression Classification
+Combine LR for themes
+"""
+
+print(__doc__)
+
 import sys
 sys.path.insert(0, 'utils/')
 from load_data import *
 from project_data import *
-from load_data import *
-from parse_theme import *
-from split_dataset import *
 from lr_fusion import cross_validation
 from thematic_data_combined import *
-
-import numpy as np
 
 if __name__ == "__main__":
 	spreadsheet = Spreadsheet(project_data_file)

@@ -8,6 +8,7 @@ import numpy as np
 from split_dataset import *
 from parse_theme import *
 from feature_selection_cv import *
+from selected_features import *
 
 themes = ['net', 'ill', 'ideo']
 

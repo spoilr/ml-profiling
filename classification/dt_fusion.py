@@ -1,11 +1,8 @@
 import sys
 sys.path.insert(0, 'utils/')
 from load_data import *
-from parse_theme import *
-from split_dataset import *
 from labels_fusion import *
-from binary_classification_measures import *
-from standardized_data import *
+from binary_classification_measures import measures
 from misclassified_ids import *
 from project_data import *
 

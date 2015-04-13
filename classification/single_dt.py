@@ -1,8 +1,14 @@
+"""
+Decision Tree Classification
+Single DT
+"""
+
+print(__doc__)
+
 import sys
 sys.path.insert(0, 'utils/')
 from load_data import *
 from project_data import *
-from load_data import *
 from parse_theme import *
 from split_dataset import *
 from dt_cv import cross_validation

@@ -1,21 +1,23 @@
 """
 SVM C-Support Vector Classification
 Single SVM
+Feature selection is applied before
 """
 
 print(__doc__)
 
-
 import sys
 sys.path.insert(0, 'utils/')
-from load_data import *
-from parse_theme import *
-from binary_classification_measures import *
-from standardized_data import *
-from misclassified_ids import *
 sys.path.insert(0, 'feature context/')
+from load_data import *
+from project_data import *
+from parse_theme import *
+from split_dataset import *
 from feature_selection_cv import *
 from parameters import CV_PERCENTAGE_OCCURENCE_THRESHOLD
+from binary_classification_measures import measures
+from misclassified_ids import *
+from standardized_data import *
 from svms import svm_selected_vars
 
 from sklearn.cross_validation import KFold

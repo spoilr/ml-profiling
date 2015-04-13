@@ -1,26 +1,15 @@
 import sys
 sys.path.insert(0, 'utils/')
 from load_data import *
-from parse_theme import *
-from split_dataset import *
 from labels_fusion import *
-from binary_classification_measures import *
-from standardized_data import *
+from binary_classification_measures import measures
 from misclassified_ids import *
 from project_data import *
 from svms import svm_for_features_fusion
 
-from sklearn import preprocessing
 from sklearn.svm import SVC
-from sklearn.grid_search import GridSearchCV
-from sklearn.cross_validation import KFold
 from sklearn.cross_validation import StratifiedKFold
-from sklearn.metrics import classification_report
-from sklearn.metrics import confusion_matrix
 from sklearn.metrics import f1_score
-from sklearn.metrics import precision_score
-from sklearn.metrics import recall_score
-from sklearn.metrics import average_precision_score
 from collections import Counter
 
 NR_THEMES = 3

@@ -1,9 +1,16 @@
+"""
+Decision Tree Classification
+Single DT
+Feature selection is applied before
+"""
+
+print(__doc__)
+
 import sys
 sys.path.insert(0, 'utils/')
 sys.path.insert(0, 'feature context/')
 from load_data import *
 from project_data import *
-from load_data import *
 from parse_theme import *
 from split_dataset import *
 from feature_selection_cv import *
