@@ -5,7 +5,7 @@ from project_data import *
 from load_data import *
 from parse_theme import *
 from split_dataset import *
-from dt_cv import cross_validation
+from knn_cv import cross_validation
 
 import numpy as np
 

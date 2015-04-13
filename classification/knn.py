@@ -5,7 +5,8 @@ from project_data import *
 from load_data import *
 from parse_theme import *
 from split_dataset import *
-from dt_cv import cross_validation
+from knn_fusion import cross_validation
+from thematic_data_combined import *
 
 import numpy as np
 
@@ -15,11 +16,10 @@ if __name__ == "__main__":
 	targets = data.targets
 	ids = data.ids
 
-	try:
-		[dataset, features] = parse_theme(sys.argv[1])
-		[known_dataset, known_targets, unk] = split_dataset(dataset, targets)
+	tdc = ThematicDataCombined(targets)
+	dataset, targets = tdc.thematic_split() 
 
-		cross_validation(np.array(known_dataset), np.array(known_targets), ids)
-		
-	except IndexError:
-		print "Error!! Pass 'all' as argument"
+	fusion_algorithm = raw_input("Enter algorithm. Choose between maj, wmaj, svm, nn")
+	cross_validation(dataset, targets, fusion_algorithm, ids)
+
+	

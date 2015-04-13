@@ -8,7 +8,7 @@ from parse_theme import *
 from split_dataset import *
 from feature_selection_cv import *
 from parameters import CV_PERCENTAGE_OCCURENCE_THRESHOLD
-from dt_cv import cross_validation
+from knn_cv import cross_validation
 
 import numpy as np
 
