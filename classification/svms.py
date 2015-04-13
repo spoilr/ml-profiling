@@ -37,13 +37,13 @@ def svm_for_features_fusion(dataset, targets):
 def svm_subset_features(dataset, targets):
 
 	# all
-	# model = SVC(class_weight='auto', C=0.7, gamma=0.2)			#90
+	model = SVC(class_weight='auto', C=0.7, gamma=0.2)			#90
 	# model = SVC(class_weight='auto', C=0.100000, gamma=0.300000)	#70
 	# model = SVC(class_weight='auto', C=0.1, gamma=0.1)			#50
 
 
 	# theme
-	model = SVC(class_weight='auto', C=0.100000, gamma=0.100000)	#90
+	# model = SVC(class_weight='auto', C=0.100000, gamma=0.100000)	#90
 	# model = SVC(class_weight='auto', C=0.100000, gamma=0.100000)	#70
 	# model = SVC(class_weight='auto', C=0.700000, gamma=0.100000)	#50
 
