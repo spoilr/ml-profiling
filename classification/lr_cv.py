@@ -3,7 +3,7 @@ sys.path.insert(0, 'utils/')
 from binary_classification_measures import *
 from misclassified_ids import *
 
-from sklearn.neighbors import KNeighborsClassifier
+from sklearn.linear_model import LogisticRegression
 from sklearn.cross_validation import StratifiedKFold
 from sklearn.metrics import f1_score
 
@@ -46,7 +46,7 @@ def cross_validation(known_dataset, known_targets, ids):
 	print 'Civil f1 %f' % (float(cf_rates) / kf.n_folds)
 
 def one_fold_measures(X_train, X_test, y_train, y_test):
-	model = knn(X_train, y_train)
+	model = lr(X_train, y_train)
 	print 'Model score %f' % model.score(X_test, y_test)
 	y_pred = model.predict(X_test)
 	error_rate = (float(sum((y_pred - y_test)**2)) / len(y_test))
@@ -55,7 +55,7 @@ def one_fold_measures(X_train, X_test, y_train, y_test):
 
 	return error_rate, f1, model, (hp, hr, hf), (cp, cr, cf)	
 
-def knn(dataset, targets):
-	model = KNeighborsClassifier(weights='distance', n_neighbors=3)
+def lr(dataset, targets):
+	model = LogisticRegression(class_weight='auto')
 	model.fit(dataset, targets)
 	return model
