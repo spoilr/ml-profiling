@@ -51,7 +51,7 @@ def cross_validation(known_dataset, known_targets, ids, one_fold_measures):
 
 def single_svm_one_fold_measures(X_train, X_test, y_train, y_test):
 	model = svm_all_vars(X_train, y_train)
-	print 'Model score %f' % model.score(X_test, y_test)
+	# print 'Model score %f' % model.score(X_test, y_test)
 	y_pred = model.predict(X_test)
 	error_rate = (float(sum((y_pred - y_test)**2)) / len(y_test))
 	f1 = f1_score(y_test, y_pred)
@@ -61,7 +61,7 @@ def single_svm_one_fold_measures(X_train, X_test, y_train, y_test):
 
 def single_svm_ft_one_fold_measures(X_train, X_test, y_train, y_test):
 	model = svm_selected_vars(X_train, y_train)
-	print 'Model score %f' % model.score(X_test, y_test)
+	# print 'Model score %f' % model.score(X_test, y_test)
 	y_pred = model.predict(X_test)
 	error_rate = (float(sum((y_pred - y_test)**2)) / len(y_test))
 	f1 = f1_score(y_test, y_pred)
@@ -71,7 +71,7 @@ def single_svm_ft_one_fold_measures(X_train, X_test, y_train, y_test):
 
 def dt_one_fold_measures(X_train, X_test, y_train, y_test):
 	model = dt(X_train, y_train)
-	print 'Model score %f' % model.score(X_test, y_test)
+	# print 'Model score %f' % model.score(X_test, y_test)
 	y_pred = model.predict(X_test)
 	error_rate = (float(sum((y_pred - y_test)**2)) / len(y_test))
 	f1 = f1_score(y_test, y_pred)
@@ -86,7 +86,7 @@ def dt(dataset, targets):
 
 def knn_one_fold_measures(X_train, X_test, y_train, y_test):
 	model = knn(X_train, y_train)
-	print 'Model score %f' % model.score(X_test, y_test)
+	# print 'Model score %f' % model.score(X_test, y_test)
 	y_pred = model.predict(X_test)
 	error_rate = (float(sum((y_pred - y_test)**2)) / len(y_test))
 	f1 = f1_score(y_test, y_pred)
@@ -101,7 +101,7 @@ def knn(dataset, targets):
 
 def lr_one_fold_measures(X_train, X_test, y_train, y_test):
 	model = lr(X_train, y_train)
-	print 'Model score %f' % model.score(X_test, y_test)
+	# print 'Model score %f' % model.score(X_test, y_test)
 	y_pred = model.predict(X_test)
 	error_rate = (float(sum((y_pred - y_test)**2)) / len(y_test))
 	f1 = f1_score(y_test, y_pred)

@@ -159,7 +159,7 @@ def combine_predictions_one_fold_using_majority(known_dataset, known_targets, tr
 		X_train, X_test = known_dataset[i][train_index], known_dataset[i][test_index]
 		model = algorithm(X_train, y_train)
 		accuracy = model.score(X_test, y_test)
-		print 'Model score for %s is %f' % (themes[i], accuracy)
+		# print 'Model score for %s is %f' % (themes[i], accuracy)
 		y_pred = model.predict(X_test)
 		predictions.append(y_pred)
 		accuracies.append(accuracy)
