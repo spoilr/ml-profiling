@@ -27,3 +27,17 @@ class BestSVM:
 
 	def to_string(self):
 		return 'c_subset %f, g_subset %f ||| c_fusion %f, g_fusion %f' % (self.c_subset, self.g_subset, self.c_fusion, self.g_fusion)
+
+
+class BestFeatureSVM:
+	def __init__(self, c, g):
+		self.c = c
+		self.g = g
+
+	def svm_subset_features(self, dataset, targets):
+		model = SVC(class_weight='auto', C=self.c, gamma=self.g)
+		model.fit(dataset, targets)
+		return model
+
+	def to_string(self):
+		return 'c %f, g %f' % (self.c, self.g)	
