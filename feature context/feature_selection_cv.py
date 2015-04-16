@@ -31,13 +31,12 @@ def features_cross_validation(known_dataset, known_targets, features):
 		X_train, X_test = known_dataset[train_index], known_dataset[test_index]
 		y_train, y_test = known_targets[train_index], known_targets[test_index]
 		
-		error_rate, selected_features = selected_feature_one_fold(X_train, y_train, X_test, y_test, features)
-		error_rates += error_rate
+		selected_features = selected_feature_one_fold(X_train, y_train, X_test, y_test, features)
+		# error_rates += error_rate
 		
 		cv_features.append(selected_features)
 
-	print 'Final error rate in features_cross_validation %f' % (float(error_rates) / kf.n_folds)
-
+	# print 'Final error rate in features_cross_validation %f' % (float(error_rates) / kf.n_folds)
 	# for testing
 	# print 'CV_FEATURES %s' % str(set(cv_features))
 	# for x in cvf:
@@ -70,9 +69,9 @@ def selected_feature_one_fold(X_train, y_train, X_test, y_test, features):
 	assert X_test.shape[0] ==  test_dataset_of_selected_features.shape[0]
 
 	# test the selected features
-	error_rate = one_fold_measures(train_dataset_of_selected_features, test_dataset_of_selected_features, y_train, y_test)
+	# error_rate = one_fold_measures(train_dataset_of_selected_features, test_dataset_of_selected_features, y_train, y_test)
 
-	return error_rate, selected_features
+	return selected_features
 
 def one_fold_measures(X_train, X_test, y_train, y_test):
 	model = svm_subset_features(X_train, y_train)
