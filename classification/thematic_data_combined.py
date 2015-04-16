@@ -4,11 +4,21 @@ Combine thematic data.
 
 import sys
 sys.path.insert(0, 'feature context/')
+sys.path.insert(0, 'results/')
 import numpy as np
 from split_dataset import *
 from parse_theme import *
 from feature_selection_cv import *
 from selected_features import *
+from features_from_svm_selection import net_90
+from features_from_svm_selection import net_70
+from features_from_svm_selection import net_50
+from features_from_svm_selection import ill_90
+from features_from_svm_selection import ill_70
+from features_from_svm_selection import ill_50
+from features_from_svm_selection import ideo_90
+from features_from_svm_selection import ideo_70
+from features_from_svm_selection import ideo_50
 
 themes = ['net', 'ill', 'ideo']
 
@@ -47,14 +57,39 @@ def thematic_data_from_feature_selection(orig_targets, theme, percentage):
 	
 	known_targets = np.asarray(known_targets)
 
-	cv_features = features_cross_validation(known_dataset, known_targets, features)
-	selected_features = select_final_features_from_cv(cv_features, percentage)
+	# these come from feature_selection_cv
+	# commented out because they were saved to decrease computation time
+	# cv_features = features_cross_validation(known_dataset, known_targets, features)
+	# selected_features = select_final_features_from_cv(cv_features, percentage)
+	selected_features = select_features(percentage, theme)
 
 	sf = SelectedFeatures(known_dataset, known_targets, selected_features, features)
 
 	print '####### %s FEATURES ####### %d %s' % (theme, len(selected_features), str(selected_features)) 
 
 	return sf.extract_data_from_selected_features(), known_targets
+
+def select_features(percentage, theme):
+	if theme == 'net' and percentage == 0.9:
+		return net_90
+	elif theme == 'net'and percentage == 0.7:
+		return net_70
+	elif theme == 'net'and percentage == 0.5:
+		return net_50
+	elif theme == 'ill' and percentage == 0.9:
+		return ill_90
+	elif theme == 'ill'and percentage == 0.7:
+		return ill_70
+	elif theme == 'ill'and percentage == 0.5:
+		return ill_50
+	elif theme == 'ideo' and percentage == 0.9:
+		return ideo_90
+	elif theme == 'ideo'and percentage == 0.7:
+		return ideo_70
+	elif theme == 'ideo'and percentage == 0.5:	
+		return ideo_50
+	else:
+		print 'ERROR in percentage - theme'
 
 def combine_data_from_feature_selection(orig_targets, percentage):
 	combined_dataset = []
