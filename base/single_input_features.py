@@ -22,7 +22,10 @@ from ssa_features import highval_all_x
 from ssa_features import highval_all_y
 from closest_distance import get_best
 from cv import cross_validation
-from cv import single_svm_one_fold_measures
+from cv import lr_one_fold_measures
+from cv import dt_one_fold_measures
+from cv import knn_one_fold_measures
+from cv import single_svm_fs_one_fold_measures
 from parameters import TOP_FEATURES_PERCENTAGE_THRESHOLD
 import math as math
 
@@ -61,11 +64,34 @@ if __name__ == "__main__":
 	try:
 		[dataset, features] = parse_theme(sys.argv[1])
 
-		print '########## CIVIL ##########'
-		feature_selection(features, targets, dataset, ids, 'civil', single_svm_one_fold_measures, standardize=True)
+		tech = raw_input("Enter algorithm. Choose between lr, dt, knn, svm")
 
-		print '########## HIGHVAL ##########'
-		feature_selection(features, targets, dataset, ids, 'highval', single_svm_one_fold_measures, standardize=True)
+		if tech == 'lr':
+			print '########## CIVIL ##########'
+			feature_selection(features, targets, dataset, ids, 'civil', lr_one_fold_measures)
+
+			print '########## HIGHVAL ##########'
+			feature_selection(features, targets, dataset, ids, 'highval', lr_one_fold_measures)
+		elif tech == 'dt':
+			print '########## CIVIL ##########'
+			feature_selection(features, targets, dataset, ids, 'civil', dt_one_fold_measures)
+
+			print '########## HIGHVAL ##########'
+			feature_selection(features, targets, dataset, ids, 'highval', dt_one_fold_measures)
+		elif tech == 'knn':
+			print '########## CIVIL ##########'
+			feature_selection(features, targets, dataset, ids, 'civil', knn_one_fold_measures)
+
+			print '########## HIGHVAL ##########'
+			feature_selection(features, targets, dataset, ids, 'highval', knn_one_fold_measures)
+		elif tech == 'svm':
+			print '########## CIVIL ##########'
+			feature_selection(features, targets, dataset, ids, 'civil', single_svm_fs_one_fold_measures, standardize=True)
+
+			print '########## HIGHVAL ##########'
+			feature_selection(features, targets, dataset, ids, 'highval', single_svm_fs_one_fold_measures, standardize=True)
+		else:
+			print 'ERROR technique'	
 
 	except IndexError:
 		print "Error!! Pass 'all' as argument"
