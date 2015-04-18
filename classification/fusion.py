@@ -49,6 +49,7 @@ def cross_validation(known_dataset, known_targets, fusion_algorithm, ids, algori
 	# print '########## MISCLASSIFIED ########## %d \n %s' % (len(misclassified_ids), str(misclassified_ids))
 	print 'Final f1 %f' % (float(f1_scores) / kf.n_folds)
 	print 'Final error %f' % (float(error_rates) / kf.n_folds)
+	print 'Final accuracy %f' % (1 - (float(error_rates) / kf.n_folds))
 
 	print 'Highval precision %f' % (float(hp_rates) / kf.n_folds)
 	print 'Highval recall %f' % (float(hr_rates) / kf.n_folds)

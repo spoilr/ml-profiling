@@ -43,6 +43,8 @@ def cross_validation(known_dataset, known_targets, ids, one_fold_measures, prt=F
 	
 	print 'Final f1 %f' % (float(f1_scores) / kf.n_folds)
 	print 'Final error %f' % (float(error_rates) / kf.n_folds)
+	print 'Final accuracy %f' % (1 - (float(error_rates) / kf.n_folds))
+	
 	print 'Highval precision %f' % (float(hp_rates) / kf.n_folds)
 	print 'Highval recall %f' % (float(hr_rates) / kf.n_folds)
 	print 'Highval f1 %f' % (float(hf_rates) / kf.n_folds)
