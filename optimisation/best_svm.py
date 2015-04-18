@@ -39,5 +39,10 @@ class BestFeatureSVM:
 		model.fit(dataset, targets)
 		return model
 
+	def svm_for_features_fusion(self, dataset, targets):
+		model = SVC(class_weight='auto', C=self.c, gamma=self.g)
+		model.fit(dataset, targets)
+		return model	
+
 	def to_string(self):
 		return 'c %f, g %f' % (self.c, self.g)	

@@ -1,5 +1,6 @@
 import sys
 sys.path.insert(0, 'utils/')
+from save_output import save_output
 from binary_classification_measures import measures
 from misclassified_ids import *
 from svms import svm_selected_vars
@@ -11,7 +12,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.cross_validation import StratifiedKFold
 from sklearn.metrics import f1_score
 
-def cross_validation(known_dataset, known_targets, ids, one_fold_measures):
+def cross_validation(known_dataset, known_targets, ids, one_fold_measures, prt=False, file_name=None):
 	misclassified_ids = []
 
 	kf = StratifiedKFold(known_targets, n_folds=10)
@@ -49,6 +50,9 @@ def cross_validation(known_dataset, known_targets, ids, one_fold_measures):
 	print 'Civil recall %f' % (float(cr_rates) / kf.n_folds)
 	print 'Civil f1 %f' % (float(cf_rates) / kf.n_folds)
 
+	if prt and (float(error_rates) / kf.n_folds) <= 0.43:
+		save_output(file_name, f1_scores, error_rates, hp_rates, hr_rates, hf_rates, cp_rates, cr_rates, cf_rates, kf.n_folds)
+
 def single_svm_one_fold_measures(X_train, X_test, y_train, y_test):
 	model = svm_all_vars(X_train, y_train)
 	# print 'Model score %f' % model.score(X_test, y_test)
@@ -59,7 +63,7 @@ def single_svm_one_fold_measures(X_train, X_test, y_train, y_test):
 
 	return error_rate, f1, model, (hp, hr, hf), (cp, cr, cf)
 
-def single_svm_ft_one_fold_measures(X_train, X_test, y_train, y_test):
+def single_svm_fs_one_fold_measures(X_train, X_test, y_train, y_test):
 	model = svm_selected_vars(X_train, y_train)
 	# print 'Model score %f' % model.score(X_test, y_test)
 	y_pred = model.predict(X_test)
@@ -80,7 +84,7 @@ def dt_one_fold_measures(X_train, X_test, y_train, y_test):
 	return error_rate, f1, model, (hp, hr, hf), (cp, cr, cf)	
 
 def dt(dataset, targets):
-	model = DecisionTreeClassifier(criterion='entropy', min_samples_split=5)
+	model = DecisionTreeClassifier(criterion='entropy')
 	model.fit(dataset, targets)
 	return model
 

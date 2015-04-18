@@ -36,7 +36,7 @@ SVC(class_weight='auto', C=2.5009999999999999)			#90		0.158333 ; 0.380000		0.370
 SVC(class_weight='auto', C=0.700000, gamma=0.400000)	#90 							0.180000 ; 0.282222
 SVC(class_weight='auto', C=0.700000, gamma=0.500000)	#90 							0.180000 ; 0.271111
 SVC(class_weight='auto', C=1.500000, gamma=0.100000)	#90 							0.183333 ; 0.280833
-SVC(class_weight='auto', C=0.900000, gamma=0.100000)	#90 							0.230000 ; 0.268333
+SVC(class_weight='auto', C=0.900000, gamma=0.100000)	#90 	0.066667 ; 0.365278		0.230000 ; 0.268333		0.160087 ; 0.452778
 SVC(class_weight='auto', C=4.900000, gamma=0.100000)	#90 							0.183333 ; 0.280833
 ]
 

@@ -1,5 +1,6 @@
 import sys
 sys.path.insert(0, 'utils/')
+from save_output import save_output
 from load_data import *
 from labels_fusion import *
 from binary_classification_measures import measures
@@ -16,7 +17,7 @@ from collections import Counter
 NR_THEMES = 3
 themes = ['net', 'ill', 'ideo']
 
-def cross_validation(known_dataset, known_targets, fusion_algorithm, ids, algorithm):
+def cross_validation(known_dataset, known_targets, fusion_algorithm, ids, algorithm, prt=False, file_name=None):
 	misclassified_ids = []
 
 	kf = StratifiedKFold(known_targets, n_folds=10)
@@ -55,6 +56,9 @@ def cross_validation(known_dataset, known_targets, fusion_algorithm, ids, algori
 	print 'Civil precision %f' % (float(cp_rates) / kf.n_folds)
 	print 'Civil recall %f' % (float(cr_rates) / kf.n_folds)
 	print 'Civil f1 %f' % (float(cf_rates) / kf.n_folds)
+
+	if prt and (float(error_rates) / kf.n_folds) <= 0.43:
+		save_output(file_name, f1_scores, error_rates, hp_rates, hr_rates, hf_rates, cp_rates, cr_rates, cf_rates, kf.n_folds)
 
 
 def fusion_outputs(known_dataset, known_targets, train_index, test_index, fusion_algorithm, ids, algorithm):
@@ -134,7 +138,7 @@ def inner_svm(dataset, targets):
 	return model
 
 def dt(dataset, targets):
-	model = DecisionTreeClassifier(criterion='entropy', min_samples_split=5)
+	model = DecisionTreeClassifier(criterion='entropy')
 	model.fit(dataset, targets)
 	return model
 

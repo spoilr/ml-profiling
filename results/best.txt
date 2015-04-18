@@ -1,0 +1,243 @@
+best_dt CV_PERCENTAGE_OCCURENCE_THRESHOLD = 0.9		wmaj
+##############################
+
+Final error 0.279722
+Final accuracy 0.720278
+Highval precision 0.493333
+Highval recall 0.600000
+Highval f1 0.523810
+Civil precision 0.835595
+Civil recall 0.764286
+Civil f1 0.787446
+
+best_knn CV_PERCENTAGE_OCCURENCE_THRESHOLD = 0.9	wmaj
+##############################
+
+Final error 0.278611
+Final accuracy 0.721389
+Highval precision 0.400000
+Highval recall 0.366667
+Highval f1 0.360476
+Civil precision 0.772976
+Civil recall 0.873810
+Civil f1 0.81240
+
+
+best_dt CV_PERCENTAGE_OCCURENCE_THRESHOLD = 0.9	maj
+############################## 
+
+Final error 0.393889
+Final accuracy 0.606111
+Highval precision 0.346667
+Highval recall 0.383333
+Highval f1 0.348571
+Civil precision 0.724405
+Civil recall 0.697619
+Civil f1 0.700220
+
+best_knn CV_PERCENTAGE_OCCURENCE_THRESHOLD = 0.9	maj
+##############################
+
+Final error 0.415278
+Final accuracy 0.584722
+Highval precision 0.133333
+Highval recall 0.066667
+Highval f1 0.083333
+Civil precision 0.660754
+Civil recall 0.809524
+Civil f1 0.723080
+
+
+
+
+
+
+
+best_dt CV_PERCENTAGE_OCCURENCE_THRESHOLD = 0.7 	wmaj
+##############################
+
+Final error 0.245833
+Final accuracy 0.754167
+Highval precision 0.526667
+Highval recall 0.633333
+Highval f1 0.560000
+Civil precision 0.847024
+Civil recall 0.816667
+Civil f1 0.818455
+
+
+best_knn CV_PERCENTAGE_OCCURENCE_THRESHOLD = 0.7 	wmaj
+##############################
+
+Final error 0.310833
+Final accuracy 0.689167
+Highval precision 0.416667
+Highval recall 0.250000
+Highval f1 0.290476
+Civil precision 0.731111
+Civil recall 0.878571
+Civil f1 0.792527
+
+
+best_dt CV_PERCENTAGE_OCCURENCE_THRESHOLD = 0.7 	maj
+##############################
+
+Final error 0.338056
+Final accuracy 0.661944
+Highval precision 0.475000
+Highval recall 0.333333
+Highval f1 0.367143
+Civil precision 0.732143
+Civil recall 0.811905
+Civil f1 0.761868
+
+
+best_knn CV_PERCENTAGE_OCCURENCE_THRESHOLD = 0.7 	maj
+##############################
+
+Final error 0.424167
+Final accuracy 0.575833
+Highval precision 0.200000
+Highval recall 0.100000
+Highval f1 0.130000
+Civil precision 0.661706
+Civil recall 0.780952
+Civil f1 0.713745
+
+
+
+
+
+
+
+
+best_dt CV_PERCENTAGE_OCCURENCE_THRESHOLD = 0.5 	wmaj
+##############################
+
+Final error 0.312222
+Final accuracy 0.687778
+Highval precision 0.440000
+Highval recall 0.450000
+Highval f1 0.430000
+Civil precision 0.774286
+Civil recall 0.800000
+Civil f1 0.778911
+
+best_knn CV_PERCENTAGE_OCCURENCE_THRESHOLD = 0.5 	wmaj
+##############################
+
+Final error 0.292500
+Final accuracy 0.707500
+Highval precision 0.541667
+Highval recall 0.316667
+Highval f1 0.369048
+Civil precision 0.757937
+Civil recall 0.873810
+Civil f1 0.807026
+
+
+best_dt CV_PERCENTAGE_OCCURENCE_THRESHOLD = 0.5 	maj
+##############################
+
+Final error 0.403333
+Final accuracy 0.596667
+Highval precision 0.266667
+Highval recall 0.300000
+Highval f1 0.272063
+Civil precision 0.715357
+Civil recall 0.721429
+Civil f1 0.708480
+
+
+best_knn CV_PERCENTAGE_OCCURENCE_THRESHOLD = 0.5 	maj
+##############################
+
+Final error 0.372222
+Final accuracy 0.627778
+Highval precision 0.316667
+Highval recall 0.200000
+Highval f1 0.223810
+Civil precision 0.697421
+Civil recall 0.809524
+Civil f1 0.740914
+
+
+
+
+
+
+
+
+best_single_dt CV_PERCENTAGE_OCCURENCE_THRESHOLD = 0.9
+##############################
+
+Final error 0.360556
+Final accuracy 0.639444
+Highval precision 0.315000
+Highval recall 0.316667
+Highval f1 0.287619
+Civil precision 0.732540
+Civil recall 0.780952
+Civil f1 0.742079
+
+best_single_knn CV_PERCENTAGE_OCCURENCE_THRESHOLD = 0.9
+##############################
+Final error 0.379167
+Final accuracy 0.620833
+Highval precision 0.216667
+Highval recall 0.150000
+Highval f1 0.163333
+Civil precision 0.689921
+Civil recall 0.828571
+Civil f1 0.747608
+
+
+best_single_dt CV_PERCENTAGE_OCCURENCE_THRESHOLD = 0.7
+##############################
+
+Final error 0.369444
+Final accuracy 0.630556
+Highval precision 0.283333
+Highval recall 0.266667
+Highval f1 0.241111
+Civil precision 0.734325
+Civil recall 0.780952
+Civil f1 0.737833
+
+
+best_single_knn CV_PERCENTAGE_OCCURENCE_THRESHOLD = 0.7
+##############################
+
+Final error 0.381667
+Final accuracy 0.618333
+Highval precision 0.100000
+Highval recall 0.066667
+Highval f1 0.080000
+Civil precision 0.676905
+Civil recall 0.857143
+Civil f1 0.753644
+
+
+best_single_dt CV_PERCENTAGE_OCCURENCE_THRESHOLD = 0.5
+##############################
+
+Final f1 0.238016
+Final error 0.430556
+Highval precision 0.211667
+Highval recall 0.300000
+Highval f1 0.238016
+Civil precision 0.712381
+Civil recall 0.680952
+Civil f1 0.677806
+
+best_single_knn CV_PERCENTAGE_OCCURENCE_THRESHOLD = 0.5
+##############################
+
+Final error 0.333056
+Final accuracy 0.666944
+Highval precision 0.250000
+Highval recall 0.150000
+Highval f1 0.186667
+Civil precision 0.704881
+Civil recall 0.890476
+Civil f1 0.784779

@@ -96,7 +96,7 @@ if __name__ == "__main__":
 	
 
 	C_range, gamma_range = params()	
-	BestFeatureSVM
+	
 	for pair in itertools.product(C_range, gamma_range):
 		c = pair[0]
 		g = pair[1]

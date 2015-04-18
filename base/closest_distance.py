@@ -54,7 +54,7 @@ def flatten_binary(points, nr_times):
 
 def get_best(data_all, data_x, data_y, nr_times):
 	points = sort_by_euclidean_distance(data_all, data_x, data_y)
-	print points
+	# print points
 	return flatten_binary(points, nr_times)
 
 if __name__ == "__main__":

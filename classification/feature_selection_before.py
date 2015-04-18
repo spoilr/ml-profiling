@@ -8,7 +8,7 @@ from features_from_svm_selection import single_features_50
 
 import numpy as np
 
-def feature_selection_before(features, targets, dataset, percentage, ids, one_fold_measures, standardize=False):
+def feature_selection_before(features, targets, dataset, percentage, ids, one_fold_measures, standardize=False, prt=False, file_name=None):
 	[known_dataset, known_targets, unk] = split_dataset(dataset, targets)
 	assert len(known_dataset) == 92
 	assert len(known_targets) == 92
@@ -28,7 +28,7 @@ def feature_selection_before(features, targets, dataset, percentage, ids, one_fo
 		std = StandardizedData(known_targets, known_dataset)
 		known_dataset, known_targets = std.split_and_standardize_dataset()  
 
-	cross_validation(np.array(known_dataset), known_targets, ids, one_fold_measures)
+	cross_validation(np.array(known_dataset), known_targets, ids, one_fold_measures, prt, file_name)
 
 	print '####### FEATURES ####### %d \n %s' % (len(selected_features), str(selected_features))
 
