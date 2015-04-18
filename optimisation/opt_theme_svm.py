@@ -32,8 +32,8 @@ if __name__ == "__main__":
 
 	dataset = preprocessing.scale(dataset)
 
-	C_range = np.arange(0.1, 5, 0.2)
-	gamma_range = np.arange(0.1, 5, 0.2)
+	C_range = np.arange(0.1, 16, 0.05)
+	gamma_range = np.arange(0.1, 16, 0.05)
 	param_grid = dict(gamma=gamma_range, C=C_range)
 	cv = StratifiedShuffleSplit(known_targets, random_state=42)
 	grid = GridSearchCV(SVC(class_weight='auto'), param_grid=param_grid, cv=cv, scoring='accuracy')
