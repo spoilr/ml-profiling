@@ -73,9 +73,9 @@ def cv(theme, percentage, current_svm):
 
 def params():
 	begin = 0.1
-	end = 2.7
-	C_range = np.arange(begin, end, 0.4)
-	gamma_range = np.arange(begin, 1.3, 0.4)
+	end = 3
+	C_range = np.arange(begin, end, 0.1)
+	gamma_range = np.arange(begin, 1.3, 0.1)
 	return C_range, gamma_range
 
 

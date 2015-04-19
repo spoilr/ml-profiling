@@ -29,6 +29,6 @@ if __name__ == "__main__":
 	dataset = std.standardize_dataset(combined_dataset)  
 
 	fusion_algorithm = raw_input("Enter algorithm. Choose between maj, wmaj, svm, nn")
-	cross_validation(dataset, targets, fusion_algorithm, ids, svm_selected_for_features_fusion)
+	cross_validation(dataset, targets, fusion_algorithm, ids, svm_selected_for_features_fusion, ind=True)
 
 	

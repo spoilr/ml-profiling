@@ -6,6 +6,9 @@ from labels_fusion import *
 from binary_classification_measures import measures
 from misclassified_ids import *
 from project_data import *
+from svms import svm_selected_net
+from svms import svm_selected_ill
+from svms import svm_selected_ideo
 
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.neighbors import KNeighborsClassifier
@@ -17,7 +20,7 @@ from collections import Counter
 NR_THEMES = 3
 themes = ['net', 'ill', 'ideo']
 
-def cross_validation(known_dataset, known_targets, fusion_algorithm, ids, algorithm, prt=False, file_name=None):
+def cross_validation(known_dataset, known_targets, fusion_algorithm, ids, algorithm, prt=False, file_name=None, ind=False):
 	misclassified_ids = []
 
 	kf = StratifiedKFold(known_targets, n_folds=10)
@@ -31,7 +34,7 @@ def cross_validation(known_dataset, known_targets, fusion_algorithm, ids, algori
 	cf_rates = 0
 	# cross validation
 	for train_index, test_index in kf:
-		error, f1, mis_ids, (hp, hr, hf), (cp, cr, cf) = fusion_outputs(known_dataset, known_targets, train_index, test_index, fusion_algorithm, ids, algorithm)
+		error, f1, mis_ids, (hp, hr, hf), (cp, cr, cf) = fusion_outputs(known_dataset, known_targets, train_index, test_index, fusion_algorithm, ids, algorithm, ind)
 		
 		f1_scores += f1
 		error_rates += error
@@ -62,17 +65,17 @@ def cross_validation(known_dataset, known_targets, fusion_algorithm, ids, algori
 		save_output(file_name, f1_scores, error_rates, hp_rates, hr_rates, hf_rates, cp_rates, cr_rates, cf_rates, kf.n_folds)
 
 
-def fusion_outputs(known_dataset, known_targets, train_index, test_index, fusion_algorithm, ids, algorithm):
+def fusion_outputs(known_dataset, known_targets, train_index, test_index, fusion_algorithm, ids, algorithm, ind):
 	misclassified_ids = []
 	combined_predictions = []
 	y_test = []
 
 	if fusion_algorithm == 'maj':
-		predictions, y_test, accuracies, misclassified_ids = combine_predictions_one_fold_using_majority(known_dataset, known_targets, train_index, test_index, ids, algorithm)
+		predictions, y_test, accuracies, misclassified_ids = combine_predictions_one_fold_using_majority(known_dataset, known_targets, train_index, test_index, ids, algorithm, ind)
 		combined_predictions = majority_vote(predictions, y_test, accuracies)
 
 	elif fusion_algorithm == 'wmaj':
-		predictions, y_test, accuracies, misclassified_ids = combine_predictions_one_fold_using_majority(known_dataset, known_targets, train_index, test_index, ids, algorithm)
+		predictions, y_test, accuracies, misclassified_ids = combine_predictions_one_fold_using_majority(known_dataset, known_targets, train_index, test_index, ids, algorithm, ind)
 		combined_predictions = weighted_majority(predictions, y_test)
 
 	elif fusion_algorithm == 'svm':
@@ -154,7 +157,7 @@ def knn(dataset, targets):
 	return model		
 
 # called majority because it is used in both cases of majority_voting and weighted_majority voting.
-def combine_predictions_one_fold_using_majority(known_dataset, known_targets, train_index, test_index, ids, algorithm):
+def combine_predictions_one_fold_using_majority(known_dataset, known_targets, train_index, test_index, ids, algorithm, ind):
 	misclassified_ids = []
 
 	predictions = []
@@ -162,7 +165,17 @@ def combine_predictions_one_fold_using_majority(known_dataset, known_targets, tr
 	y_train, y_test = known_targets[train_index], known_targets[test_index]
 	for i in range(0, NR_THEMES):
 		X_train, X_test = known_dataset[i][train_index], known_dataset[i][test_index]
-		model = algorithm(X_train, y_train)
+
+		if ind:
+			if i == 0:
+				model = svm_selected_net(X_train, y_train)
+			elif i == 1:
+				model = svm_selected_ill(X_train, y_train)
+			elif i == 2:
+				model = svm_selected_ideo(X_train, y_train)
+		else:
+			model = algorithm(X_train, y_train)
+
 		accuracy = model.score(X_test, y_test)
 		# print 'Model score for %s is %f' % (themes[i], accuracy)
 		y_pred = model.predict(X_test)
