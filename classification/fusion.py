@@ -137,7 +137,7 @@ def svm_fusion(known_dataset, known_targets, train_index, test_index, ids, algor
 
 
 def inner_svm(dataset, targets):
-	model = SVC(class_weight='auto')
+	model = SVC(class_weight='auto', C=0.10000000000000001, gamma=0.30000000000000004)
 	model.fit(dataset, targets)
 	return model
 

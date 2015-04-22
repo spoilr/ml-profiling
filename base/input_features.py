@@ -86,15 +86,15 @@ def combine_and_cv(targets, target, tech):
 	combined_dataset, targets = combine_data_from_feature_selection(targets, target)
 
 	if tech == 'lr':
-		cross_validation(dataset, targets, fusion_algorithm, ids, lr)
+		cross_validation(combined_dataset, targets, fusion_algorithm, ids, lr)
 	elif tech == 'dt':
-		cross_validation(dataset, targets, fusion_algorithm, ids, dt)
+		cross_validation(combined_dataset, targets, fusion_algorithm, ids, dt)
 	elif tech == 'knn':
-		cross_validation(dataset, targets, fusion_algorithm, ids, knn)
+		cross_validation(combined_dataset, targets, fusion_algorithm, ids, knn)
 	elif tech == 'svm':
 		std = StandardizedData(targets)
-		dataset = std.standardize_dataset(combined_dataset)  
-		cross_validation(dataset, targets, fusion_algorithm, ids, svm_selected_for_features_fusion)
+		combined_dataset = std.standardize_dataset(combined_dataset)  
+		cross_validation(combined_dataset, targets, fusion_algorithm, ids, svm_selected_for_features_fusion, ind=True)
 	else:
 		print 'ERROR technique'	
 
@@ -108,11 +108,11 @@ if __name__ == "__main__":
 
 	tech = raw_input("Enter algorithm. Choose between lr, dt, knn, svm")
 
-	print '########## CIVIL ##########'
-	combine_and_cv(targets, 'civil', tech)
-
 	print '########## HIGHVAL ##########'
 	combine_and_cv(targets, 'highval', tech)
+
+	print '########## CIVIL ##########'
+	combine_and_cv(targets, 'civil', tech)
 
 	
 
