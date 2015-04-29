@@ -1,4 +1,4 @@
-def save_output(file_name, f1_scores, error_rates, hp_rates, hr_rates, hf_rates, cp_rates, cr_rates, cf_rates, folds):
+def save_output(file_name, error_rates, hp_rates, hr_rates, hf_rates, cp_rates, cr_rates, cf_rates, folds):
 	with open(file_name, "a") as myfile:	
 		myfile.write('\n##############################\n')
 	with open(file_name, "a") as myfile:	

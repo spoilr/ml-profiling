@@ -1,7 +1,7 @@
 import sys
 sys.path.insert(0, 'results/')
 from feature_selection_cv import *
-from cv import cross_validation
+from cv import cv10
 from features_from_svm_selection import single_features_90
 from features_from_svm_selection import single_features_70
 from features_from_svm_selection import single_features_50
@@ -28,7 +28,7 @@ def feature_selection_before(features, targets, dataset, percentage, ids, one_fo
 		std = StandardizedData(known_targets, known_dataset)
 		known_dataset, known_targets = std.split_and_standardize_dataset()  
 
-	cross_validation(np.array(known_dataset), known_targets, ids, one_fold_measures, prt, file_name)
+	cv10(np.array(known_dataset), known_targets, ids, one_fold_measures, prt, file_name)
 
 	print '####### FEATURES ####### %d \n %s' % (len(selected_features), str(selected_features))
 

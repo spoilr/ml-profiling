@@ -95,13 +95,13 @@ def measures(y_test, y_pred):
 	f = f1(y_test, y_pred)
 	a = accuracy(y_test, y_pred)
 
-	print 'PRECISION %s' % str(p)
-	print 'RECALL %s' % str(r)
-	print 'F1 %s' % str(f)
-	print 'ACCURACY %s' % str(a)
+	# print 'PRECISION %s' % str(p)
+	# print 'RECALL %s' % str(r)
+	# print 'F1 %s' % str(f)
+	# print 'ACCURACY %s' % str(a)
 
-	print 'Y_TEST %s' % str(y_test)
-	print 'Y_PRED %s' % str(y_pred)
+	# print 'Y_TEST %s' % str(y_test)
+	# print 'Y_PRED %s' % str(y_pred)
 
 	hp, cp = p
 	hr, cr = r

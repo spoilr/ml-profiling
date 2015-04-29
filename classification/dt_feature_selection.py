@@ -11,7 +11,7 @@ sys.path.insert(0, 'utils/')
 sys.path.insert(0, 'feature context/')
 from load_data import *
 from project_data import *
-from fusion import cross_validation
+from fusion import cv10
 from fusion import dt
 from thematic_data_combined import combine_data_from_feature_selection
 from parameters import CV_PERCENTAGE_OCCURENCE_THRESHOLD
@@ -25,6 +25,6 @@ if __name__ == "__main__":
 	combined_dataset, targets = combine_data_from_feature_selection(targets, CV_PERCENTAGE_OCCURENCE_THRESHOLD)
 
 	fusion_algorithm = raw_input("Enter algorithm. Choose between maj, wmaj, svm, nn")
-	cross_validation(combined_dataset, targets, fusion_algorithm, ids, dt)
+	cv10(combined_dataset, targets, fusion_algorithm, ids, dt)
 
 	

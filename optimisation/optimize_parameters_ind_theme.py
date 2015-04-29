@@ -97,7 +97,7 @@ if __name__ == "__main__":
 
 		f1, error= cv(theme, percentage, current_svm)
 		
-		if error <= 0.33 and f1 > 0:
+		if error <= 0.27 and f1 > 0:
 			with open("result.txt", "a") as myfile:	
 				myfile.write('\n##############################\n')
 			with open("result.txt", "a") as myfile:

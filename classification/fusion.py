@@ -19,11 +19,45 @@ from collections import Counter
 
 NR_THEMES = 3
 themes = ['net', 'ill', 'ideo']
+NR_FOLDS = 10
+
+def cv10(known_dataset, known_targets, fusion_algorithm, ids, algorithm, prt=False, file_name=None, ind=False):
+	error_rates = 0
+	hp_rates = 0
+	hr_rates = 0
+	hf_rates = 0
+	cp_rates = 0
+	cr_rates = 0
+	cf_rates = 0
+	for i in range(NR_FOLDS):
+		error, hp, hr, hf, cp, cr, cf = cross_validation(known_dataset, known_targets, fusion_algorithm, ids, algorithm, prt, file_name, ind)		
+		error_rates += error
+		
+		hp_rates += hp
+		hr_rates += hr
+		hf_rates += hf
+		cp_rates += cp
+		cr_rates += cr
+		cf_rates += cf
+
+	if prt and (float(error_rates) / NR_FOLDS) <= 0.43:
+		save_output(file_name, error_rates, hp_rates, hr_rates, hf_rates, cp_rates, cr_rates, cf_rates, NR_FOLDS)	
+
+	print 'Final error %f' % (float(error_rates) / NR_FOLDS)
+	print 'Final accuracy %f' % (1 - (float(error_rates) / NR_FOLDS))
+
+	print 'Highval precision %f' % (float(hp_rates) / NR_FOLDS)
+	print 'Highval recall %f' % (float(hr_rates) / NR_FOLDS)
+	print 'Highval f1 %f' % (float(hf_rates) / NR_FOLDS)
+	print 'Civil precision %f' % (float(cp_rates) / NR_FOLDS)
+	print 'Civil recall %f' % (float(cr_rates) / NR_FOLDS)
+	print 'Civil f1 %f' % (float(cf_rates) / NR_FOLDS)	
+
 
 def cross_validation(known_dataset, known_targets, fusion_algorithm, ids, algorithm, prt=False, file_name=None, ind=False):
 	misclassified_ids = []
 
-	kf = StratifiedKFold(known_targets, n_folds=10)
+	kf = StratifiedKFold(known_targets, n_folds=NR_FOLDS, shuffle=True)
 	f1_scores = 0
 	error_rates = 0
 	hp_rates = 0
@@ -50,19 +84,18 @@ def cross_validation(known_dataset, known_targets, fusion_algorithm, ids, algori
 
 	misclassified_ids = set(misclassified_ids)	
 	# print '########## MISCLASSIFIED ########## %d \n %s' % (len(misclassified_ids), str(misclassified_ids))
-	print 'Final f1 %f' % (float(f1_scores) / kf.n_folds)
-	print 'Final error %f' % (float(error_rates) / kf.n_folds)
-	print 'Final accuracy %f' % (1 - (float(error_rates) / kf.n_folds))
+	# print 'Final f1 %f' % (float(f1_scores) / kf.n_folds)
+	# print 'Final error %f' % (float(error_rates) / kf.n_folds)
+	# print 'Final accuracy %f' % (1 - (float(error_rates) / kf.n_folds))
 
-	print 'Highval precision %f' % (float(hp_rates) / kf.n_folds)
-	print 'Highval recall %f' % (float(hr_rates) / kf.n_folds)
-	print 'Highval f1 %f' % (float(hf_rates) / kf.n_folds)
-	print 'Civil precision %f' % (float(cp_rates) / kf.n_folds)
-	print 'Civil recall %f' % (float(cr_rates) / kf.n_folds)
-	print 'Civil f1 %f' % (float(cf_rates) / kf.n_folds)
+	# print 'Highval precision %f' % (float(hp_rates) / kf.n_folds)
+	# print 'Highval recall %f' % (float(hr_rates) / kf.n_folds)
+	# print 'Highval f1 %f' % (float(hf_rates) / kf.n_folds)
+	# print 'Civil precision %f' % (float(cp_rates) / kf.n_folds)
+	# print 'Civil recall %f' % (float(cr_rates) / kf.n_folds)
+	# print 'Civil f1 %f' % (float(cf_rates) / kf.n_folds)
 
-	if prt and (float(error_rates) / kf.n_folds) <= 0.43:
-		save_output(file_name, f1_scores, error_rates, hp_rates, hr_rates, hf_rates, cp_rates, cr_rates, cf_rates, kf.n_folds)
+	return (float(error_rates) / kf.n_folds), (float(hp_rates) / kf.n_folds), (float(hr_rates) / kf.n_folds), (float(hf_rates) / kf.n_folds), (float(cp_rates) / kf.n_folds), (float(cr_rates) / kf.n_folds), (float(cf_rates) / kf.n_folds)	
 
 
 def fusion_outputs(known_dataset, known_targets, train_index, test_index, fusion_algorithm, ids, algorithm, ind):
@@ -86,11 +119,11 @@ def fusion_outputs(known_dataset, known_targets, train_index, test_index, fusion
 	else:
 		print 'Error parsing algorithm'
 
-	print '###############'
-	print 'Y_PRED %s' % str(predictions)
-	print 'Y_TEST %s' % str(y_test)
-	print 'COMBINED %s' % str(combined_predictions)
-	print '###############'
+	# print '###############'
+	# print 'Y_PRED %s' % str(predictions)
+	# print 'Y_TEST %s' % str(y_test)
+	# print 'COMBINED %s' % str(combined_predictions)
+	# print '###############'
 
 	(hp, hr, hf), (cp, cr, cf) = measures(y_test, combined_predictions)
 
@@ -147,7 +180,12 @@ def dt(dataset, targets):
 	return model
 
 def lr(dataset, targets):
-	model = LogisticRegression(class_weight='auto')
+	model = LogisticRegression(class_weight='auto', C=0.06)
+	model.fit(dataset, targets)
+	return model
+
+def lr_feature_selection(dataset, targets):
+	model = LogisticRegression(class_weight='auto', C=20.960000)
 	model.fit(dataset, targets)
 	return model
 

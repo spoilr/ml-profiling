@@ -44,7 +44,7 @@ class BestSVM:
 		return 'c_net %f, g_net %f ||| c_ill %f, g_ill %f ||| c_ideo %f, g_ideo %f' % (self.c_net, self.g_net, self.c_ill, self.g_ill, self.c_ideo, self.g_ideo)
 
 def cross_validation(known_dataset, known_targets, best_svm):
-	kf = StratifiedKFold(known_targets, n_folds=10)
+	kf = StratifiedKFold(known_targets, n_folds=10, shuffle=True)
 	f1_scores = 0
 	error_rates = 0
 	# cross validation
@@ -83,10 +83,10 @@ def combine_predictions_one_fold_using_majority(known_dataset, known_targets, tr
 	return predictions, y_test
 
 def params():
-	begin = 0.1
-	end = 2.5
-	C_range = np.arange(begin, end, 0.1)
-	gamma_range = np.arange(begin, 1.3, 0.1)
+	begin = 0.3
+	end = 3.5
+	C_range = np.arange(begin, end, 0.4)
+	gamma_range = np.arange(begin, 1.3, 0.4)
 	return C_range, gamma_range
 
 
@@ -119,9 +119,9 @@ if __name__ == "__main__":
 			std = StandardizedData(targets)
 			dataset = std.standardize_dataset(combined_dataset)  
 
-			f1, error = cross_validation(dataset, targets, best_svm)
+			error, f1 = cross_validation(dataset, targets, best_svm)
 			
-			if error <= 0.33 and f1 > 0:
+			if error <= 0.27 and f1 > 0:
 				with open("result.txt", "a") as myfile:	
 					myfile.write('\n##############################\n')
 				with open("result.txt", "a") as myfile:
