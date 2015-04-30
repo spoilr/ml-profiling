@@ -1,11 +1,3 @@
-"""
-Decision Tree Classification
-Single DT
-Feature selection is applied before
-"""
-
-print(__doc__)
-
 import sys
 sys.path.insert(0, 'utils/')
 sys.path.insert(0, 'feature context/')
@@ -30,7 +22,7 @@ if __name__ == "__main__":
 		[dataset, features] = parse_theme(sys.argv[1])
 		alg = raw_input("Enter algorithm. Choose lr, dt, knn, svm")
 
-		for i in range(1000):
+		for i in range(100):
 			if alg == "lr":
 				feature_selection_before(features, targets, dataset, CV_PERCENTAGE_OCCURENCE_THRESHOLD, ids, lr_one_fold_measures_feature_selection, prt=True, file_name="best_single_lr.txt")
 			elif alg == "dt":

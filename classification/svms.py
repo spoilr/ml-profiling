@@ -29,7 +29,7 @@ def svm_for_features_fusion(dataset, targets):
 	return model
 
 def svm_selected_for_features_fusion(dataset, targets):
-	model = SVC(class_weight='auto', C=0.900000, gamma=0.100000)	#90 	0.066667 ; 0.365278		0.230000 ; 0.268333		0.160087 ; 0.452778
+	# model = SVC(class_weight='auto', C=0.900000, gamma=0.100000)	#90 	0.066667 ; 0.365278		0.230000 ; 0.268333		0.160087 ; 0.452778
 	# model = SVC(class_weight='auto', C=0.700000, gamma=0.200000)	#70 	0.073333 ; 0.370000		0.120000 ; 0.292222		0.291905 ; 0.406111
 	# model = SVC(class_weight='auto', C=2.5009999999999999)		#50 	0.123333 ; 0.408889 	0.260000 ; 0.293333		0.258990 ; 0.481944
 

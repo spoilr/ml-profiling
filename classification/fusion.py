@@ -40,7 +40,7 @@ def cv10(known_dataset, known_targets, fusion_algorithm, ids, algorithm, prt=Fal
 		cr_rates += cr
 		cf_rates += cf
 
-	if prt and (float(error_rates) / NR_FOLDS) <= 0.43:
+	if prt and (float(hf_rates) / NR_FOLDS) >= 0.3:
 		save_output(file_name, error_rates, hp_rates, hr_rates, hf_rates, cp_rates, cr_rates, cf_rates, NR_FOLDS)	
 
 	print 'Final error %f' % (float(error_rates) / NR_FOLDS)
@@ -112,7 +112,7 @@ def fusion_outputs(known_dataset, known_targets, train_index, test_index, fusion
 		combined_predictions = weighted_majority(predictions, y_test)
 
 	elif fusion_algorithm == 'svm':
-		y_test, predictions, combined_predictions, misclassified_ids = svm_fusion(known_dataset, known_targets, train_index, test_index, ids, algorithm)
+		y_test, predictions, combined_predictions, misclassified_ids = svm_fusion(known_dataset, known_targets, train_index, test_index, ids, algorithm, ind)
 
 	elif fusion_algorithm == 'nn':
 		print 'not done'
@@ -134,7 +134,7 @@ def fusion_outputs(known_dataset, known_targets, train_index, test_index, fusion
 
 # Training and testing sets initially
 # 2/3 are used to train the algorithm and 1/3 is used to train(after the output is obtained) the fusion SVM
-def svm_fusion(known_dataset, known_targets, train_index, test_index, ids, algorithm):
+def svm_fusion(known_dataset, known_targets, train_index, test_index, ids, algorithm, ind):
 	misclassified_ids = []
 
 	training_predictions = []
@@ -151,7 +151,17 @@ def svm_fusion(known_dataset, known_targets, train_index, test_index, ids, algor
 			svm_X_train, svm_Y_train = X_train[inner_train_index], y_train[inner_train_index]
 			fusion_X_train, fusion_Y_train = X_train[inner_test_index], y_train[inner_test_index]
 
-			model = algorithm(svm_X_train, svm_Y_train)
+
+			if ind:
+				if i == 0:
+					model = svm_selected_net(svm_X_train, svm_Y_train)
+				elif i == 1:
+					model = svm_selected_ill(svm_X_train, svm_Y_train)
+				elif i == 2:
+					model = svm_selected_ideo(svm_X_train, svm_Y_train)
+			else:
+				model = algorithm(svm_X_train, svm_Y_train)
+
 			training_predictions.append(model.predict(fusion_X_train))
 			predictions.append(model.predict(final_X_test))
 			misclassified_ids += add_misclassified_ids(model, test_index, known_dataset[i], known_targets, ids)
@@ -170,7 +180,8 @@ def svm_fusion(known_dataset, known_targets, train_index, test_index, ids, algor
 
 
 def inner_svm(dataset, targets):
-	model = SVC(class_weight='auto', C=0.10000000000000001, gamma=0.30000000000000004)
+	# model = SVC(class_weight='auto', C=0.10000000000000001, gamma=0.30000000000000004)
+	model = SVC(class_weight='auto', C=0.10000000000000001, gamma=1.0)
 	model.fit(dataset, targets)
 	return model
 
@@ -190,7 +201,7 @@ def lr_feature_selection(dataset, targets):
 	return model
 
 def knn(dataset, targets):
-	model = KNeighborsClassifier(weights='distance', n_neighbors=3)
+	model = KNeighborsClassifier(weights='distance', n_neighbors=5)
 	model.fit(dataset, targets)
 	return model		
 

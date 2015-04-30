@@ -34,14 +34,14 @@ if __name__ == "__main__":
 		[dataset, features] = parse_theme(sys.argv[1])
 		known_targets = np.array(targets)
 
-		selected_features = select_features(0.9)
+		selected_features = select_features(CV_PERCENTAGE_OCCURENCE_THRESHOLD)
 		sf = SelectedFeatures(dataset, known_targets, selected_features, features)
 		dataset = sf.extract_data_from_selected_features()
 
 		dataset = preprocessing.scale(dataset)
 
-		C_range = np.arange(0.1, 25, 0.05)
-		gamma_range = np.arange(0.1, 25, 0.05)
+		C_range = np.arange(0.1, 16, 0.1)
+		gamma_range = np.arange(0.1, 16, 0.1)
 		param_grid = dict(gamma=gamma_range, C=C_range)
 		cv = StratifiedShuffleSplit(known_targets, random_state=42)
 		grid = GridSearchCV(SVC(class_weight='auto'), param_grid=param_grid, cv=cv, scoring='accuracy')

@@ -1,11 +1,3 @@
-"""
-Decision Tree Classification
-Combine DT for themes
-Feature selection is applied before
-"""
-
-print(__doc__)
-
 import sys
 sys.path.insert(0, 'utils/')
 sys.path.insert(0, 'feature context/')
@@ -16,6 +8,7 @@ from fusion import cv10
 from fusion import dt
 from fusion import lr_feature_selection
 from fusion import knn
+from standardized_data import *
 from thematic_data_combined import combine_data_from_feature_selection
 from parameters import CV_PERCENTAGE_OCCURENCE_THRESHOLD
 from svms import svm_selected_for_features_fusion
@@ -31,7 +24,7 @@ if __name__ == "__main__":
 	alg = raw_input("Enter algorithm. Choose lr, dt, knn, svm")
 	fusion_algorithm = raw_input("Enter algorithm. Choose between maj, wmaj, svm, nn")
 
-	for i in range(1000):
+	for i in range(100):
 		if alg == "lr":
 			cv10(combined_dataset, targets, fusion_algorithm, ids, lr_feature_selection, prt=True, file_name="best_lr.txt")
 		elif alg == "dt":
