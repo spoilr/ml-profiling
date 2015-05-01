@@ -1,3 +1,5 @@
+""" Optimise overall accuracy using combinations of parameters of each theme """
+
 import sys
 sys.path.insert(0, 'utils/')
 sys.path.insert(0, 'classification/')
@@ -84,7 +86,7 @@ def combine_predictions_one_fold_using_majority(known_dataset, known_targets, tr
 
 def params():
 	begin = 0.3
-	end = 3.5
+	end = 3
 	C_range = np.arange(begin, end, 0.4)
 	gamma_range = np.arange(begin, 1.3, 0.4)
 	return C_range, gamma_range
@@ -121,7 +123,7 @@ if __name__ == "__main__":
 
 			error, f1 = cross_validation(dataset, targets, best_svm)
 			
-			if error <= 0.27 and f1 > 0:
+			if error <= 0.33 and f1 > 0:
 				with open("result.txt", "a") as myfile:	
 					myfile.write('\n##############################\n')
 				with open("result.txt", "a") as myfile:

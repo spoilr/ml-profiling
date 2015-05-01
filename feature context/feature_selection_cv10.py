@@ -22,9 +22,15 @@ from sklearn.metrics import f1_score
 # each fold has selected features
 # after cv, choose the features that were selected at least N% of the repeated cross validation process (50%, 70%, 90%)
 def features_cross_validation(known_dataset, known_targets, features):
+	cv_feats = []
+	for i in range(10):
+		cv_feats.append(cv_10(known_dataset, known_targets, features))
+	return cv_feats	
+
+def cv_10(known_dataset, known_targets, features):
 	std = StandardizedData(known_targets, known_dataset)
 	known_dataset, known_targets = std.split_and_standardize_dataset()
-	kf = StratifiedKFold(known_targets, n_folds=10)
+	kf = StratifiedKFold(known_targets, n_folds=10, shuffle=True)
 	error_rates = 0
 	cv_features = []
 	for train_index, test_index in kf:
@@ -35,27 +41,24 @@ def features_cross_validation(known_dataset, known_targets, features):
 		# error_rates += error_rate
 		
 		cv_features.append(selected_features)
-
-	# print 'Final error rate in features_cross_validation %f' % (float(error_rates) / kf.n_folds)
-	# for testing
-	# print 'CV_FEATURES %s' % str(set(cv_features))
-	# for x in cvf:
-	# 	print len(x)	
-
 	return cv_features	
 
 # to be considered, a feature must appear at least 'percentage' of times in cv
 def select_final_features_from_cv(cv_features, percentage):
-	final_features = set()
-	unique_features = set.union(*cv_features)
-	nr_times = math.floor(percentage * len(cv_features))
-	
-	for feat in unique_features:
-		if len([x for x in cv_features if feat in x]) >= nr_times:
-			final_features.add(feat)
+	final_feats = []
+	for i in range(len(cv_features)):
 
-	print str(percentage) + " ##### " + str(len(final_features))
-	return final_features	
+		final_features = set()
+		unique_features = set.union(*cv_features[i])
+		nr_times = math.floor(percentage * len(cv_features[i]))
+		
+		for feat in unique_features:
+			if len([x for x in cv_features[i] if feat in x]) >= nr_times:
+				final_features.add(feat)
+
+		final_feats.append(final_features)
+
+	return set.intersection(*map(set,final_feats))
 
 
 def selected_feature_one_fold(X_train, y_train, X_test, y_test, features):
@@ -82,8 +85,8 @@ def one_fold_measures(X_train, X_test, y_train, y_test):
 	return error_rate		
 
 if __name__ == "__main__":
-	spreadsheet = Spreadsheet(project_data_file, upsampling=False)
-	data = Data(spreadsheet, upsampling=False)
+	spreadsheet = Spreadsheet(project_data_file)
+	data = Data(spreadsheet)
 	targets = data.targets
 
 	[dataset, features] = parse_theme(sys.argv[1])

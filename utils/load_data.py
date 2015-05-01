@@ -9,7 +9,8 @@ START_EXAMPLE_ROW = 1
 
 class Data:
 
-	def __init__(self, spreadsheet):
+	def __init__(self, spreadsheet, upsampling=True):
+		self.upsampling = upsampling
 		self.spreadsheet = spreadsheet
 		self.features = spreadsheet.features
 		self.targets = spreadsheet.targets
@@ -64,7 +65,15 @@ class Data:
 			row = []
 			for ind in indices:
 				row.append(self.spreadsheet.get_cell(curr_row, ind))
+
 			thematic_examples.append(row)	
+
+			if self.upsampling:
+				if self.targets[curr_row-1] == 1:
+					row = []
+					for ind in indices:
+						row.append(self.spreadsheet.get_cell(curr_row, ind))				
+					thematic_examples.append(row)		
 
 		assert len(thematic_examples) == len(self.examples)
 		
@@ -87,19 +96,34 @@ class Spreadsheet:
 
 	SHEET = 'Sheet1'
 
-	def __init__(self, url):
+	def __init__(self, url, upsampling=True):
+		self.upsampling = upsampling
 		self.workbook = xlrd.open_workbook(url)
 		self.worksheet = self.workbook.sheet_by_name(self.SHEET)
 		self.features = self.get_features()
 		self.examples = self.get_examples()
 		self.targets = self.get_targets()
+
+		if self.upsampling:
+			for i in range(len(self.targets)):
+				if self.targets[i] == 1:
+					self.examples = np.vstack((self.examples, self.examples[i]))
+					self.targets = np.hstack((self.targets, self.targets[i]))
+
+		
 		self.ids = self.get_ids()
 
 	def get_ids(self):
 		ids = []
 		num_rows = self.worksheet.nrows
-		for curr_row in range(num_rows):
+		for curr_row in range(START_EXAMPLE_ROW, num_rows):
 			ids.append(self.get_cell(curr_row, 0))
+
+		if self.upsampling:
+			for curr_row in range(START_EXAMPLE_ROW, num_rows):
+				if self.targets[curr_row-1] == 1:
+					ids.append(self.get_cell(curr_row, 0))	
+			
 		return ids	
 
 	def get_features(self):

@@ -189,8 +189,8 @@ def common_features(net, ideo, ill):
 	return common_selected_features		
 
 if __name__ == "__main__":
-	spreadsheet = Spreadsheet(project_data_file)
-	data = Data(spreadsheet)
+	spreadsheet = Spreadsheet(project_data_file, upsampling=False)
+	data = Data(spreadsheet, upsampling=False)
 	targets = data.targets
 
 	net = report_status_selection('net')

@@ -1,10 +1,3 @@
-"""
-SVM C-Support Vector Classification
-Single SVM
-"""
-
-print(__doc__)
-
 import sys
 sys.path.insert(0, 'utils/')
 sys.path.insert(0, 'classification/')
@@ -15,6 +8,7 @@ from standardized_data import *
 
 from sklearn.grid_search import GridSearchCV
 from sklearn.cross_validation import StratifiedShuffleSplit
+from sklearn.cross_validation import StratifiedKFold
 from sklearn.svm import SVC
 from sklearn import preprocessing
 
@@ -32,7 +26,8 @@ if __name__ == "__main__":
 		C_range = np.arange(0.1, 16, 0.1)
 		gamma_range = np.arange(0.1, 16, 0.1)
 		param_grid = dict(gamma=gamma_range, C=C_range)
-		cv = StratifiedShuffleSplit(known_targets, random_state=42)
+		# cv = StratifiedShuffleSplit(known_targets, random_state=42)
+		cv = StratifiedKFold(known_targets, n_folds=10)
 		grid = GridSearchCV(SVC(class_weight='auto'), param_grid=param_grid, cv=cv, scoring='accuracy')
 		grid.fit(known_dataset_scaled, known_targets)
 		print("The best parameters are %s with a score of %0.2f" % (grid.best_params_, grid.best_score_))

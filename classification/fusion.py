@@ -40,7 +40,7 @@ def cv10(known_dataset, known_targets, fusion_algorithm, ids, algorithm, prt=Fal
 		cr_rates += cr
 		cf_rates += cf
 
-	if prt and (float(hf_rates) / NR_FOLDS) >= 0.3:
+	if prt and (float(error_rates) / NR_FOLDS) <= 0.35:
 		save_output(file_name, error_rates, hp_rates, hr_rates, hf_rates, cp_rates, cr_rates, cf_rates, NR_FOLDS)	
 
 	print 'Final error %f' % (float(error_rates) / NR_FOLDS)
@@ -68,6 +68,8 @@ def cross_validation(known_dataset, known_targets, fusion_algorithm, ids, algori
 	cf_rates = 0
 	# cross validation
 	for train_index, test_index in kf:
+		# print len(test_index)
+		# train_index = np.concatenate((train_index, inds), axis=0)
 		error, f1, mis_ids, (hp, hr, hf), (cp, cr, cf) = fusion_outputs(known_dataset, known_targets, train_index, test_index, fusion_algorithm, ids, algorithm, ind)
 		
 		f1_scores += f1
@@ -180,8 +182,7 @@ def svm_fusion(known_dataset, known_targets, train_index, test_index, ids, algor
 
 
 def inner_svm(dataset, targets):
-	# model = SVC(class_weight='auto', C=0.10000000000000001, gamma=0.30000000000000004)
-	model = SVC(class_weight='auto', C=0.10000000000000001, gamma=1.0)
+	model = SVC(class_weight='auto', C=0.30000000000000004, gamma=0.10000000000000001)
 	model.fit(dataset, targets)
 	return model
 

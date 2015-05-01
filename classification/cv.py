@@ -33,7 +33,7 @@ def cv10(known_dataset, known_targets, ids, one_fold_measures, prt=False, file_n
 		cr_rates += cr
 		cf_rates += cf
 
-	if prt and (float(error_rates) / NR_FOLDS) <= 0.45:
+	if prt and (float(error_rates) / NR_FOLDS) <= 0.35:
 		save_output(file_name, error_rates, hp_rates, hr_rates, hf_rates, cp_rates, cr_rates, cf_rates, NR_FOLDS)	
 
 	print 'Final error %f' % (float(error_rates) / NR_FOLDS)

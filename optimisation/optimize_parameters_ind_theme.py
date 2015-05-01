@@ -1,9 +1,6 @@
 """
-Optimise parameters.
-Optimise SVM for each theme individually.
+Optimise parameters for a theme given percentage
 """
-
-print(__doc__)
 
 import sys
 sys.path.insert(0, 'utils/')
@@ -24,7 +21,6 @@ import numpy as np
 import itertools
 from sklearn.cross_validation import StratifiedKFold
 
-
 def cross_validation(known_dataset, known_targets, ids, current_svm):
 	kf = StratifiedKFold(known_targets, n_folds=10)
 	f1_scores = 0
@@ -44,7 +40,7 @@ def cross_validation(known_dataset, known_targets, ids, current_svm):
 
 def one_fold_measures(X_train, X_test, y_train, y_test, current_svm):
 	model = current_svm.svm_for_features_fusion(X_train, y_train)
-	print 'Model score %f' % model.score(X_test, y_test)
+	
 	y_pred = model.predict(X_test)
 	error_rate = (float(sum((y_pred - y_test)**2)) / len(y_test))
 	f1 = f1_score(y_test, y_pred)
@@ -73,9 +69,9 @@ def cv(theme, percentage, current_svm):
 
 def params():
 	begin = 0.1
-	end = 3
-	C_range = np.arange(begin, end, 0.1)
-	gamma_range = np.arange(begin, 1.3, 0.1)
+	end = 10
+	C_range = np.arange(begin, end, 0.2)
+	gamma_range = np.arange(begin, 1.3, 0.2)
 	return C_range, gamma_range
 
 
@@ -95,14 +91,16 @@ if __name__ == "__main__":
 		g = pair[1]
 		current_svm = BestFeatureSVM(c, g)
 
-		f1, error= cv(theme, percentage, current_svm)
+		f1, error = cv(theme, percentage, current_svm)
 		
-		if error <= 0.27 and f1 > 0:
-			with open("result.txt", "a") as myfile:	
+		fn = "result" + theme + str(percentage) + ".txt"
+
+		if error <= 0.45 and f1 > 0:
+			with open(fn, "a") as myfile:	
 				myfile.write('\n##############################\n')
-			with open("result.txt", "a") as myfile:
+			with open(fn, "a") as myfile:
 				myfile.write(current_svm.to_string())
-			with open("result.txt", "a") as myfile:	
+			with open(fn, "a") as myfile:	
 				myfile.write('\nerror_maj %f' % error)
     	
 		print current_svm.to_string()

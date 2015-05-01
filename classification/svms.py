@@ -2,7 +2,7 @@ from sklearn.svm import SVC
 
 def svm_all_vars(dataset, targets):
 	
-	model = SVC(class_weight='auto', C=2.0009999999999999)	# 0.220000 ; 0.292222
+	model = SVC(class_weight='auto', C=2.0009999999999999)
 
 	model.fit(dataset, targets)
 	# print 'Model score: %f' % model.score(known_dataset, known_targets)
@@ -10,9 +10,9 @@ def svm_all_vars(dataset, targets):
 
 def svm_selected_vars(dataset, targets):
 
-	model = SVC(class_weight='auto', C=0.700000, gamma=0.300000)	#90 	0.050000 ; 0.314444
-	# model = SVC(class_weight='auto', C=0.700000, gamma=0.100000)	#70 	0.040000 ; 0.324444
-	# model = SVC(class_weight='auto', C=0.700000, gamma=0.200000)	#50 	0.050000 ; 0.303333
+	model = SVC(class_weight='auto', C=1.1000000000000001, gamma=0.10000000000000001) #90
+	# model = SVC(class_weight='auto', C=0.80000000000000004, gamma=0.10000000000000001)	#70
+	# model = SVC(class_weight='auto', C=12.6, gamma=0.10000000000000001)	#50
 
 	model.fit(dataset, targets)
 	# print 'Model score: %f' % model.score(known_dataset, known_targets)
@@ -28,6 +28,41 @@ def svm_for_features_fusion(dataset, targets):
 	# print 'Model score: %f' % model.score(known_dataset, known_targets)
 	return model
 
+def svm_selected_net(dataset, targets):
+	model = SVC(class_weight='auto', C=1.9, gamma=0.1)	#90
+	# model = SVC(class_weight='auto', C=1.3, gamma=0.3)	#70
+	# model = SVC(class_weight='auto', C=1.5, gamma=0.1)	#50
+
+	# model = SVC(class_weight='auto', C=0.80000000000000004, gamma=0.30000000000000004) #all
+
+	model.fit(dataset, targets)
+	return model
+
+def svm_selected_ill(dataset, targets):
+	model = SVC(class_weight='auto', C=6.9, gamma=0.7)	#90
+	# model = SVC(class_weight='auto', C=1.5, gamma=0.1)	#70
+	# model = SVC(class_weight='auto', C=7.1, gamma=0.3)	#50
+
+	# model = SVC(class_weight='auto', C=0.80000000000000004, gamma=0.10000000000000001)	#all
+
+	model.fit(dataset, targets)
+	return model
+
+def svm_selected_ideo(dataset, targets):
+	model = SVC(class_weight='auto', C=1.5, gamma=0.1)	#90
+	# model = SVC(class_weight='auto', C=0.5, gamma=0.1)	#70
+	# model = SVC(class_weight='auto', C=0.5, gamma=0.1)	#50
+
+	# model = SVC(class_weight='auto', C=0.90000000000000002, gamma=0.10000000000000001)	#all
+
+	model.fit(dataset, targets)
+	return model	
+
+
+
+
+
+
 def svm_selected_for_features_fusion(dataset, targets):
 	# model = SVC(class_weight='auto', C=0.900000, gamma=0.100000)	#90 	0.066667 ; 0.365278		0.230000 ; 0.268333		0.160087 ; 0.452778
 	# model = SVC(class_weight='auto', C=0.700000, gamma=0.200000)	#70 	0.073333 ; 0.370000		0.120000 ; 0.292222		0.291905 ; 0.406111
@@ -36,32 +71,6 @@ def svm_selected_for_features_fusion(dataset, targets):
 	model.fit(dataset, targets)
 	# print 'Model score: %f' % model.score(known_dataset, known_targets)
 	return model
-
-def svm_selected_net(dataset, targets):
-	model = SVC(class_weight='auto', C=2.5, gamma=0.3)	#90
-	# model = SVC(class_weight='auto', C=0.75000000000000022, gamma=0.30000000000000004)	#70
-	# model = SVC(class_weight='auto', C=0.75000000000000022, gamma=0.25000000000000006)	#50
-
-	model.fit(dataset, targets)
-	return model
-
-def svm_selected_ill(dataset, targets):
-	# model = SVC(class_weight='auto', C=0.75000000000000022, gamma=0.35000000000000009)	#90
-
-	model = SVC(class_weight='auto', C=0.69000000000000022, gamma=0.35000000000000009)		#90
-	# model = SVC(class_weight='auto', C=0.58800000000000022, gamma=2.70000000000000004)	#70
-	# model = SVC(class_weight='auto', C=0.55000000000000022, gamma=0.15000000000000002)	#50
-
-	model.fit(dataset, targets)
-	return model
-
-def svm_selected_ideo(dataset, targets):
-	model = SVC(class_weight='auto', C=0.7, gamma=0.1)	#90
-	# model = SVC(class_weight='auto', C=0.75000000000000022, gamma=0.15000000000000002)	#70
-	# model = SVC(class_weight='auto', C=0.75000000000000022, gamma=0.20000000000000004)	#50
-
-	model.fit(dataset, targets)
-	return model	
 
 # used for selecting the features
 def svm_subset_features(dataset, targets):
@@ -73,7 +82,7 @@ def svm_subset_features(dataset, targets):
 
 
 	# theme
-	model = SVC(class_weight='auto', C=0.100000, gamma=0.100000)	#90
+	# model = SVC(class_weight='auto', C=0.100000, gamma=0.100000)	#90
 	# model = SVC(class_weight='auto', C=0.100000, gamma=0.100000)	#70
 	# model = SVC(class_weight='auto', C=0.700000, gamma=0.100000)	#50
 

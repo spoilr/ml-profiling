@@ -1,11 +1,3 @@
-"""
-SVM C-Support Vector Classification
-Single SVM
-Feature selection is applied before
-"""
-
-print(__doc__)
-
 import sys
 sys.path.insert(0, 'utils/')
 sys.path.insert(0, 'classification/')
@@ -19,6 +11,7 @@ from cv import single_svm_fs_one_fold_measures
 
 from sklearn.grid_search import GridSearchCV
 from sklearn.cross_validation import StratifiedShuffleSplit
+from sklearn.cross_validation import StratifiedKFold
 from sklearn.svm import SVC
 from sklearn import preprocessing
 
@@ -34,7 +27,9 @@ if __name__ == "__main__":
 		[dataset, features] = parse_theme(sys.argv[1])
 		known_targets = np.array(targets)
 
-		selected_features = select_features(CV_PERCENTAGE_OCCURENCE_THRESHOLD)
+
+		percentage = float(raw_input("Percentage. 0.9, 0.7 or 0.5\n"))
+		selected_features = select_features(percentage)
 		sf = SelectedFeatures(dataset, known_targets, selected_features, features)
 		dataset = sf.extract_data_from_selected_features()
 
@@ -43,7 +38,8 @@ if __name__ == "__main__":
 		C_range = np.arange(0.1, 16, 0.1)
 		gamma_range = np.arange(0.1, 16, 0.1)
 		param_grid = dict(gamma=gamma_range, C=C_range)
-		cv = StratifiedShuffleSplit(known_targets, random_state=42)
+		# cv = StratifiedShuffleSplit(known_targets, random_state=42)
+		cv = StratifiedKFold(known_targets, n_folds=10)
 		grid = GridSearchCV(SVC(class_weight='auto'), param_grid=param_grid, cv=cv, scoring='accuracy')
 		grid.fit(dataset, known_targets)
 		print("The best parameters are %s with a score of %0.2f" % (grid.best_params_, grid.best_score_))

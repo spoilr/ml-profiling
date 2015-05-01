@@ -10,8 +10,6 @@ import numpy as np
 
 def feature_selection_before(features, targets, dataset, percentage, ids, one_fold_measures, standardize=False, prt=False, file_name=None):
 	[known_dataset, known_targets, unk] = split_dataset(dataset, targets)
-	assert len(known_dataset) == 92
-	assert len(known_targets) == 92
 		
 	known_targets = np.asarray(known_targets)
 
