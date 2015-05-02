@@ -23,6 +23,6 @@ if __name__ == "__main__":
 	dataset, targets = std.thematic_split_and_standardize_dataset() 
 
 	fusion_algorithm = raw_input("Enter algorithm. Choose between maj, wmaj, svm, nn")
-	cv10(dataset, targets, fusion_algorithm, ids, svm_for_features_fusion)
+	cv10(dataset, targets, fusion_algorithm, ids, svm_for_features_fusion, ind=True)
 
 	

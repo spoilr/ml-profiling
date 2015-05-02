@@ -28,8 +28,8 @@ if __name__ == "__main__":
 	known_targets = np.asarray(known_targets)
 	dataset = preprocessing.scale(known_dataset)
 
-	C_range = np.arange(0.1, 10, 0.1)
-	gamma_range = np.arange(0.1, 10, 0.1)
+	C_range = np.arange(0.1, 8, 0.3)
+	gamma_range = np.arange(0.1, 8, 0.3)
 	param_grid = dict(gamma=gamma_range, C=C_range)
 	# cv = StratifiedShuffleSplit(known_targets, random_state=42)
 	cv = StratifiedKFold(known_targets, n_folds=10)

@@ -40,7 +40,7 @@ def cv10(known_dataset, known_targets, fusion_algorithm, ids, algorithm, prt=Fal
 		cr_rates += cr
 		cf_rates += cf
 
-	if prt and (float(error_rates) / NR_FOLDS) <= 0.35:
+	if prt and (float(error_rates) / NR_FOLDS) <= 0.5:
 		save_output(file_name, error_rates, hp_rates, hr_rates, hf_rates, cp_rates, cr_rates, cf_rates, NR_FOLDS)	
 
 	print 'Final error %f' % (float(error_rates) / NR_FOLDS)
@@ -182,7 +182,8 @@ def svm_fusion(known_dataset, known_targets, train_index, test_index, ids, algor
 
 
 def inner_svm(dataset, targets):
-	model = SVC(class_weight='auto', C=0.30000000000000004, gamma=0.10000000000000001)
+	# model = SVC(class_weight='auto', C=0.5, gamma=0.10000000000000001)
+	model = SVC(class_weight='auto', C=16, gamma=16)
 	model.fit(dataset, targets)
 	return model
 

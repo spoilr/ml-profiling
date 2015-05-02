@@ -6,7 +6,6 @@ from load_data import *
 from project_data import *
 from parse_theme import *
 from feature_selection_before import *
-from parameters import CV_PERCENTAGE_OCCURENCE_THRESHOLD
 from cv import dt_one_fold_measures
 from cv import lr_one_fold_measures_feature_selection
 from cv import knn_one_fold_measures
@@ -20,17 +19,18 @@ if __name__ == "__main__":
 
 	try:
 		[dataset, features] = parse_theme(sys.argv[1])
+		percentage = float(raw_input("Enter percentage."))
 		alg = raw_input("Enter algorithm. Choose lr, dt, knn, svm")
 
 		for i in range(100):
 			if alg == "lr":
-				feature_selection_before(features, targets, dataset, CV_PERCENTAGE_OCCURENCE_THRESHOLD, ids, lr_one_fold_measures_feature_selection, prt=True, file_name="best_single_lr.txt")
+				feature_selection_before(features, targets, dataset, percentage, ids, lr_one_fold_measures_feature_selection, prt=True, file_name="best_single_lr_"+str(percentage)+alg+".txt")
 			elif alg == "dt":
-				feature_selection_before(features, targets, dataset, CV_PERCENTAGE_OCCURENCE_THRESHOLD, ids, dt_one_fold_measures, prt=True, file_name="best_single_dt.txt")
+				feature_selection_before(features, targets, dataset, percentage, ids, dt_one_fold_measures, prt=True, file_name="best_single_dt_"+str(percentage)+alg+".txt")
 			elif alg == "knn":
-				feature_selection_before(features, targets, dataset, CV_PERCENTAGE_OCCURENCE_THRESHOLD, ids, knn_one_fold_measures, prt=True, file_name="best_single_knn.txt")
+				feature_selection_before(features, targets, dataset, percentage, ids, knn_one_fold_measures, prt=True, file_name="best_single_knn_"+str(percentage)+alg+".txt")
 			elif alg == "svm":
-				feature_selection_before(features, targets, dataset, CV_PERCENTAGE_OCCURENCE_THRESHOLD, ids, single_svm_fs_one_fold_measures, standardize=True, prt=True, file_name="best_single_svm.txt")	
+				feature_selection_before(features, targets, dataset, percentage, ids, single_svm_fs_one_fold_measures, standardize=True, prt=True, file_name="best_single_svm_"+str(percentage)+alg+".txt")
 			else:
 				print 'ERROR'	
 		

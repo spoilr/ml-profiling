@@ -3,7 +3,7 @@ from sklearn.svm import SVC
 def svm_all_vars(dataset, targets):
 	
 	model = SVC(class_weight='auto', C=2.0009999999999999)
-
+	
 	model.fit(dataset, targets)
 	# print 'Model score: %f' % model.score(known_dataset, known_targets)
 	return model

@@ -44,11 +44,11 @@ if __name__ == "__main__":
 
 	dataset = preprocessing.scale(data)
 
-	C_range = np.arange(0.1, 16, 0.1)
-	gamma_range = np.arange(0.1, 16, 0.1)
+	C_range = np.arange(0.1, 16, 0.2)
+	gamma_range = np.arange(0.1, 16, 0.2)
 	param_grid = dict(gamma=gamma_range, C=C_range)
 	# cv = StratifiedShuffleSplit(targets, random_state=42)
-	cv = StratifiedKFold(targets, n_folds=10)
+	cv = StratifiedKFold(targets)
 	grid = GridSearchCV(SVC(class_weight='auto'), param_grid=param_grid, cv=cv, scoring='accuracy')
 	grid.fit(dataset, targets)
 	print("The best parameters are %s with a score of %0.2f" % (grid.best_params_, grid.best_score_))
