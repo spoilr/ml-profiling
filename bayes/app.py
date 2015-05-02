@@ -20,6 +20,43 @@ app = Flask(__name__)
 def index():
 	return "Hello World"
 	
+def graph(nodes, edges):
+	graph = dict()
+	graph['nodes'] = nodes
+	graph['links'] = edges
+	return json.dumps(graph, indent=2)
+
+@app.route('/net', methods=['GET'])
+def show_net():
+	return render_template('show_net.html')
+
+@app.route('/networks/net.json', methods=['GET'])
+def net_graph():
+	nodes = bn_net.V
+	edges = bn_net.E
+	
+	return graph(nodes, edges)
+
+@app.route('/ill', methods=['GET'])
+def show_ill():
+	return render_template('show_ill.html')
+
+@app.route('/networks/ill.json', methods=['GET'])
+def ill_graph():
+	nodes = bn_ill.V
+	edges = bn_ill.E
+	return graph(nodes, edges)
+
+@app.route('/ideo', methods=['GET'])
+def show_ideo():
+	return render_template('show_ideo.html')
+
+@app.route('/networks/ideo.json', methods=['GET'])
+def ideo_graph():
+	nodes = bn_ideo.V
+	edges = bn_ideo.E
+	return graph(nodes, edges)
+
 def create_evidence_and_inference(categs, theme):
 	if request.method == 'POST':
 		evidence = dict()	
@@ -34,13 +71,11 @@ def create_evidence_and_inference(categs, theme):
 						evidence[key] = 0
 					elif value == "yes":
 						evidence[key] = 1
-		print 'Evidence ' + str(evidence)
-
-		url = "http://127.0.0.1:5000/" + theme + "?" + urlencode(evidence)
-		print url
+		
+		url = "http://127.0.0.1:5000/inference/" + theme + "?" + urlencode(evidence)
+		
 		response = urlopen(url)
 		json_inf = json.loads(response.read())
-		print 'JSON inference ' + str(json_inf)
 
 		inference = dict()
 		for key, values in json_inf.iteritems():
@@ -91,7 +126,7 @@ def bayes_ideo():
 	inference = create_evidence_and_inference(categs, "ideo")
 	return render_template('ideo.html', categs=categs, inference=inference)
 
-@app.route('/net', methods=['GET'])
+@app.route('/inference/net', methods=['GET'])
 def net_inferences():
 	evidence = request.args.to_dict()
 	evidence = dict((k,int(v)) for k,v in evidence.iteritems())
@@ -99,7 +134,7 @@ def net_inferences():
 	inf = inference(bn_net, evidence)
 	return inf
 
-@app.route('/ill', methods=['GET'])
+@app.route('/inference/ill', methods=['GET'])
 def ill_inferences():
 	evidence = request.args.to_dict()
 	evidence = dict((k,int(v)) for k,v in evidence.iteritems())
@@ -107,7 +142,7 @@ def ill_inferences():
 	inf = inference(bn_ill, evidence)
 	return inf
 
-@app.route('/ideo', methods=['GET'])
+@app.route('/inference/ideo', methods=['GET'])
 def ideo_inferences():
 	evidence = request.args.to_dict()
 	evidence = dict((k,int(v)) for k,v in evidence.iteritems())
