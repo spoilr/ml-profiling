@@ -3,9 +3,27 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="static/networks.css">
+    <link rel="stylesheet" href="static/style.css">
   </head>
   
   <body>
+    <header>
+      <div class="nav">
+        <ul>
+          <li class="home"><a href="/">Home</a></li>
+          <li class="network"><a href="net">Network</a></li>
+          <li class="illness"><a href="ill">Illness</a></li>
+          <li class="ideology"><a class="active" href="ideo">Ideology</a></li>
+          <li class="ideology"><a href="#">Inference</a>
+            <ul>
+              <li><a href="bayes/net">Network</a></li>
+              <li><a href="bayes/ill">Illness</a></li>
+              <li><a href="bayes/ideo">Ideology</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </header>
   </body>
 
   <script src="http://d3js.org/d3.v3.min.js"></script>

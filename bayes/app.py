@@ -15,16 +15,23 @@ sys.path.insert(0, 'utils/')
 from explanatory_data import *
 
 app = Flask(__name__)
-
-@app.route('/')
-def index():
-	return "Hello World"
 	
 def graph(nodes, edges):
 	graph = dict()
 	graph['nodes'] = nodes
 	graph['links'] = edges
 	return json.dumps(graph, indent=2)
+
+@app.route('/', methods=['GET'])
+def show():
+	return render_template('index.html')
+
+@app.route('/networks/test.json', methods=['GET'])
+def home():
+	bn_test = create_bayesian_network_structure('test')
+	nodes = bn_test.V
+	edges = bn_test.E
+	return graph(nodes, edges)
 
 @app.route('/net', methods=['GET'])
 def show_net():
