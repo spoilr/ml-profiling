@@ -80,7 +80,7 @@ def inference(bn, evidence):
 if __name__ == "__main__":
   theme = raw_input("Enter theme.\n")
   bn = create_bayesian_network_structure(theme)
-  evidence = json.loads(raw_input("Evidence.\n"))
+  # evidence = json.loads(raw_input("Evidence.\n"))
   # evidence = dict(InteractNet=0)
   # query = dict(HighValueCivilian=[1])
-  inference(bn, evidence)
+  # inference(bn, evidence)
