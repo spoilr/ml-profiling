@@ -8,6 +8,7 @@ from create_struct import *
 from urllib import urlopen
 from urllib import urlencode
 import json
+from copy import deepcopy
 
 import sys
 sys.path.insert(0, 'utils/')
@@ -201,6 +202,25 @@ def shutdown():
     shutdown_server()
     return 'Server shutting down...'
 
+@app.route('/originals/networks/net.json', methods=['POST'])
+def original_net_graph():
+	bn_net.V = original_bn_net.V
+	bn_net.E = original_bn_net.E
+	bn_net.Vdata = original_bn_net.Vdata
+
+@app.route('/originals/networks/ill.json', methods=['POST'])
+def original_ill_graph():
+	bn_ill.V = original_bn_ill.V
+	bn_ill.E = original_bn_ill.E
+	bn_ill.Vdata = original_bn_ill.Vdata
+
+@app.route('/originals/networks/ideo.json', methods=['POST'])
+def original_ideo_graph():
+	bn_ideo.V = original_bn_ideo.V
+	bn_ideo.E = original_bn_ideo.E
+	bn_ideo.Vdata = original_bn_ideo.Vdata
+		
+
 if __name__ == '__main__':
 	global bn_net
 	global bn_ill
@@ -208,4 +228,7 @@ if __name__ == '__main__':
 	bn_net = create_bayesian_network_structure('net')
 	bn_ill = create_bayesian_network_structure('ill')
 	bn_ideo = create_bayesian_network_structure('ideo')
+	original_bn_net = deepcopy(bn_net)
+	original_bn_ill = deepcopy(bn_ill)
+	original_bn_ideo = deepcopy(bn_ideo)
 	app.run(debug=True, threaded=True)

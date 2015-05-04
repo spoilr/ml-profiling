@@ -402,7 +402,7 @@ restart();
 $("#update").click(function (e) {
   e.preventDefault();
   var gr = {}
-  
+
   url = window.location.href
   var theme;
   if (url.indexOf("net") > -1) {
@@ -412,7 +412,7 @@ $("#update").click(function (e) {
   } else if (url.indexOf("ideo") > -1) {
     theme = "ideo"
   }
-
+  
   var simple_nodes = []
   for (var i = 0; i < nodes.length; i++) {
     simple_nodes[i] = nodes[i].id;
@@ -433,6 +433,30 @@ $("#update").click(function (e) {
     url: "http://127.0.0.1:5000/networks/" + theme + ".json",
     data: JSON.stringify(gr),
     dataType: "json",
+  });
+});
+
+$("#original").click(function (e) {
+  e.preventDefault();
+  
+  url = window.location.href
+  var theme;
+  if (url.indexOf("net") > -1) {
+    theme = "net"
+  } else if (url.indexOf("ill") > -1) {
+    theme = "ill"
+  } else if (url.indexOf("ideo") > -1) {
+    theme = "ideo"
+  }
+
+  $.ajax({
+    type: "POST",
+    contentType: 'application/json; charset=UTF-8',
+    url: "http://127.0.0.1:5000/originals/networks/" + theme + ".json",
+    dataType: "json",
+    success: function(){    
+      location.reload();
+    }
   });
 });
 
