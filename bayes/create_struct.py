@@ -2,12 +2,12 @@ import json
 import sys
 import os.path
 
-from libpgm.nodedata import NodeData
-from libpgm.graphskeleton import GraphSkeleton
-from libpgm.discretebayesiannetwork import DiscreteBayesianNetwork
-from libpgm.lgbayesiannetwork import LGBayesianNetwork
-from libpgm.hybayesiannetwork import HyBayesianNetwork
-from libpgm.dyndiscbayesiannetwork import DynDiscBayesianNetwork
+# from libpgm.nodedata import NodeData
+from noded import NodeData
+# from libpgm.graphskeleton import GraphSkeleton
+from graphskel import GraphSkeleton
+# from libpgm.discretebayesiannetwork import DiscreteBayesianNetwork
+from dbn import DiscreteBayesianNetwork
 from libpgm.tablecpdfactorization import TableCPDFactorization
 from libpgm.sampleaggregator import SampleAggregator
 # from libpgm.pgmlearner import PGMLearner
@@ -67,7 +67,16 @@ def create_bayesian_network_structure(theme):
   bn = DiscreteBayesianNetwork(skel, nd)
 
   return bn
-  
+
+def update_bayesian_network_structure(theme, nodes, edges, cpts):
+  data = select_theme_data(theme)
+  skel = GraphSkeleton()
+  skel.load_skel(nodes, edges)
+  skel.toporder()
+
+  learner = PGMLearner()
+  bn = learner.discrete_mle_estimateparams(skel, data)
+  return bn.Vdata
 
 def inference(bn, evidence):
   fn = TableCPDFactorization(bn)

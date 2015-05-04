@@ -35,9 +35,12 @@ def show_net():
 def net_graph():
 	
 	if request.method == 'POST':
-		bn_net.V = request.get_json()["nodes"]
-		bn_net.E = request.get_json()["links"]
-		bn_net.Vdata = request.get_json()["cpts"]
+		nodes = request.get_json()["nodes"]
+		edges = request.get_json()["links"]
+		cpts = request.get_json()["cpts"]
+		bn_net.V = nodes
+		bn_net.E = edges
+		bn_net.Vdata = update_bayesian_network_structure("net", nodes, edges, cpts)
 		return render_template('show_net.html')
 
 	if request.method == 'GET':	
@@ -53,9 +56,12 @@ def show_ill():
 @app.route('/networks/ill.json', methods=['GET', 'POST'])
 def ill_graph():
 	if request.method == 'POST':
-		bn_ill.V = request.get_json()["nodes"]
-		bn_ill.E = request.get_json()["links"]
-		bn_ill.Vdata = request.get_json()["cpts"]
+		nodes = request.get_json()["nodes"]
+		edges = request.get_json()["links"]
+		cpts = request.get_json()["cpts"]
+		bn_ill.V = nodes
+		bn_ill.E = edges
+		bn_ill.Vdata = update_bayesian_network_structure("ill", nodes, edges, cpts)
 		return render_template('show_ill.html')
 
 	if request.method == 'GET':		
@@ -71,9 +77,12 @@ def show_ideo():
 @app.route('/networks/ideo.json', methods=['GET', 'POST'])
 def ideo_graph():
 	if request.method == 'POST':
-		bn_ideo.V = request.get_json()["nodes"]
-		bn_ideo.E = request.get_json()["links"]
-		bn_ideo.Vdata = request.get_json()["cpts"]
+		nodes = request.get_json()["nodes"]
+		edges = request.get_json()["links"]
+		cpts = request.get_json()["cpts"]
+		bn_ideo.V = nodes
+		bn_ideo.E = edges
+		bn_ideo.Vdata = update_bayesian_network_structure("ideo", nodes, edges, cpts)
 		return render_template('show_ideo.html')
 
 	if request.method == 'GET':		
@@ -187,6 +196,9 @@ def shutdown():
     return 'Server shutting down...'
 
 if __name__ == '__main__':
+	global bn_net
+	global bn_ill
+	global bn_ideo
 	bn_net = create_bayesian_network_structure('net')
 	bn_ill = create_bayesian_network_structure('ill')
 	bn_ideo = create_bayesian_network_structure('ideo')

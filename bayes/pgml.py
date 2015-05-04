@@ -49,7 +49,7 @@ except ImportError:
     raise ImportError, "scipy is not installed on your system."
 
 
-from libpgm.graphskeleton import GraphSkeleton
+from graphskel import GraphSkeleton
 from libpgm.discretebayesiannetwork import DiscreteBayesianNetwork
 from libpgm.lgbayesiannetwork import LGBayesianNetwork
 from libpgm.sampleaggregator import SampleAggregator
