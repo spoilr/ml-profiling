@@ -1,9 +1,12 @@
 body            { font-family: sans-serif; background: #eee; margin: 0; padding: 0;}
  
-h1 { color: #377ba8; }
+h1 { color: #377ba8; padding-left: 10px}
 
+.header td { color: #377ba8; font-weight: bold;}
 
+form {padding-left: 10px}
 
+td {padding-right: 10px; font-family: sans-serif}
 
 .nav ul {
   list-style: none;
