@@ -94,17 +94,23 @@ def ideo_graph():
 def create_evidence_and_inference(categs, theme):
 	if request.method == 'POST':
 		evidence = dict()	
+		encoded_evidence = dict()
 		submit = request.form
 		
 		for key, value in submit.iteritems():
 			if value != "None":
 				if key in explanatory_data:
 					evidence[key] = explanatory_data[key][value]
+					encoded_evidence[key] = value
 				else:
 					if value == "no":
 						evidence[key] = 0
+						encoded_evidence[key] = "no"
 					elif value == "yes":
 						evidence[key] = 1
+						encoded_evidence[key] = "yes"
+			else:
+				encoded_evidence[key] = None
 		
 		url = "http://127.0.0.1:5000/inference/" + theme + "?" + urlencode(evidence)
 		
@@ -127,8 +133,8 @@ def create_evidence_and_inference(categs, theme):
 						temp["yes"] = v
 				inference[key] = temp
 
-		return inference
-	return None		
+		return inference, encoded_evidence
+	return None, None
 
 def get_categories(nodes):
 	categs = dict()
@@ -143,22 +149,22 @@ def get_categories(nodes):
 def bayes_net():
 	nodes = bn_net.V
 	categs = get_categories(nodes)
-	inference = create_evidence_and_inference(categs, "net")
-	return render_template('net.html', categs=categs, inference=inference)
+	inference, evidence = create_evidence_and_inference(categs, "net")
+	return render_template('net.html', categs=categs, evidence=evidence, inference=inference)
 
 @app.route('/bayes/ill', methods=['GET', 'POST'])
 def bayes_ill():
 	nodes = bn_ill.V
 	categs = get_categories(nodes)
-	inference = create_evidence_and_inference(categs, "ill")
-	return render_template('ill.html', categs=categs, inference=inference)
+	inference, evidence = create_evidence_and_inference(categs, "ill")
+	return render_template('ill.html', categs=categs, evidence=evidence, inference=inference)
 
 @app.route('/bayes/ideo', methods=['GET', 'POST'])
 def bayes_ideo():
 	nodes = bn_ideo.V
 	categs = get_categories(nodes)
-	inference = create_evidence_and_inference(categs, "ideo")
-	return render_template('ideo.html', categs=categs, inference=inference)
+	inference,evidence = create_evidence_and_inference(categs, "ideo")
+	return render_template('ideo.html', categs=categs, evidence=evidence, inference=inference)
 
 @app.route('/inference/net', methods=['GET'])
 def net_inferences():

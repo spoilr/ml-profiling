@@ -2,44 +2,73 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='inference.css') }}">
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
     </head>
     <body>
-        <h1>Network</h1>
-        <p>
-            <form action="{{ url_for('bayes_net') }}" method='post'>
-            <table>
-              <tr>
-                <td>Variables</td>
-                <td>Evidence</td>
-                <td>Inference</td>
-              </tr>
-              {% for key, value in categs.iteritems() %}
-              <tr>
-                <td>
-                  {{ key }}
-                </td>
-                <td>
-                  <select name="{{ key }}">
-                      <option selected="selected">None</option>
-                      {% for k, v in value.iteritems() %}
-                      <option>{{ v }}</option>
-                      {% endfor %}
-                    </select>
-                </td>
-                <td>
-                  {% if inference is not none %}
-                    {{ inference[key] }}
+        <header>
+          <div class="nav">
+            <ul>
+              <li class="home"><a href="/">Home</a></li>
+              <li class="network"><a href="/net">Network</a></li>
+              <li class="illness"><a href="/ill">Illness</a></li>
+              <li class="ideology"><a href="/ideo">Ideology</a></li>
+              <li class="ideology"><a href="#">Inference</a>
+                <ul>
+                  <li><a class="active" href="/bayes/net">Network</a></li>
+                  <li><a href="/bayes/ill">Illness</a></li>
+                  <li><a href="/bayes/ideo">Ideology</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </header>
+
+      <h1>Network features</h1>  
+
+      <div>
+        <form action="{{ url_for('bayes_net') }}" method='post'>
+          <table>
+            <tr>
+              <td>Variables</td>
+              <td>Values</td>
+              <td>Evidence</td>
+              <td>Inference</td>
+            </tr>
+            {% for key, value in categs.iteritems() %}
+            <tr>
+              <td>
+                {{ key }}
+              </td>
+              <td>
+                <select name="{{ key }}">
+                    <option selected="selected">None</option>
+                    {% for k, v in value.iteritems() %}
+                    <option>{{ v }}</option>
+                    {% endfor %}
+                  </select>
+              </td>
+              <td>
+                {% if evidence is not none %}
+                  {% if evidence[key] is not none %}
+                    {{ evidence[key] }}
                   {% else %}
-                    n/a
-                  {%endif %}
-                </td>
-              </tr>
-              {% endfor %}
-            </table>
-              <input type="submit" value="Submit">
-            </form>
-        </p>
+                    n/a  
+                  {%endif %}  
+                {%endif %}
+              </td>
+              <td>
+                {% if inference is not none %}
+                  {{ inference[key] }}
+                {% else %}
+                  n/a
+                {%endif %}
+              </td>
+            </tr>
+            {% endfor %}
+          </table>
+            <input type="submit" value="Submit">
+        </form>
+      </div>
     </body>
 </html>
 

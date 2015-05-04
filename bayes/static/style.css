@@ -1,5 +1,10 @@
 body            { font-family: sans-serif; background: #eee; margin: 0; padding: 0;}
  
+h1 { color: #377ba8; }
+
+
+
+
 .nav ul {
   list-style: none;
   background-color: #444;
@@ -45,9 +50,7 @@ body            { font-family: sans-serif; background: #eee; margin: 0; padding:
 
 /*******************************************
    Style menu for larger screens
-
-   Using 650px (130px each * 5 items), but ems
-   or other values could be used depending on other factors
+   Using 650px (130px each * 5 items)
 ********************************************/
 
 @media screen and (min-width: 650px) {
@@ -90,3 +93,4 @@ body            { font-family: sans-serif; background: #eee; margin: 0; padding:
     display: block;
   }
 }
+
