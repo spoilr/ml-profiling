@@ -16,53 +16,71 @@ from explanatory_data import *
 
 app = Flask(__name__)
 	
-def graph(nodes, edges):
+def graph(nodes, edges, cpts):
 	graph = dict()
 	graph['nodes'] = nodes
 	graph['links'] = edges
+	graph['cpts'] = cpts
 	return json.dumps(graph, indent=2)
 
 @app.route('/', methods=['GET'])
 def show():
 	return render_template('index.html')
 
-@app.route('/networks/test.json', methods=['GET'])
-def home():
-	bn_test = create_bayesian_network_structure('test')
-	nodes = bn_test.V
-	edges = bn_test.E
-	return graph(nodes, edges)
-
 @app.route('/net', methods=['GET'])
 def show_net():
 	return render_template('show_net.html')
 
-@app.route('/networks/net.json', methods=['GET'])
+@app.route('/networks/net.json', methods=['GET', 'POST'])
 def net_graph():
-	nodes = bn_net.V
-	edges = bn_net.E
 	
-	return graph(nodes, edges)
+	if request.method == 'POST':
+		bn_net.V = request.get_json()["nodes"]
+		bn_net.E = request.get_json()["links"]
+		bn_net.Vdata = request.get_json()["cpts"]
+		return render_template('show_net.html')
+
+	if request.method == 'GET':	
+		nodes = bn_net.V
+		edges = bn_net.E
+		cpts = bn_net.Vdata
+		return graph(nodes, edges, cpts)
 
 @app.route('/ill', methods=['GET'])
 def show_ill():
 	return render_template('show_ill.html')
 
-@app.route('/networks/ill.json', methods=['GET'])
+@app.route('/networks/ill.json', methods=['GET', 'POST'])
 def ill_graph():
-	nodes = bn_ill.V
-	edges = bn_ill.E
-	return graph(nodes, edges)
+	if request.method == 'POST':
+		bn_ill.V = request.get_json()["nodes"]
+		bn_ill.E = request.get_json()["links"]
+		bn_ill.Vdata = request.get_json()["cpts"]
+		return render_template('show_ill.html')
+
+	if request.method == 'GET':		
+		nodes = bn_ill.V
+		edges = bn_ill.E
+		cpts = bn_ill.Vdata
+		return graph(nodes, edges, cpts)
 
 @app.route('/ideo', methods=['GET'])
 def show_ideo():
 	return render_template('show_ideo.html')
 
-@app.route('/networks/ideo.json', methods=['GET'])
+@app.route('/networks/ideo.json', methods=['GET', 'POST'])
 def ideo_graph():
-	nodes = bn_ideo.V
-	edges = bn_ideo.E
-	return graph(nodes, edges)
+	if request.method == 'POST':
+		bn_ideo.V = request.get_json()["nodes"]
+		bn_ideo.E = request.get_json()["links"]
+		bn_ideo.Vdata = request.get_json()["cpts"]
+		return render_template('show_ideo.html')
+
+	if request.method == 'GET':		
+		nodes = bn_ideo.V
+		edges = bn_ideo.E
+		cpts = bn_ideo.Vdata
+		return graph(nodes, edges, cpts)
 
 def create_evidence_and_inference(categs, theme):
 	if request.method == 'POST':

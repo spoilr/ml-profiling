@@ -37,8 +37,7 @@ var create_nodes = function(nodes) {
 var render_network = function(error, graph) {
 // set up SVG for D3
 var width = window.innerWidth;
-var height= window.innerHeight;
-    
+var height= window.innerHeight;    
 
 var svg = d3.select('body')
   .append('svg')
@@ -261,8 +260,8 @@ function restart() {
   // remove old nodes
   circle.exit().remove();
 
-  console.log(nodes)
-  console.log(links)
+  // console.log(nodes)
+  // console.log(links)
 
   // set the graph in motion
   force.start();
@@ -399,5 +398,42 @@ d3.select(window)
   .on('keydown', keydown)
   .on('keyup', keyup);
 restart();
+
+$("#update").click(function (e) {
+  e.preventDefault();
+  var gr = {}
+  
+  url = window.location.href
+  var theme;
+  if (url.indexOf("net") > -1) {
+    theme = "net"
+  } else if (url.indexOf("ill") > -1) {
+    theme = "ill"
+  } else if (url.indexOf("ideo") > -1) {
+    theme = "ideo"
+  }
+
+  var simple_nodes = []
+  for (var i = 0; i < nodes.length; i++) {
+    simple_nodes[i] = nodes[i].id;
+  }
+
+  var simple_links = []
+  for (var i = 0; i < links.length; i++) {
+    simple_links[i] = [links[i].source.id, links[i].target.id]
+  }
+
+  gr["nodes"] = simple_nodes
+  gr["links"] = simple_links;
+  gr["cpts"] = graph.cpts;
+
+  $.ajax({
+    type: "POST",
+    contentType: 'application/json; charset=UTF-8',
+    url: "http://127.0.0.1:5000/networks/" + theme + ".json",
+    data: JSON.stringify(gr),
+    dataType: "json",
+  });
+});
 
 };

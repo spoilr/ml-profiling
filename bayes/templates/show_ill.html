@@ -26,6 +26,7 @@
     </header>
   </body>
 
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="http://d3js.org/d3.v3.min.js"></script>
   <script src="static/render_network.js"></script>
   <script type="text/javascript">
@@ -33,5 +34,8 @@
 	d3.json(url, render_network);
   </script>
 
+  <form>
+    <input id="update" type="submit" value="Submit" action="{{ url_for('ill_graph') }}" method='post'>
+  </form>
 
 </html>
