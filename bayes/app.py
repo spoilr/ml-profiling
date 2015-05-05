@@ -150,22 +150,36 @@ def get_categories(nodes):
 def bayes_net():
 	nodes = bn_net.V
 	categs = get_categories(nodes)
-	inference, evidence = create_evidence_and_inference(categs, "net")
-	return render_template('net.html', categs=categs, evidence=evidence, inference=inference)
+	while True:
+		try:
+			inference, evidence = create_evidence_and_inference(categs, "net")
+			return render_template('net.html', categs=categs, evidence=evidence, inference=inference)
+		except KeyError:
+			continue
 
 @app.route('/bayes/ill', methods=['GET', 'POST'])
 def bayes_ill():
 	nodes = bn_ill.V
 	categs = get_categories(nodes)
-	inference, evidence = create_evidence_and_inference(categs, "ill")
-	return render_template('ill.html', categs=categs, evidence=evidence, inference=inference)
+
+	while True:
+		try:
+			inference, evidence = create_evidence_and_inference(categs, "ill")
+			return render_template('ill.html', categs=categs, evidence=evidence, inference=inference)
+		except KeyError:
+			continue
 
 @app.route('/bayes/ideo', methods=['GET', 'POST'])
 def bayes_ideo():
 	nodes = bn_ideo.V
 	categs = get_categories(nodes)
-	inference,evidence = create_evidence_and_inference(categs, "ideo")
-	return render_template('ideo.html', categs=categs, evidence=evidence, inference=inference)
+
+	while True:
+		try:
+			inference,evidence = create_evidence_and_inference(categs, "ideo")
+			return render_template('ideo.html', categs=categs, evidence=evidence, inference=inference)
+		except KeyError:
+			continue
 
 @app.route('/inference/net', methods=['GET'])
 def net_inferences():
