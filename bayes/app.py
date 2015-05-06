@@ -118,6 +118,7 @@ def create_evidence(submit):
 	return evidence, encoded_evidence
 
 def create_inference(json_inf):
+	print 'coding'
 	inference = dict()
 	for key, values in json_inf.iteritems():
 		if key in inv_explanatory_data:
@@ -135,25 +136,23 @@ def create_inference(json_inf):
 			inference[key] = temp
 
 	return inference
-			
-def translate_inference(inf):
-	inference = dict()
-	for key, values in inf.iteritems():
-		if key in inv_explanatory_data:
-			temp = dict()
-			for k, v in values.iteritems():
-				temp[inv_explanatory_data[key][int(k)]] = v
-			inference[key] = temp
-		else:
-			temp = dict()
-			for k, v in values.iteritems():
-				if k == "0":
-					temp["no"] = v
-				elif k == "1":
-					temp["yes"] = v
-			inference[key] = temp
 
-	return inference	
+def ev_inf(evidence, encoded_evidence, theme, network):
+	try:
+		if not cycles[theme]:
+			url = "http://127.0.0.1:5000/inference/" + theme + "?" + urlencode(evidence)
+			
+			response = urlopen(url)
+			json_inf = json.loads(response.read())
+			inference = create_inference(json_inf)
+
+			return inference, encoded_evidence
+		else:
+			inf = create_inference(jt_inference(network, evidence))
+			return inf, encoded_evidence		
+	except ValueError:
+		inf = create_inference(jt_inference(network, evidence))
+		return inf, encoded_evidence	
 
 def create_evidence_and_inference(categs, theme):
 	if request.method == 'POST':
@@ -161,53 +160,14 @@ def create_evidence_and_inference(categs, theme):
 		submit = request.form
 		evidence, encoded_evidence = create_evidence(submit)
 		
-		try:
-			if theme == "net" and not cycles["net"]:
-				url = "http://127.0.0.1:5000/inference/" + theme + "?" + urlencode(evidence)
-				
-				response = urlopen(url)
-				json_inf = json.loads(response.read())
-				inference = create_inference(json_inf)
-
-				return inference, encoded_evidence
-			else:
-				inf = jt_inference(bn_net, evidence)
-				return inf, encoded_evidence		
-		except ValueError:
-			inf = jt_inference(bn_net, evidence)
-			return inf, encoded_evidence			
-
-		try:
-			if theme == "ill" and not cycles["ill"]:
-				url = "http://127.0.0.1:5000/inference/" + theme + "?" + urlencode(evidence)
-				
-				response = urlopen(url)
-				json_inf = json.loads(response.read())
-				inference = create_inference(json_inf)
-
-				return inference, encoded_evidence
-			else:
-				inf = jt_inference(bn_ill, evidence)
-				return inf, encoded_evidence		
-		except ValueError:
-			inf = jt_inference(bn_ill, evidence)
-			return inf, encoded_evidence			
-			
-		try:
-			if theme == "ideo" and not cycles["ideo"]:
-				url = "http://127.0.0.1:5000/inference/" + theme + "?" + urlencode(evidence)
-				
-				response = urlopen(url)
-				json_inf = json.loads(response.read())
-				inference = create_inference(json_inf)
-
-				return inference, encoded_evidence
-			else:
-				inf = jt_inference(bn_ideo, evidence)
-				return inf, encoded_evidence		
-		except ValueError:
-			inf = jt_inference(bn_ideo, evidence)
-			return inf, encoded_evidence	
+		if theme == "net":
+			return ev_inf(evidence, encoded_evidence, theme, bn_net)
+		elif theme == "ill":
+			return ev_inf(evidence, encoded_evidence, theme, bn_ill)
+		elif theme == "ideo":
+			return ev_inf(evidence, encoded_evidence, theme, bn_ideo)
+		else:
+			print "ERROR"	
 
 	return None, None
 
