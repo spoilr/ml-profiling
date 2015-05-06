@@ -1,32 +1,7 @@
 data_ideo = [
+  
   {
-    "Education":1,
-    "Ideology":4,
-    "Religion":0,
-    "AwareIdeo":0,
-    "IdeoChangeInt":2,
-    "ReligChangeInt":1,
-    "Legitimise":0,
-    "Denounce":1,
-    "LiveAlone":0,
-    "BombManuals":0,
-    "Interrupt":0,
-    "NotCareInjustice":0,
-    "Financial":0,
-    "TargetTyp":1,
-    "LocPubPriv":0,
-    "Stockpile":0,
-    "Contradict":1,
-    "Discriminate":0,
-    "LettersPost":0,
-    "Getaway":0,
-    "OtherKnowledge":0,
-    "RecruitNetGroup":1,
-    "Propaganda":0,
-    "FurtherAttacks":0,
-    "HighValueCivilian":0
-  },
-  {
+    "RelatStat":0,
     "Education":0,
     "Ideology":4,
     "Religion":1,
@@ -34,7 +9,6 @@ data_ideo = [
     "IdeoChangeInt":3,
     "ReligChangeInt":4,
     "Legitimise":1,
-    "Denounce":0,
     "LiveAlone":0,
     "BombManuals":1,
     "Interrupt":0,
@@ -54,6 +28,7 @@ data_ideo = [
     "HighValueCivilian":1
   },
   {
+    "RelatStat":0,
     "Education":0,
     "Ideology":2,
     "Religion":0,
@@ -61,7 +36,6 @@ data_ideo = [
     "IdeoChangeInt":2,
     "ReligChangeInt":1,
     "Legitimise":0,
-    "Denounce":0,
     "LiveAlone":0,
     "BombManuals":1,
     "Interrupt":1,
@@ -80,34 +54,9 @@ data_ideo = [
     "FurtherAttacks":1,
     "HighValueCivilian":1
   },
+  
   {
-    "Education":0,
-    "Ideology":4,
-    "Religion":0,
-    "AwareIdeo":1,
-    "IdeoChangeInt":1,
-    "ReligChangeInt":1,
-    "Legitimise":0,
-    "Denounce":0,
-    "LiveAlone":0,
-    "BombManuals":1,
-    "Interrupt":0,
-    "NotCareInjustice":0,
-    "Financial":0,
-    "TargetTyp":1,
-    "LocPubPriv":0,
-    "Stockpile":0,
-    "Contradict":0,
-    "Discriminate":0,
-    "LettersPost":0,
-    "Getaway":0,
-    "OtherKnowledge":1,
-    "RecruitNetGroup":0,
-    "Propaganda":1,
-    "FurtherAttacks":1,
-    "HighValueCivilian":0
-  },
-  {
+    "RelatStat":0,
     "Education":6,
     "Ideology":4,
     "Religion":1,
@@ -115,7 +64,6 @@ data_ideo = [
     "IdeoChangeInt":4,
     "ReligChangeInt":2,
     "Legitimise":0,
-    "Denounce":0,
     "LiveAlone":0,
     "BombManuals":0,
     "Interrupt":0,
@@ -134,34 +82,9 @@ data_ideo = [
     "FurtherAttacks":1,
     "HighValueCivilian":1
   },
+  
   {
-    "Education":6,
-    "Ideology":3,
-    "Religion":8,
-    "AwareIdeo":1,
-    "IdeoChangeInt":1,
-    "ReligChangeInt":2,
-    "Legitimise":0,
-    "Denounce":0,
-    "LiveAlone":0,
-    "BombManuals":0,
-    "Interrupt":0,
-    "NotCareInjustice":1,
-    "Financial":0,
-    "TargetTyp":0,
-    "LocPubPriv":0,
-    "Stockpile":1,
-    "Contradict":0,
-    "Discriminate":0,
-    "LettersPost":0,
-    "Getaway":1,
-    "OtherKnowledge":0,
-    "RecruitNetGroup":0,
-    "Propaganda":0,
-    "FurtherAttacks":1,
-    "HighValueCivilian":0
-  },
-  {
+    "RelatStat":0,
     "Education":1,
     "Ideology":4,
     "Religion":1,
@@ -169,7 +92,6 @@ data_ideo = [
     "IdeoChangeInt":2,
     "ReligChangeInt":1,
     "Legitimise":1,
-    "Denounce":0,
     "LiveAlone":0,
     "BombManuals":0,
     "Interrupt":0,
@@ -189,6 +111,7 @@ data_ideo = [
     "HighValueCivilian":1
   },
   {
+    "RelatStat":0,
     "Education":0,
     "Ideology":4,
     "Religion":1,
@@ -196,7 +119,6 @@ data_ideo = [
     "IdeoChangeInt":1,
     "ReligChangeInt":1,
     "Legitimise":0,
-    "Denounce":0,
     "LiveAlone":0,
     "BombManuals":0,
     "Interrupt":0,
@@ -216,6 +138,7 @@ data_ideo = [
     "HighValueCivilian":1
   },
   {
+    "RelatStat":0,
     "Education":4,
     "Ideology":4,
     "Religion":1,
@@ -223,7 +146,6 @@ data_ideo = [
     "IdeoChangeInt":1,
     "ReligChangeInt":4,
     "Legitimise":0,
-    "Denounce":0,
     "LiveAlone":1,
     "BombManuals":1,
     "Interrupt":0,
@@ -242,34 +164,9 @@ data_ideo = [
     "FurtherAttacks":1,
     "HighValueCivilian":1
   },
+  
   {
-    "Education":2,
-    "Ideology":4,
-    "Religion":1,
-    "AwareIdeo":0,
-    "IdeoChangeInt":2,
-    "ReligChangeInt":1,
-    "Legitimise":0,
-    "Denounce":0,
-    "LiveAlone":0,
-    "BombManuals":1,
-    "Interrupt":1,
-    "NotCareInjustice":0,
-    "Financial":0,
-    "TargetTyp":1,
-    "LocPubPriv":0,
-    "Stockpile":0,
-    "Contradict":0,
-    "Discriminate":0,
-    "LettersPost":0,
-    "Getaway":0,
-    "OtherKnowledge":0,
-    "RecruitNetGroup":1,
-    "Propaganda":0,
-    "FurtherAttacks":1,
-    "HighValueCivilian":0
-  },
-  {
+    "RelatStat":2,
     "Education":1,
     "Ideology":4,
     "Religion":1,
@@ -277,7 +174,6 @@ data_ideo = [
     "IdeoChangeInt":3,
     "ReligChangeInt":4,
     "Legitimise":0,
-    "Denounce":0,
     "LiveAlone":1,
     "BombManuals":0,
     "Interrupt":0,
@@ -296,61 +192,10 @@ data_ideo = [
     "FurtherAttacks":0,
     "HighValueCivilian":1
   },
+  
+  
   {
-    "Education":4,
-    "Ideology":4,
-    "Religion":1,
-    "AwareIdeo":1,
-    "IdeoChangeInt":4,
-    "ReligChangeInt":4,
-    "Legitimise":0,
-    "Denounce":0,
-    "LiveAlone":1,
-    "BombManuals":1,
-    "Interrupt":0,
-    "NotCareInjustice":0,
-    "Financial":0,
-    "TargetTyp":2,
-    "LocPubPriv":0,
-    "Stockpile":1,
-    "Contradict":0,
-    "Discriminate":0,
-    "LettersPost":1,
-    "Getaway":0,
-    "OtherKnowledge":1,
-    "RecruitNetGroup":1,
-    "Propaganda":1,
-    "FurtherAttacks":1,
-    "HighValueCivilian":0
-  },
-  {
-    "Education":0,
-    "Ideology":2,
-    "Religion":0,
-    "AwareIdeo":0,
-    "IdeoChangeInt":2,
-    "ReligChangeInt":1,
-    "Legitimise":0,
-    "Denounce":0,
-    "LiveAlone":0,
-    "BombManuals":0,
-    "Interrupt":0,
-    "NotCareInjustice":0,
-    "Financial":0,
-    "TargetTyp":0,
-    "LocPubPriv":0,
-    "Stockpile":0,
-    "Contradict":0,
-    "Discriminate":1,
-    "LettersPost":0,
-    "Getaway":1,
-    "OtherKnowledge":0,
-    "RecruitNetGroup":1,
-    "Propaganda":0,
-    "FurtherAttacks":0,
-    "HighValueCivilian":0
-  },
-  {
+    "RelatStat":2,
     "Education":6,
     "Ideology":4,
     "Religion":1,
@@ -358,7 +203,6 @@ data_ideo = [
     "IdeoChangeInt":4,
     "ReligChangeInt":4,
     "Legitimise":0,
-    "Denounce":0,
     "LiveAlone":1,
     "BombManuals":1,
     "Interrupt":0,
@@ -377,34 +221,9 @@ data_ideo = [
     "FurtherAttacks":1,
     "HighValueCivilian":1
   },
+  
   {
-    "Education":0,
-    "Ideology":2,
-    "Religion":0,
-    "AwareIdeo":1,
-    "IdeoChangeInt":3,
-    "ReligChangeInt":1,
-    "Legitimise":0,
-    "Denounce":0,
-    "LiveAlone":1,
-    "BombManuals":1,
-    "Interrupt":0,
-    "NotCareInjustice":0,
-    "Financial":0,
-    "TargetTyp":0,
-    "LocPubPriv":0,
-    "Stockpile":1,
-    "Contradict":0,
-    "Discriminate":0,
-    "LettersPost":1,
-    "Getaway":0,
-    "OtherKnowledge":1,
-    "RecruitNetGroup":1,
-    "Propaganda":1,
-    "FurtherAttacks":1,
-    "HighValueCivilian":0
-  },
-  {
+    "RelatStat":2,
     "Education":7,
     "Ideology":4,
     "Religion":1,
@@ -412,7 +231,6 @@ data_ideo = [
     "IdeoChangeInt":4,
     "ReligChangeInt":4,
     "Legitimise":1,
-    "Denounce":0,
     "LiveAlone":0,
     "BombManuals":0,
     "Interrupt":0,
@@ -432,6 +250,7 @@ data_ideo = [
     "HighValueCivilian":1
   },
   {
+    "RelatStat":0,
     "Education":4,
     "Ideology":2,
     "Religion":0,
@@ -439,7 +258,6 @@ data_ideo = [
     "IdeoChangeInt":2,
     "ReligChangeInt":1,
     "Legitimise":0,
-    "Denounce":1,
     "LiveAlone":1,
     "BombManuals":1,
     "Interrupt":1,
@@ -458,34 +276,9 @@ data_ideo = [
     "FurtherAttacks":0,
     "HighValueCivilian":1
   },
+  
   {
-    "Education":0,
-    "Ideology":2,
-    "Religion":0,
-    "AwareIdeo":1,
-    "IdeoChangeInt":1,
-    "ReligChangeInt":1,
-    "Legitimise":0,
-    "Denounce":0,
-    "LiveAlone":0,
-    "BombManuals":1,
-    "Interrupt":0,
-    "NotCareInjustice":0,
-    "Financial":0,
-    "TargetTyp":2,
-    "LocPubPriv":0,
-    "Stockpile":1,
-    "Contradict":0,
-    "Discriminate":0,
-    "LettersPost":0,
-    "Getaway":0,
-    "OtherKnowledge":0,
-    "RecruitNetGroup":1,
-    "Propaganda":1,
-    "FurtherAttacks":1,
-    "HighValueCivilian":0
-  },
-  {
+    "RelatStat":0,
     "Education":9,
     "Ideology":4,
     "Religion":1,
@@ -493,7 +286,6 @@ data_ideo = [
     "IdeoChangeInt":2,
     "ReligChangeInt":2,
     "Legitimise":0,
-    "Denounce":0,
     "LiveAlone":0,
     "BombManuals":0,
     "Interrupt":0,
@@ -512,34 +304,9 @@ data_ideo = [
     "FurtherAttacks":0,
     "HighValueCivilian":1
   },
+  
   {
-    "Education":5,
-    "Ideology":4,
-    "Religion":1,
-    "AwareIdeo":1,
-    "IdeoChangeInt":1,
-    "ReligChangeInt":2,
-    "Legitimise":0,
-    "Denounce":0,
-    "LiveAlone":1,
-    "BombManuals":1,
-    "Interrupt":1,
-    "NotCareInjustice":0,
-    "Financial":0,
-    "TargetTyp":0,
-    "LocPubPriv":0,
-    "Stockpile":1,
-    "Contradict":0,
-    "Discriminate":0,
-    "LettersPost":0,
-    "Getaway":0,
-    "OtherKnowledge":1,
-    "RecruitNetGroup":1,
-    "Propaganda":1,
-    "FurtherAttacks":0,
-    "HighValueCivilian":0
-  },
-  {
+    "RelatStat":0,
     "Education":4,
     "Ideology":2,
     "Religion":0,
@@ -547,7 +314,6 @@ data_ideo = [
     "IdeoChangeInt":1,
     "ReligChangeInt":1,
     "Legitimise":0,
-    "Denounce":0,
     "LiveAlone":0,
     "BombManuals":0,
     "Interrupt":0,
@@ -566,34 +332,9 @@ data_ideo = [
     "FurtherAttacks":1,
     "HighValueCivilian":2
   },
+  
   {
-    "Education":8,
-    "Ideology":4,
-    "Religion":1,
-    "AwareIdeo":1,
-    "IdeoChangeInt":1,
-    "ReligChangeInt":3,
-    "Legitimise":0,
-    "Denounce":1,
-    "LiveAlone":1,
-    "BombManuals":0,
-    "Interrupt":0,
-    "NotCareInjustice":1,
-    "Financial":1,
-    "TargetTyp":0,
-    "LocPubPriv":1,
-    "Stockpile":0,
-    "Contradict":0,
-    "Discriminate":0,
-    "LettersPost":0,
-    "Getaway":0,
-    "OtherKnowledge":0,
-    "RecruitNetGroup":0,
-    "Propaganda":0,
-    "FurtherAttacks":0,
-    "HighValueCivilian":0
-  },
-  {
+    "RelatStat":4,
     "Education":7,
     "Ideology":4,
     "Religion":1,
@@ -601,7 +342,6 @@ data_ideo = [
     "IdeoChangeInt":2,
     "ReligChangeInt":3,
     "Legitimise":0,
-    "Denounce":0,
     "LiveAlone":0,
     "BombManuals":0,
     "Interrupt":0,
@@ -621,6 +361,7 @@ data_ideo = [
     "HighValueCivilian":1
   },
   {
+    "RelatStat":0,
     "Education":7,
     "Ideology":2,
     "Religion":0,
@@ -628,7 +369,6 @@ data_ideo = [
     "IdeoChangeInt":1,
     "ReligChangeInt":1,
     "Legitimise":0,
-    "Denounce":0,
     "LiveAlone":1,
     "BombManuals":0,
     "Interrupt":0,
@@ -648,6 +388,7 @@ data_ideo = [
     "HighValueCivilian":1
   },
   {
+    "RelatStat":1,
     "Education":7,
     "Ideology":3,
     "Religion":0,
@@ -655,7 +396,6 @@ data_ideo = [
     "IdeoChangeInt":1,
     "ReligChangeInt":1,
     "Legitimise":0,
-    "Denounce":1,
     "LiveAlone":0,
     "BombManuals":1,
     "Interrupt":0,
@@ -674,34 +414,9 @@ data_ideo = [
     "FurtherAttacks":1,
     "HighValueCivilian":1
   },
+  
   {
-    "Education":0,
-    "Ideology":4,
-    "Religion":1,
-    "AwareIdeo":0,
-    "IdeoChangeInt":1,
-    "ReligChangeInt":1,
-    "Legitimise":1,
-    "Denounce":0,
-    "LiveAlone":0,
-    "BombManuals":0,
-    "Interrupt":0,
-    "NotCareInjustice":0,
-    "Financial":0,
-    "TargetTyp":2,
-    "LocPubPriv":0,
-    "Stockpile":0,
-    "Contradict":0,
-    "Discriminate":0,
-    "LettersPost":0,
-    "Getaway":0,
-    "OtherKnowledge":1,
-    "RecruitNetGroup":0,
-    "Propaganda":1,
-    "FurtherAttacks":0,
-    "HighValueCivilian":0
-  },
-  {
+    "RelatStat":1,
     "Education":0,
     "Ideology":4,
     "Religion":1,
@@ -709,7 +424,6 @@ data_ideo = [
     "IdeoChangeInt":2,
     "ReligChangeInt":2,
     "Legitimise":0,
-    "Denounce":0,
     "LiveAlone":0,
     "BombManuals":1,
     "Interrupt":0,
@@ -729,6 +443,7 @@ data_ideo = [
     "HighValueCivilian":1
   },
   {
+    "RelatStat":0,
     "Education":8,
     "Ideology":2,
     "Religion":0,
@@ -736,7 +451,6 @@ data_ideo = [
     "IdeoChangeInt":1,
     "ReligChangeInt":1,
     "Legitimise":0,
-    "Denounce":0,
     "LiveAlone":0,
     "BombManuals":0,
     "Interrupt":0,
@@ -756,6 +470,7 @@ data_ideo = [
     "HighValueCivilian":1
   },
   {
+    "RelatStat":0,
     "Education":0,
     "Ideology":3,
     "Religion":0,
@@ -763,7 +478,6 @@ data_ideo = [
     "IdeoChangeInt":1,
     "ReligChangeInt":1,
     "Legitimise":0,
-    "Denounce":0,
     "LiveAlone":1,
     "BombManuals":0,
     "Interrupt":0,
@@ -782,88 +496,11 @@ data_ideo = [
     "FurtherAttacks":0,
     "HighValueCivilian":1
   },
+  
+  
+  
   {
-    "Education":0,
-    "Ideology":2,
-    "Religion":0,
-    "AwareIdeo":1,
-    "IdeoChangeInt":1,
-    "ReligChangeInt":1,
-    "Legitimise":0,
-    "Denounce":0,
-    "LiveAlone":1,
-    "BombManuals":0,
-    "Interrupt":0,
-    "NotCareInjustice":0,
-    "Financial":1,
-    "TargetTyp":2,
-    "LocPubPriv":0,
-    "Stockpile":1,
-    "Contradict":0,
-    "Discriminate":0,
-    "LettersPost":0,
-    "Getaway":0,
-    "OtherKnowledge":1,
-    "RecruitNetGroup":1,
-    "Propaganda":1,
-    "FurtherAttacks":0,
-    "HighValueCivilian":0
-  },
-  {
-    "Education":7,
-    "Ideology":4,
-    "Religion":1,
-    "AwareIdeo":0,
-    "IdeoChangeInt":1,
-    "ReligChangeInt":1,
-    "Legitimise":0,
-    "Denounce":0,
-    "LiveAlone":0,
-    "BombManuals":1,
-    "Interrupt":0,
-    "NotCareInjustice":0,
-    "Financial":0,
-    "TargetTyp":0,
-    "LocPubPriv":0,
-    "Stockpile":1,
-    "Contradict":0,
-    "Discriminate":0,
-    "LettersPost":0,
-    "Getaway":0,
-    "OtherKnowledge":0,
-    "RecruitNetGroup":0,
-    "Propaganda":1,
-    "FurtherAttacks":1,
-    "HighValueCivilian":0
-  },
-  {
-    "Education":0,
-    "Ideology":4,
-    "Religion":0,
-    "AwareIdeo":0,
-    "IdeoChangeInt":1,
-    "ReligChangeInt":1,
-    "Legitimise":0,
-    "Denounce":0,
-    "LiveAlone":0,
-    "BombManuals":0,
-    "Interrupt":0,
-    "NotCareInjustice":0,
-    "Financial":0,
-    "TargetTyp":0,
-    "LocPubPriv":0,
-    "Stockpile":1,
-    "Contradict":0,
-    "Discriminate":0,
-    "LettersPost":0,
-    "Getaway":0,
-    "OtherKnowledge":0,
-    "RecruitNetGroup":0,
-    "Propaganda":0,
-    "FurtherAttacks":0,
-    "HighValueCivilian":0
-  },
-  {
+    "RelatStat":2,
     "Education":3,
     "Ideology":3,
     "Religion":0,
@@ -871,7 +508,6 @@ data_ideo = [
     "IdeoChangeInt":1,
     "ReligChangeInt":1,
     "Legitimise":0,
-    "Denounce":0,
     "LiveAlone":0,
     "BombManuals":0,
     "Interrupt":1,
@@ -891,6 +527,7 @@ data_ideo = [
     "HighValueCivilian":1
   },
   {
+    "RelatStat":4,
     "Education":8,
     "Ideology":3,
     "Religion":0,
@@ -898,7 +535,6 @@ data_ideo = [
     "IdeoChangeInt":2,
     "ReligChangeInt":1,
     "Legitimise":0,
-    "Denounce":0,
     "LiveAlone":0,
     "BombManuals":1,
     "Interrupt":0,
@@ -917,34 +553,9 @@ data_ideo = [
     "FurtherAttacks":1,
     "HighValueCivilian":1
   },
+  
   {
-    "Education":5,
-    "Ideology":2,
-    "Religion":7,
-    "AwareIdeo":1,
-    "IdeoChangeInt":1,
-    "ReligChangeInt":1,
-    "Legitimise":0,
-    "Denounce":0,
-    "LiveAlone":1,
-    "BombManuals":0,
-    "Interrupt":0,
-    "NotCareInjustice":1,
-    "Financial":1,
-    "TargetTyp":2,
-    "LocPubPriv":0,
-    "Stockpile":0,
-    "Contradict":0,
-    "Discriminate":0,
-    "LettersPost":1,
-    "Getaway":0,
-    "OtherKnowledge":0,
-    "RecruitNetGroup":0,
-    "Propaganda":1,
-    "FurtherAttacks":0,
-    "HighValueCivilian":0
-  },
-  {
+    "RelatStat":0,
     "Education":10,
     "Ideology":4,
     "Religion":1,
@@ -952,7 +563,6 @@ data_ideo = [
     "IdeoChangeInt":2,
     "ReligChangeInt":1,
     "Legitimise":1,
-    "Denounce":0,
     "LiveAlone":1,
     "BombManuals":0,
     "Interrupt":0,
@@ -971,34 +581,9 @@ data_ideo = [
     "FurtherAttacks":1,
     "HighValueCivilian":1
   },
+  
   {
-    "Education":2,
-    "Ideology":2,
-    "Religion":7,
-    "AwareIdeo":0,
-    "IdeoChangeInt":1,
-    "ReligChangeInt":1,
-    "Legitimise":0,
-    "Denounce":0,
-    "LiveAlone":1,
-    "BombManuals":1,
-    "Interrupt":0,
-    "NotCareInjustice":0,
-    "Financial":0,
-    "TargetTyp":2,
-    "LocPubPriv":0,
-    "Stockpile":1,
-    "Contradict":0,
-    "Discriminate":0,
-    "LettersPost":0,
-    "Getaway":0,
-    "OtherKnowledge":0,
-    "RecruitNetGroup":1,
-    "Propaganda":1,
-    "FurtherAttacks":0,
-    "HighValueCivilian":0
-  },
-  {
+    "RelatStat":2,
     "Education":10,
     "Ideology":2,
     "Religion":0,
@@ -1006,7 +591,6 @@ data_ideo = [
     "IdeoChangeInt":2,
     "ReligChangeInt":1,
     "Legitimise":0,
-    "Denounce":0,
     "LiveAlone":0,
     "BombManuals":1,
     "Interrupt":0,
@@ -1026,6 +610,7 @@ data_ideo = [
     "HighValueCivilian":1
   },
   {
+    "RelatStat":2,
     "Education":0,
     "Ideology":3,
     "Religion":0,
@@ -1033,7 +618,6 @@ data_ideo = [
     "IdeoChangeInt":2,
     "ReligChangeInt":1,
     "Legitimise":0,
-    "Denounce":0,
     "LiveAlone":0,
     "BombManuals":0,
     "Interrupt":0,
@@ -1053,6 +637,7 @@ data_ideo = [
     "HighValueCivilian":1
   },
   {
+    "RelatStat":0,
     "Education":0,
     "Ideology":3,
     "Religion":1,
@@ -1060,7 +645,6 @@ data_ideo = [
     "IdeoChangeInt":1,
     "ReligChangeInt":1,
     "Legitimise":0,
-    "Denounce":0,
     "LiveAlone":0,
     "BombManuals":1,
     "Interrupt":0,
@@ -1079,88 +663,11 @@ data_ideo = [
     "FurtherAttacks":1,
     "HighValueCivilian":2
   },
+  
+  
+  
   {
-    "Education":0,
-    "Ideology":2,
-    "Religion":0,
-    "AwareIdeo":1,
-    "IdeoChangeInt":4,
-    "ReligChangeInt":2,
-    "Legitimise":1,
-    "Denounce":0,
-    "LiveAlone":0,
-    "BombManuals":1,
-    "Interrupt":0,
-    "NotCareInjustice":0,
-    "Financial":0,
-    "TargetTyp":0,
-    "LocPubPriv":0,
-    "Stockpile":1,
-    "Contradict":1,
-    "Discriminate":0,
-    "LettersPost":0,
-    "Getaway":0,
-    "OtherKnowledge":1,
-    "RecruitNetGroup":1,
-    "Propaganda":1,
-    "FurtherAttacks":1,
-    "HighValueCivilian":0
-  },
-  {
-    "Education":0,
-    "Ideology":2,
-    "Religion":0,
-    "AwareIdeo":0,
-    "IdeoChangeInt":1,
-    "ReligChangeInt":1,
-    "Legitimise":0,
-    "Denounce":0,
-    "LiveAlone":0,
-    "BombManuals":1,
-    "Interrupt":0,
-    "NotCareInjustice":0,
-    "Financial":0,
-    "TargetTyp":0,
-    "LocPubPriv":0,
-    "Stockpile":1,
-    "Contradict":0,
-    "Discriminate":0,
-    "LettersPost":0,
-    "Getaway":0,
-    "OtherKnowledge":0,
-    "RecruitNetGroup":0,
-    "Propaganda":0,
-    "FurtherAttacks":1,
-    "HighValueCivilian":0
-  },
-  {
-    "Education":0,
-    "Ideology":2,
-    "Religion":0,
-    "AwareIdeo":0,
-    "IdeoChangeInt":1,
-    "ReligChangeInt":1,
-    "Legitimise":0,
-    "Denounce":0,
-    "LiveAlone":0,
-    "BombManuals":1,
-    "Interrupt":0,
-    "NotCareInjustice":0,
-    "Financial":0,
-    "TargetTyp":0,
-    "LocPubPriv":0,
-    "Stockpile":1,
-    "Contradict":0,
-    "Discriminate":0,
-    "LettersPost":0,
-    "Getaway":0,
-    "OtherKnowledge":0,
-    "RecruitNetGroup":0,
-    "Propaganda":1,
-    "FurtherAttacks":1,
-    "HighValueCivilian":0
-  },
-  {
+    "RelatStat":1,
     "Education":0,
     "Ideology":3,
     "Religion":0,
@@ -1168,7 +675,6 @@ data_ideo = [
     "IdeoChangeInt":1,
     "ReligChangeInt":1,
     "Legitimise":0,
-    "Denounce":0,
     "LiveAlone":0,
     "BombManuals":1,
     "Interrupt":0,
@@ -1188,6 +694,7 @@ data_ideo = [
     "HighValueCivilian":1
   },
   {
+    "RelatStat":2,
     "Education":7,
     "Ideology":2,
     "Religion":7,
@@ -1195,7 +702,6 @@ data_ideo = [
     "IdeoChangeInt":2,
     "ReligChangeInt":1,
     "Legitimise":0,
-    "Denounce":0,
     "LiveAlone":0,
     "BombManuals":0,
     "Interrupt":0,
@@ -1215,6 +721,7 @@ data_ideo = [
     "HighValueCivilian":1
   },
   {
+    "RelatStat":2,
     "Education":10,
     "Ideology":3,
     "Religion":0,
@@ -1222,7 +729,6 @@ data_ideo = [
     "IdeoChangeInt":1,
     "ReligChangeInt":1,
     "Legitimise":0,
-    "Denounce":0,
     "LiveAlone":0,
     "BombManuals":1,
     "Interrupt":1,
@@ -1242,6 +748,7 @@ data_ideo = [
     "HighValueCivilian":1
   },
   {
+    "RelatStat":2,
     "Education":9,
     "Ideology":3,
     "Religion":0,
@@ -1249,7 +756,6 @@ data_ideo = [
     "IdeoChangeInt":2,
     "ReligChangeInt":1,
     "Legitimise":0,
-    "Denounce":0,
     "LiveAlone":0,
     "BombManuals":0,
     "Interrupt":0,
@@ -1269,6 +775,7 @@ data_ideo = [
     "HighValueCivilian":1
   },
   {
+    "RelatStat":1,
     "Education":8,
     "Ideology":4,
     "Religion":1,
@@ -1276,7 +783,6 @@ data_ideo = [
     "IdeoChangeInt":1,
     "ReligChangeInt":1,
     "Legitimise":0,
-    "Denounce":0,
     "LiveAlone":0,
     "BombManuals":1,
     "Interrupt":0,
@@ -1296,6 +802,7 @@ data_ideo = [
     "HighValueCivilian":2
   },
   {
+    "RelatStat":0,
     "Education":4,
     "Ideology":3,
     "Religion":0,
@@ -1303,7 +810,6 @@ data_ideo = [
     "IdeoChangeInt":4,
     "ReligChangeInt":2,
     "Legitimise":0,
-    "Denounce":1,
     "LiveAlone":1,
     "BombManuals":0,
     "Interrupt":0,
@@ -1323,6 +829,7 @@ data_ideo = [
     "HighValueCivilian":2
   },
   {
+    "RelatStat":0,
     "Education":0,
     "Ideology":2,
     "Religion":0,
@@ -1330,7 +837,6 @@ data_ideo = [
     "IdeoChangeInt":1,
     "ReligChangeInt":1,
     "Legitimise":0,
-    "Denounce":0,
     "LiveAlone":0,
     "BombManuals":1,
     "Interrupt":0,
@@ -1350,6 +856,7 @@ data_ideo = [
     "HighValueCivilian":2
   },
   {
+    "RelatStat":0,
     "Education":1,
     "Ideology":2,
     "Religion":0,
@@ -1357,7 +864,6 @@ data_ideo = [
     "IdeoChangeInt":1,
     "ReligChangeInt":1,
     "Legitimise":0,
-    "Denounce":0,
     "LiveAlone":0,
     "BombManuals":1,
     "Interrupt":0,
@@ -1377,6 +883,7 @@ data_ideo = [
     "HighValueCivilian":2
   },
   {
+    "RelatStat":1,
     "Education":0,
     "Ideology":3,
     "Religion":0,
@@ -1384,7 +891,6 @@ data_ideo = [
     "IdeoChangeInt":2,
     "ReligChangeInt":1,
     "Legitimise":0,
-    "Denounce":0,
     "LiveAlone":0,
     "BombManuals":1,
     "Interrupt":0,
@@ -1404,6 +910,7 @@ data_ideo = [
     "HighValueCivilian":2
   },
   {
+    "RelatStat":0,
     "Education":9,
     "Ideology":3,
     "Religion":0,
@@ -1411,7 +918,6 @@ data_ideo = [
     "IdeoChangeInt":2,
     "ReligChangeInt":1,
     "Legitimise":0,
-    "Denounce":0,
     "LiveAlone":0,
     "BombManuals":0,
     "Interrupt":0,
@@ -1431,6 +937,7 @@ data_ideo = [
     "HighValueCivilian":2
   },
   {
+    "RelatStat":2,
     "Education":0,
     "Ideology":3,
     "Religion":0,
@@ -1438,7 +945,6 @@ data_ideo = [
     "IdeoChangeInt":2,
     "ReligChangeInt":1,
     "Legitimise":0,
-    "Denounce":0,
     "LiveAlone":0,
     "BombManuals":1,
     "Interrupt":0,
@@ -1458,6 +964,7 @@ data_ideo = [
     "HighValueCivilian":2
   },
   {
+    "RelatStat":0,
     "Education":0,
     "Ideology":3,
     "Religion":0,
@@ -1465,7 +972,6 @@ data_ideo = [
     "IdeoChangeInt":2,
     "ReligChangeInt":1,
     "Legitimise":0,
-    "Denounce":0,
     "LiveAlone":1,
     "BombManuals":0,
     "Interrupt":0,
@@ -1485,6 +991,7 @@ data_ideo = [
     "HighValueCivilian":2
   },
   {
+    "RelatStat":0,
     "Education":0,
     "Ideology":3,
     "Religion":7,
@@ -1492,7 +999,6 @@ data_ideo = [
     "IdeoChangeInt":4,
     "ReligChangeInt":1,
     "Legitimise":0,
-    "Denounce":0,
     "LiveAlone":1,
     "BombManuals":0,
     "Interrupt":0,
@@ -1512,6 +1018,7 @@ data_ideo = [
     "HighValueCivilian":2
   },
   {
+    "RelatStat":2,
     "Education":0,
     "Ideology":2,
     "Religion":0,
@@ -1519,7 +1026,6 @@ data_ideo = [
     "IdeoChangeInt":1,
     "ReligChangeInt":1,
     "Legitimise":0,
-    "Denounce":0,
     "LiveAlone":0,
     "BombManuals":1,
     "Interrupt":0,
@@ -1539,6 +1045,7 @@ data_ideo = [
     "HighValueCivilian":2
   },
   {
+    "RelatStat":0,
     "Education":6,
     "Ideology":4,
     "Religion":1,
@@ -1546,7 +1053,6 @@ data_ideo = [
     "IdeoChangeInt":2,
     "ReligChangeInt":4,
     "Legitimise":1,
-    "Denounce":1,
     "LiveAlone":1,
     "BombManuals":1,
     "Interrupt":0,
@@ -1566,6 +1072,7 @@ data_ideo = [
     "HighValueCivilian":2
   },
   {
+    "RelatStat":0,
     "Education":6,
     "Ideology":4,
     "Religion":1,
@@ -1573,7 +1080,6 @@ data_ideo = [
     "IdeoChangeInt":2,
     "ReligChangeInt":1,
     "Legitimise":0,
-    "Denounce":0,
     "LiveAlone":0,
     "BombManuals":1,
     "Interrupt":0,
@@ -1593,6 +1099,7 @@ data_ideo = [
     "HighValueCivilian":1
   },
   {
+    "RelatStat":0,
     "Education":6,
     "Ideology":2,
     "Religion":0,
@@ -1600,7 +1107,6 @@ data_ideo = [
     "IdeoChangeInt":2,
     "ReligChangeInt":1,
     "Legitimise":1,
-    "Denounce":0,
     "LiveAlone":1,
     "BombManuals":0,
     "Interrupt":0,
@@ -1620,6 +1126,7 @@ data_ideo = [
     "HighValueCivilian":2
   },
   {
+    "RelatStat":0,
     "Education":0,
     "Ideology":2,
     "Religion":0,
@@ -1627,7 +1134,6 @@ data_ideo = [
     "IdeoChangeInt":1,
     "ReligChangeInt":1,
     "Legitimise":0,
-    "Denounce":0,
     "LiveAlone":0,
     "BombManuals":0,
     "Interrupt":1,
@@ -1647,6 +1153,7 @@ data_ideo = [
     "HighValueCivilian":2
   },
   {
+    "RelatStat":0,
     "Education":0,
     "Ideology":3,
     "Religion":7,
@@ -1654,7 +1161,6 @@ data_ideo = [
     "IdeoChangeInt":1,
     "ReligChangeInt":1,
     "Legitimise":0,
-    "Denounce":0,
     "LiveAlone":0,
     "BombManuals":0,
     "Interrupt":0,
@@ -1674,6 +1180,7 @@ data_ideo = [
     "HighValueCivilian":2
   },
   {
+    "RelatStat":0,
     "Education":3,
     "Ideology":2,
     "Religion":0,
@@ -1681,7 +1188,6 @@ data_ideo = [
     "IdeoChangeInt":2,
     "ReligChangeInt":1,
     "Legitimise":1,
-    "Denounce":0,
     "LiveAlone":0,
     "BombManuals":1,
     "Interrupt":0,
@@ -1701,6 +1207,7 @@ data_ideo = [
     "HighValueCivilian":2
   },
   {
+    "RelatStat":0,
     "Education":4,
     "Ideology":4,
     "Religion":1,
@@ -1708,7 +1215,6 @@ data_ideo = [
     "IdeoChangeInt":4,
     "ReligChangeInt":4,
     "Legitimise":0,
-    "Denounce":0,
     "LiveAlone":0,
     "BombManuals":0,
     "Interrupt":0,
@@ -1728,6 +1234,7 @@ data_ideo = [
     "HighValueCivilian":2
   },
   {
+    "RelatStat":0,
     "Education":7,
     "Ideology":4,
     "Religion":1,
@@ -1735,7 +1242,6 @@ data_ideo = [
     "IdeoChangeInt":2,
     "ReligChangeInt":4,
     "Legitimise":0,
-    "Denounce":1,
     "LiveAlone":0,
     "BombManuals":0,
     "Interrupt":0,
@@ -1755,6 +1261,7 @@ data_ideo = [
     "HighValueCivilian":2
   },
   {
+    "RelatStat":0,
     "Education":4,
     "Ideology":2,
     "Religion":0,
@@ -1762,7 +1269,6 @@ data_ideo = [
     "IdeoChangeInt":2,
     "ReligChangeInt":1,
     "Legitimise":0,
-    "Denounce":1,
     "LiveAlone":1,
     "BombManuals":1,
     "Interrupt":0,
@@ -1782,6 +1288,7 @@ data_ideo = [
     "HighValueCivilian":2
   },
   {
+    "RelatStat":0,
     "Education":0,
     "Ideology":2,
     "Religion":0,
@@ -1789,7 +1296,6 @@ data_ideo = [
     "IdeoChangeInt":1,
     "ReligChangeInt":1,
     "Legitimise":0,
-    "Denounce":1,
     "LiveAlone":1,
     "BombManuals":0,
     "Interrupt":0,
@@ -1809,6 +1315,7 @@ data_ideo = [
     "HighValueCivilian":2
   },
   {
+    "RelatStat":0,
     "Education":8,
     "Ideology":4,
     "Religion":1,
@@ -1816,7 +1323,6 @@ data_ideo = [
     "IdeoChangeInt":3,
     "ReligChangeInt":2,
     "Legitimise":1,
-    "Denounce":0,
     "LiveAlone":1,
     "BombManuals":0,
     "Interrupt":1,
@@ -1836,6 +1342,7 @@ data_ideo = [
     "HighValueCivilian":2
   },
   {
+    "RelatStat":3,
     "Education":1,
     "Ideology":4,
     "Religion":1,
@@ -1843,7 +1350,6 @@ data_ideo = [
     "IdeoChangeInt":2,
     "ReligChangeInt":2,
     "Legitimise":0,
-    "Denounce":0,
     "LiveAlone":1,
     "BombManuals":0,
     "Interrupt":1,
@@ -1863,6 +1369,7 @@ data_ideo = [
     "HighValueCivilian":1
   },
   {
+    "RelatStat":0,
     "Education":9,
     "Ideology":2,
     "Religion":0,
@@ -1870,7 +1377,6 @@ data_ideo = [
     "IdeoChangeInt":3,
     "ReligChangeInt":1,
     "Legitimise":0,
-    "Denounce":0,
     "LiveAlone":0,
     "BombManuals":1,
     "Interrupt":0,
@@ -1890,6 +1396,7 @@ data_ideo = [
     "HighValueCivilian":2
   },
   {
+    "RelatStat":0,
     "Education":6,
     "Ideology":4,
     "Religion":1,
@@ -1897,7 +1404,6 @@ data_ideo = [
     "IdeoChangeInt":2,
     "ReligChangeInt":2,
     "Legitimise":0,
-    "Denounce":0,
     "LiveAlone":0,
     "BombManuals":0,
     "Interrupt":0,
@@ -1917,6 +1423,7 @@ data_ideo = [
     "HighValueCivilian":2
   },
   {
+    "RelatStat":0,
     "Education":0,
     "Ideology":2,
     "Religion":0,
@@ -1924,7 +1431,6 @@ data_ideo = [
     "IdeoChangeInt":4,
     "ReligChangeInt":1,
     "Legitimise":0,
-    "Denounce":0,
     "LiveAlone":1,
     "BombManuals":1,
     "Interrupt":0,
@@ -1944,6 +1450,7 @@ data_ideo = [
     "HighValueCivilian":2
   },
   {
+    "RelatStat":0,
     "Education":7,
     "Ideology":2,
     "Religion":0,
@@ -1951,7 +1458,6 @@ data_ideo = [
     "IdeoChangeInt":1,
     "ReligChangeInt":1,
     "Legitimise":0,
-    "Denounce":0,
     "LiveAlone":1,
     "BombManuals":0,
     "Interrupt":0,
@@ -1971,6 +1477,7 @@ data_ideo = [
     "HighValueCivilian":2
   },
   {
+    "RelatStat":0,
     "Education":1,
     "Ideology":4,
     "Religion":1,
@@ -1978,7 +1485,6 @@ data_ideo = [
     "IdeoChangeInt":4,
     "ReligChangeInt":4,
     "Legitimise":1,
-    "Denounce":1,
     "LiveAlone":1,
     "BombManuals":0,
     "Interrupt":0,
@@ -1998,6 +1504,7 @@ data_ideo = [
     "HighValueCivilian":2
   },
   {
+    "RelatStat":0,
     "Education":8,
     "Ideology":4,
     "Religion":1,
@@ -2005,7 +1512,6 @@ data_ideo = [
     "IdeoChangeInt":1,
     "ReligChangeInt":1,
     "Legitimise":0,
-    "Denounce":0,
     "LiveAlone":0,
     "BombManuals":0,
     "Interrupt":0,
@@ -2025,6 +1531,7 @@ data_ideo = [
     "HighValueCivilian":2
   },
   {
+    "RelatStat":0,
     "Education":0,
     "Ideology":4,
     "Religion":1,
@@ -2032,7 +1539,6 @@ data_ideo = [
     "IdeoChangeInt":1,
     "ReligChangeInt":1,
     "Legitimise":0,
-    "Denounce":0,
     "LiveAlone":0,
     "BombManuals":0,
     "Interrupt":0,
@@ -2052,6 +1558,7 @@ data_ideo = [
     "HighValueCivilian":2
   },
   {
+    "RelatStat":2,
     "Education":7,
     "Ideology":4,
     "Religion":1,
@@ -2059,7 +1566,6 @@ data_ideo = [
     "IdeoChangeInt":4,
     "ReligChangeInt":4,
     "Legitimise":1,
-    "Denounce":1,
     "LiveAlone":0,
     "BombManuals":0,
     "Interrupt":0,
@@ -2079,6 +1585,7 @@ data_ideo = [
     "HighValueCivilian":2
   },
   {
+    "RelatStat":3,
     "Education":4,
     "Ideology":4,
     "Religion":1,
@@ -2086,7 +1593,6 @@ data_ideo = [
     "IdeoChangeInt":2,
     "ReligChangeInt":2,
     "Legitimise":0,
-    "Denounce":0,
     "LiveAlone":1,
     "BombManuals":0,
     "Interrupt":0,
@@ -2106,6 +1612,7 @@ data_ideo = [
     "HighValueCivilian":2
   },
   {
+    "RelatStat":0,
     "Education":6,
     "Ideology":3,
     "Religion":0,
@@ -2113,7 +1620,6 @@ data_ideo = [
     "IdeoChangeInt":1,
     "ReligChangeInt":3,
     "Legitimise":0,
-    "Denounce":0,
     "LiveAlone":1,
     "BombManuals":1,
     "Interrupt":0,
@@ -2133,6 +1639,7 @@ data_ideo = [
     "HighValueCivilian":2
   },
   {
+    "RelatStat":3,
     "Education":0,
     "Ideology":2,
     "Religion":0,
@@ -2140,7 +1647,6 @@ data_ideo = [
     "IdeoChangeInt":1,
     "ReligChangeInt":1,
     "Legitimise":0,
-    "Denounce":0,
     "LiveAlone":1,
     "BombManuals":1,
     "Interrupt":0,
@@ -2160,6 +1666,7 @@ data_ideo = [
     "HighValueCivilian":2
   },
   {
+    "RelatStat":2,
     "Education":9,
     "Ideology":4,
     "Religion":1,
@@ -2167,7 +1674,6 @@ data_ideo = [
     "IdeoChangeInt":4,
     "ReligChangeInt":2,
     "Legitimise":0,
-    "Denounce":0,
     "LiveAlone":1,
     "BombManuals":0,
     "Interrupt":1,
@@ -2187,6 +1693,7 @@ data_ideo = [
     "HighValueCivilian":2
   },
   {
+    "RelatStat":4,
     "Education":5,
     "Ideology":4,
     "Religion":1,
@@ -2194,7 +1701,6 @@ data_ideo = [
     "IdeoChangeInt":1,
     "ReligChangeInt":1,
     "Legitimise":0,
-    "Denounce":0,
     "LiveAlone":0,
     "BombManuals":0,
     "Interrupt":0,
@@ -2214,6 +1720,7 @@ data_ideo = [
     "HighValueCivilian":2
   },
   {
+    "RelatStat":0,
     "Education":4,
     "Ideology":2,
     "Religion":0,
@@ -2221,7 +1728,6 @@ data_ideo = [
     "IdeoChangeInt":1,
     "ReligChangeInt":1,
     "Legitimise":0,
-    "Denounce":0,
     "LiveAlone":1,
     "BombManuals":0,
     "Interrupt":0,
@@ -2241,6 +1747,7 @@ data_ideo = [
     "HighValueCivilian":2
   },
   {
+    "RelatStat":0,
     "Education":4,
     "Ideology":2,
     "Religion":7,
@@ -2248,7 +1755,6 @@ data_ideo = [
     "IdeoChangeInt":2,
     "ReligChangeInt":1,
     "Legitimise":0,
-    "Denounce":1,
     "LiveAlone":1,
     "BombManuals":1,
     "Interrupt":0,
@@ -2268,6 +1774,7 @@ data_ideo = [
     "HighValueCivilian":2
   },
   {
+    "RelatStat":2,
     "Education":0,
     "Ideology":3,
     "Religion":0,
@@ -2275,7 +1782,6 @@ data_ideo = [
     "IdeoChangeInt":4,
     "ReligChangeInt":1,
     "Legitimise":0,
-    "Denounce":0,
     "LiveAlone":0,
     "BombManuals":0,
     "Interrupt":0,
@@ -2295,6 +1801,7 @@ data_ideo = [
     "HighValueCivilian":2
   },
   {
+    "RelatStat":0,
     "Education":9,
     "Ideology":2,
     "Religion":0,
@@ -2302,7 +1809,6 @@ data_ideo = [
     "IdeoChangeInt":4,
     "ReligChangeInt":1,
     "Legitimise":1,
-    "Denounce":0,
     "LiveAlone":0,
     "BombManuals":0,
     "Interrupt":0,
@@ -2322,6 +1828,7 @@ data_ideo = [
     "HighValueCivilian":2
   },
   {
+    "RelatStat":2,
     "Education":5,
     "Ideology":2,
     "Religion":0,
@@ -2329,7 +1836,6 @@ data_ideo = [
     "IdeoChangeInt":1,
     "ReligChangeInt":1,
     "Legitimise":0,
-    "Denounce":0,
     "LiveAlone":1,
     "BombManuals":1,
     "Interrupt":0,
@@ -2349,6 +1855,7 @@ data_ideo = [
     "HighValueCivilian":2
   },
   {
+    "RelatStat":4,
     "Education":6,
     "Ideology":3,
     "Religion":0,
@@ -2356,7 +1863,6 @@ data_ideo = [
     "IdeoChangeInt":1,
     "ReligChangeInt":1,
     "Legitimise":0,
-    "Denounce":0,
     "LiveAlone":1,
     "BombManuals":0,
     "Interrupt":1,
@@ -2376,6 +1882,7 @@ data_ideo = [
     "HighValueCivilian":2
   },
   {
+    "RelatStat":0,
     "Education":10,
     "Ideology":3,
     "Religion":7,
@@ -2383,7 +1890,6 @@ data_ideo = [
     "IdeoChangeInt":2,
     "ReligChangeInt":1,
     "Legitimise":0,
-    "Denounce":0,
     "LiveAlone":1,
     "BombManuals":1,
     "Interrupt":1,
@@ -2403,6 +1909,7 @@ data_ideo = [
     "HighValueCivilian":2
   },
   {
+    "RelatStat":0,
     "Education":4,
     "Ideology":2,
     "Religion":0,
@@ -2410,7 +1917,6 @@ data_ideo = [
     "IdeoChangeInt":3,
     "ReligChangeInt":1,
     "Legitimise":0,
-    "Denounce":0,
     "LiveAlone":1,
     "BombManuals":0,
     "Interrupt":0,
@@ -2430,6 +1936,7 @@ data_ideo = [
     "HighValueCivilian":2
   },
   {
+    "RelatStat":0,
     "Education":0,
     "Ideology":3,
     "Religion":0,
@@ -2437,7 +1944,6 @@ data_ideo = [
     "IdeoChangeInt":1,
     "ReligChangeInt":2,
     "Legitimise":0,
-    "Denounce":0,
     "LiveAlone":0,
     "BombManuals":0,
     "Interrupt":0,
@@ -2457,6 +1963,7 @@ data_ideo = [
     "HighValueCivilian":2
   },
   {
+    "RelatStat":2,
     "Education":10,
     "Ideology":3,
     "Religion":5,
@@ -2464,7 +1971,6 @@ data_ideo = [
     "IdeoChangeInt":1,
     "ReligChangeInt":1,
     "Legitimise":0,
-    "Denounce":0,
     "LiveAlone":0,
     "BombManuals":1,
     "Interrupt":0,
@@ -2484,6 +1990,7 @@ data_ideo = [
     "HighValueCivilian":2
   },
   {
+    "RelatStat":4,
     "Education":7,
     "Ideology":2,
     "Religion":0,
@@ -2491,7 +1998,6 @@ data_ideo = [
     "IdeoChangeInt":2,
     "ReligChangeInt":1,
     "Legitimise":0,
-    "Denounce":0,
     "LiveAlone":0,
     "BombManuals":0,
     "Interrupt":1,
@@ -2511,6 +2017,7 @@ data_ideo = [
     "HighValueCivilian":2
   },
   {
+    "RelatStat":0,
     "Education":6,
     "Ideology":2,
     "Religion":0,
@@ -2518,7 +2025,6 @@ data_ideo = [
     "IdeoChangeInt":1,
     "ReligChangeInt":1,
     "Legitimise":0,
-    "Denounce":0,
     "LiveAlone":0,
     "BombManuals":0,
     "Interrupt":0,
@@ -2538,6 +2044,7 @@ data_ideo = [
     "HighValueCivilian":2
   },
   {
+    "RelatStat":0,
     "Education":0,
     "Ideology":3,
     "Religion":0,
@@ -2545,7 +2052,6 @@ data_ideo = [
     "IdeoChangeInt":1,
     "ReligChangeInt":1,
     "Legitimise":0,
-    "Denounce":0,
     "LiveAlone":1,
     "BombManuals":0,
     "Interrupt":0,
@@ -2565,6 +2071,7 @@ data_ideo = [
     "HighValueCivilian":2
   },
   {
+    "RelatStat":2,
     "Education":9,
     "Ideology":3,
     "Religion":0,
@@ -2572,7 +2079,6 @@ data_ideo = [
     "IdeoChangeInt":2,
     "ReligChangeInt":2,
     "Legitimise":0,
-    "Denounce":0,
     "LiveAlone":0,
     "BombManuals":0,
     "Interrupt":0,
@@ -2592,6 +2098,7 @@ data_ideo = [
     "HighValueCivilian":2
   },
   {
+    "RelatStat":0,
     "Education":9,
     "Ideology":3,
     "Religion":0,
@@ -2599,7 +2106,6 @@ data_ideo = [
     "IdeoChangeInt":2,
     "ReligChangeInt":4,
     "Legitimise":1,
-    "Denounce":0,
     "LiveAlone":0,
     "BombManuals":0,
     "Interrupt":0,
@@ -2619,6 +2125,7 @@ data_ideo = [
     "HighValueCivilian":2
   },
   {
+    "RelatStat":2,
     "Education":7,
     "Ideology":4,
     "Religion":1,
@@ -2626,7 +2133,6 @@ data_ideo = [
     "IdeoChangeInt":1,
     "ReligChangeInt":1,
     "Legitimise":0,
-    "Denounce":0,
     "LiveAlone":0,
     "BombManuals":0,
     "Interrupt":0,
@@ -2646,6 +2152,7 @@ data_ideo = [
     "HighValueCivilian":2
   },
   {
+    "RelatStat":2,
     "Education":7,
     "Ideology":2,
     "Religion":0,
@@ -2653,7 +2160,6 @@ data_ideo = [
     "IdeoChangeInt":1,
     "ReligChangeInt":1,
     "Legitimise":0,
-    "Denounce":0,
     "LiveAlone":0,
     "BombManuals":1,
     "Interrupt":0,
@@ -2673,6 +2179,7 @@ data_ideo = [
     "HighValueCivilian":2
   },
   {
+    "RelatStat":1,
     "Education":1,
     "Ideology":2,
     "Religion":0,
@@ -2680,7 +2187,6 @@ data_ideo = [
     "IdeoChangeInt":1,
     "ReligChangeInt":1,
     "Legitimise":0,
-    "Denounce":0,
     "LiveAlone":0,
     "BombManuals":1,
     "Interrupt":0,
@@ -2700,6 +2206,7 @@ data_ideo = [
     "HighValueCivilian":2
   },
   {
+    "RelatStat":2,
     "Education":1,
     "Ideology":3,
     "Religion":0,
@@ -2707,7 +2214,6 @@ data_ideo = [
     "IdeoChangeInt":2,
     "ReligChangeInt":3,
     "Legitimise":1,
-    "Denounce":1,
     "LiveAlone":1,
     "BombManuals":0,
     "Interrupt":1,
@@ -2727,6 +2233,7 @@ data_ideo = [
     "HighValueCivilian":2
   },
   {
+    "RelatStat":0,
     "Education":6,
     "Ideology":2,
     "Religion":0,
@@ -2734,7 +2241,6 @@ data_ideo = [
     "IdeoChangeInt":1,
     "ReligChangeInt":1,
     "Legitimise":0,
-    "Denounce":0,
     "LiveAlone":0,
     "BombManuals":1,
     "Interrupt":0,
@@ -2754,6 +2260,7 @@ data_ideo = [
     "HighValueCivilian":2
   },
   {
+    "RelatStat":0,
     "Education":1,
     "Ideology":2,
     "Religion":0,
@@ -2761,7 +2268,6 @@ data_ideo = [
     "IdeoChangeInt":2,
     "ReligChangeInt":1,
     "Legitimise":0,
-    "Denounce":0,
     "LiveAlone":1,
     "BombManuals":0,
     "Interrupt":0,
@@ -2781,6 +2287,7 @@ data_ideo = [
     "HighValueCivilian":2
   },
   {
+    "RelatStat":3,
     "Education":0,
     "Ideology":2,
     "Religion":0,
@@ -2788,7 +2295,6 @@ data_ideo = [
     "IdeoChangeInt":2,
     "ReligChangeInt":1,
     "Legitimise":0,
-    "Denounce":0,
     "LiveAlone":1,
     "BombManuals":1,
     "Interrupt":0,
@@ -2808,6 +2314,7 @@ data_ideo = [
     "HighValueCivilian":2
   },
   {
+    "RelatStat":0,
     "Education":2,
     "Ideology":3,
     "Religion":0,
@@ -2815,7 +2322,6 @@ data_ideo = [
     "IdeoChangeInt":2,
     "ReligChangeInt":2,
     "Legitimise":0,
-    "Denounce":0,
     "LiveAlone":1,
     "BombManuals":0,
     "Interrupt":0,
@@ -2835,6 +2341,7 @@ data_ideo = [
     "HighValueCivilian":2
   },
   {
+    "RelatStat":4,
     "Education":6,
     "Ideology":3,
     "Religion":0,
@@ -2842,7 +2349,6 @@ data_ideo = [
     "IdeoChangeInt":1,
     "ReligChangeInt":4,
     "Legitimise":0,
-    "Denounce":0,
     "LiveAlone":1,
     "BombManuals":1,
     "Interrupt":0,
@@ -2862,6 +2368,7 @@ data_ideo = [
     "HighValueCivilian":2
   },
   {
+    "RelatStat":0,
     "Education":0,
     "Ideology":2,
     "Religion":0,
@@ -2869,7 +2376,6 @@ data_ideo = [
     "IdeoChangeInt":2,
     "ReligChangeInt":1,
     "Legitimise":0,
-    "Denounce":0,
     "LiveAlone":0,
     "BombManuals":1,
     "Interrupt":0,
@@ -2889,6 +2395,7 @@ data_ideo = [
     "HighValueCivilian":2
   },
   {
+    "RelatStat":4,
     "Education":2,
     "Ideology":2,
     "Religion":0,
@@ -2896,7 +2403,6 @@ data_ideo = [
     "IdeoChangeInt":2,
     "ReligChangeInt":1,
     "Legitimise":0,
-    "Denounce":0,
     "LiveAlone":1,
     "BombManuals":0,
     "Interrupt":1,
@@ -2916,6 +2422,7 @@ data_ideo = [
     "HighValueCivilian":2
   },
   {
+    "RelatStat":3,
     "Education":0,
     "Ideology":3,
     "Religion":0,
@@ -2923,7 +2430,6 @@ data_ideo = [
     "IdeoChangeInt":1,
     "ReligChangeInt":1,
     "Legitimise":1,
-    "Denounce":0,
     "LiveAlone":0,
     "BombManuals":0,
     "Interrupt":0,
@@ -2943,6 +2449,7 @@ data_ideo = [
     "HighValueCivilian":2
   },
   {
+    "RelatStat":4,
     "Education":0,
     "Ideology":2,
     "Religion":7,
@@ -2950,7 +2457,6 @@ data_ideo = [
     "IdeoChangeInt":1,
     "ReligChangeInt":1,
     "Legitimise":0,
-    "Denounce":0,
     "LiveAlone":1,
     "BombManuals":0,
     "Interrupt":1,
@@ -2970,6 +2476,7 @@ data_ideo = [
     "HighValueCivilian":2
   },
   {
+    "RelatStat":2,
     "Education":7,
     "Ideology":4,
     "Religion":0,
@@ -2977,7 +2484,6 @@ data_ideo = [
     "IdeoChangeInt":1,
     "ReligChangeInt":1,
     "Legitimise":0,
-    "Denounce":0,
     "LiveAlone":1,
     "BombManuals":0,
     "Interrupt":0,

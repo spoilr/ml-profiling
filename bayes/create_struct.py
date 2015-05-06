@@ -75,8 +75,9 @@ def update_bayesian_network_structure(theme, nodes, edges, cpts):
   skel.toporder()
 
   learner = PGMLearner()
-  bn = learner.discrete_mle_estimateparams(skel, data)
-  return bn.Vdata
+  bn, passed = learner.discrete_mle_estimateparams(skel, data)
+
+  return bn.Vdata, passed
 
 def inference(bn, evidence):
   fn = TableCPDFactorization(bn)

@@ -5,6 +5,7 @@ from flask import request
 from flask import render_template
 from flask import url_for
 from create_struct import *
+from join_tree import *
 from urllib import urlopen
 from urllib import urlencode
 import json
@@ -41,7 +42,8 @@ def net_graph():
 		cpts = request.get_json()["cpts"]
 		bn_net.V = nodes
 		bn_net.E = edges
-		bn_net.Vdata = update_bayesian_network_structure("net", nodes, edges, cpts)
+		bn_net.Vdata, passed = update_bayesian_network_structure("net", nodes, edges, cpts)
+		cycles["net"] = not passed
 		return render_template('show_net.html')
 
 	if request.method == 'GET':	
@@ -62,7 +64,8 @@ def ill_graph():
 		cpts = request.get_json()["cpts"]
 		bn_ill.V = nodes
 		bn_ill.E = edges
-		bn_ill.Vdata = update_bayesian_network_structure("ill", nodes, edges, cpts)
+		bn_ill.Vdata, passed = update_bayesian_network_structure("ill", nodes, edges, cpts)
+		cycles["ill"] = not passed
 		return render_template('show_ill.html')
 
 	if request.method == 'GET':		
@@ -83,7 +86,8 @@ def ideo_graph():
 		cpts = request.get_json()["cpts"]
 		bn_ideo.V = nodes
 		bn_ideo.E = edges
-		bn_ideo.Vdata = update_bayesian_network_structure("ideo", nodes, edges, cpts)
+		bn_ideo.Vdata, passed = update_bayesian_network_structure("ideo", nodes, edges, cpts)
+		cycles["ideo"] = not passed
 		return render_template('show_ideo.html')
 
 	if request.method == 'GET':		
@@ -92,49 +96,119 @@ def ideo_graph():
 		cpts = bn_ideo.Vdata
 		return graph(nodes, edges, cpts)
 
+def create_evidence(submit):
+	evidence = dict()	
+	encoded_evidence = dict()
+
+	for key, value in submit.iteritems():
+		if value != "None":
+			if key in explanatory_data:
+				evidence[key] = explanatory_data[key][value]
+				encoded_evidence[key] = value
+			else:
+				if value == "no":
+					evidence[key] = 0
+					encoded_evidence[key] = "no"
+				elif value == "yes":
+					evidence[key] = 1
+					encoded_evidence[key] = "yes"
+		else:
+			encoded_evidence[key] = None
+
+	return evidence, encoded_evidence
+
+def create_inference(json_inf):
+	inference = dict()
+	for key, values in json_inf.iteritems():
+		if key in inv_explanatory_data:
+			temp = dict()
+			for k, v in values.iteritems():
+				temp[inv_explanatory_data[key][int(k)]] = v
+			inference[key] = temp
+		else:
+			temp = dict()
+			for k, v in values.iteritems():
+				if k == "0":
+					temp["no"] = v
+				elif k == "1":
+					temp["yes"] = v
+			inference[key] = temp
+
+	return inference
+			
+def translate_inference(inf):
+	inference = dict()
+	for key, values in inf.iteritems():
+		if key in inv_explanatory_data:
+			temp = dict()
+			for k, v in values.iteritems():
+				temp[inv_explanatory_data[key][int(k)]] = v
+			inference[key] = temp
+		else:
+			temp = dict()
+			for k, v in values.iteritems():
+				if k == "0":
+					temp["no"] = v
+				elif k == "1":
+					temp["yes"] = v
+			inference[key] = temp
+
+	return inference	
+
 def create_evidence_and_inference(categs, theme):
 	if request.method == 'POST':
-		evidence = dict()	
-		encoded_evidence = dict()
+		
 		submit = request.form
+		evidence, encoded_evidence = create_evidence(submit)
 		
-		for key, value in submit.iteritems():
-			if value != "None":
-				if key in explanatory_data:
-					evidence[key] = explanatory_data[key][value]
-					encoded_evidence[key] = value
-				else:
-					if value == "no":
-						evidence[key] = 0
-						encoded_evidence[key] = "no"
-					elif value == "yes":
-						evidence[key] = 1
-						encoded_evidence[key] = "yes"
-			else:
-				encoded_evidence[key] = None
-		
-		url = "http://127.0.0.1:5000/inference/" + theme + "?" + urlencode(evidence)
-		
-		response = urlopen(url)
-		json_inf = json.loads(response.read())
+		try:
+			if theme == "net" and not cycles["net"]:
+				url = "http://127.0.0.1:5000/inference/" + theme + "?" + urlencode(evidence)
+				
+				response = urlopen(url)
+				json_inf = json.loads(response.read())
+				inference = create_inference(json_inf)
 
-		inference = dict()
-		for key, values in json_inf.iteritems():
-			if key in inv_explanatory_data:
-				temp = dict()
-				for k, v in values.iteritems():
-					temp[inv_explanatory_data[key][int(k)]] = v
-				inference[key] = temp
+				return inference, encoded_evidence
 			else:
-				temp = dict()
-				for k, v in values.iteritems():
-					if k == "0":
-						temp["no"] = v
-					elif k == "1":
-						temp["yes"] = v
-				inference[key] = temp
+				inf = jt_inference(bn_net, evidence)
+				return inf, encoded_evidence		
+		except ValueError:
+			inf = jt_inference(bn_net, evidence)
+			return inf, encoded_evidence			
 
-		return inference, encoded_evidence
+		try:
+			if theme == "ill" and not cycles["ill"]:
+				url = "http://127.0.0.1:5000/inference/" + theme + "?" + urlencode(evidence)
+				
+				response = urlopen(url)
+				json_inf = json.loads(response.read())
+				inference = create_inference(json_inf)
+
+				return inference, encoded_evidence
+			else:
+				inf = jt_inference(bn_ill, evidence)
+				return inf, encoded_evidence		
+		except ValueError:
+			inf = jt_inference(bn_ill, evidence)
+			return inf, encoded_evidence			
+			
+		try:
+			if theme == "ideo" and not cycles["ideo"]:
+				url = "http://127.0.0.1:5000/inference/" + theme + "?" + urlencode(evidence)
+				
+				response = urlopen(url)
+				json_inf = json.loads(response.read())
+				inference = create_inference(json_inf)
+
+				return inference, encoded_evidence
+			else:
+				inf = jt_inference(bn_ideo, evidence)
+				return inf, encoded_evidence		
+		except ValueError:
+			inf = jt_inference(bn_ideo, evidence)
+			return inf, encoded_evidence	
+
 	return None, None
 
 def get_categories(nodes):
@@ -156,7 +230,7 @@ def bayes_net():
 			return render_template('net.html', categs=categs, evidence=evidence, inference=inference)
 		except KeyError:
 			continue
-
+		
 @app.route('/bayes/ill', methods=['GET', 'POST'])
 def bayes_ill():
 	nodes = bn_ill.V
@@ -185,7 +259,6 @@ def bayes_ideo():
 def net_inferences():
 	evidence = request.args.to_dict()
 	evidence = dict((k,int(v)) for k,v in evidence.iteritems())
-	fn = TableCPDFactorization(bn_net)
 	inf = inference(bn_net, evidence)
 	return inf
 
@@ -193,7 +266,6 @@ def net_inferences():
 def ill_inferences():
 	evidence = request.args.to_dict()
 	evidence = dict((k,int(v)) for k,v in evidence.iteritems())
-	fn = TableCPDFactorization(bn_ill)
 	inf = inference(bn_ill, evidence)
 	return inf
 
@@ -201,7 +273,6 @@ def ill_inferences():
 def ideo_inferences():
 	evidence = request.args.to_dict()
 	evidence = dict((k,int(v)) for k,v in evidence.iteritems())
-	fn = TableCPDFactorization(bn_ideo)
 	inf = inference(bn_ideo, evidence)
 	return inf	
 
@@ -239,6 +310,11 @@ if __name__ == '__main__':
 	global bn_net
 	global bn_ill
 	global bn_ideo
+	global cycles
+	cycles = dict()
+	cycles["net"] = False
+	cycles["ill"] = False
+	cycles["ideo"] = False
 	bn_net = create_bayesian_network_structure('net')
 	bn_ill = create_bayesian_network_structure('ill')
 	bn_ideo = create_bayesian_network_structure('ideo')
@@ -246,3 +322,4 @@ if __name__ == '__main__':
 	original_bn_ill = deepcopy(bn_ill)
 	original_bn_ideo = deepcopy(bn_ideo)
 	app.run(debug=True, threaded=True)
+

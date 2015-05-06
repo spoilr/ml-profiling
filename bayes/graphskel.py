@@ -148,6 +148,19 @@ class GraphSkeleton(Dictionary):
                             break
                     if yesparent == False:
                         roots.append(m)
-        assert (not Ecopy), ("Graph contains a cycle", Ecopy)
+        
+        # assert (not Ecopy), ("Graph contains a cycle", Ecopy) UNCOMMENT THIS ON FIRST NETWORK BUILD
         self.V = toporder 
+        if not Ecopy:
+            return True
+
+        for (x,y) in self.E:
+            if x not in self.V:
+                self.V.append(x)
+            if y not in self.V:
+                self.V.append(y)
+
+        return False 
+        assert (not Ecopy), ("Graph contains a cycle", Ecopy)
+        
 

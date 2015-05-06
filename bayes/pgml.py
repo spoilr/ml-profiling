@@ -112,7 +112,7 @@ class PGMLearner():
 
         # instantiate Bayesian network, and add parent and children data
         bn = DiscreteBayesianNetwork()
-        graphskeleton.toporder()
+        passed = graphskeleton.toporder()
         bn.V = graphskeleton.V
         bn.E = graphskeleton.E
         bn.Vdata = dict()
@@ -197,7 +197,7 @@ class PGMLearner():
                         bn.Vdata[vertex]["cprob"][key] = [1/float(bn.Vdata[vertex]["numoutcomes"]) for x in bn.Vdata[vertex]["cprob"][key]]
 
         # return cprob table with estimated probability distributions
-        return bn
+        return bn, passed
 
     def lg_mle_estimateparams(self, graphskeleton, data):
         '''
@@ -900,7 +900,7 @@ class PGMLearner():
         skel = self.discrete_constraint_estimatestruct(data, pvalparam=pvalparam, indegree=indegree)
 
         # learn parameters
-        bn = self.discrete_mle_estimateparams(skel, data)
+        bn, passed = self.discrete_mle_estimateparams(skel, data)
 
         # return
         return bn
