@@ -21,7 +21,7 @@ from ssa_features import highval_all
 from ssa_features import highval_all_x
 from ssa_features import highval_all_y
 from closest_distance import get_best
-from cv import cross_validation
+from cv import cv10
 from cv import lr_one_fold_measures
 from cv import dt_one_fold_measures
 from cv import knn_one_fold_measures
@@ -31,8 +31,6 @@ import math as math
 
 def feature_selection(features, targets, dataset, ids, target, one_fold_measures, standardize=False):
 	[known_dataset, known_targets, unk] = split_dataset(dataset, targets)
-	assert len(known_dataset) == 92
-	assert len(known_targets) == 92
 		
 	known_targets = np.asarray(known_targets)
 
@@ -50,7 +48,7 @@ def feature_selection(features, targets, dataset, ids, target, one_fold_measures
 		std = StandardizedData(known_targets, ssa_dataset)
 		ssa_dataset, known_targets = std.split_and_standardize_dataset()  
 
-	cross_validation(ssa_dataset, known_targets, ids, one_fold_measures)
+	cv10(ssa_dataset, known_targets, ids, one_fold_measures)
 
 	print '####### FEATURES ####### %d \n %s' % (len(ssa_features), str(ssa_features))
 
@@ -80,10 +78,10 @@ if __name__ == "__main__":
 			feature_selection(features, targets, dataset, ids, 'highval', dt_one_fold_measures)
 		elif tech == 'knn':
 			print '########## CIVIL ##########'
-			feature_selection(features, targets, dataset, ids, 'civil', knn_one_fold_measures)
+			feature_selection(features, targets, dataset, ids, 'civil', knn_one_fold_measures, standardize=True)
 
 			print '########## HIGHVAL ##########'
-			feature_selection(features, targets, dataset, ids, 'highval', knn_one_fold_measures)
+			feature_selection(features, targets, dataset, ids, 'highval', knn_one_fold_measures, standardize=True)
 		elif tech == 'svm':
 			print '########## CIVIL ##########'
 			feature_selection(features, targets, dataset, ids, 'civil', single_svm_fs_one_fold_measures, standardize=True)

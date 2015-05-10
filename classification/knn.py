@@ -11,7 +11,7 @@ from load_data import *
 from project_data import *
 from fusion import cv10
 from fusion import knn
-from thematic_data_combined import *
+from standardized_data import *
 
 if __name__ == "__main__":
 	spreadsheet = Spreadsheet(project_data_file)
@@ -19,8 +19,8 @@ if __name__ == "__main__":
 	targets = data.targets
 	ids = data.ids
 
-	tdc = ThematicDataCombined(targets)
-	dataset, targets = tdc.thematic_split() 
+	std = StandardizedData(targets)
+	dataset, targets = std.thematic_split_and_standardize_dataset() 
 
 	fusion_algorithm = raw_input("Enter algorithm. Choose between maj, wmaj, svm, nn")
 	cv10(dataset, targets, fusion_algorithm, ids, knn)

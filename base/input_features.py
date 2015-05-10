@@ -34,7 +34,7 @@ from ssa_features import highval_ill_y
 from ssa_features import highval_net
 from ssa_features import highval_net_x
 from ssa_features import highval_net_y
-from fusion import cross_validation
+from fusion import cv10
 from fusion import lr
 from fusion import dt
 from fusion import knn
@@ -86,15 +86,17 @@ def combine_and_cv(targets, target, tech):
 	combined_dataset, targets = combine_data_from_feature_selection(targets, target)
 
 	if tech == 'lr':
-		cross_validation(combined_dataset, targets, fusion_algorithm, ids, lr)
+		cv10(combined_dataset, targets, fusion_algorithm, ids, lr)
 	elif tech == 'dt':
-		cross_validation(combined_dataset, targets, fusion_algorithm, ids, dt)
+		cv10(combined_dataset, targets, fusion_algorithm, ids, dt)
 	elif tech == 'knn':
-		cross_validation(combined_dataset, targets, fusion_algorithm, ids, knn)
+		std = StandardizedData(targets)
+		combined_dataset = std.standardize_dataset(combined_dataset)  
+		cv10(combined_dataset, targets, fusion_algorithm, ids, knn)
 	elif tech == 'svm':
 		std = StandardizedData(targets)
 		combined_dataset = std.standardize_dataset(combined_dataset)  
-		cross_validation(combined_dataset, targets, fusion_algorithm, ids, svm_selected_for_features_fusion, ind=True)
+		cv10(combined_dataset, targets, fusion_algorithm, ids, svm_selected_for_features_fusion, ind=True)
 	else:
 		print 'ERROR technique'	
 

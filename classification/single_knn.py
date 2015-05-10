@@ -10,7 +10,7 @@ sys.path.insert(0, 'utils/')
 from load_data import *
 from project_data import *
 from parse_theme import *
-from split_dataset import *
+from standardized_data import *
 from cv import cv10
 from cv import knn_one_fold_measures
 
@@ -24,9 +24,10 @@ if __name__ == "__main__":
 
 	try:
 		[dataset, features] = parse_theme(sys.argv[1])
-		[known_dataset, known_targets, unk] = split_dataset(dataset, targets)
+		std = StandardizedData(targets, dataset)
+		known_dataset_scaled, known_targets = std.split_and_standardize_dataset()
 
-		cv10(np.array(known_dataset), np.array(known_targets), ids, knn_one_fold_measures)
+		cv10(known_dataset_scaled, known_targets, ids, knn_one_fold_measures)
 		
 	except IndexError:
 		print "Error!! Pass 'all' as argument"

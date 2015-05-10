@@ -24,7 +24,7 @@ if __name__ == "__main__":
 
 	try:
 		[dataset, features] = parse_theme(sys.argv[1])
-		feature_selection_before(features, targets, dataset, CV_PERCENTAGE_OCCURENCE_THRESHOLD, ids, knn_one_fold_measures)
+		feature_selection_before(features, targets, dataset, CV_PERCENTAGE_OCCURENCE_THRESHOLD, ids, knn_one_fold_measures, standardize=True)
 		
 	except IndexError:
 		print "Error!! Pass 'all' as argument"
