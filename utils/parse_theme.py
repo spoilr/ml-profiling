@@ -23,8 +23,8 @@ def parse_theme(theme):
 	return [dataset, features]	
 
 def parse_theme_from_file(theme, file_name):
-	spreadsheet = Spreadsheet(file_name)
-	data = Data(spreadsheet)
+	spreadsheet = Spreadsheet(file_name, upsampling=False)
+	data = Data(spreadsheet, upsampling=False)
 
 	if theme == 'ill':
 		dataset = data.extract_illness_examples()
