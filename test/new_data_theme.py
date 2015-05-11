@@ -15,6 +15,9 @@ from thematic_data_combined import *
 from binary_classification_measures import measures
 from opt_fusion_svm import combine_and_process_dataset
 from svms import svm_for_features_fusion
+from svms import svm_selected_net
+from svms import svm_selected_ill
+from svms import svm_selected_ideo
 
 import numpy as np
 from sklearn.preprocessing import StandardScaler
