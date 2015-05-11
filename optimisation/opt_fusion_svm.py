@@ -21,8 +21,7 @@ def check_prev(inet, iill, iideo, itargets):
 			return True
 	return False	
 
-if __name__ == "__main__":
-
+def create_dataset_and_targets():
 	for i in range(len(init_targets)):
 
 		if not (init_net[i] == init_ill[i] and init_ill[i] == init_ideo[i] and init_net[i] != init_targets[i]):
@@ -32,17 +31,21 @@ if __name__ == "__main__":
 				ideo.append(init_ideo[i])
 				targets.append(init_net[i])
 
+	return np.array(net), np.array(ill), np.array(ideo), np.array(targets)
 
-	net = np.array(net)
-	ill = np.array(ill)
-	ideo = np.array(ideo)
-	targets = np.array(targets)
+def combine_and_process_dataset():
+	net, ill, ideo, targets = create_dataset_and_targets()
 
 	data = []
 	for i in range(len(targets)):
 		data.append([float(net[i]), float(ill[i]), float(ideo[i])])
 
 	dataset = preprocessing.scale(data)
+
+	return dataset, targets
+
+if __name__ == "__main__":
+	dataset, targets = combine_and_process_dataset()
 
 	C_range = np.arange(0.1, 16, 0.2)
 	gamma_range = np.arange(0.1, 16, 0.2)

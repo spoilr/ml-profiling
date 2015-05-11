@@ -50,10 +50,12 @@ if __name__ == "__main__":
 		
 	elif tech == 'knn':
 		training_data = scaler.fit_transform(training_data)
+		testing_data = scaler.transform(testing_data)
 		error_rate, f1, model, (hp, hr, hf), (cp, cr, cf) = knn_one_fold_measures(training_data, testing_data, training_targets, testing_targets)
 
 	elif tech == 'svm':
 		training_data = scaler.fit_transform(training_data)
+		testing_data = scaler.transform(testing_data)
 		error_rate, f1, model, (hp, hr, hf), (cp, cr, cf) = single_svm_fs_one_fold_measures(training_data, testing_data, training_targets, testing_targets)
 
 	else:

@@ -34,6 +34,12 @@ class ThematicDataCombined:
 		known_targets = np.asarray(known_targets)
 		return [known_dataset, known_targets]
 
+	def get_known_data_from_theme_from_file(self, theme, file_name):
+		[theme_dataset, theme_features] = parse_theme_from_file(theme, file_name)
+		[known_dataset, known_targets, unk] = split_dataset(theme_dataset, self.targets)
+		known_targets = np.asarray(known_targets)
+		return [known_dataset, known_targets]	
+
 	def thematic_split(self):
 		theme_dataset = []
 
@@ -49,6 +55,22 @@ class ThematicDataCombined:
 		assert np.array_equal(net[1], ill[1])
 		assert np.array_equal(net[1], ideo[1])
 		return theme_dataset, net[1]
+
+	def thematic_split_from_file(self, file_name):
+		theme_dataset = []
+
+		net = self.get_known_data_from_theme_from_file(themes[0], file_name)
+		ill = self.get_known_data_from_theme_from_file(themes[1], file_name)
+		ideo = self.get_known_data_from_theme_from_file(themes[2], file_name)
+
+		theme_dataset.append(np.array(net[0]))
+		theme_dataset.append(np.array(ill[0]))
+		theme_dataset.append(np.array(ideo[0]))
+
+		# known targets should be all the same for all themes
+		assert np.array_equal(net[1], ill[1])
+		assert np.array_equal(net[1], ideo[1])
+		return theme_dataset, net[1]	
 
 
 def thematic_data_from_feature_selection(orig_targets, theme, percentage):

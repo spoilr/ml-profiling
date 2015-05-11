@@ -26,7 +26,7 @@ def majority_vote(predictions, y_test, accuracies):
 		data = Counter(predictions[:,i])
 		combined_predictions.append(data.most_common(1)[0][0])
 
-	maj_vote_bounds(accuracies)
+	# maj_vote_bounds(accuracies)
 	return combined_predictions
 
 def upper_epsilons(nr_classifiers, k, accuracies):
