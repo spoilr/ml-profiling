@@ -91,6 +91,16 @@ def thematic_data_from_feature_selection(orig_targets, theme, percentage):
 
 	return sf.extract_data_from_selected_features(), known_targets
 
+def thematic_data_from_feature_selection_from_file(orig_targets, theme, percentage, file_name):
+	[dataset, features] = parse_theme_from_file(theme, file_name)
+	[known_dataset, known_targets, unk] = split_dataset(dataset, orig_targets)
+	
+	known_targets = np.asarray(known_targets)
+	selected_features = select_features(percentage, theme)
+
+	sf = SelectedFeatures(known_dataset, known_targets, selected_features, features)
+	return sf.extract_data_from_selected_features(), known_targets	
+
 def select_features(percentage, theme):
 	if theme == 'net' and percentage == 0.9:
 		return net_90
@@ -120,3 +130,11 @@ def combine_data_from_feature_selection(orig_targets, percentage):
 		data, targets = thematic_data_from_feature_selection(orig_targets, theme, percentage)
 		combined_dataset.append(data)
 	return combined_dataset, targets	
+
+def combine_data_from_feature_selection_from_file(orig_targets, percentage, file_name):
+	combined_dataset = []
+	targets = []
+	for theme in themes:
+		data, targets = thematic_data_from_feature_selection_from_file(orig_targets, theme, percentage, file_name)
+		combined_dataset.append(data)
+	return combined_dataset, targets
