@@ -1,4 +1,4 @@
-knn"""
+"""
 Decision Tree Classification
 Combine DT for themes
 Feature selection is applied before
