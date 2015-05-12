@@ -77,4 +77,13 @@ def	weighted_majority(predictions, y_test):
 		out = round(sum([a*b for a,b in zip(predictions[:,i].tolist(), weights)]) / float(sum(weights)))
 		combined_predictions.append(out)
 
-	return combined_predictions
+	return combined_predictions, weights
+
+def weigh(weights, predictions):
+	combined_predictions = []
+	for i in range(0, len(predictions[0])):
+		# compute final prediction with updated weights
+		out = round(sum([a*b for a,b in zip(predictions[:,i].tolist(), weights)]) / float(sum(weights)))
+		combined_predictions.append(out)
+
+	return combined_predictions	

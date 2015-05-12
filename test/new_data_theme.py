@@ -2,6 +2,7 @@ import sys
 sys.path.insert(0, 'utils/')
 sys.path.insert(0, 'classification/')
 sys.path.insert(0, 'optimisation/')
+sys.path.insert(0, 'results/')
 from load_data import *
 from project_data import *
 from parse_theme import *
@@ -12,12 +13,14 @@ from fusion import knn
 from fusion import inner_svm
 from labels_fusion import *
 from thematic_data_combined import *
+from weights import *
 from binary_classification_measures import measures
 from opt_fusion_svm import combine_and_process_dataset
 from svms import svm_for_features_fusion
 from svms import svm_selected_net
 from svms import svm_selected_ill
 from svms import svm_selected_ideo
+from replace_missing_values import *
 
 import numpy as np
 from sklearn.preprocessing import StandardScaler
@@ -32,7 +35,7 @@ def svm_vote(predictions, testing_targets):
 	predictions = scaler.transform(predictions)
 	return model.predict(predictions)
 
-def fusion(algorithm, training_data, training_targets, testing_data, testing_targets, fusion_algorithm, ind=False):
+def fusion(theme, algorithm, training_data, training_targets, testing_data, testing_targets, fusion_algorithm, ind=False):
 	models = []
 	for i in range(NR_THEMES):
 
@@ -56,7 +59,7 @@ def fusion(algorithm, training_data, training_targets, testing_data, testing_tar
 	if fusion_algorithm == "maj":
 		combined_predictions = majority_vote(predictions, testing_targets, [])
 	elif fusion_algorithm == "wmaj":
-		combined_predictions = weighted_majority(predictions, testing_targets)
+		combined_predictions = weighted_majority_theme(theme, predictions)
 	elif fusion_algorithm == "svm":	
 		combined_predictions = svm_vote(predictions, testing_targets)
 	else:
@@ -66,6 +69,18 @@ def fusion(algorithm, training_data, training_targets, testing_data, testing_tar
 	(hp, hr, hf), (cp, cr, cf) = measures(testing_targets, combined_predictions)
 	error_rate = (float(sum((combined_predictions - testing_targets)**2)) / len(testing_targets))
 	return error_rate, (hp, hr, hf), (cp, cr, cf)
+
+def weighted_majority_theme(theme, predictions):
+	if theme == 'lr':
+		weights = get_lr_weights()
+	elif theme == 'dt':
+		weights = get_dt_weights()
+	elif theme == 'knn':
+		weights = get_knn_weights()		
+	elif theme == 'svm':
+		weights = get_svm_weights()	
+	combined_predictions = weigh(weights, predictions)
+	return combined_predictions
 
 if __name__ == "__main__":
 
@@ -95,25 +110,27 @@ if __name__ == "__main__":
 	ill_scaler = StandardScaler()
 	ideo_scaler = StandardScaler()
 
+	testing_data = replace_missings_thematic(testing_data)
+
 	if tech == 'lr':
-		error_rate, (hp, hr, hf), (cp, cr, cf) = fusion(lr, training_data, training_targets, testing_data, testing_targets, fusion_algorithm)
+		error_rate, (hp, hr, hf), (cp, cr, cf) = fusion('lr', lr, training_data, training_targets, testing_data, testing_targets, fusion_algorithm)
 		
 	elif tech == 'dt':
-		error_rate, (hp, hr, hf), (cp, cr, cf) = fusion(dt, training_data, training_targets, testing_data, testing_targets, fusion_algorithm)
+		error_rate, (hp, hr, hf), (cp, cr, cf) = fusion('dt', dt, training_data, training_targets, testing_data, testing_targets, fusion_algorithm)
 		
 	elif tech == 'knn':
 		training_data[0] = net_scaler.fit_transform(training_data[0])
 		training_data[1] =  ill_scaler.fit_transform(training_data[1])
 		training_data[2] =  ideo_scaler.fit_transform(training_data[2])
 
-		error_rate, (hp, hr, hf), (cp, cr, cf) = fusion(knn, training_data, training_targets, testing_data, testing_targets, fusion_algorithm)
+		error_rate, (hp, hr, hf), (cp, cr, cf) = fusion('knn', knn, training_data, training_targets, testing_data, testing_targets, fusion_algorithm)
 
 	elif tech == 'svm':
 		training_data[0] = net_scaler.fit_transform(training_data[0])
 		training_data[1] =  ill_scaler.fit_transform(training_data[1])
 		training_data[2] =  ideo_scaler.fit_transform(training_data[2])
 
-		error_rate, (hp, hr, hf), (cp, cr, cf) = fusion(svm_for_features_fusion, training_data, training_targets, testing_data, testing_targets, fusion_algorithm, ind=True)
+		error_rate, (hp, hr, hf), (cp, cr, cf) = fusion('svm', svm_for_features_fusion, training_data, training_targets, testing_data, testing_targets, fusion_algorithm, ind=True)
 
 	else:
 		print 'ERROR technique'	

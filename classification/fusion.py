@@ -111,7 +111,7 @@ def fusion_outputs(known_dataset, known_targets, train_index, test_index, fusion
 
 	elif fusion_algorithm == 'wmaj':
 		predictions, y_test, accuracies, misclassified_ids = combine_predictions_one_fold_using_majority(known_dataset, known_targets, train_index, test_index, ids, algorithm, ind)
-		combined_predictions = weighted_majority(predictions, y_test)
+		combined_predictions, weights = weighted_majority(predictions, y_test)
 
 	elif fusion_algorithm == 'svm':
 		y_test, predictions, combined_predictions, misclassified_ids = svm_fusion(known_dataset, known_targets, train_index, test_index, ids, algorithm, ind)

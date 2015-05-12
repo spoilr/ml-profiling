@@ -9,6 +9,7 @@ from cv import single_svm_one_fold_measures
 from cv import lr_one_fold_measures
 from cv import dt_one_fold_measures
 from cv import knn_one_fold_measures
+from replace_missing_values import *
 
 import numpy as np
 from sklearn.preprocessing import StandardScaler
@@ -33,6 +34,8 @@ if __name__ == "__main__":
 		
 	# standardize dataset - Gaussian with zero mean and unit variance
 	scaler = StandardScaler()
+
+	testing_data = replace_missings(testing_data)
 
 	if tech == 'lr':
 		error_rate, f1, model, (hp, hr, hf), (cp, cr, cf) = lr_one_fold_measures(training_data, testing_data, training_targets, testing_targets)

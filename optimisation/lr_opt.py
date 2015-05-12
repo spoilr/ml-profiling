@@ -42,7 +42,7 @@ def fusion_outputs(known_dataset, known_targets, train_index, test_index, fusion
 	y_test = []
 
 	predictions, y_test = combine_predictions_one_fold_using_majority(known_dataset, known_targets, train_index, test_index, ids, algorithm, c, ind)
-	combined_predictions = weighted_majority(predictions, y_test)
+	combined_predictions, weights = weighted_majority(predictions, y_test)
 
 	error = (float(sum((combined_predictions - y_test)**2)) / len(y_test))
 	f1 = f1_score(combined_predictions, y_test)
