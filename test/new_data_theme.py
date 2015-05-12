@@ -65,7 +65,9 @@ def fusion(theme, algorithm, training_data, training_targets, testing_data, test
 	else:
 		print 'ERROR'	
 	
-
+	print 'PRED ' + str(combined_predictions)
+	print 'TEST ' + str(testing_targets)	
+	
 	(hp, hr, hf), (cp, cr, cf) = measures(testing_targets, combined_predictions)
 	error_rate = (float(sum((combined_predictions - testing_targets)**2)) / len(testing_targets))
 	return error_rate, (hp, hr, hf), (cp, cr, cf)

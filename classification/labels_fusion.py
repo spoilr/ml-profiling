@@ -80,6 +80,7 @@ def	weighted_majority(predictions, y_test):
 	return combined_predictions, weights
 
 def weigh(weights, predictions):
+	print predictions
 	combined_predictions = []
 	for i in range(0, len(predictions[0])):
 		# compute final prediction with updated weights

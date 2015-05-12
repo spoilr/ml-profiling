@@ -23,8 +23,8 @@ if __name__ == "__main__":
 		std = StandardizedData(targets, dataset)
 		known_dataset_scaled, known_targets = std.split_and_standardize_dataset()
 
-		C_range = np.arange(0.1, 16, 0.1)
-		gamma_range = np.arange(0.1, 16, 0.1)
+		C_range = np.arange(0.1, 9, 0.1)
+		gamma_range = np.arange(0.1, 9, 0.1)
 		param_grid = dict(gamma=gamma_range, C=C_range)
 		# cv = StratifiedShuffleSplit(known_targets, random_state=42)
 		cv = StratifiedKFold(known_targets, n_folds=10)
