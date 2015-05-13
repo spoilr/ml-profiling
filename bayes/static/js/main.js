@@ -4,7 +4,7 @@ var main = function(theme, inference) {
 		info = {}
 		info["inf"] = inference
 		info["net"] = net
-		render_network(info)
+		render_network(info, 0.6)
 	})
 }
 
@@ -68,7 +68,7 @@ var max_probabilities = function(inference) {
 	return max_probs
 }
 
-var render_network = function(info) {
+var render_network = function(info, percentage) {
 // set up SVG for D3
 var width = window.innerWidth;
 var height= window.innerHeight;
@@ -200,7 +200,7 @@ function restart() {
   // update existing nodes (reflexive & selected visual states)
   circle.selectAll('circle')
     .style('fill', function(d) { 
-    	if (d.likelihood != null && d.likelihood.prob > 0.7) {
+    	if (d.likelihood != null && d.likelihood.prob > percentage) {
   			return (d === selected_node) ? d3.rgb("#726E97").brighter().toString() : d3.rgb("#726E97"); 
   		} else {
   			return (d === selected_node) ? d3.rgb("#83B5D1").brighter().toString() : d3.rgb("#83B5D1"); 
@@ -215,7 +215,7 @@ function restart() {
     .attr('class', 'node')
     .attr('r', 12)
     .style('fill', function(d) { 
-    	if (d.likelihood != null && d.likelihood.prob > 0.7) {
+    	if (d.likelihood != null && d.likelihood.prob > percentage) {
   			return (d === selected_node) ? d3.rgb("#726E97").brighter().toString() : d3.rgb("#726E97"); 
   		} else {
   			return (d === selected_node) ? d3.rgb("#83B5D1").brighter().toString() : d3.rgb("#83B5D1"); 
@@ -506,5 +506,13 @@ $("#original").click(function (e) {
     }
   });
 });
+
+	$(function() {
+	  $('#threshold').change(function(){
+	  	d3.select("svg")
+       .remove();
+      render_network(info, $(this).val().split(" ")[1])
+	  });
+	});
 
 };

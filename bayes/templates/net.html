@@ -42,11 +42,11 @@
               </td>
               <td>
                 <select name="{{ key }}">
-                    <option selected="selected">None</option>
-                    {% for k, v in value.iteritems() %}
-                    <option>{{ v }}</option>
-                    {% endfor %}
-                  </select>
+                  <option selected="selected">None</option>
+                  {% for k, v in value.iteritems() %}
+                  <option>{{ v }}</option>
+                  {% endfor %}
+                </select>
               </td>
               <td>
                 {% if evidence is not none %}
@@ -67,11 +67,17 @@
             </tr>
             {% endfor %}
           </table>
-            <input type="submit" value="Submit">
+          <input type="submit" value="Submit">
+          <select name="threshold" id="threshold">
+            <option selected="selected">Threshold 0.6</option>
+            <option>Threshold 0.7</option>
+            <option>Threshold 0.8</option>
+            <option>Threshold 0.9</option>
+          </select>
 
         </form>
       </div>  
-      <div>
+      <div class="graph">
         <script src={{ url_for('static', filename='js/d3.js') }}></script>
         <script src={{ url_for('static', filename='js/jquery.js') }}></script>
         <script src={{ url_for('static', filename='js/render_network.js') }}></script>
