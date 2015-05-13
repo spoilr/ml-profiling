@@ -1,4 +1,4 @@
-body            { font-family: sans-serif; background: #eee; margin: 0; padding: 0;}
+body            { font-family: sans-serif; background: #E1DEE3; margin: 0; padding: 0;}
  
 h1 { color: #377ba8; padding-left: 10px}
 
@@ -10,7 +10,7 @@ td {padding-right: 10px; font-family: sans-serif}
 
 .nav ul {
   list-style: none;
-  background-color: #444;
+  background-color: #726E97;
   text-align: center;
   padding: 0;
   margin: 0;
@@ -38,11 +38,11 @@ td {padding-right: 10px; font-family: sans-serif}
 }
 
 .nav a:hover {
-  background-color: #E0E0E0;
+  background-color: #846FB4;
 }
 
 .nav a.active {
-  background-color: #aaa;
+  background-color: #846FB4;
   color: #444;
   cursor: default;
 }

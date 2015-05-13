@@ -1,3 +1,13 @@
+var main = function(theme, inference) {
+	var url = "http://127.0.0.1:5000/networks/" + theme +".json"
+	$.getJSON(url, function(net) {
+		info = {}
+		info["inf"] = inference
+		info["net"] = net
+		render_network(info)
+	})
+}
+
 var create_edges = function(nodes, edges) {
   
   var index = {};
@@ -22,22 +32,49 @@ var create_edges = function(nodes, edges) {
   return d3_edges;
 }
 
-var create_nodes = function(nodes) {
+var create_nodes = function(nodes, probs) {
   var d3_nodes = [];
-
   nodes.forEach(function(n) {
     d3_nodes.push({
       id: n,
-      reflexive: false
+      reflexive: false,
+      likelihood: probs[n]
     })
   });  
   return d3_nodes;
 }
 
-var render_network = function(error, graph) {
+var calculate_max = function(values) {
+	k = null
+	v = 0
+	for (var val in values) {
+		curr_val = values[val]
+  	if (curr_val >= v) {
+  		k = val
+  		v = curr_val
+  	}
+	}
+	return [k,v]
+}
+
+var max_probabilities = function(inference) {
+	max_probs = {}
+	for (var key in inference) {
+		res = calculate_max(inference[key])
+		max_probs[key] = {}
+  	max_probs[key].val = res[0]
+  	max_probs[key].prob = res[1]
+	}
+	return max_probs
+}
+
+var render_network = function(info) {
 // set up SVG for D3
 var width = window.innerWidth;
-var height= window.innerHeight;    
+var height= window.innerHeight;
+
+graph = info.net
+probs = max_probabilities(info.inf)
 
 var svg = d3.select('body')
   .append('svg')
@@ -45,7 +82,7 @@ var svg = d3.select('body')
   .attr('height', height);
 
 
-nodes = create_nodes(graph.nodes)
+nodes = create_nodes(graph.nodes, probs)
 links = create_edges(nodes, graph.links)
 var lastNodeId = nodes.length
 
@@ -162,7 +199,13 @@ function restart() {
 
   // update existing nodes (reflexive & selected visual states)
   circle.selectAll('circle')
-    .style('fill', function(d) { return (d === selected_node) ? d3.rgb("#C0C0C0").brighter().toString() : d3.rgb("#C0C0C0"); })
+    .style('fill', function(d) { 
+    	if (d.likelihood != null && d.likelihood.prob > 0.7) {
+  			return (d === selected_node) ? d3.rgb("#726E97").brighter().toString() : d3.rgb("#726E97"); 
+  		} else {
+  			return (d === selected_node) ? d3.rgb("#83B5D1").brighter().toString() : d3.rgb("#83B5D1"); 
+  		}
+  	})
     .classed('reflexive', function(d) { return d.reflexive; });
 
   // add new nodes
@@ -171,7 +214,13 @@ function restart() {
   g.append('svg:circle')
     .attr('class', 'node')
     .attr('r', 12)
-    .style('fill', function(d) { return (d === selected_node) ? d3.rgb("#C0C0C0").brighter().toString() : d3.rgb("#C0C0C0"); })
+    .style('fill', function(d) { 
+    	if (d.likelihood != null && d.likelihood.prob > 0.7) {
+  			return (d === selected_node) ? d3.rgb("#726E97").brighter().toString() : d3.rgb("#726E97"); 
+  		} else {
+  			return (d === selected_node) ? d3.rgb("#83B5D1").brighter().toString() : d3.rgb("#83B5D1"); 
+  		}
+    })
     .style('stroke', function(d) { return d3.rgb("#C0C0C0").darker().toString(); })
     .classed('reflexive', function(d) { return d.reflexive; })
     .on('mouseover', function(d) {
