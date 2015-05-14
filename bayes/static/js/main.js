@@ -201,9 +201,9 @@ function restart() {
   circle.selectAll('circle')
     .style('fill', function(d) { 
     	if (d.likelihood != null && d.likelihood.prob > percentage) {
-  			return (d === selected_node) ? d3.rgb("#726E97").brighter().toString() : d3.rgb("#726E97"); 
+  			return (d === selected_node) ? d3.rgb("#612940").brighter().toString() : d3.rgb("#612940"); 
   		} else {
-  			return (d === selected_node) ? d3.rgb("#83B5D1").brighter().toString() : d3.rgb("#83B5D1"); 
+  			return (d === selected_node) ? d3.rgb("#7A93AC").brighter().toString() : d3.rgb("#7A93AC"); 
   		}
   	})
     .classed('reflexive', function(d) { return d.reflexive; });
@@ -216,9 +216,9 @@ function restart() {
     .attr('r', 12)
     .style('fill', function(d) { 
     	if (d.likelihood != null && d.likelihood.prob > percentage) {
-  			return (d === selected_node) ? d3.rgb("#726E97").brighter().toString() : d3.rgb("#726E97"); 
+  			return (d === selected_node) ? d3.rgb("#612940").brighter().toString() : d3.rgb("#612940"); 
   		} else {
-  			return (d === selected_node) ? d3.rgb("#83B5D1").brighter().toString() : d3.rgb("#83B5D1"); 
+  			return (d === selected_node) ? d3.rgb("#7A93AC").brighter().toString() : d3.rgb("#7A93AC"); 
   		}
     })
     .style('stroke', function(d) { return d3.rgb("#C0C0C0").darker().toString(); })
