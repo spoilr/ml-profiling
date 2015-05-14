@@ -104,7 +104,7 @@ def final_set_of_features(features, feature_gain_ratio, avg_gain_ratios, der_fea
 		if sorted_der_feats[i][1] - feature_gain_ratio[sorted_der_feats[i][0][0]] > avg_increase_difference and sorted_der_feats[i][1] - feature_gain_ratio[sorted_der_feats[i][0][1]] > avg_increase_difference:
 			selected_features_from_derived.append(features[sorted_der_feats[i][0][0]])
 			selected_features_from_derived.append(features[sorted_der_feats[i][0][1]])	
-			# print "der %s with %s provides context" % (features[sorted_der_feats[i][0][0]], features[sorted_der_feats[i][0][1]])
+			print "der %s with %s provides context" % (features[sorted_der_feats[i][0][0]], features[sorted_der_feats[i][0][1]])
 
 	#return set(selected_features_from_whole_set).union(selected_features_from_derived)	
 	return selected_features_from_derived
