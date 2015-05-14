@@ -1,0 +1,14 @@
+python feature\ context/join_attributes.py
+ideo
+set(['MilExp', 'Discriminate', 'OtherKnowledge', 'FurtherAttacks', 'Training', 
+'Religion', 'AwareIdeo', 'MultiEventTarget', 'RelatStat', 'Denounce', 'IdeoChangeInt', 
+'Interrupt', 'LifeAspectChange', 'WarningLettersStatements', 'LettersPost', 'Violence', 
+'BombManuals', 'Contradict', 'ParRelatStat', 'Legitimise', 'Getaway', 'Ideology', 
+'Stockpile', 'RecruitNetGroup', 'Propaganda', 'NewMedia', 'Financial', 'LocPubPriv', 
+'LiveAlone', 'WideGroup', 'NotCareInjustice', 'ReligChangeInt', 'TargetTyp', 'DryRuns', 
+'Education', 'Children', 'BeliefChange'])
+Nr selected features 37
+Nr total features 48
+Features eliminated set(['Regret', 'CrimCon', 'OccCat', 'OwnProp', 'Virtual', 
+'LocationNature', 'ClaimResp', 'Adoption', 'PossessStories', 'MultiAttackMeth', 
+'Implement'])

@@ -1,0 +1,12 @@
+python feature\ context/join_attributes.py
+ill
+set(['Discriminate', 'NotCareInjustice', 'FurtherAttacks', 'Isolated', 'MultiAttackMeth', 
+'Stress', 'MultiEventTarget', 'RelatStat', 'DryRuns', 'Insanity', 'ClaimResp', 
+'HurtOthers', 'LifeAspectChange', 'WarningLettersStatements', 'MentalIll', 'LettersPost', 
+'Violence', 'BombManuals', 'ParRelatStat', 'Getaway', 'Interrupt', 'Stockpile', 'Implement', 
+'Tipping', 'SubstanceUse', 'Financial', 'LiveAlone', 'OtherKnowledge', 'NewMedia', 
+'TargetTyp', 'AwareGriev', 'Education', 'Children'])
+Nr selected features 33
+Nr total features 40
+Features eliminated set(['Regret', 'CrimCon', 'OccCat', 'Virtual', 'SubAbuse', 
+'HarmVictimHelpless', 'Obsess'])

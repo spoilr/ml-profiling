@@ -1,0 +1,54 @@
+python base/input_features.py
+Use features from SPSS
+
+
+Combine outputs of X classifiers.
+Methods: majority vote and weighted majority vote.
+Each classifier produces a class label.
+
+
+Binary classification measures.
+Includes precision, recall, f1, accuracy, and accuracy number.
+
+Enter algorithm. Choose between maj, wmaj, svm, nn
+Enter algorithm. Choose between lr, dt, knn, svm
+
+########## HIGHVAL ##########
+####### net FEATURES ####### 24 
+['ParRelatStat', 'Education', 'LifeAspectChange', 'MultiEventTarget', 'OccCat', 'Funds', 
+'RelatStat', 'Getaway', 'MultiAttackMeth', 'TargetTyp', 'Regret', 'Interrupt', 'CrimCon', 
+'PersRelat', 'NewMedia', 'OtherInv', 'Financial', 'LiveAlone', 'Involve', 'Children', 
+'LettersPost', 'Violence', 'DryRuns', 'RecruitNetGroup']
+####### ill FEATURES ####### 28 
+['ParRelatStat', 'Education', 'LifeAspectChange', 'MultiEventTarget', 'OccCat', 
+'RelatStat', 'SubstanceUse', 'Getaway', 'MultiAttackMeth', 'TargetTyp', 'HarmVictimHelpless', 
+'CrimCon', 'Regret', 'Interrupt', 'SubAbuse', 'NewMedia', 'Financial', 'Obsess', 'Children', 
+'LettersPost', 'Insanity', 'Violence', 'Virtual', 'DryRuns', 'Stress', 'LiveAlone', 
+'NotCareInjustice', 'BombManuals']
+####### ideo FEATURES ####### 33 
+['Education', 'LifeAspectChange', 'OccCat', 'Religion', 'MultiEventTarget', 'LocationNature', 
+'ParRelatStat', 'PossessStories', 'ReligChangeInt', 'RelatStat', 'IdeoChangeInt', 'Getaway', 
+'Denounce', 'BeliefChange', 'MultiAttackMeth', 'TargetTyp', 'Contradict', 'Regret', 
+'CrimCon', 'Legitimise', 'Interrupt', 'OwnProp', 'WideGroup', 'Ideology', 'NewMedia', 
+'Training', 'LiveAlone', 'Financial', 'Children', 'LettersPost', 'Adoption', 
+'LocPubPriv', 'Violence']
+########## CIVIL ##########
+####### net FEATURES ####### 24 
+['RelatStat', 'TargetTyp', 'WarningLettersStatements', 'Stockpile', 'FurtherAttacks', 
+'Implement', 'InteractNet', 'LifeAspectChange', 'Violence', 'MultiEventTarget', 
+'Virtual', 'RecruitNetGroup', 'Discriminate', 'LiveAlone', 'LettersPost', 'Education', 
+'Involve', 'Funds', 'ParRelatStat', 'PersRelat', 'OtherKnowledge', 'OccCat', 
+'BombManuals', 'OtherInv']
+####### ill FEATURES ####### 28 
+['Tipping', 'Isolated', 'Implement', 'RelatStat', 'FurtherAttacks', 'TargetTyp', 
+'OccCat', 'Stockpile', 'ClaimResp', 'LifeAspectChange', 'HurtOthers', 'AwareGriev', 
+'Insanity', 'MentalIll', 'CrimCon', 'WarningLettersStatements', 'Virtual', 'DryRuns', 
+'LiveAlone', 'ParRelatStat', 'MultiEventTarget', 'NewMedia', 'Education', 'Discriminate', 
+'Obsess', 'HarmVictimHelpless', 'BombManuals', 'LettersPost']
+####### ideo FEATURES ####### 33 
+['Propaganda', 'Implement', 'TargetTyp', 'RelatStat', 'AwareIdeo', 'Stockpile', 
+'WarningLettersStatements', 'CrimCon', 'LocationNature', 'FurtherAttacks', 
+'RecruitNetGroup', 'LiveAlone', 'MultiEventTarget', 'WideGroup', 'Religion', 
+'Financial', 'MilExp', 'BombManuals', 'OccCat', 'Ideology', 'Virtual', 'IdeoChangeInt', 
+'ClaimResp', 'LifeAspectChange', 'ParRelatStat', 'Discriminate', 'LettersPost', 
+'DryRuns', 'ReligChangeInt', 'Interrupt', 'OtherKnowledge', 'Violence', 'NewMedia']

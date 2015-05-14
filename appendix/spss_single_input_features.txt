@@ -1,0 +1,30 @@
+python base/single_input_features.py 'all'
+
+Use features from SPSS
+
+
+Binary classification measures.
+Includes precision, recall, f1, accuracy, and accuracy number.
+
+Enter algorithm. Choose between lr, dt, knn, svm
+
+########## CIVIL ##########
+####### FEATURES ####### 44
+['AwareIdeo', 'Propaganda', 'AwareGriev', 'HurtOthers', 'TargetTyp', 'Religion', 
+'WarningLettersStatements', 'RelatStat', 'Stockpile', 'FurtherAttacks', 'InteractNet', 
+'LifeAspectChange', 'Implement', 'Violence', 'ReligChangeInt', 'LiveAlone', 'MentalIll', 
+'RecruitNetGroup', 'MultiEventTarget', 'Education', 'Ideology', 'Discriminate', 
+'Insanity', 'MilExp', 'OccCat', 'Virtual', 'DryRuns', 'WideGroup', 'LocationNature', 
+'Isolated', 'LettersPost', 'Funds', 'Involve', 'Training', 'PersRelat', 'OwnProp', 
+'Stress', 'Adoption', 'SubAbuse', 'BombManuals', 'Tipping', 'ClaimResp', 
+'IdeoChangeInt', 'OtherInv']
+########## HIGHVAL ##########
+####### FEATURES ####### 44
+['Education', 'LifeAspectChange', 'OccCat', 'Religion', 'ParRelatStat', 
+'MultiEventTarget', 'LocationNature', 'ReligChangeInt', 'Funds', 'PossessStories', 
+'RelatStat', 'SubstanceUse', 'IdeoChangeInt', 'Getaway', 'Denounce', 'BeliefChange', 
+'MultiAttackMeth', 'TargetTyp', 'Contradict', 'Regret', 'HarmVictimHelpless', 
+'Legitimise', 'OwnProp', 'CrimCon', 'Interrupt', 'WideGroup', 'Ideology', 'SubAbuse', 
+'NewMedia', 'PersRelat', 'OtherInv', 'Training', 'Obsess', 'LiveAlone', 'Financial', 
+'Involve', 'Children', 'Insanity', 'LettersPost', 'Adoption', 'LocPubPriv', 
+'Violence', 'MilExp', 'DryRuns']
