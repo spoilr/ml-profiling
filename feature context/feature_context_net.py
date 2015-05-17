@@ -1,9 +1,0 @@
-python feature\ context/join_attributes.py
-None
-None
-net
-set(['Discriminate', 'InteractNet', 'NotCareInjustice', 'FurtherAttacks', 'MultiAttackMeth', 'MultiEventTarget', 'RelatStat', 'DryRuns', 'ClaimResp', 'Interrupt', 'LifeAspectChange', 'WarningLettersStatements', 'LettersPost', 'Violence', 'BombManuals', 'ParRelatStat', 'Getaway', 'Stockpile', 'RecruitNetGroup', 'Implement', 'Financial', 'LiveAlone', 'CrimCon', 'OtherKnowledge', 'Involve', 'NewMedia', 'TargetTyp', 'Education', 'Children'])
-Nr selected features 29
-Nr total features 35
-Features eliminated set(['Regret', 'Funds', 'Virtual', 'OtherInv', 'OccCat', 'PersRelat'])
-dyn1226-237:ml-profiling oana$

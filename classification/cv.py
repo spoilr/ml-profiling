@@ -96,7 +96,7 @@ def single_svm_one_fold_measures(X_train, X_test, y_train, y_test):
 	f1 = f1_score(y_test, y_pred)
 	(hp, hr, hf), (cp, cr, cf) = measures(y_test, y_pred)
 
-	print_pred_test(y_pred, y_test)
+	# print_pred_test(y_pred, y_test)
 	return error_rate, f1, model, (hp, hr, hf), (cp, cr, cf)
 
 def single_svm_fs_one_fold_measures(X_train, X_test, y_train, y_test):
@@ -107,7 +107,7 @@ def single_svm_fs_one_fold_measures(X_train, X_test, y_train, y_test):
 	f1 = f1_score(y_test, y_pred)
 	(hp, hr, hf), (cp, cr, cf) = measures(y_test, y_pred)
 
-	print_pred_test(y_pred, y_test)
+	# print_pred_test(y_pred, y_test)
 	return error_rate, f1, model, (hp, hr, hf), (cp, cr, cf)
 
 def dt_one_fold_measures(X_train, X_test, y_train, y_test):
@@ -118,7 +118,7 @@ def dt_one_fold_measures(X_train, X_test, y_train, y_test):
 	f1 = f1_score(y_test, y_pred)
 	(hp, hr, hf), (cp, cr, cf) = measures(y_test, y_pred)
 
-	print_pred_test(y_pred, y_test)
+	# print_pred_test(y_pred, y_test)
 	return error_rate, f1, model, (hp, hr, hf), (cp, cr, cf)	
 
 def dt(dataset, targets):
@@ -134,7 +134,7 @@ def knn_one_fold_measures(X_train, X_test, y_train, y_test):
 	f1 = f1_score(y_test, y_pred)
 	(hp, hr, hf), (cp, cr, cf) = measures(y_test, y_pred)
 
-	print_pred_test(y_pred, y_test)
+	# print_pred_test(y_pred, y_test)
 	return error_rate, f1, model, (hp, hr, hf), (cp, cr, cf)	
 
 def knn(dataset, targets):
@@ -150,7 +150,7 @@ def lr_one_fold_measures(X_train, X_test, y_train, y_test):
 	f1 = f1_score(y_test, y_pred)
 	(hp, hr, hf), (cp, cr, cf) = measures(y_test, y_pred)
 
-	print_pred_test(y_pred, y_test)
+	# print_pred_test(y_pred, y_test)
 	return error_rate, f1, model, (hp, hr, hf), (cp, cr, cf)	
 
 def lr_one_fold_measures_feature_selection(X_train, X_test, y_train, y_test):
@@ -161,7 +161,7 @@ def lr_one_fold_measures_feature_selection(X_train, X_test, y_train, y_test):
 	f1 = f1_score(y_test, y_pred)
 	(hp, hr, hf), (cp, cr, cf) = measures(y_test, y_pred)
 
-	print_pred_test(y_pred, y_test)
+	# print_pred_test(y_pred, y_test)
 	return error_rate, f1, model, (hp, hr, hf), (cp, cr, cf)
 
 def lr(dataset, targets):

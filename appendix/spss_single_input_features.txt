@@ -10,21 +10,19 @@ Enter algorithm. Choose between lr, dt, knn, svm
 
 ########## CIVIL ##########
 ####### FEATURES ####### 44
-['AwareIdeo', 'Propaganda', 'AwareGriev', 'HurtOthers', 'TargetTyp', 'Religion', 
-'WarningLettersStatements', 'RelatStat', 'Stockpile', 'FurtherAttacks', 'InteractNet', 
-'LifeAspectChange', 'Implement', 'Violence', 'ReligChangeInt', 'LiveAlone', 'MentalIll', 
-'RecruitNetGroup', 'MultiEventTarget', 'Education', 'Ideology', 'Discriminate', 
-'Insanity', 'MilExp', 'OccCat', 'Virtual', 'DryRuns', 'WideGroup', 'LocationNature', 
-'Isolated', 'LettersPost', 'Funds', 'Involve', 'Training', 'PersRelat', 'OwnProp', 
-'Stress', 'Adoption', 'SubAbuse', 'BombManuals', 'Tipping', 'ClaimResp', 
-'IdeoChangeInt', 'OtherInv']
+['AwareGriev', 'WarningLettersStatements', 'HurtOthers', 'AwareIdeo', 'Religion', 
+'Discriminate', 'Propaganda', 'ReligChangeInt', 'TargetTyp', 'Implement', 
+'LifeAspectChange', 'MultiEventTarget', 'MilExp', 'RelatStat', 'Funds', 'FurtherAttacks', 
+'Stockpile', 'InteractNet', 'Isolated', 'LiveAlone', 'OccCat', 'MentalIll', 'RecruitNetGroup', 
+'Violence', 'Tipping', 'Virtual', 'Ideology', 'Insanity', 'ClaimResp', 'LettersPost', 
+'WideGroup', 'DryRuns', 'LocationNature', 'Stress', 'Education', 'PersRelat', 'Involve', 
+'ParRelatStat', 'Training', 'IdeoChangeInt', 'SubAbuse', 'OwnProp', 'Adoption', 'BombManuals']
 ########## HIGHVAL ##########
 ####### FEATURES ####### 44
-['Education', 'LifeAspectChange', 'OccCat', 'Religion', 'ParRelatStat', 
-'MultiEventTarget', 'LocationNature', 'ReligChangeInt', 'Funds', 'PossessStories', 
-'RelatStat', 'SubstanceUse', 'IdeoChangeInt', 'Getaway', 'Denounce', 'BeliefChange', 
-'MultiAttackMeth', 'TargetTyp', 'Contradict', 'Regret', 'HarmVictimHelpless', 
-'Legitimise', 'OwnProp', 'CrimCon', 'Interrupt', 'WideGroup', 'Ideology', 'SubAbuse', 
-'NewMedia', 'PersRelat', 'OtherInv', 'Training', 'Obsess', 'LiveAlone', 'Financial', 
-'Involve', 'Children', 'Insanity', 'LettersPost', 'Adoption', 'LocPubPriv', 
-'Violence', 'MilExp', 'DryRuns']
+['WarningLettersStatements', 'LocationNature', 'Tipping', 'AwareGriev', 'ReligChangeInt', 
+'Funds', 'AwareIdeo', 'FurtherAttacks', 'Discriminate', 'MultiEventTarget', 'HurtOthers', 
+'Propaganda', 'Implement', 'Virtual', 'OtherKnowledge', 'IdeoChangeInt', 'Stockpile', 
+'CrimCon', 'BombManuals', 'MentalIll', 'InteractNet', 'MilExp', 'RelatStat', 'Adoption', 
+'ClaimResp', 'Violence', 'NotCareInjustice', 'TargetTyp', 'RecruitNetGroup', 'LifeAspectChange', 
+'DryRuns', 'Stress', 'Religion', 'Obsess', 'Ideology', 'Training', 'OtherInv', 'PersRelat', 
+'Involve', 'LettersPost', 'OccCat', 'Isolated', 'Insanity', 'LocPubPriv']
