@@ -1,3 +1,5 @@
+// From http://bl.ocks.org/rkirsling/5001347
+
 var create_edges = function(nodes, edges) {
   
   var index = {};

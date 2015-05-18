@@ -1,3 +1,5 @@
+// From http://bl.ocks.org/rkirsling/5001347
+
 var main = function(theme, inference) {
 	var url = "http://127.0.0.1:5000/networks/" + theme +".json"
 	$.getJSON(url, function(net) {

@@ -6,6 +6,7 @@ from load_data import *
 from parse_theme import *
 from project_data import *
 
+from copy import deepcopy
 import itertools
 
 net_evidence = ['InteractNet', 'RecruitNetGroup', 'OtherKnowledge', 'Involve', 'LiveAlone', 'WarningLettersStatements', 'TargetTyp', 'HighValueCivilian', 'FurtherAttacks']
@@ -13,7 +14,6 @@ net_evidence = ['InteractNet', 'RecruitNetGroup', 'OtherKnowledge', 'Involve', '
 ill_evidence = ['AwareGriev', 'OtherKnowledge', 'Isolated', 'FurtherAttacks', 'WarningLettersStatements', 'LiveAlone', 'Stress', 'HighValueCivilian', 'Getaway', 'MentalIll']
 
 ideo_evidence = ['ReligChangeInt', 'HighValueCivilian', 'RecruitNetGroup', 'Ideology', 'LiveAlone', 'TargetTyp', 'Propaganda', 'Legitimise', 'LocPubPriv', 'OtherKnowledge', 'IdeoChangeInt', 'AwareIdeo', 'Religion', 'FurtherAttacks']
-
 
 def likelihood_from_inference(inference):
 	inf = dict()
@@ -62,22 +62,72 @@ def create_combinations_evidence(possible_evidence):
 
 	return combinations_possible_evidence		
 
+features_multiple_values = ['HighValueCivilian', 'TargetTyp', 'LocPubPriv', 'ReligChangeInt', 'IdeoChangeInt']
+multiple_values = dict(HighValueCivilian=[1,2], TargetTyp=[0,1,2], LocPubPriv=[0,1], IdeoChangeInt=[1,2,3,4], ReligChangeInt=[1,2,3,4])
+
+
 def create_evidence_from_list(x):
+	all_ev = []
 	ev = dict()
 	for elem in x:
-		ev[elem] = 1
-	return ev
+		if elem not in multiple_values:
+			if elem == 'Ideology':
+				ev[elem] = 4
+			elif elem == 'TargetTyp':
+				ev[elem] = 0
+			elif elem == 'LocPubPriv':
+				ev[elem] = 0	
+			elif elem == 'HighValueCivilian':
+				ev[elem] = 2
+			else:
+				ev[elem] = 1
 
-def propagate_evidence(bn, possible_evidence, features):
+	if 'IdeoChangeInt' in x and 'ReligChangeInt' in x:
+		for ideo, relig in itertools.product(multiple_values['IdeoChangeInt'],multiple_values['ReligChangeInt']):
+			current_ev = deepcopy(ev)
+			current_ev['IdeoChangeInt'] = ideo
+			current_ev['ReligChangeInt'] = relig
+			all_ev.append(current_ev)
+	elif 'IdeoChangeInt' in x:
+		for val in multiple_values['IdeoChangeInt']:
+			current_ev = deepcopy(ev)
+			current_ev['IdeoChangeInt'] = val
+			all_ev.append(current_ev)
+	elif 'ReligChangeInt' in x:	
+		for val in multiple_values['IdeoChangeInt']:
+			current_ev = deepcopy(ev)
+			current_ev['ReligChangeInt'] = val
+			all_ev.append(current_ev)
+	else:
+		all_ev.append(ev)
+	return all_ev
+
+def save_evidence(file_name, accuracy, evidence):
+	with open(file_name, "a") as myfile:	
+		myfile.write('\n##############################')
+	with open(file_name, "a") as myfile:	
+		myfile.write('\nEvidence %s' % str(evidence))
+	with open(file_name, "a") as myfile:	
+		myfile.write('\nAccuracy %f' % accuracy)
+
+def propagate_evidence(bn, possible_evidence, features, file_name):
 	combinations_possible_evidence = create_combinations_evidence(possible_evidence)
 	for x in combinations_possible_evidence:
-		evidence = create_evidence_from_list(x)
-		inf = inference(bn, evidence)
-		inf = likelihood_from_inference(inf)
-		# print inf
+		evidences = create_evidence_from_list(x)
+		for evidence in evidences:
+			try:
+				inf = inference(bn, evidence)
+				inf = likelihood_from_inference(inf)
+				# print inf
 
-		accuracy = inference_accuracy(dataset, bn.V, features, inf)
-		print accuracy
+				accuracy = inference_accuracy(dataset, bn.V, features, inf)
+
+				if accuracy >= 0.66:
+					save_evidence(file_name, accuracy, evidence)
+
+				print accuracy
+			except Exception:
+				print 'Exception ' + str(evidence)
 
 if __name__ == "__main__":
 	theme = raw_input("Enter theme.\n")
@@ -98,5 +148,6 @@ if __name__ == "__main__":
 	# evidence = dict(Religion=1, Ideology=4)
 
 	possible_evidence = evidence_from_theme(theme)
-	propagate_evidence(bn, possible_evidence, features)
+	file_name = theme + "_evidence.txt"
+	propagate_evidence(bn, possible_evidence, features, file_name)
 	

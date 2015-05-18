@@ -94,10 +94,6 @@ if __name__ == "__main__":
 	testing_data = Data(testing_spreadsheet, upsampling=False)
 	testing_targets = testing_data.targets
 
-	[training_data, features] = parse_theme('all')
-	[testing_data, feats] = parse_theme_from_file('all', addendum_data_file)
-	assert features == feats
-
 	tech = raw_input("Enter algorithm. Choose between lr, dt, knn, svm")
 	fusion_algorithm = raw_input("Enter algorithm. Choose between maj, wmaj, svm, nn")
 
