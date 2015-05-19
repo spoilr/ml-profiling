@@ -1,0 +1,1183 @@
+
+##############################
+Evidence {'Ideology': 4}
+Accuracy 0.680000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'ReligChangeInt': 1, 'AwareIdeo': 1}
+Accuracy 0.680000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Religion': 1, 'ReligChangeInt': 1, 'FurtherAttacks': 1}
+Accuracy 0.664000
+##############################
+Evidence {'IdeoChangeInt': 1}
+Accuracy 0.680000
+##############################
+Evidence {'Ideology': 4, 'LiveAlone': 1}
+Accuracy 0.672000
+##############################
+Evidence {'Ideology': 4, 'OtherKnowledge': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'AwareIdeo': 1, 'OtherKnowledge': 1}
+Accuracy 0.672000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'IdeoChangeInt': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'AwareIdeo': 1}
+Accuracy 0.664000
+##############################
+Evidence {'AwareIdeo': 1, 'Propaganda': 1}
+Accuracy 0.680000
+##############################
+Evidence {'Religion': 1, 'IdeoChangeInt': 3}
+Accuracy 0.664000
+##############################
+Evidence {'Religion': 1, 'AwareIdeo': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Religion': 1, 'FurtherAttacks': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Religion': 1, 'OtherKnowledge': 1, 'IdeoChangeInt': 1}
+Accuracy 0.680000
+##############################
+Evidence {'Religion': 1, 'ReligChangeInt': 1, 'IdeoChangeInt': 4}
+Accuracy 0.676000
+##############################
+Evidence {'ReligChangeInt': 1, 'IdeoChangeInt': 1, 'RecruitNetGroup': 1}
+Accuracy 0.672000
+##############################
+Evidence {'Religion': 1, 'ReligChangeInt': 3, 'IdeoChangeInt': 3, 'RecruitNetGroup': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 3, 'LiveAlone': 1}
+Accuracy 0.668000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Religion': 1, 'ReligChangeInt': 1, 'FurtherAttacks': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'RecruitNetGroup': 1}
+Accuracy 0.688000
+##############################
+Evidence {'Religion': 1, 'IdeoChangeInt': 4, 'RecruitNetGroup': 1}
+Accuracy 0.676000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'Propaganda': 1}
+Accuracy 0.672000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'IdeoChangeInt': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'AwareIdeo': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Religion': 1, 'LiveAlone': 1}
+Accuracy 0.680000
+##############################
+Evidence {'Religion': 1, 'FurtherAttacks': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Religion': 1, 'IdeoChangeInt': 1, 'Legitimise': 1, 'RecruitNetGroup': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'LiveAlone': 1, 'IdeoChangeInt': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'LiveAlone': 1, 'IdeoChangeInt': 3}
+Accuracy 0.668000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'IdeoChangeInt': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'AwareIdeo': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'FurtherAttacks': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'Propaganda': 1, 'IdeoChangeInt': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'AwareIdeo': 1, 'Propaganda': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'AwareIdeo': 1, 'Legitimise': 1, 'Religion': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'AwareIdeo': 1, 'OtherKnowledge': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'IdeoChangeInt': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'IdeoChangeInt': 2}
+Accuracy 0.680000
+##############################
+Evidence {'OtherKnowledge': 1, 'Propaganda': 1, 'LiveAlone': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Religion': 1, 'Propaganda': 1, 'LiveAlone': 1}
+Accuracy 0.668000
+##############################
+Evidence {'Religion': 1, 'Legitimise': 1, 'Propaganda': 1, 'IdeoChangeInt': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'ReligChangeInt': 4, 'AwareIdeo': 1, 'RecruitNetGroup': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 3, 'RecruitNetGroup': 1}
+Accuracy 0.676000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'ReligChangeInt': 3, 'AwareIdeo': 1, 'IdeoChangeInt': 1}
+Accuracy 0.668000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'IdeoChangeInt': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Religion': 1, 'ReligChangeInt': 4, 'AwareIdeo': 1, 'LiveAlone': 1}
+Accuracy 0.672000
+##############################
+Evidence {'ReligChangeInt': 1, 'Propaganda': 1, 'IdeoChangeInt': 4}
+Accuracy 0.668000
+##############################
+Evidence {'Religion': 1, 'ReligChangeInt': 3, 'Propaganda': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Religion': 1, 'ReligChangeInt': 1, 'Propaganda': 1, 'IdeoChangeInt': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Religion': 1, 'ReligChangeInt': 1, 'IdeoChangeInt': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Religion': 1, 'ReligChangeInt': 1, 'AwareIdeo': 1, 'IdeoChangeInt': 1}
+Accuracy 0.696000
+##############################
+Evidence {'Religion': 1, 'ReligChangeInt': 1, 'AwareIdeo': 1, 'IdeoChangeInt': 4}
+Accuracy 0.676000
+##############################
+Evidence {'Ideology': 4, 'ReligChangeInt': 4, 'RecruitNetGroup': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 4, 'IdeoChangeInt': 1, 'RecruitNetGroup': 1}
+Accuracy 0.680000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'IdeoChangeInt': 4, 'RecruitNetGroup': 1}
+Accuracy 0.676000
+##############################
+Evidence {'Religion': 1, 'ReligChangeInt': 1, 'Propaganda': 1, 'RecruitNetGroup': 1}
+Accuracy 0.688000
+##############################
+Evidence {'Legitimise': 1, 'ReligChangeInt': 1, 'RecruitNetGroup': 1, 'AwareIdeo': 1, 'Religion': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Religion': 1, 'ReligChangeInt': 1, 'IdeoChangeInt': 1, 'RecruitNetGroup': 1}
+Accuracy 0.668000
+##############################
+Evidence {'Ideology': 4, 'ReligChangeInt': 4, 'LiveAlone': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'ReligChangeInt': 4, 'Propaganda': 1, 'LiveAlone': 1, 'IdeoChangeInt': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'ReligChangeInt': 4, 'OtherKnowledge': 1, 'Propaganda': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'Propaganda': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'ReligChangeInt': 1, 'AwareIdeo': 1, 'Propaganda': 1}
+Accuracy 0.680000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 4, 'Propaganda': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'FurtherAttacks': 1, 'Propaganda': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 3, 'IdeoChangeInt': 1}
+Accuracy 0.676000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'FurtherAttacks': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'AwareIdeo': 1, 'IdeoChangeInt': 2}
+Accuracy 0.672000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'AwareIdeo': 1, 'IdeoChangeInt': 4}
+Accuracy 0.676000
+##############################
+Evidence {'OtherKnowledge': 1, 'ReligChangeInt': 4, 'AwareIdeo': 1, 'LiveAlone': 1, 'Religion': 1}
+Accuracy 0.664000
+##############################
+Evidence {'ReligChangeInt': 4, 'Propaganda': 1, 'IdeoChangeInt': 1}
+Accuracy 0.672000
+##############################
+Evidence {'Religion': 1, 'ReligChangeInt': 3, 'OtherKnowledge': 1, 'Propaganda': 1}
+Accuracy 0.668000
+##############################
+Evidence {'Legitimise': 1, 'ReligChangeInt': 1, 'OtherKnowledge': 1, 'Religion': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Religion': 1, 'ReligChangeInt': 4, 'AwareIdeo': 1, 'IdeoChangeInt': 4}
+Accuracy 0.676000
+##############################
+Evidence {'Ideology': 4, 'Propaganda': 1, 'RecruitNetGroup': 1}
+Accuracy 0.672000
+##############################
+Evidence {'IdeoChangeInt': 1, 'AwareIdeo': 1, 'RecruitNetGroup': 1}
+Accuracy 0.672000
+##############################
+Evidence {'Religion': 1, 'AwareIdeo': 1, 'RecruitNetGroup': 1}
+Accuracy 0.668000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'AwareIdeo': 1, 'LiveAlone': 1}
+Accuracy 0.680000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'Propaganda': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'AwareIdeo': 1, 'OtherKnowledge': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'AwareIdeo': 1, 'IdeoChangeInt': 3}
+Accuracy 0.668000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'Propaganda': 1, 'IdeoChangeInt': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'FurtherAttacks': 1, 'Propaganda': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'OtherKnowledge': 1, 'IdeoChangeInt': 3}
+Accuracy 0.676000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'AwareIdeo': 1, 'IdeoChangeInt': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'FurtherAttacks': 1, 'IdeoChangeInt': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'FurtherAttacks': 1, 'AwareIdeo': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Religion': 1, 'Legitimise': 1, 'IdeoChangeInt': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'IdeoChangeInt': 1, 'OtherKnowledge': 1, 'RecruitNetGroup': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Religion': 1, 'IdeoChangeInt': 1, 'Legitimise': 1, 'RecruitNetGroup': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'AwareIdeo': 1, 'LiveAlone': 1, 'IdeoChangeInt': 2}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'Propaganda': 1, 'IdeoChangeInt': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'Propaganda': 1, 'IdeoChangeInt': 4}
+Accuracy 0.676000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'FurtherAttacks': 1, 'Propaganda': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'AwareIdeo': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'AwareIdeo': 1, 'OtherKnowledge': 1, 'Propaganda': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'Propaganda': 1, 'IdeoChangeInt': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'FurtherAttacks': 1, 'AwareIdeo': 1, 'Propaganda': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'Legitimise': 1, 'IdeoChangeInt': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Legitimise': 1, 'IdeoChangeInt': 1, 'AwareIdeo': 1, 'Religion': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'OtherKnowledge': 1, 'IdeoChangeInt': 2}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'AwareIdeo': 1, 'IdeoChangeInt': 3}
+Accuracy 0.684000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'FurtherAttacks': 1, 'IdeoChangeInt': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Religion': 1, 'AwareIdeo': 1, 'Propaganda': 1, 'IdeoChangeInt': 3}
+Accuracy 0.676000
+##############################
+Evidence {'Ideology': 4, 'ReligChangeInt': 1, 'LiveAlone': 1, 'RecruitNetGroup': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Religion': 1, 'ReligChangeInt': 4, 'IdeoChangeInt': 1, 'OtherKnowledge': 1, 'RecruitNetGroup': 1}
+Accuracy 0.672000
+##############################
+Evidence {'Ideology': 4, 'ReligChangeInt': 4, 'LiveAlone': 1, 'IdeoChangeInt': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'LiveAlone': 1, 'IdeoChangeInt': 3}
+Accuracy 0.668000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'LiveAlone': 1, 'IdeoChangeInt': 4}
+Accuracy 0.668000
+##############################
+Evidence {'Ideology': 4, 'ReligChangeInt': 4, 'Propaganda': 1, 'IdeoChangeInt': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'Propaganda': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'ReligChangeInt': 4, 'AwareIdeo': 1, 'IdeoChangeInt': 1}
+Accuracy 0.672000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'IdeoChangeInt': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'FurtherAttacks': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 3, 'Propaganda': 1, 'IdeoChangeInt': 1}
+Accuracy 0.684000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'AwareIdeo': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'OtherKnowledge': 1, 'IdeoChangeInt': 1}
+Accuracy 0.680000
+##############################
+Evidence {'Religion': 1, 'ReligChangeInt': 1, 'AwareIdeo': 1, 'IdeoChangeInt': 1}
+Accuracy 0.668000
+##############################
+Evidence {'Religion': 1, 'ReligChangeInt': 1, 'Legitimise': 1, 'Propaganda': 1, 'IdeoChangeInt': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Religion': 1, 'ReligChangeInt': 1, 'OtherKnowledge': 1, 'Propaganda': 1}
+Accuracy 0.680000
+##############################
+Evidence {'Religion': 1, 'ReligChangeInt': 1, 'Propaganda': 1, 'IdeoChangeInt': 1}
+Accuracy 0.668000
+##############################
+Evidence {'Religion': 1, 'ReligChangeInt': 4, 'AwareIdeo': 1, 'Propaganda': 1, 'IdeoChangeInt': 3}
+Accuracy 0.668000
+##############################
+Evidence {'Religion': 1, 'ReligChangeInt': 1, 'OtherKnowledge': 1, 'IdeoChangeInt': 1}
+Accuracy 0.668000
+##############################
+Evidence {'Religion': 1, 'ReligChangeInt': 1, 'AwareIdeo': 1, 'IdeoChangeInt': 1}
+Accuracy 0.664000
+##############################
+Evidence {'LiveAlone': 1, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 3, 'RecruitNetGroup': 1, 'Propaganda': 1}
+Accuracy 0.668000
+##############################
+Evidence {'IdeoChangeInt': 1, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 3, 'RecruitNetGroup': 1, 'Propaganda': 1}
+Accuracy 0.668000
+##############################
+Evidence {'IdeoChangeInt': 3, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'RecruitNetGroup': 1, 'Propaganda': 1}
+Accuracy 0.676000
+##############################
+Evidence {'IdeoChangeInt': 1, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'AwareIdeo': 1, 'RecruitNetGroup': 1}
+Accuracy 0.688000
+##############################
+Evidence {'OtherKnowledge': 1, 'ReligChangeInt': 4, 'RecruitNetGroup': 1, 'AwareIdeo': 1, 'Religion': 1}
+Accuracy 0.672000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 3, 'LiveAlone': 1}
+Accuracy 0.676000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 3, 'LiveAlone': 1, 'IdeoChangeInt': 4}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'Propaganda': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 4, 'Propaganda': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'FurtherAttacks': 1, 'Propaganda': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'Legitimise': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'AwareIdeo': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'FurtherAttacks': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 4, 'AwareIdeo': 1, 'IdeoChangeInt': 1}
+Accuracy 0.680000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 4, 'AwareIdeo': 1, 'IdeoChangeInt': 4}
+Accuracy 0.676000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'FurtherAttacks': 1, 'AwareIdeo': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'FurtherAttacks': 1, 'Propaganda': 1}
+Accuracy 0.664000
+##############################
+Evidence {'OtherKnowledge': 1, 'IdeoChangeInt': 1, 'Ideology': 4, 'ReligChangeInt': 1, 'AwareIdeo': 1, 'Propaganda': 1}
+Accuracy 0.672000
+##############################
+Evidence {'IdeoChangeInt': 4, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'AwareIdeo': 1, 'Propaganda': 1}
+Accuracy 0.676000
+##############################
+Evidence {'FurtherAttacks': 1, 'IdeoChangeInt': 1, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'Propaganda': 1}
+Accuracy 0.664000
+##############################
+Evidence {'OtherKnowledge': 1, 'Legitimise': 1, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'AwareIdeo': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 3, 'AwareIdeo': 1, 'IdeoChangeInt': 4}
+Accuracy 0.672000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'FurtherAttacks': 1, 'AwareIdeo': 1}
+Accuracy 0.664000
+##############################
+Evidence {'FurtherAttacks': 1, 'IdeoChangeInt': 1, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'AwareIdeo': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Religion': 1, 'ReligChangeInt': 1, 'AwareIdeo': 1, 'Propaganda': 1, 'LiveAlone': 1}
+Accuracy 0.668000
+##############################
+Evidence {'Religion': 1, 'ReligChangeInt': 1, 'OtherKnowledge': 1, 'IdeoChangeInt': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Religion': 1, 'ReligChangeInt': 1, 'OtherKnowledge': 1, 'Propaganda': 1, 'IdeoChangeInt': 1}
+Accuracy 0.680000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'Propaganda': 1, 'LiveAlone': 1, 'RecruitNetGroup': 1}
+Accuracy 0.680000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'IdeoChangeInt': 1, 'AwareIdeo': 1, 'RecruitNetGroup': 1}
+Accuracy 0.688000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'IdeoChangeInt': 2, 'AwareIdeo': 1, 'RecruitNetGroup': 1}
+Accuracy 0.672000
+##############################
+Evidence {'AwareIdeo': 1, 'Legitimise': 1, 'Religion': 1, 'RecruitNetGroup': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Religion': 1, 'IdeoChangeInt': 4, 'OtherKnowledge': 1, 'RecruitNetGroup': 1}
+Accuracy 0.668000
+##############################
+Evidence {'Ideology': 4, 'Propaganda': 1, 'LiveAlone': 1}
+Accuracy 0.672000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'LiveAlone': 1, 'IdeoChangeInt': 4}
+Accuracy 0.676000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'Propaganda': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'AwareIdeo': 1, 'Propaganda': 1, 'IdeoChangeInt': 3}
+Accuracy 0.668000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'FurtherAttacks': 1, 'Propaganda': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'OtherKnowledge': 1, 'IdeoChangeInt': 1}
+Accuracy 0.672000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'IdeoChangeInt': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'FurtherAttacks': 1, 'IdeoChangeInt': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'Propaganda': 1, 'IdeoChangeInt': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'AwareIdeo': 1, 'Propaganda': 1}
+Accuracy 0.696000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'AwareIdeo': 1, 'Propaganda': 1, 'IdeoChangeInt': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'AwareIdeo': 1, 'Propaganda': 1, 'IdeoChangeInt': 2}
+Accuracy 0.672000
+##############################
+Evidence {'Ideology': 4, 'OtherKnowledge': 1, 'Legitimise': 1, 'Religion': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'AwareIdeo': 1, 'IdeoChangeInt': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'FurtherAttacks': 1, 'IdeoChangeInt': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Religion': 1, 'AwareIdeo': 1, 'Propaganda': 1, 'LiveAlone': 1}
+Accuracy 0.668000
+##############################
+Evidence {'Legitimise': 1, 'IdeoChangeInt': 1, 'OtherKnowledge': 1, 'Religion': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Religion': 1, 'AwareIdeo': 1, 'Propaganda': 1, 'IdeoChangeInt': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'IdeoChangeInt': 1, 'Propaganda': 1, 'LiveAlone': 1, 'RecruitNetGroup': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'AwareIdeo': 1, 'OtherKnowledge': 1, 'RecruitNetGroup': 1}
+Accuracy 0.664000
+##############################
+Evidence {'IdeoChangeInt': 2, 'Ideology': 4, 'Religion': 1, 'AwareIdeo': 1, 'RecruitNetGroup': 1, 'Propaganda': 1}
+Accuracy 0.672000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'IdeoChangeInt': 3, 'OtherKnowledge': 1, 'RecruitNetGroup': 1}
+Accuracy 0.668000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'IdeoChangeInt': 3, 'AwareIdeo': 1, 'RecruitNetGroup': 1}
+Accuracy 0.676000
+##############################
+Evidence {'LiveAlone': 1, 'OtherKnowledge': 1, 'IdeoChangeInt': 1, 'Religion': 1, 'RecruitNetGroup': 1, 'Propaganda': 1}
+Accuracy 0.672000
+##############################
+Evidence {'Ideology': 4, 'AwareIdeo': 1, 'Propaganda': 1, 'LiveAlone': 1, 'IdeoChangeInt': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'AwareIdeo': 1, 'OtherKnowledge': 1, 'LiveAlone': 1, 'Religion': 1}
+Accuracy 0.672000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'Propaganda': 1, 'LiveAlone': 1, 'IdeoChangeInt': 1}
+Accuracy 0.680000
+##############################
+Evidence {'LiveAlone': 1, 'OtherKnowledge': 1, 'IdeoChangeInt': 3, 'Ideology': 4, 'Religion': 1, 'AwareIdeo': 1}
+Accuracy 0.668000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'AwareIdeo': 1, 'Propaganda': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'AwareIdeo': 1, 'Propaganda': 1, 'IdeoChangeInt': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'AwareIdeo': 1, 'Propaganda': 1, 'IdeoChangeInt': 3}
+Accuracy 0.676000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'FurtherAttacks': 1, 'Propaganda': 1, 'IdeoChangeInt': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'OtherKnowledge': 1, 'IdeoChangeInt': 4}
+Accuracy 0.668000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'AwareIdeo': 1, 'IdeoChangeInt': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'FurtherAttacks': 1, 'AwareIdeo': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'FurtherAttacks': 1, 'Propaganda': 1, 'IdeoChangeInt': 1}
+Accuracy 0.664000
+##############################
+Evidence {'FurtherAttacks': 1, 'IdeoChangeInt': 1, 'Ideology': 4, 'Religion': 1, 'AwareIdeo': 1, 'Propaganda': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'FurtherAttacks': 1, 'AwareIdeo': 1, 'IdeoChangeInt': 1}
+Accuracy 0.664000
+##############################
+Evidence {'OtherKnowledge': 1, 'Legitimise': 1, 'Propaganda': 1, 'Religion': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Legitimise': 1, 'IdeoChangeInt': 1, 'OtherKnowledge': 1, 'Propaganda': 1, 'Religion': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'RecruitNetGroup': 1}
+Accuracy 0.672000
+##############################
+Evidence {'IdeoChangeInt': 4, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 4, 'AwareIdeo': 1, 'RecruitNetGroup': 1}
+Accuracy 0.668000
+##############################
+Evidence {'LiveAlone': 1, 'IdeoChangeInt': 1, 'Ideology': 4, 'ReligChangeInt': 4, 'AwareIdeo': 1, 'Propaganda': 1}
+Accuracy 0.664000
+##############################
+Evidence {'LiveAlone': 1, 'IdeoChangeInt': 4, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'Propaganda': 1}
+Accuracy 0.668000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 3, 'LiveAlone': 1, 'IdeoChangeInt': 3}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'ReligChangeInt': 4, 'AwareIdeo': 1, 'Propaganda': 1, 'IdeoChangeInt': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'Propaganda': 1, 'IdeoChangeInt': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'ReligChangeInt': 1, 'AwareIdeo': 1, 'IdeoChangeInt': 4}
+Accuracy 0.668000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'IdeoChangeInt': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'OtherKnowledge': 1, 'IdeoChangeInt': 1}
+Accuracy 0.680000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'AwareIdeo': 1, 'IdeoChangeInt': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'AwareIdeo': 1, 'Propaganda': 1}
+Accuracy 0.664000
+##############################
+Evidence {'OtherKnowledge': 1, 'IdeoChangeInt': 1, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'Propaganda': 1}
+Accuracy 0.688000
+##############################
+Evidence {'IdeoChangeInt': 1, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'AwareIdeo': 1, 'Propaganda': 1}
+Accuracy 0.664000
+##############################
+Evidence {'IdeoChangeInt': 2, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'AwareIdeo': 1, 'Propaganda': 1}
+Accuracy 0.672000
+##############################
+Evidence {'FurtherAttacks': 1, 'IdeoChangeInt': 1, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'Propaganda': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'AwareIdeo': 1, 'IdeoChangeInt': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Religion': 1, 'ReligChangeInt': 4, 'Propaganda': 1, 'IdeoChangeInt': 1}
+Accuracy 0.668000
+##############################
+Evidence {'Religion': 1, 'ReligChangeInt': 1, 'AwareIdeo': 1, 'Propaganda': 1}
+Accuracy 0.664000
+##############################
+Evidence {'OtherKnowledge': 1, 'ReligChangeInt': 1, 'AwareIdeo': 1, 'Propaganda': 1, 'Religion': 1}
+Accuracy 0.680000
+##############################
+Evidence {'Religion': 1, 'ReligChangeInt': 1, 'OtherKnowledge': 1, 'IdeoChangeInt': 4}
+Accuracy 0.668000
+##############################
+Evidence {'Religion': 1, 'ReligChangeInt': 4, 'AwareIdeo': 1, 'IdeoChangeInt': 1}
+Accuracy 0.668000
+##############################
+Evidence {'Religion': 1, 'ReligChangeInt': 1, 'OtherKnowledge': 1, 'Propaganda': 1, 'IdeoChangeInt': 2}
+Accuracy 0.672000
+##############################
+Evidence {'Religion': 1, 'ReligChangeInt': 1, 'FurtherAttacks': 1, 'Propaganda': 1, 'IdeoChangeInt': 1}
+Accuracy 0.664000
+##############################
+Evidence {'LiveAlone': 1, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 4, 'AwareIdeo': 1, 'RecruitNetGroup': 1, 'Propaganda': 1}
+Accuracy 0.672000
+##############################
+Evidence {'LiveAlone': 1, 'IdeoChangeInt': 3, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'RecruitNetGroup': 1}
+Accuracy 0.668000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'IdeoChangeInt': 4, 'RecruitNetGroup': 1}
+Accuracy 0.676000
+##############################
+Evidence {'IdeoChangeInt': 4, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'AwareIdeo': 1, 'RecruitNetGroup': 1}
+Accuracy 0.676000
+##############################
+Evidence {'Religion': 1, 'ReligChangeInt': 1, 'Legitimise': 1, 'Propaganda': 1, 'RecruitNetGroup': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Legitimise': 1, 'Religion': 1, 'ReligChangeInt': 1, 'AwareIdeo': 1, 'RecruitNetGroup': 1, 'Propaganda': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'ReligChangeInt': 1, 'AwareIdeo': 1, 'Propaganda': 1, 'LiveAlone': 1}
+Accuracy 0.664000
+##############################
+Evidence {'LiveAlone': 1, 'IdeoChangeInt': 2, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'Propaganda': 1}
+Accuracy 0.664000
+##############################
+Evidence {'LiveAlone': 1, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'AwareIdeo': 1, 'Propaganda': 1}
+Accuracy 0.664000
+##############################
+Evidence {'LiveAlone': 1, 'OtherKnowledge': 1, 'IdeoChangeInt': 1, 'Ideology': 4, 'ReligChangeInt': 1, 'AwareIdeo': 1, 'Propaganda': 1}
+Accuracy 0.664000
+##############################
+Evidence {'OtherKnowledge': 1, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'AwareIdeo': 1, 'Propaganda': 1}
+Accuracy 0.664000
+##############################
+Evidence {'FurtherAttacks': 1, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'AwareIdeo': 1, 'Propaganda': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Legitimise': 1, 'ReligChangeInt': 1, 'AwareIdeo': 1, 'Religion': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'OtherKnowledge': 1, 'IdeoChangeInt': 1}
+Accuracy 0.680000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'AwareIdeo': 1, 'IdeoChangeInt': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'AwareIdeo': 1, 'IdeoChangeInt': 3}
+Accuracy 0.684000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'FurtherAttacks': 1, 'IdeoChangeInt': 1}
+Accuracy 0.664000
+##############################
+Evidence {'OtherKnowledge': 1, 'IdeoChangeInt': 4, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 4, 'AwareIdeo': 1}
+Accuracy 0.660000
+##############################
+Evidence {'FurtherAttacks': 1, 'IdeoChangeInt': 1, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'AwareIdeo': 1}
+Accuracy 0.664000
+##############################
+Evidence {'IdeoChangeInt': 1, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'AwareIdeo': 1, 'Propaganda': 1}
+Accuracy 0.688000
+##############################
+Evidence {'IdeoChangeInt': 4, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 4, 'AwareIdeo': 1, 'Propaganda': 1}
+Accuracy 0.668000
+##############################
+Evidence {'OtherKnowledge': 1, 'Legitimise': 1, 'IdeoChangeInt': 1, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'AwareIdeo': 1}
+Accuracy 0.664000
+##############################
+Evidence {'OtherKnowledge': 1, 'IdeoChangeInt': 2, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'AwareIdeo': 1}
+Accuracy 0.672000
+##############################
+Evidence {'FurtherAttacks': 1, 'IdeoChangeInt': 1, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'AwareIdeo': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Religion': 1, 'ReligChangeInt': 1, 'Propaganda': 1, 'LiveAlone': 1, 'IdeoChangeInt': 1}
+Accuracy 0.668000
+##############################
+Evidence {'Religion': 1, 'ReligChangeInt': 1, 'AwareIdeo': 1, 'Propaganda': 1, 'IdeoChangeInt': 2}
+Accuracy 0.660000
+##############################
+Evidence {'Religion': 1, 'ReligChangeInt': 1, 'FurtherAttacks': 1, 'AwareIdeo': 1, 'Propaganda': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Propaganda': 1, 'LiveAlone': 1, 'RecruitNetGroup': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'IdeoChangeInt': 1, 'Legitimise': 1, 'RecruitNetGroup': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'IdeoChangeInt': 3, 'OtherKnowledge': 1, 'RecruitNetGroup': 1}
+Accuracy 0.668000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'IdeoChangeInt': 1, 'AwareIdeo': 1, 'RecruitNetGroup': 1}
+Accuracy 0.688000
+##############################
+Evidence {'Ideology': 4, 'OtherKnowledge': 1, 'IdeoChangeInt': 1, 'AwareIdeo': 1, 'RecruitNetGroup': 1}
+Accuracy 0.664000
+##############################
+Evidence {'OtherKnowledge': 1, 'Religion': 1, 'Legitimise': 1, 'Propaganda': 1, 'RecruitNetGroup': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Religion': 1, 'IdeoChangeInt': 4, 'OtherKnowledge': 1, 'Propaganda': 1, 'RecruitNetGroup': 1}
+Accuracy 0.668000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'OtherKnowledge': 1, 'LiveAlone': 1, 'IdeoChangeInt': 1}
+Accuracy 0.672000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'AwareIdeo': 1, 'LiveAlone': 1, 'IdeoChangeInt': 3}
+Accuracy 0.676000
+##############################
+Evidence {'LiveAlone': 1, 'OtherKnowledge': 1, 'IdeoChangeInt': 3, 'Ideology': 4, 'Religion': 1, 'AwareIdeo': 1}
+Accuracy 0.668000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'Propaganda': 1, 'IdeoChangeInt': 1}
+Accuracy 0.696000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'FurtherAttacks': 1, 'Propaganda': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'OtherKnowledge': 1, 'AwareIdeo': 1, 'Propaganda': 1, 'IdeoChangeInt': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'FurtherAttacks': 1, 'Propaganda': 1, 'IdeoChangeInt': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'OtherKnowledge': 1, 'IdeoChangeInt': 1}
+Accuracy 0.680000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'AwareIdeo': 1, 'IdeoChangeInt': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'FurtherAttacks': 1, 'AwareIdeo': 1, 'IdeoChangeInt': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'AwareIdeo': 1, 'Propaganda': 1, 'IdeoChangeInt': 1}
+Accuracy 0.664000
+##############################
+Evidence {'FurtherAttacks': 1, 'IdeoChangeInt': 1, 'Ideology': 4, 'Religion': 1, 'AwareIdeo': 1, 'Propaganda': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'OtherKnowledge': 1, 'IdeoChangeInt': 4, 'AwareIdeo': 1, 'Religion': 1}
+Accuracy 0.676000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'FurtherAttacks': 1, 'AwareIdeo': 1, 'IdeoChangeInt': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Religion': 1, 'Legitimise': 1, 'Propaganda': 1, 'IdeoChangeInt': 1}
+Accuracy 0.664000
+##############################
+Evidence {'LiveAlone': 1, 'IdeoChangeInt': 1, 'Ideology': 4, 'Religion': 1, 'RecruitNetGroup': 1, 'Propaganda': 1}
+Accuracy 0.680000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'IdeoChangeInt': 1, 'LiveAlone': 1, 'RecruitNetGroup': 1}
+Accuracy 0.680000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'IdeoChangeInt': 2, 'LiveAlone': 1, 'RecruitNetGroup': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'AwareIdeo': 1, 'LiveAlone': 1, 'RecruitNetGroup': 1}
+Accuracy 0.672000
+##############################
+Evidence {'LiveAlone': 1, 'IdeoChangeInt': 3, 'Ideology': 4, 'Religion': 1, 'RecruitNetGroup': 1, 'Propaganda': 1}
+Accuracy 0.668000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'IdeoChangeInt': 2, 'AwareIdeo': 1, 'RecruitNetGroup': 1}
+Accuracy 0.672000
+##############################
+Evidence {'Legitimise': 1, 'OtherKnowledge': 1, 'IdeoChangeInt': 1, 'Ideology': 4, 'Religion': 1, 'AwareIdeo': 1, 'RecruitNetGroup': 1}
+Accuracy 0.664000
+##############################
+Evidence {'OtherKnowledge': 1, 'IdeoChangeInt': 2, 'Ideology': 4, 'Religion': 1, 'AwareIdeo': 1, 'RecruitNetGroup': 1}
+Accuracy 0.664000
+##############################
+Evidence {'OtherKnowledge': 1, 'IdeoChangeInt': 3, 'Ideology': 4, 'Religion': 1, 'AwareIdeo': 1, 'RecruitNetGroup': 1}
+Accuracy 0.668000
+##############################
+Evidence {'OtherKnowledge': 1, 'IdeoChangeInt': 1, 'Religion': 1, 'AwareIdeo': 1, 'RecruitNetGroup': 1, 'Propaganda': 1}
+Accuracy 0.672000
+##############################
+Evidence {'LiveAlone': 1, 'OtherKnowledge': 1, 'IdeoChangeInt': 2, 'Ideology': 4, 'Religion': 1, 'AwareIdeo': 1}
+Accuracy 0.664000
+##############################
+Evidence {'LiveAlone': 1, 'OtherKnowledge': 1, 'IdeoChangeInt': 3, 'Ideology': 4, 'Religion': 1, 'AwareIdeo': 1}
+Accuracy 0.668000
+##############################
+Evidence {'LiveAlone': 1, 'OtherKnowledge': 1, 'IdeoChangeInt': 3, 'Ideology': 4, 'Religion': 1, 'AwareIdeo': 1, 'Propaganda': 1}
+Accuracy 0.668000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'AwareIdeo': 1, 'Propaganda': 1, 'IdeoChangeInt': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'AwareIdeo': 1, 'Propaganda': 1, 'IdeoChangeInt': 2}
+Accuracy 0.672000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'FurtherAttacks': 1, 'Propaganda': 1, 'IdeoChangeInt': 1}
+Accuracy 0.664000
+##############################
+Evidence {'FurtherAttacks': 1, 'IdeoChangeInt': 1, 'Ideology': 4, 'Religion': 1, 'AwareIdeo': 1, 'Propaganda': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Legitimise': 1, 'IdeoChangeInt': 1, 'AwareIdeo': 1, 'Religion': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'FurtherAttacks': 1, 'AwareIdeo': 1, 'IdeoChangeInt': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Religion': 1, 'FurtherAttacks': 1, 'AwareIdeo': 1, 'Propaganda': 1, 'IdeoChangeInt': 1}
+Accuracy 0.664000
+##############################
+Evidence {'LiveAlone': 1, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 3, 'AwareIdeo': 1, 'RecruitNetGroup': 1}
+Accuracy 0.668000
+##############################
+Evidence {'LiveAlone': 1, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 4, 'RecruitNetGroup': 1, 'Propaganda': 1}
+Accuracy 0.672000
+##############################
+Evidence {'LiveAlone': 1, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 3, 'AwareIdeo': 1, 'RecruitNetGroup': 1, 'Propaganda': 1}
+Accuracy 0.668000
+##############################
+Evidence {'LiveAlone': 1, 'OtherKnowledge': 1, 'IdeoChangeInt': 1, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 4, 'RecruitNetGroup': 1}
+Accuracy 0.664000
+##############################
+Evidence {'IdeoChangeInt': 2, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'RecruitNetGroup': 1, 'Propaganda': 1}
+Accuracy 0.672000
+##############################
+Evidence {'OtherKnowledge': 1, 'IdeoChangeInt': 2, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'RecruitNetGroup': 1}
+Accuracy 0.664000
+##############################
+Evidence {'IdeoChangeInt': 1, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 3, 'AwareIdeo': 1, 'RecruitNetGroup': 1}
+Accuracy 0.676000
+##############################
+Evidence {'LiveAlone': 1, 'OtherKnowledge': 1, 'Religion': 1, 'ReligChangeInt': 4, 'RecruitNetGroup': 1, 'Propaganda': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Religion': 1, 'ReligChangeInt': 4, 'AwareIdeo': 1, 'Propaganda': 1, 'RecruitNetGroup': 1}
+Accuracy 0.664000
+##############################
+Evidence {'OtherKnowledge': 1, 'Legitimise': 1, 'IdeoChangeInt': 1, 'Religion': 1, 'ReligChangeInt': 1, 'RecruitNetGroup': 1}
+Accuracy 0.664000
+##############################
+Evidence {'LiveAlone': 1, 'OtherKnowledge': 1, 'IdeoChangeInt': 1, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 4}
+Accuracy 0.664000
+##############################
+Evidence {'LiveAlone': 1, 'IdeoChangeInt': 2, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 4, 'AwareIdeo': 1}
+Accuracy 0.664000
+##############################
+Evidence {'LiveAlone': 1, 'IdeoChangeInt': 2, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'Propaganda': 1}
+Accuracy 0.664000
+##############################
+Evidence {'LiveAlone': 1, 'IdeoChangeInt': 1, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 3, 'AwareIdeo': 1, 'Propaganda': 1}
+Accuracy 0.676000
+##############################
+Evidence {'LiveAlone': 1, 'IdeoChangeInt': 2, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 4, 'AwareIdeo': 1, 'Propaganda': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'OtherKnowledge': 1, 'Propaganda': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'ReligChangeInt': 4, 'AwareIdeo': 1, 'Propaganda': 1, 'IdeoChangeInt': 1}
+Accuracy 0.672000
+##############################
+Evidence {'IdeoChangeInt': 1, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'AwareIdeo': 1, 'Propaganda': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'OtherKnowledge': 1, 'ReligChangeInt': 1, 'AwareIdeo': 1, 'IdeoChangeInt': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 4, 'OtherKnowledge': 1, 'IdeoChangeInt': 4}
+Accuracy 0.660000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'AwareIdeo': 1, 'IdeoChangeInt': 1}
+Accuracy 0.664000
+##############################
+Evidence {'FurtherAttacks': 1, 'IdeoChangeInt': 1, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'AwareIdeo': 1}
+Accuracy 0.664000
+##############################
+Evidence {'IdeoChangeInt': 2, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 4, 'AwareIdeo': 1, 'Propaganda': 1}
+Accuracy 0.664000
+##############################
+Evidence {'IdeoChangeInt': 3, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'AwareIdeo': 1, 'Propaganda': 1}
+Accuracy 0.676000
+##############################
+Evidence {'IdeoChangeInt': 3, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 3, 'AwareIdeo': 1, 'Propaganda': 1}
+Accuracy 0.672000
+##############################
+Evidence {'FurtherAttacks': 1, 'IdeoChangeInt': 1, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'Propaganda': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Religion': 1, 'ReligChangeInt': 4, 'OtherKnowledge': 1, 'LiveAlone': 1, 'IdeoChangeInt': 4}
+Accuracy 0.660000
+##############################
+Evidence {'LiveAlone': 1, 'IdeoChangeInt': 1, 'Religion': 1, 'ReligChangeInt': 1, 'AwareIdeo': 1, 'Propaganda': 1}
+Accuracy 0.668000
+##############################
+Evidence {'Religion': 1, 'ReligChangeInt': 1, 'FurtherAttacks': 1, 'Propaganda': 1, 'IdeoChangeInt': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Religion': 1, 'ReligChangeInt': 1, 'FurtherAttacks': 1, 'AwareIdeo': 1, 'Propaganda': 1}
+Accuracy 0.664000
+##############################
+Evidence {'OtherKnowledge': 1, 'ReligChangeInt': 4, 'IdeoChangeInt': 1, 'AwareIdeo': 1, 'Religion': 1}
+Accuracy 0.672000
+##############################
+Evidence {'OtherKnowledge': 1, 'IdeoChangeInt': 3, 'Religion': 1, 'ReligChangeInt': 1, 'AwareIdeo': 1, 'Propaganda': 1}
+Accuracy 0.668000
+##############################
+Evidence {'LiveAlone': 1, 'IdeoChangeInt': 1, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 3, 'RecruitNetGroup': 1, 'Propaganda': 1}
+Accuracy 0.668000
+##############################
+Evidence {'LiveAlone': 1, 'IdeoChangeInt': 2, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'AwareIdeo': 1, 'RecruitNetGroup': 1, 'Propaganda': 1}
+Accuracy 0.664000
+##############################
+Evidence {'LiveAlone': 1, 'IdeoChangeInt': 1, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 4, 'AwareIdeo': 1, 'RecruitNetGroup': 1}
+Accuracy 0.672000
+##############################
+Evidence {'IdeoChangeInt': 1, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'AwareIdeo': 1, 'RecruitNetGroup': 1}
+Accuracy 0.688000
+##############################
+Evidence {'IdeoChangeInt': 1, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'AwareIdeo': 1, 'RecruitNetGroup': 1, 'Propaganda': 1}
+Accuracy 0.688000
+##############################
+Evidence {'IdeoChangeInt': 3, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'AwareIdeo': 1, 'RecruitNetGroup': 1, 'Propaganda': 1}
+Accuracy 0.676000
+##############################
+Evidence {'LiveAlone': 1, 'OtherKnowledge': 1, 'Religion': 1, 'ReligChangeInt': 1, 'AwareIdeo': 1, 'RecruitNetGroup': 1}
+Accuracy 0.672000
+##############################
+Evidence {'LiveAlone': 1, 'OtherKnowledge': 1, 'IdeoChangeInt': 1, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 3, 'AwareIdeo': 1}
+Accuracy 0.668000
+##############################
+Evidence {'LiveAlone': 1, 'OtherKnowledge': 1, 'IdeoChangeInt': 2, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'Propaganda': 1}
+Accuracy 0.664000
+##############################
+Evidence {'OtherKnowledge': 1, 'Legitimise': 1, 'IdeoChangeInt': 1, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'Propaganda': 1}
+Accuracy 0.664000
+##############################
+Evidence {'OtherKnowledge': 1, 'IdeoChangeInt': 1, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 3, 'AwareIdeo': 1, 'Propaganda': 1}
+Accuracy 0.668000
+##############################
+Evidence {'FurtherAttacks': 1, 'IdeoChangeInt': 1, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'AwareIdeo': 1}
+Accuracy 0.664000
+##############################
+Evidence {'OtherKnowledge': 1, 'Legitimise': 1, 'IdeoChangeInt': 1, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'Propaganda': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'OtherKnowledge': 1, 'Propaganda': 1, 'LiveAlone': 1, 'IdeoChangeInt': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'OtherKnowledge': 1, 'LiveAlone': 1, 'IdeoChangeInt': 2}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'Legitimise': 1, 'Propaganda': 1, 'IdeoChangeInt': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Ideology': 4, 'Religion': 1, 'OtherKnowledge': 1, 'Propaganda': 1, 'IdeoChangeInt': 2}
+Accuracy 0.664000
+##############################
+Evidence {'OtherKnowledge': 1, 'IdeoChangeInt': 4, 'Ideology': 4, 'Religion': 1, 'AwareIdeo': 1, 'Propaganda': 1}
+Accuracy 0.668000
+##############################
+Evidence {'FurtherAttacks': 1, 'IdeoChangeInt': 1, 'Ideology': 4, 'Religion': 1, 'AwareIdeo': 1, 'Propaganda': 1}
+Accuracy 0.664000
+##############################
+Evidence {'OtherKnowledge': 1, 'IdeoChangeInt': 4, 'AwareIdeo': 1, 'Propaganda': 1, 'Religion': 1}
+Accuracy 0.668000
+##############################
+Evidence {'LiveAlone': 1, 'IdeoChangeInt': 1, 'Ideology': 4, 'Religion': 1, 'AwareIdeo': 1, 'RecruitNetGroup': 1}
+Accuracy 0.680000
+##############################
+Evidence {'OtherKnowledge': 1, 'IdeoChangeInt': 3, 'Ideology': 4, 'Religion': 1, 'RecruitNetGroup': 1, 'Propaganda': 1}
+Accuracy 0.668000
+##############################
+Evidence {'IdeoChangeInt': 1, 'Ideology': 4, 'Religion': 1, 'AwareIdeo': 1, 'RecruitNetGroup': 1, 'Propaganda': 1}
+Accuracy 0.688000
+##############################
+Evidence {'OtherKnowledge': 1, 'IdeoChangeInt': 3, 'Ideology': 4, 'Religion': 1, 'AwareIdeo': 1, 'RecruitNetGroup': 1}
+Accuracy 0.668000
+##############################
+Evidence {'OtherKnowledge': 1, 'IdeoChangeInt': 3, 'Ideology': 4, 'Religion': 1, 'AwareIdeo': 1, 'Propaganda': 1}
+Accuracy 0.676000
+##############################
+Evidence {'LiveAlone': 1, 'IdeoChangeInt': 1, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 3, 'AwareIdeo': 1, 'RecruitNetGroup': 1}
+Accuracy 0.668000
+##############################
+Evidence {'LiveAlone': 1, 'IdeoChangeInt': 1, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'RecruitNetGroup': 1, 'Propaganda': 1}
+Accuracy 0.680000
+##############################
+Evidence {'IdeoChangeInt': 1, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 3, 'AwareIdeo': 1, 'RecruitNetGroup': 1, 'Propaganda': 1}
+Accuracy 0.676000
+##############################
+Evidence {'IdeoChangeInt': 1, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 3, 'AwareIdeo': 1, 'RecruitNetGroup': 1}
+Accuracy 0.676000
+##############################
+Evidence {'OtherKnowledge': 1, 'IdeoChangeInt': 1, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'AwareIdeo': 1, 'RecruitNetGroup': 1}
+Accuracy 0.664000
+##############################
+Evidence {'OtherKnowledge': 1, 'IdeoChangeInt': 1, 'Religion': 1, 'ReligChangeInt': 4, 'AwareIdeo': 1, 'RecruitNetGroup': 1}
+Accuracy 0.672000
+##############################
+Evidence {'OtherKnowledge': 1, 'IdeoChangeInt': 1, 'Religion': 1, 'ReligChangeInt': 4, 'AwareIdeo': 1, 'RecruitNetGroup': 1, 'Propaganda': 1}
+Accuracy 0.672000
+##############################
+Evidence {'LiveAlone': 1, 'IdeoChangeInt': 1, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'AwareIdeo': 1, 'Propaganda': 1}
+Accuracy 0.680000
+##############################
+Evidence {'OtherKnowledge': 1, 'IdeoChangeInt': 3, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 3, 'Propaganda': 1}
+Accuracy 0.664000
+##############################
+Evidence {'IdeoChangeInt': 2, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'AwareIdeo': 1, 'Propaganda': 1}
+Accuracy 0.672000
+##############################
+Evidence {'FurtherAttacks': 1, 'IdeoChangeInt': 1, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'Propaganda': 1}
+Accuracy 0.664000
+##############################
+Evidence {'FurtherAttacks': 1, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'AwareIdeo': 1, 'Propaganda': 1}
+Accuracy 0.664000
+##############################
+Evidence {'FurtherAttacks': 1, 'IdeoChangeInt': 1, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'AwareIdeo': 1}
+Accuracy 0.664000
+##############################
+Evidence {'FurtherAttacks': 1, 'IdeoChangeInt': 1, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'AwareIdeo': 1, 'Propaganda': 1}
+Accuracy 0.664000
+##############################
+Evidence {'LiveAlone': 1, 'IdeoChangeInt': 1, 'Ideology': 4, 'ReligChangeInt': 1, 'AwareIdeo': 1, 'RecruitNetGroup': 1, 'Propaganda': 1}
+Accuracy 0.664000
+##############################
+Evidence {'LiveAlone': 1, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'AwareIdeo': 1, 'RecruitNetGroup': 1, 'Propaganda': 1}
+Accuracy 0.680000
+##############################
+Evidence {'LiveAlone': 1, 'IdeoChangeInt': 3, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'AwareIdeo': 1, 'RecruitNetGroup': 1, 'Propaganda': 1}
+Accuracy 0.668000
+##############################
+Evidence {'Legitimise': 1, 'OtherKnowledge': 1, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'AwareIdeo': 1, 'Propaganda': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Legitimise': 1, 'IdeoChangeInt': 1, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'AwareIdeo': 1, 'Propaganda': 1}
+Accuracy 0.664000
+##############################
+Evidence {'FurtherAttacks': 1, 'IdeoChangeInt': 1, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'AwareIdeo': 1, 'Propaganda': 1}
+Accuracy 0.664000
+##############################
+Evidence {'LiveAlone': 1, 'OtherKnowledge': 1, 'IdeoChangeInt': 1, 'Ideology': 4, 'Religion': 1, 'RecruitNetGroup': 1}
+Accuracy 0.672000
+##############################
+Evidence {'Legitimise': 1, 'OtherKnowledge': 1, 'IdeoChangeInt': 1, 'Religion': 1, 'AwareIdeo': 1, 'RecruitNetGroup': 1, 'Propaganda': 1}
+Accuracy 0.664000
+##############################
+Evidence {'LiveAlone': 1, 'OtherKnowledge': 1, 'IdeoChangeInt': 2, 'Ideology': 4, 'Religion': 1, 'AwareIdeo': 1}
+Accuracy 0.664000
+##############################
+Evidence {'OtherKnowledge': 1, 'Legitimise': 1, 'IdeoChangeInt': 1, 'Ideology': 4, 'Religion': 1, 'Propaganda': 1}
+Accuracy 0.672000
+##############################
+Evidence {'FurtherAttacks': 1, 'IdeoChangeInt': 1, 'Ideology': 4, 'Religion': 1, 'AwareIdeo': 1, 'Propaganda': 1}
+Accuracy 0.664000
+##############################
+Evidence {'LiveAlone': 1, 'IdeoChangeInt': 2, 'Ideology': 4, 'Religion': 1, 'AwareIdeo': 1, 'RecruitNetGroup': 1, 'Propaganda': 1}
+Accuracy 0.664000
+##############################
+Evidence {'OtherKnowledge': 1, 'IdeoChangeInt': 1, 'Ideology': 4, 'Religion': 1, 'AwareIdeo': 1, 'RecruitNetGroup': 1, 'Propaganda': 1}
+Accuracy 0.664000
+##############################
+Evidence {'OtherKnowledge': 1, 'IdeoChangeInt': 4, 'Ideology': 4, 'Religion': 1, 'AwareIdeo': 1, 'RecruitNetGroup': 1, 'Propaganda': 1}
+Accuracy 0.668000
+##############################
+Evidence {'Legitimise': 1, 'OtherKnowledge': 1, 'IdeoChangeInt': 1, 'Ideology': 4, 'Religion': 1, 'AwareIdeo': 1, 'RecruitNetGroup': 1}
+Accuracy 0.664000
+##############################
+Evidence {'LiveAlone': 1, 'IdeoChangeInt': 1, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 4, 'RecruitNetGroup': 1, 'Propaganda': 1}
+Accuracy 0.672000
+##############################
+Evidence {'LiveAlone': 1, 'IdeoChangeInt': 4, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'AwareIdeo': 1, 'RecruitNetGroup': 1}
+Accuracy 0.668000
+##############################
+Evidence {'Legitimise': 1, 'IdeoChangeInt': 1, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'RecruitNetGroup': 1, 'Propaganda': 1}
+Accuracy 0.664000
+##############################
+Evidence {'OtherKnowledge': 1, 'IdeoChangeInt': 1, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'RecruitNetGroup': 1, 'Propaganda': 1}
+Accuracy 0.680000
+##############################
+Evidence {'Legitimise': 1, 'OtherKnowledge': 1, 'IdeoChangeInt': 1, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'AwareIdeo': 1, 'RecruitNetGroup': 1}
+Accuracy 0.664000
+##############################
+Evidence {'LiveAlone': 1, 'OtherKnowledge': 1, 'IdeoChangeInt': 1, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 4, 'Propaganda': 1}
+Accuracy 0.672000
+##############################
+Evidence {'LiveAlone': 1, 'OtherKnowledge': 1, 'IdeoChangeInt': 1, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'AwareIdeo': 1, 'Propaganda': 1}
+Accuracy 0.680000
+##############################
+Evidence {'FurtherAttacks': 1, 'IdeoChangeInt': 1, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'AwareIdeo': 1, 'Propaganda': 1}
+Accuracy 0.664000
+##############################
+Evidence {'LiveAlone': 1, 'IdeoChangeInt': 1, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 4, 'AwareIdeo': 1, 'RecruitNetGroup': 1, 'Propaganda': 1}
+Accuracy 0.672000
+##############################
+Evidence {'LiveAlone': 1, 'OtherKnowledge': 1, 'IdeoChangeInt': 1, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 4, 'AwareIdeo': 1, 'Propaganda': 1}
+Accuracy 0.672000
+##############################
+Evidence {'Legitimise': 1, 'OtherKnowledge': 1, 'IdeoChangeInt': 1, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 1, 'AwareIdeo': 1, 'Propaganda': 1}
+Accuracy 0.664000
+##############################
+Evidence {'LiveAlone': 1, 'IdeoChangeInt': 1, 'Ideology': 4, 'Religion': 1, 'AwareIdeo': 1, 'RecruitNetGroup': 1, 'Propaganda': 1}
+Accuracy 0.680000
+##############################
+Evidence {'Legitimise': 1, 'OtherKnowledge': 1, 'IdeoChangeInt': 1, 'Ideology': 4, 'Religion': 1, 'RecruitNetGroup': 1, 'Propaganda': 1}
+Accuracy 0.664000
+##############################
+Evidence {'Legitimise': 1, 'OtherKnowledge': 1, 'IdeoChangeInt': 1, 'Ideology': 4, 'Religion': 1, 'AwareIdeo': 1, 'RecruitNetGroup': 1}
+Accuracy 0.664000
+##############################
+Evidence {'LiveAlone': 1, 'IdeoChangeInt': 1, 'Ideology': 4, 'Religion': 1, 'ReligChangeInt': 3, 'AwareIdeo': 1, 'RecruitNetGroup': 1, 'Propaganda': 1}
+Accuracy 0.668000

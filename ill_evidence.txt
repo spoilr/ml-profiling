@@ -1,0 +1,4 @@
+
+##############################
+Evidence {'AwareGriev': 1, 'Isolated': 1}
+Accuracy 0.668421

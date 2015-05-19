@@ -9,6 +9,8 @@ from join_tree import *
 from urllib import urlopen
 from urllib import urlencode
 import json
+import operator
+from collections import OrderedDict
 from copy import deepcopy
 
 import sys
@@ -118,7 +120,6 @@ def create_evidence(submit):
 	return evidence, encoded_evidence
 
 def create_inference(json_inf):
-	print 'coding'
 	inference = dict()
 	for key, values in json_inf.iteritems():
 		if key in inv_explanatory_data:
@@ -135,6 +136,8 @@ def create_inference(json_inf):
 					temp["yes"] = v
 			inference[key] = temp
 
+	for key, values in inference.iteritems():
+		inference[key] = OrderedDict(sorted(values.items(), key=operator.itemgetter(1), reverse=True))
 	return inference
 
 def ev_inf(evidence, encoded_evidence, theme, network):

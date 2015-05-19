@@ -34,6 +34,7 @@
               <td>Values</td>
               <td>Evidence</td>
               <td>Inference</td>
+              <td>Distribution</td>
             </tr>
             {% for key, value in categs.iteritems() %}
             <tr>
@@ -59,10 +60,13 @@
               </td>
               <td>
                 {% if inference is not none %}
-                  {{ inference[key] }}
+                  {{ inference[key].items()[0] }}
                 {% else %}
                   n/a
                 {%endif %}
+              </td>
+              <td>
+                <button type="submit" class="distribution">View</button>
               </td>
             </tr>
             {% endfor %}
@@ -74,9 +78,17 @@
             <option>Threshold 0.8</option>
             <option>Threshold 0.9</option>
           </select>
-
         </form>
       </div>  
+      <div id="pie">
+        <script src={{ url_for('static', filename='js/jquery.js') }}></script>
+        <script src={{ url_for('static', filename='js/highcharts.js') }}></script>
+        <script src={{ url_for('static', filename='js/exporting.js') }}></script>
+        <script src={{ url_for('static', filename='js/pie_chart.js') }}></script>
+        <script type="text/javascript">
+          pie_chart({{ inference|tojson }}, null);
+        </script>
+      </div> 
       <div class="graph">
         <script src={{ url_for('static', filename='js/d3.js') }}></script>
         <script src={{ url_for('static', filename='js/jquery.js') }}></script>
