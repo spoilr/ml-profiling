@@ -1,3 +1,6 @@
+''' Check only connected nodes as there are disconnected nodes too, but which can then be connected using expert knowledge'''
+
+
 import sys
 sys.path.insert(0, 'utils/')
 sys.path.insert(0, 'bayes/')
@@ -41,9 +44,10 @@ def inference_accuracy(dataset, nodes, features, inf):
 def inference_accuracy_for_instance(nodes, features, inference, instance):
 	nrs = 0
 	for key, (val, prob) in inference.iteritems():
-		index = features.index(key)
-		if instance[index] == int(val):
-			nrs+=1
+		if key in nodes:
+			index = features.index(key)
+			if instance[index] == int(val):
+				nrs+=1
 
 	accuracy = float(nrs)/len(nodes)
 	# print 'Accuracy ' + str(accuracy)
@@ -110,6 +114,14 @@ def save_evidence(file_name, accuracy, evidence):
 	with open(file_name, "a") as myfile:	
 		myfile.write('\nAccuracy %f' % accuracy)
 
+def get_connected_nodes(bn):
+	connected_nodes = []
+	vdata = bn.Vdata
+	for node in vdata:
+		if vdata[node]['parents'] or vdata[node]['children']:
+			connected_nodes.append(node)
+	return connected_nodes		
+
 def propagate_evidence(bn, possible_evidence, features, file_name):
 	combinations_possible_evidence = create_combinations_evidence(possible_evidence)
 	for x in combinations_possible_evidence:
@@ -120,7 +132,9 @@ def propagate_evidence(bn, possible_evidence, features, file_name):
 				inf = likelihood_from_inference(inf)
 				# print inf
 
-				accuracy = inference_accuracy(dataset, bn.V, features, inf)
+				nodes = get_connected_nodes(bn)
+				print '\nConnected nodes ' + str(nodes)
+				accuracy = inference_accuracy(dataset, nodes, features, inf)
 
 				if accuracy >= 0.66:
 					save_evidence(file_name, accuracy, evidence)

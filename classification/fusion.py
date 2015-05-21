@@ -21,6 +21,133 @@ NR_THEMES = 3
 themes = ['net', 'ill', 'ideo']
 NR_FOLDS = 10
 
+def cv10_ensemble(known_dataset, known_targets, known_dataset_scaled, dt, knn, svm, fusion_algorithm, ids, prt=False, file_name=None):
+	error_rates = 0
+	hp_rates = 0
+	hr_rates = 0
+	hf_rates = 0
+	cp_rates = 0
+	cr_rates = 0
+	cf_rates = 0
+	for i in range(NR_FOLDS):
+		error, hp, hr, hf, cp, cr, cf = cross_validation_ensemble(known_dataset, known_targets, known_dataset_scaled, dt, knn, svm, fusion_algorithm, ids, prt, file_name)
+		error_rates += error
+		
+		hp_rates += hp
+		hr_rates += hr
+		hf_rates += hf
+		cp_rates += cp
+		cr_rates += cr
+		cf_rates += cf
+
+	if prt and (float(error_rates) / NR_FOLDS) <= 0.5:
+		save_output(file_name, error_rates, hp_rates, hr_rates, hf_rates, cp_rates, cr_rates, cf_rates, NR_FOLDS)	
+
+	print 'Final error %f' % (float(error_rates) / NR_FOLDS)
+	print 'Final accuracy %f' % (1 - (float(error_rates) / NR_FOLDS))
+
+	print 'Highval precision %f' % (float(hp_rates) / NR_FOLDS)
+	print 'Highval recall %f' % (float(hr_rates) / NR_FOLDS)
+	print 'Highval f1 %f' % (float(hf_rates) / NR_FOLDS)
+	print 'Civil precision %f' % (float(cp_rates) / NR_FOLDS)
+	print 'Civil recall %f' % (float(cr_rates) / NR_FOLDS)
+	print 'Civil f1 %f' % (float(cf_rates) / NR_FOLDS)	
+
+def cross_validation_ensemble(known_dataset, known_targets, known_dataset_scaled, dt, knn, svm, fusion_algorithm, ids, prt=False, file_name=None):
+	kf = StratifiedKFold(known_targets, n_folds=NR_FOLDS, shuffle=True)
+	f1_scores = 0
+	error_rates = 0
+	hp_rates = 0
+	hr_rates = 0
+	hf_rates = 0
+	cp_rates = 0
+	cr_rates = 0
+	cf_rates = 0
+	# cross validation
+	for train_index, test_index in kf:
+		# print len(test_index)
+		# train_index = np.concatenate((train_index, inds), axis=0)
+		error, f1, mis_ids, (hp, hr, hf), (cp, cr, cf) = fusion_outputs_ensemble(known_dataset, known_targets, known_dataset_scaled, dt, knn, svm, fusion_algorithm, train_index, test_index, ids)
+		
+		f1_scores += f1
+		error_rates += error
+		
+		hp_rates += hp
+		hr_rates += hr
+		hf_rates += hf
+		cp_rates += cp
+		cr_rates += cr
+		cf_rates += cf
+
+	return (float(error_rates) / kf.n_folds), (float(hp_rates) / kf.n_folds), (float(hr_rates) / kf.n_folds), (float(hf_rates) / kf.n_folds), (float(cp_rates) / kf.n_folds), (float(cr_rates) / kf.n_folds), (float(cf_rates) / kf.n_folds)	
+
+def fusion_outputs_ensemble(known_dataset, known_targets, known_dataset_scaled, dt, knn, svm, fusion_algorithm, train_index, test_index, ids):
+	misclassified_ids = []
+	combined_predictions = []
+	y_test = []
+
+	if fusion_algorithm == 'maj':
+		predictions, y_test, accuracies, misclassified_ids = combine_predictions_one_fold_using_majority(known_dataset, known_targets, train_index, test_index, ids, dt, ind=False)
+		combined_predictions_dt = majority_vote(predictions, y_test, accuracies)
+		predictions, y_test, accuracies, misclassified_ids = combine_predictions_one_fold_using_majority(known_dataset_scaled, known_targets, train_index, test_index, ids, knn, ind=False)
+		combined_predictions_knn = majority_vote(predictions, y_test, accuracies)
+		predictions, y_test, accuracies, misclassified_ids = combine_predictions_one_fold_using_majority(known_dataset_scaled, known_targets, train_index, test_index, ids, svm, ind=True)
+		combined_predictions_svm = majority_vote(predictions, y_test, accuracies)
+
+		combined_predictions = []
+		assert len(combined_predictions_dt) == len(combined_predictions_knn)
+		assert len(combined_predictions_dt) == len(combined_predictions_svm)
+
+		for i in range(len(combined_predictions_dt)):
+			data = Counter([combined_predictions_dt[i], combined_predictions_knn[i], combined_predictions_svm[i]])
+			combined_predictions.append(data.most_common(1)[0][0])
+
+	elif fusion_algorithm == 'wmaj':
+		predictions, y_test, accuracies, misclassified_ids = combine_predictions_one_fold_using_majority(known_dataset, known_targets, train_index, test_index, ids, dt, ind=False)
+		combined_predictions_dt, weights = weighted_majority(predictions, y_test)
+		predictions, y_test, accuracies, misclassified_ids = combine_predictions_one_fold_using_majority(known_dataset_scaled, known_targets, train_index, test_index, ids, knn, ind=False)
+		combined_predictions_knn, weights = weighted_majority(predictions, y_test)
+		predictions, y_test, accuracies, misclassified_ids = combine_predictions_one_fold_using_majority(known_dataset_scaled, known_targets, train_index, test_index, ids, svm, ind=True)
+		combined_predictions_svm, weights = weighted_majority(predictions, y_test)
+
+		combined_predictions = []
+		assert len(combined_predictions_dt) == len(combined_predictions_knn)
+		assert len(combined_predictions_dt) == len(combined_predictions_svm)
+
+		for i in range(len(combined_predictions_dt)):
+			data = Counter([combined_predictions_dt[i], combined_predictions_knn[i], combined_predictions_svm[i]])
+			combined_predictions.append(data.most_common(1)[0][0])
+
+	elif fusion_algorithm == 'svm':
+		y_test, predictions, combined_predictions_dt, misclassified_ids = svm_fusion(known_dataset, known_targets, train_index, test_index, ids, dt, ind=False)
+		y_test, predictions, combined_predictions_knn, misclassified_ids = svm_fusion(known_dataset_scaled, known_targets, train_index, test_index, ids, knn, ind=False)
+		y_test, predictions, combined_predictions_svm, misclassified_ids = svm_fusion(known_dataset_scaled, known_targets, train_index, test_index, ids, svm, ind=True)
+
+		combined_predictions = []
+		assert len(combined_predictions_dt) == len(combined_predictions_knn)
+		assert len(combined_predictions_dt) == len(combined_predictions_svm)
+
+		for i in range(len(combined_predictions_dt)):
+			data = Counter([combined_predictions_dt[i], combined_predictions_knn[i], combined_predictions_svm[i]])
+			combined_predictions.append(data.most_common(1)[0][0])
+
+	elif fusion_algorithm == 'nn':
+		print 'not done'
+	else:
+		print 'Error parsing algorithm'
+
+	# print '###############'
+	# print 'Y_PRED %s' % str(predictions)
+	# print 'Y_TEST %s' % str(y_test)
+	# print 'COMBINED %s' % str(combined_predictions)
+	# print '###############'
+
+	(hp, hr, hf), (cp, cr, cf) = measures(y_test, combined_predictions)
+
+	error = (float(sum((combined_predictions - y_test)**2)) / len(y_test))
+	f1 = f1_score(combined_predictions, y_test)
+	return error, f1, misclassified_ids, (hp, hr, hf), (cp, cr, cf)
+
 def cv10(known_dataset, known_targets, fusion_algorithm, ids, algorithm, prt=False, file_name=None, ind=False):
 	error_rates = 0
 	hp_rates = 0

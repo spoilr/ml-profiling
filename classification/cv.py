@@ -5,6 +5,7 @@ from binary_classification_measures import measures
 from misclassified_ids import *
 from svms import svm_selected_vars
 from svms import svm_all_vars
+from collections import Counter
 
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.neighbors import KNeighborsClassifier
@@ -13,6 +14,88 @@ from sklearn.cross_validation import StratifiedKFold
 from sklearn.metrics import f1_score
 
 NR_FOLDS = 10
+
+def cv10_ensemble(known_dataset, known_targets, known_dataset_scaled, dt, knn, svm, prt=False, file_name=None):
+	error_rates = 0
+	hp_rates = 0
+	hr_rates = 0
+	hf_rates = 0
+	cp_rates = 0
+	cr_rates = 0
+	cf_rates = 0
+	for i in range(NR_FOLDS):
+		error, hp, hr, hf, cp, cr, cf = cross_validation_ensemble(known_dataset, known_targets, known_dataset_scaled, dt, knn, svm)
+		error_rates += error
+		
+		hp_rates += hp
+		hr_rates += hr
+		hf_rates += hf
+		cp_rates += cp
+		cr_rates += cr
+		cf_rates += cf
+
+	if prt and (float(error_rates) / NR_FOLDS) <= 0.5:
+		save_output(file_name, error_rates, hp_rates, hr_rates, hf_rates, cp_rates, cr_rates, cf_rates, NR_FOLDS)	
+
+	print 'Final error %f' % (float(error_rates) / NR_FOLDS)
+	print 'Final accuracy %f' % (1 - (float(error_rates) / NR_FOLDS))
+
+	print 'Highval precision %f' % (float(hp_rates) / NR_FOLDS)
+	print 'Highval recall %f' % (float(hr_rates) / NR_FOLDS)
+	print 'Highval f1 %f' % (float(hf_rates) / NR_FOLDS)
+	print 'Civil precision %f' % (float(cp_rates) / NR_FOLDS)
+	print 'Civil recall %f' % (float(cr_rates) / NR_FOLDS)
+	print 'Civil f1 %f' % (float(cf_rates) / NR_FOLDS)	
+
+def cross_validation_ensemble(known_dataset, known_targets, known_dataset_scaled, dt, knn, svm):
+	kf = StratifiedKFold(known_targets, n_folds=NR_FOLDS, shuffle=True)
+	f1_scores = 0
+	error_rates = 0
+	hp_rates = 0
+	hr_rates = 0
+	hf_rates = 0
+	cp_rates = 0
+	cr_rates = 0
+	cf_rates = 0
+	for train_index, test_index in kf:
+		X_train, X_test = known_dataset[train_index], known_dataset[test_index]
+		X_train_scaled, X_test_scaled = known_dataset_scaled[train_index], known_dataset_scaled[test_index]
+		y_train, y_test = known_targets[train_index], known_targets[test_index]
+
+		error_rate, f1, (hp, hr, hf), (cp, cr, cf) = ensemble_one_fold_measures(X_train, X_test, X_train_scaled, X_test_scaled, y_train, y_test, dt, knn, svm)
+		f1_scores += f1
+		error_rates += error_rate
+
+		hp_rates += hp
+		hr_rates += hr
+		hf_rates += hf
+		cp_rates += cp
+		cr_rates += cr
+		cf_rates += cf
+
+	return (float(error_rates) / kf.n_folds), (float(hp_rates) / kf.n_folds), (float(hr_rates) / kf.n_folds), (float(hf_rates) / kf.n_folds), (float(cp_rates) / kf.n_folds), (float(cr_rates) / kf.n_folds), (float(cf_rates) / kf.n_folds)	
+
+def ensemble_one_fold_measures(X_train, X_test, X_train_scaled, X_test_scaled, y_train, y_test, dt, knn, svm):
+	model_dt = dt(X_train, y_train)
+	y_pred_dt = model_dt.predict(X_test)
+	model_knn = knn(X_train_scaled, y_train)
+	y_pred_knn = model_knn.predict(X_test)
+	model_svm = svm(X_train_scaled, y_train)
+	y_pred_svm = model_svm.predict(X_test)
+
+	y_pred = []
+	assert len(y_pred_dt) == len(y_pred_knn)
+	assert len(y_pred_dt) == len(y_pred_svm)
+
+	for i in range(len(y_pred_dt)):
+		data = Counter([y_pred_dt[i], y_pred_knn[i], y_pred_svm[i]])
+		y_pred.append(data.most_common(1)[0][0])
+
+	error_rate = (float(sum((y_pred - y_test)**2)) / len(y_test))
+	f1 = f1_score(y_test, y_pred)		
+	(hp, hr, hf), (cp, cr, cf) = measures(y_test, y_pred)
+	return error_rate, f1, (hp, hr, hf), (cp, cr, cf)	
+
 
 def cv10(known_dataset, known_targets, ids, one_fold_measures, prt=False, file_name=None):
 	error_rates = 0
