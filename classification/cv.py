@@ -79,9 +79,9 @@ def ensemble_one_fold_measures(X_train, X_test, X_train_scaled, X_test_scaled, y
 	model_dt = dt(X_train, y_train)
 	y_pred_dt = model_dt.predict(X_test)
 	model_knn = knn(X_train_scaled, y_train)
-	y_pred_knn = model_knn.predict(X_test)
+	y_pred_knn = model_knn.predict(X_test_scaled)
 	model_svm = svm(X_train_scaled, y_train)
-	y_pred_svm = model_svm.predict(X_test)
+	y_pred_svm = model_svm.predict(X_test_scaled)
 
 	y_pred = []
 	assert len(y_pred_dt) == len(y_pred_knn)
