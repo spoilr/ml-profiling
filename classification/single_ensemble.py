@@ -33,7 +33,8 @@ if __name__ == "__main__":
 		std = StandardizedData(targets, dataset)
 		known_dataset_scaled, known_targets = std.split_and_standardize_dataset()
 
-		cv10_ensemble(np.array(known_dataset), np.array(known_targets), known_dataset_scaled, dt, knn, svm_all_vars)
+		for i in range(100):
+			cv10_ensemble(np.array(known_dataset), np.array(known_targets), known_dataset_scaled, dt, knn, svm_all_vars, prt=True, file_name="single_ensemble.txt")
 		
 	except IndexError:
 		print "Error!! Pass 'all' as argument"

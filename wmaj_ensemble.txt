@@ -1,0 +1,10 @@
+##############################
+
+Final error 0.188409
+Final accuracy 0.811591
+Highval precision 0.778877
+Highval recall 0.876000
+Highval f1 0.813767
+Civil precision 0.886063
+Civil recall 0.756190
+Civil f1 0.804227

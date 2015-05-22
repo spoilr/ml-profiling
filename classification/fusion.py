@@ -40,7 +40,7 @@ def cv10_ensemble(known_dataset, known_targets, known_dataset_scaled, dt, knn, s
 		cr_rates += cr
 		cf_rates += cf
 
-	if prt and (float(error_rates) / NR_FOLDS) <= 0.5:
+	if prt and (float(error_rates) / NR_FOLDS) <= 0.4:
 		save_output(file_name, error_rates, hp_rates, hr_rates, hf_rates, cp_rates, cr_rates, cf_rates, NR_FOLDS)	
 
 	print 'Final error %f' % (float(error_rates) / NR_FOLDS)

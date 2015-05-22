@@ -33,7 +33,8 @@ if __name__ == "__main__":
 		std = StandardizedData(targets, dataset)
 		known_dataset_scaled, known_targets = std.split_and_standardize_dataset()
 
-		feature_selection_before_ensemble(features, targets, dataset, CV_PERCENTAGE_OCCURENCE_THRESHOLD, dt, knn, svm_selected_vars)
+		for i in range(100):
+			feature_selection_before_ensemble(features, targets, dataset, CV_PERCENTAGE_OCCURENCE_THRESHOLD, dt, knn, svm_selected_vars, prt=True, file_name="single_ensemble_ft.txt")
 		
 	except IndexError:
 		print "Error!! Pass 'all' as argument"

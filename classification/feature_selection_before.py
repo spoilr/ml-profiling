@@ -26,7 +26,7 @@ def feature_selection_before_ensemble(features, targets, dataset, percentage, dt
 	std = StandardizedData(known_targets, known_dataset)
 	known_dataset_scaled, known_targets = std.split_and_standardize_dataset()  
 
-	cv10_ensemble(np.array(known_dataset), np.array(known_targets), known_dataset_scaled, dt, knn, svm)
+	cv10_ensemble(np.array(known_dataset), np.array(known_targets), known_dataset_scaled, dt, knn, svm, prt, file_name)
 
 	print '####### FEATURES ####### %d \n %s' % (len(selected_features), str(selected_features))
 

@@ -27,4 +27,6 @@ if __name__ == "__main__":
 	std = StandardizedData(targets)
 	dataset_scaled, targets = std.thematic_split_and_standardize_dataset() 
 
-	cv10_ensemble(dataset, targets, dataset_scaled, dt, knn, svm_for_features_fusion, fusion_algorithm, ids, prt=False, file_name=None)
+	file_name = fusion_algorithm + "_ensemble.txt"
+	for i in range(100):
+		cv10_ensemble(dataset, targets, dataset_scaled, dt, knn, svm_for_features_fusion, fusion_algorithm, ids, prt=True, file_name=file_name)

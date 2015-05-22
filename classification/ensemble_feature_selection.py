@@ -28,4 +28,6 @@ if __name__ == "__main__":
 	std = StandardizedData(targets)
 	combined_dataset_scaled = std.standardize_dataset(combined_dataset)  
 	
-	cv10_ensemble(combined_dataset, targets, combined_dataset_scaled, dt, knn, svm_selected_for_features_fusion, fusion_algorithm, ids, prt=False, file_name=None)
+	file_name = fusion_algorithm + "_ensemble_ft.txt"
+	for i in range(100):
+		cv10_ensemble(combined_dataset, targets, combined_dataset_scaled, dt, knn, svm_selected_for_features_fusion, fusion_algorithm, ids, prt=True, file_name=file_name)

@@ -1,0 +1,581 @@
+
+##############################
+
+Final error 0.275816
+Final accuracy 0.724184
+Highval precision 0.770940
+Highval recall 0.593667
+Highval f1 0.652032
+Civil precision 0.715478
+Civil recall 0.838333
+Civil f1 0.764278
+##############################
+
+Final error 0.272873
+Final accuracy 0.727127
+Highval precision 0.792726
+Highval recall 0.597333
+Highval f1 0.656484
+Civil precision 0.717032
+Civil recall 0.839762
+Civil f1 0.765166
+##############################
+
+Final error 0.270618
+Final accuracy 0.729382
+Highval precision 0.795567
+Highval recall 0.605333
+Highval f1 0.659898
+Civil precision 0.722565
+Civil recall 0.838571
+Civil f1 0.766950
+##############################
+
+Final error 0.274283
+Final accuracy 0.725717
+Highval precision 0.764571
+Highval recall 0.609333
+Highval f1 0.660530
+Civil precision 0.720532
+Civil recall 0.827857
+Civil f1 0.761315
+##############################
+
+Final error 0.273438
+Final accuracy 0.726562
+Highval precision 0.770417
+Highval recall 0.627333
+Highval f1 0.671687
+Civil precision 0.730249
+Civil recall 0.812143
+Civil f1 0.756953
+##############################
+
+Final error 0.266585
+Final accuracy 0.733415
+Highval precision 0.780464
+Highval recall 0.613333
+Highval f1 0.668784
+Civil precision 0.725118
+Civil recall 0.837857
+Civil f1 0.769431
+##############################
+
+Final error 0.279895
+Final accuracy 0.720105
+Highval precision 0.757929
+Highval recall 0.595000
+Highval f1 0.643215
+Civil precision 0.720678
+Civil recall 0.830000
+Civil f1 0.759530
+##############################
+
+Final error 0.273730
+Final accuracy 0.726270
+Highval precision 0.774226
+Highval recall 0.616333
+Highval f1 0.667355
+Civil precision 0.720587
+Civil recall 0.821905
+Civil f1 0.760127
+##############################
+
+Final error 0.266684
+Final accuracy 0.733316
+Highval precision 0.782988
+Highval recall 0.600333
+Highval f1 0.658711
+Civil precision 0.724135
+Civil recall 0.850952
+Civil f1 0.773244
+##############################
+
+Final error 0.276894
+Final accuracy 0.723106
+Highval precision 0.772337
+Highval recall 0.603667
+Highval f1 0.652066
+Civil precision 0.723650
+Civil recall 0.830000
+Civil f1 0.760622
+##############################
+
+Final error 0.272692
+Final accuracy 0.727308
+Highval precision 0.796476
+Highval recall 0.592000
+Highval f1 0.657036
+Civil precision 0.713614
+Civil recall 0.845476
+Civil f1 0.766639
+##############################
+
+Final error 0.268555
+Final accuracy 0.731445
+Highval precision 0.784440
+Highval recall 0.614333
+Highval f1 0.665830
+Civil precision 0.729633
+Civil recall 0.835000
+Civil f1 0.768342
+##############################
+
+Final error 0.262057
+Final accuracy 0.737943
+Highval precision 0.798298
+Highval recall 0.624000
+Highval f1 0.672495
+Civil precision 0.738154
+Civil recall 0.839762
+Civil f1 0.773386
+##############################
+
+Final error 0.265140
+Final accuracy 0.734860
+Highval precision 0.801071
+Highval recall 0.612333
+Highval f1 0.671303
+Civil precision 0.724734
+Civil recall 0.843571
+Civil f1 0.771385
+##############################
+
+Final error 0.272360
+Final accuracy 0.727640
+Highval precision 0.777270
+Highval recall 0.609000
+Highval f1 0.658136
+Civil precision 0.729231
+Civil recall 0.831190
+Civil f1 0.763349
+##############################
+
+Final error 0.276597
+Final accuracy 0.723403
+Highval precision 0.766024
+Highval recall 0.602667
+Highval f1 0.655563
+Civil precision 0.718181
+Civil recall 0.829524
+Civil f1 0.760462
+##############################
+
+Final error 0.271259
+Final accuracy 0.728741
+Highval precision 0.764905
+Highval recall 0.620333
+Highval f1 0.663850
+Civil precision 0.729487
+Civil recall 0.824048
+Civil f1 0.763194
+##############################
+
+Final error 0.278438
+Final accuracy 0.721562
+Highval precision 0.769524
+Highval recall 0.608667
+Highval f1 0.657585
+Civil precision 0.719237
+Civil recall 0.820238
+Civil f1 0.757222
+##############################
+
+Final error 0.279790
+Final accuracy 0.720210
+Highval precision 0.771000
+Highval recall 0.598667
+Highval f1 0.653338
+Civil precision 0.713952
+Civil recall 0.825714
+Civil f1 0.757442
+##############################
+
+Final error 0.262704
+Final accuracy 0.737296
+Highval precision 0.791750
+Highval recall 0.619667
+Highval f1 0.673378
+Civil precision 0.731597
+Civil recall 0.838810
+Civil f1 0.773025
+##############################
+
+Final error 0.295775
+Final accuracy 0.704225
+Highval precision 0.744675
+Highval recall 0.573333
+Highval f1 0.624338
+Civil precision 0.704489
+Civil recall 0.818095
+Civil f1 0.746058
+##############################
+
+Final error 0.275746
+Final accuracy 0.724254
+Highval precision 0.765583
+Highval recall 0.604667
+Highval f1 0.654013
+Civil precision 0.720156
+Civil recall 0.827381
+Civil f1 0.761715
+##############################
+
+Final error 0.269761
+Final accuracy 0.730239
+Highval precision 0.768746
+Highval recall 0.628333
+Highval f1 0.671871
+Civil precision 0.731506
+Civil recall 0.819286
+Civil f1 0.762123
+##############################
+
+Final error 0.273362
+Final accuracy 0.726638
+Highval precision 0.768381
+Highval recall 0.620000
+Highval f1 0.660261
+Civil precision 0.732115
+Civil recall 0.820476
+Civil f1 0.763575
+##############################
+
+Final error 0.269977
+Final accuracy 0.730023
+Highval precision 0.786869
+Highval recall 0.602667
+Highval f1 0.660666
+Civil precision 0.724260
+Civil recall 0.841190
+Civil f1 0.767960
+##############################
+
+Final error 0.270425
+Final accuracy 0.729575
+Highval precision 0.769405
+Highval recall 0.604667
+Highval f1 0.660517
+Civil precision 0.720873
+Civil recall 0.838571
+Civil f1 0.768316
+##############################
+
+Final error 0.278048
+Final accuracy 0.721952
+Highval precision 0.764417
+Highval recall 0.605000
+Highval f1 0.658221
+Civil precision 0.716449
+Civil recall 0.825476
+Civil f1 0.759765
+##############################
+
+Final error 0.273939
+Final accuracy 0.726061
+Highval precision 0.772329
+Highval recall 0.605667
+Highval f1 0.658416
+Civil precision 0.723509
+Civil recall 0.831667
+Civil f1 0.763176
+##############################
+
+Final error 0.273467
+Final accuracy 0.726533
+Highval precision 0.769377
+Highval recall 0.618000
+Highval f1 0.663781
+Civil precision 0.726812
+Civil recall 0.820476
+Civil f1 0.761327
+##############################
+
+Final error 0.278228
+Final accuracy 0.721772
+Highval precision 0.773853
+Highval recall 0.598000
+Highval f1 0.653713
+Civil precision 0.715526
+Civil recall 0.830000
+Civil f1 0.759566
+##############################
+
+Final error 0.271929
+Final accuracy 0.728071
+Highval precision 0.797107
+Highval recall 0.594667
+Highval f1 0.657167
+Civil precision 0.717689
+Civil recall 0.843810
+Civil f1 0.766870
+##############################
+
+Final error 0.269376
+Final accuracy 0.730624
+Highval precision 0.777143
+Highval recall 0.605000
+Highval f1 0.656863
+Civil precision 0.726668
+Civil recall 0.841667
+Civil f1 0.770367
+##############################
+
+Final error 0.273368
+Final accuracy 0.726632
+Highval precision 0.768357
+Highval recall 0.614333
+Highval f1 0.658598
+Civil precision 0.728878
+Civil recall 0.827381
+Civil f1 0.763148
+##############################
+
+Final error 0.270641
+Final accuracy 0.729359
+Highval precision 0.785726
+Highval recall 0.605000
+Highval f1 0.660927
+Civil precision 0.723280
+Civil recall 0.838571
+Civil f1 0.767578
+##############################
+
+Final error 0.267972
+Final accuracy 0.732028
+Highval precision 0.788655
+Highval recall 0.610667
+Highval f1 0.673042
+Civil precision 0.717788
+Civil recall 0.838095
+Civil f1 0.767060
+##############################
+
+Final error 0.299790
+Final accuracy 0.700210
+Highval precision 0.737817
+Highval recall 0.577667
+Highval f1 0.624606
+Civil precision 0.701530
+Civil recall 0.807857
+Civil f1 0.739542
+##############################
+
+Final error 0.293223
+Final accuracy 0.706777
+Highval precision 0.766060
+Highval recall 0.559333
+Highval f1 0.624571
+Civil precision 0.696160
+Civil recall 0.835714
+Civil f1 0.751426
+##############################
+
+Final error 0.275676
+Final accuracy 0.724324
+Highval precision 0.780817
+Highval recall 0.592333
+Highval f1 0.651218
+Civil precision 0.716056
+Civil recall 0.839048
+Civil f1 0.763098
+##############################
+
+Final error 0.278642
+Final accuracy 0.721358
+Highval precision 0.773440
+Highval recall 0.597333
+Highval f1 0.652188
+Civil precision 0.715698
+Civil recall 0.829762
+Civil f1 0.760020
+##############################
+
+Final error 0.272809
+Final accuracy 0.727191
+Highval precision 0.781786
+Highval recall 0.614000
+Highval f1 0.661190
+Civil precision 0.727996
+Civil recall 0.827381
+Civil f1 0.760052
+##############################
+
+Final error 0.270857
+Final accuracy 0.729143
+Highval precision 0.776583
+Highval recall 0.609667
+Highval f1 0.660485
+Civil precision 0.727228
+Civil recall 0.833333
+Civil f1 0.767125
+##############################
+
+Final error 0.274079
+Final accuracy 0.725921
+Highval precision 0.781667
+Highval recall 0.597000
+Highval f1 0.651093
+Civil precision 0.722709
+Civil recall 0.838333
+Civil f1 0.764995
+##############################
+
+Final error 0.277145
+Final accuracy 0.722855
+Highval precision 0.775984
+Highval recall 0.626333
+Highval f1 0.668395
+Civil precision 0.727224
+Civil recall 0.810238
+Civil f1 0.753452
+##############################
+
+Final error 0.267797
+Final accuracy 0.732203
+Highval precision 0.795321
+Highval recall 0.603667
+Highval f1 0.659620
+Civil precision 0.724794
+Civil recall 0.845476
+Civil f1 0.770369
+##############################
+
+Final error 0.273089
+Final accuracy 0.726911
+Highval precision 0.775226
+Highval recall 0.604000
+Highval f1 0.653678
+Civil precision 0.723794
+Civil recall 0.834286
+Civil f1 0.765670
+##############################
+
+Final error 0.292669
+Final accuracy 0.707331
+Highval precision 0.742468
+Highval recall 0.579667
+Highval f1 0.625754
+Civil precision 0.709470
+Civil recall 0.817619
+Civil f1 0.748272
+##############################
+
+Final error 0.277593
+Final accuracy 0.722407
+Highval precision 0.771417
+Highval recall 0.603667
+Highval f1 0.659618
+Civil precision 0.714579
+Civil recall 0.826667
+Civil f1 0.758999
+##############################
+
+Final error 0.262343
+Final accuracy 0.737657
+Highval precision 0.785238
+Highval recall 0.625667
+Highval f1 0.675816
+Civil precision 0.733729
+Civil recall 0.835238
+Civil f1 0.772782
+##############################
+
+Final error 0.276340
+Final accuracy 0.723660
+Highval precision 0.775643
+Highval recall 0.607333
+Highval f1 0.656713
+Civil precision 0.722279
+Civil recall 0.826429
+Civil f1 0.760398
+##############################
+
+Final error 0.279633
+Final accuracy 0.720367
+Highval precision 0.756571
+Highval recall 0.584667
+Highval f1 0.640543
+Civil precision 0.712173
+Civil recall 0.838333
+Civil f1 0.762898
+##############################
+
+Final error 0.265221
+Final accuracy 0.734779
+Highval precision 0.792738
+Highval recall 0.599000
+Highval f1 0.657573
+Civil precision 0.726858
+Civil recall 0.852143
+Civil f1 0.775326
+##############################
+
+Final error 0.272908
+Final accuracy 0.727092
+Highval precision 0.774488
+Highval recall 0.593333
+Highval f1 0.653431
+Civil precision 0.718113
+Civil recall 0.844762
+Civil f1 0.768214
+##############################
+
+Final error 0.296847
+Final accuracy 0.703153
+Highval precision 0.755794
+Highval recall 0.576000
+Highval f1 0.627425
+Civil precision 0.701303
+Civil recall 0.814524
+Civil f1 0.742573
+##############################
+
+Final error 0.271667
+Final accuracy 0.728333
+Highval precision 0.776444
+Highval recall 0.616000
+Highval f1 0.662452
+Civil precision 0.727675
+Civil recall 0.826190
+Civil f1 0.762881
+##############################
+
+Final error 0.291888
+Final accuracy 0.708112
+Highval precision 0.763377
+Highval recall 0.599333
+Highval f1 0.641365
+Civil precision 0.710608
+Civil recall 0.804762
+Civil f1 0.742593
+##############################
+
+Final error 0.293514
+Final accuracy 0.706486
+Highval precision 0.756365
+Highval recall 0.585667
+Highval f1 0.641566
+Civil precision 0.698627
+Civil recall 0.813095
+Civil f1 0.743288
+##############################
+
+Final error 0.292232
+Final accuracy 0.707768
+Highval precision 0.758171
+Highval recall 0.597333
+Highval f1 0.644366
+Civil precision 0.708703
+Civil recall 0.806190
+Civil f1 0.743436
+##############################
+
+Final error 0.271183
+Final accuracy 0.728817
+Highval precision 0.782202
+Highval recall 0.609667
+Highval f1 0.663554
+Civil precision 0.723395
+Civil recall 0.831905
+Civil f1 0.7654067
