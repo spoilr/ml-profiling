@@ -13,9 +13,26 @@ from cv import knn
 from svms import svm_selected_vars
 from features_from_svm_selection import single_features_90
 from replace_missing_values import *
+from save_output import *
 
 import numpy as np
 from sklearn.preprocessing import StandardScaler
+
+def ensemble_single_feature_selection(training_data, testing_data, training_data_scaled, testing_data_scaled, training_targets, testing_targets, dt, knn, svm_selected_vars):
+	error_rate, f1, (hp, hr, hf), (cp, cr, cf) = ensemble_one_fold_measures(training_data, testing_data, training_data_scaled, testing_data_scaled, np.array(training_targets), np.array(testing_targets), dt, knn, svm_selected_vars)
+
+
+	print 'Final error %f' % error_rate
+	print 'Final accuracy %f' % (1 - error_rate)
+
+	print 'Highval precision %f' % hp
+	print 'Highval recall %f' % hr
+	print 'Highval f1 %f' % hf
+	print 'Civil precision %f' % cp
+	print 'Civil recall %f' % cr
+	print 'Civil f1 %f' % cf
+
+	return error_rate, f1, (hp, hr, hf), (cp, cr, cf)
 
 if __name__ == "__main__":
 
@@ -45,17 +62,9 @@ if __name__ == "__main__":
 	testing_data = replace_missings(testing_data)
 	training_data_scaled = scaler.fit_transform(training_data)
 	testing_data_scaled = scaler.transform(testing_data)
-
-	error_rate, f1, (hp, hr, hf), (cp, cr, cf) = ensemble_one_fold_measures(training_data, testing_data, training_data_scaled, testing_data_scaled, np.array(training_targets), np.array(testing_targets), dt, knn, svm_selected_vars)
-
-
-	print 'Final error %f' % error_rate
-	print 'Final accuracy %f' % (1 - error_rate)
-
-	print 'Highval precision %f' % hp
-	print 'Highval recall %f' % hr
-	print 'Highval f1 %f' % hf
-	print 'Civil precision %f' % cp
-	print 'Civil recall %f' % cr
-	print 'Civil f1 %f' % cf
+	
+	file_name = "ensemble_single_feature_selection.txt"
+	for i in range(100):
+		error_rate, f1, (hp, hr, hf), (cp, cr, cf) = ensemble_single_feature_selection(training_data, testing_data, training_data_scaled, testing_data_scaled, training_targets, testing_targets, dt, knn, svm_selected_vars)
+		save_output(file_name, error_rate, hp, hr, hf, cp, cr, cf, 1)
 

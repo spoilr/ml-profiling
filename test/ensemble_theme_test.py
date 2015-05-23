@@ -21,9 +21,25 @@ from svms import svm_selected_net
 from svms import svm_selected_ill
 from svms import svm_selected_ideo
 from replace_missing_values import *
+from save_output import *
 
 import numpy as np
 from sklearn.preprocessing import StandardScaler
+
+def ensemble_theme(training_data, training_data_scaled, training_targets, testing_data, testing_data_scaled, testing_targets, fusion_algorithm):
+	error_rate, (hp, hr, hf), (cp, cr, cf) = fusion(training_data, training_data_scaled, training_targets, testing_data, testing_data_scaled, testing_targets, fusion_algorithm)
+
+	print 'Final error %f' % error_rate
+	print 'Final accuracy %f' % (1 - error_rate)
+
+	print 'Highval precision %f' % hp
+	print 'Highval recall %f' % hr
+	print 'Highval f1 %f' % hf
+	print 'Civil precision %f' % cp
+	print 'Civil recall %f' % cr
+	print 'Civil f1 %f' % cf
+
+	return error_rate, (hp, hr, hf), (cp, cr, cf)
 
 def svm_vote(predictions):
 	dataset, targets = combine_and_process_dataset()
@@ -144,17 +160,9 @@ if __name__ == "__main__":
 	testing_data_scaled.append(ill_scaler.transform(testing_data[1]))
 	testing_data_scaled.append(ideo_scaler.transform(testing_data[2]))
 
-
-	error_rate, (hp, hr, hf), (cp, cr, cf) = fusion(training_data, training_data_scaled, training_targets, testing_data, testing_data_scaled, testing_targets, fusion_algorithm)
-
-	print 'Final error %f' % error_rate
-	print 'Final accuracy %f' % (1 - error_rate)
-
-	print 'Highval precision %f' % hp
-	print 'Highval recall %f' % hr
-	print 'Highval f1 %f' % hf
-	print 'Civil precision %f' % cp
-	print 'Civil recall %f' % cr
-	print 'Civil f1 %f' % cf
+	file_name = "ensemble_theme.txt"
+	for i in range(100):
+		error_rate, (hp, hr, hf), (cp, cr, cf) = ensemble_theme(training_data, training_data_scaled, training_targets, testing_data, testing_data_scaled, testing_targets, fusion_algorithm)
+		save_output(file_name, error_rate, hp, hr, hf, cp, cr, cf, 1)
 
 
