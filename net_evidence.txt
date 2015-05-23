@@ -1,55 +1,103 @@
 
 ##############################
 Evidence {'InteractNet': 1}
-Accuracy 0.690000
+Accuracy 0.607143
 ##############################
-Evidence {'Involve': 1}
-Accuracy 0.660000
+Evidence {'WarningLettersStatements': 1}
+Accuracy 0.607143
 ##############################
-Evidence {'InteractNet': 1, 'Involve': 1}
-Accuracy 0.660000
+Evidence {}
+Accuracy 0.607143
 ##############################
-Evidence {'Involve': 1, 'FurtherAttacks': 1}
-Accuracy 0.660000
+Evidence {}
+Accuracy 0.607143
 ##############################
-Evidence {'InteractNet': 1, 'Involve': 1}
-Accuracy 0.690000
-##############################
-Evidence {'InteractNet': 1, 'Involve': 1, 'FurtherAttacks': 1}
-Accuracy 0.660000
-##############################
-Evidence {'Involve': 1, 'LiveAlone': 1}
-Accuracy 0.680000
-##############################
-Evidence {'Involve': 1, 'WarningLettersStatements': 1}
-Accuracy 0.660000
-##############################
-Evidence {'Involve': 1, 'WarningLettersStatements': 1}
-Accuracy 0.660000
-##############################
-Evidence {'Involve': 1, 'FurtherAttacks': 1, 'WarningLettersStatements': 1}
-Accuracy 0.660000
-##############################
-Evidence {'Involve': 1, 'FurtherAttacks': 1}
-Accuracy 0.660000
-##############################
-Evidence {'InteractNet': 1, 'WarningLettersStatements': 1, 'RecruitNetGroup': 1}
-Accuracy 0.690000
+Evidence {'FurtherAttacks': 1}
+Accuracy 0.607143
 ##############################
 Evidence {'InteractNet': 1, 'Involve': 1}
-Accuracy 0.690000
+Accuracy 0.607143
+##############################
+Evidence {'InteractNet': 1, 'WarningLettersStatements': 1}
+Accuracy 0.607143
+##############################
+Evidence {'InteractNet': 1}
+Accuracy 0.607143
+##############################
+Evidence {'InteractNet': 1}
+Accuracy 0.607143
 ##############################
 Evidence {'Involve': 1, 'FurtherAttacks': 1}
-Accuracy 0.660000
+Accuracy 0.607143
 ##############################
-Evidence {'InteractNet': 1, 'OtherKnowledge': 1, 'WarningLettersStatements': 1, 'RecruitNetGroup': 1}
-Accuracy 0.670000
+Evidence {}
+Accuracy 0.607143
 ##############################
-Evidence {'InteractNet': 1, 'LiveAlone': 1, 'RecruitNetGroup': 1}
-Accuracy 0.680000
+Evidence {'FurtherAttacks': 1}
+Accuracy 0.607143
 ##############################
 Evidence {'InteractNet': 1, 'Involve': 1, 'WarningLettersStatements': 1}
-Accuracy 0.700000
+Accuracy 0.607143
+##############################
+Evidence {'InteractNet': 1, 'Involve': 1}
+Accuracy 0.607143
+##############################
+Evidence {'InteractNet': 1, 'Involve': 1}
+Accuracy 0.607143
+##############################
+Evidence {'InteractNet': 1, 'WarningLettersStatements': 1}
+Accuracy 0.607143
+##############################
+Evidence {'InteractNet': 1, 'WarningLettersStatements': 1}
+Accuracy 0.607143
+##############################
+Evidence {'InteractNet': 1}
+Accuracy 0.607143
+##############################
+Evidence {'InteractNet': 1, 'FurtherAttacks': 1}
+Accuracy 0.607143
+##############################
+Evidence {'Involve': 1, 'WarningLettersStatements': 1}
+Accuracy 0.607143
+##############################
+Evidence {'Involve': 1, 'WarningLettersStatements': 1}
+Accuracy 0.607143
+##############################
+Evidence {'Involve': 1, 'FurtherAttacks': 1, 'WarningLettersStatements': 1}
+Accuracy 0.607143
+##############################
+Evidence {'Involve': 1}
+Accuracy 0.607143
+##############################
+Evidence {'Involve': 1, 'FurtherAttacks': 1}
+Accuracy 0.607143
+##############################
+Evidence {'FurtherAttacks': 1, 'WarningLettersStatements': 1}
+Accuracy 0.607143
+##############################
+Evidence {'FurtherAttacks': 1, 'WarningLettersStatements': 1}
+Accuracy 0.607143
 ##############################
 Evidence {'InteractNet': 1, 'Involve': 1, 'FurtherAttacks': 1, 'WarningLettersStatements': 1}
-Accuracy 0.660000
+Accuracy 0.607143
+##############################
+Evidence {'InteractNet': 1, 'Involve': 1}
+Accuracy 0.607143
+##############################
+Evidence {'InteractNet': 1, 'Involve': 1, 'FurtherAttacks': 1}
+Accuracy 0.607143
+##############################
+Evidence {'InteractNet': 1, 'FurtherAttacks': 1, 'WarningLettersStatements': 1}
+Accuracy 0.607143
+##############################
+Evidence {'InteractNet': 1, 'FurtherAttacks': 1, 'WarningLettersStatements': 1}
+Accuracy 0.607143
+##############################
+Evidence {'Involve': 1, 'FurtherAttacks': 1, 'WarningLettersStatements': 1}
+Accuracy 0.607143
+##############################
+Evidence {'InteractNet': 1, 'Involve': 1, 'FurtherAttacks': 1, 'WarningLettersStatements': 1}
+Accuracy 0.607143
+##############################
+Evidence {'InteractNet': 1, 'FurtherAttacks': 1, 'WarningLettersStatements': 1}
+Accuracy 0.607143
