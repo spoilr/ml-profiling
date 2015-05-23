@@ -136,7 +136,7 @@ def propagate_evidence(bn, possible_evidence, features, file_name):
 				print '\nConnected nodes ' + str(nodes)
 				accuracy = inference_accuracy(dataset, nodes, features, inf)
 
-				if accuracy >= 0.66:
+				if accuracy >= 0.6:
 					save_evidence(file_name, accuracy, evidence)
 
 				print accuracy

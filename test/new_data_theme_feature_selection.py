@@ -21,9 +21,63 @@ from svms import svm_selected_ill
 from svms import svm_selected_ideo
 from parameters import CV_PERCENTAGE_OCCURENCE_THRESHOLD	
 from replace_missing_values import *
+from save_output import save_output
 
 import numpy as np
 from sklearn.preprocessing import StandardScaler
+
+def new_data_theme_feture_selection(training_data, training_targets, testing_data, testing_targets, tech, fusion_algorithm):
+	training_data, training_targets = combine_data_from_feature_selection(training_targets, CV_PERCENTAGE_OCCURENCE_THRESHOLD)
+	testing_data, testing_targets = combine_data_from_feature_selection_from_file(testing_targets, CV_PERCENTAGE_OCCURENCE_THRESHOLD, addendum_data_file)
+
+	net_scaler = StandardScaler()
+	ill_scaler = StandardScaler()
+	ideo_scaler = StandardScaler()
+
+	testing_data = replace_missings_thematic(testing_data)
+
+	if tech == 'lr':
+		error_rate, (hp, hr, hf), (cp, cr, cf) = fusion('lr', lr_feature_selection, training_data, training_targets, testing_data, testing_targets, fusion_algorithm)
+		
+	elif tech == 'dt':
+		error_rate, (hp, hr, hf), (cp, cr, cf) = fusion('dt', dt, training_data, training_targets, testing_data, testing_targets, fusion_algorithm)
+		
+	elif tech == 'knn':
+		training_data[0] = net_scaler.fit_transform(training_data[0])
+		training_data[1] =  ill_scaler.fit_transform(training_data[1])
+		training_data[2] =  ideo_scaler.fit_transform(training_data[2])
+
+		testing_data[0] = net_scaler.transform(testing_data[0])
+		testing_data[1] =  ill_scaler.transform(testing_data[1])
+		testing_data[2] =  ideo_scaler.transform(testing_data[2])
+
+		error_rate, (hp, hr, hf), (cp, cr, cf) = fusion('knn', knn, training_data, training_targets, testing_data, testing_targets, fusion_algorithm)
+
+	elif tech == 'svm':
+		training_data[0] = net_scaler.fit_transform(training_data[0])
+		training_data[1] =  ill_scaler.fit_transform(training_data[1])
+		training_data[2] =  ideo_scaler.fit_transform(training_data[2])
+
+		testing_data[0] = net_scaler.transform(testing_data[0])
+		testing_data[1] =  ill_scaler.transform(testing_data[1])
+		testing_data[2] =  ideo_scaler.transform(testing_data[2])
+
+		error_rate, (hp, hr, hf), (cp, cr, cf) = fusion('svm', svm_selected_for_features_fusion, training_data, training_targets, testing_data, testing_targets, fusion_algorithm, ind=True)
+
+	else:
+		print 'ERROR technique'	
+
+	print 'Final error %f' % error_rate
+	print 'Final accuracy %f' % (1 - error_rate)
+
+	print 'Highval precision %f' % hp
+	print 'Highval recall %f' % hr
+	print 'Highval f1 %f' % hf
+	print 'Civil precision %f' % cp
+	print 'Civil recall %f' % cr
+	print 'Civil f1 %f' % cf
+
+	return error_rate, (hp, hr, hf), (cp, cr, cf)
 
 def svm_vote(predictions, testing_targets):
 	dataset, targets = combine_and_process_dataset()
@@ -96,55 +150,7 @@ if __name__ == "__main__":
 
 	tech = raw_input("Enter algorithm. Choose between lr, dt, knn, svm")
 	fusion_algorithm = raw_input("Enter algorithm. Choose between maj, wmaj, svm, nn")
-
-	training_data, training_targets = combine_data_from_feature_selection(training_targets, CV_PERCENTAGE_OCCURENCE_THRESHOLD)
-	testing_data, testing_targets = combine_data_from_feature_selection_from_file(testing_targets, CV_PERCENTAGE_OCCURENCE_THRESHOLD, addendum_data_file)
-
-	net_scaler = StandardScaler()
-	ill_scaler = StandardScaler()
-	ideo_scaler = StandardScaler()
-
-	testing_data = replace_missings_thematic(testing_data)
-
-	if tech == 'lr':
-		error_rate, (hp, hr, hf), (cp, cr, cf) = fusion('lr', lr_feature_selection, training_data, training_targets, testing_data, testing_targets, fusion_algorithm)
-		
-	elif tech == 'dt':
-		error_rate, (hp, hr, hf), (cp, cr, cf) = fusion('dt', dt, training_data, training_targets, testing_data, testing_targets, fusion_algorithm)
-		
-	elif tech == 'knn':
-		training_data[0] = net_scaler.fit_transform(training_data[0])
-		training_data[1] =  ill_scaler.fit_transform(training_data[1])
-		training_data[2] =  ideo_scaler.fit_transform(training_data[2])
-
-		testing_data[0] = net_scaler.transform(testing_data[0])
-		testing_data[1] =  ill_scaler.transform(testing_data[1])
-		testing_data[2] =  ideo_scaler.transform(testing_data[2])
-
-		error_rate, (hp, hr, hf), (cp, cr, cf) = fusion('knn', knn, training_data, training_targets, testing_data, testing_targets, fusion_algorithm)
-
-	elif tech == 'svm':
-		training_data[0] = net_scaler.fit_transform(training_data[0])
-		training_data[1] =  ill_scaler.fit_transform(training_data[1])
-		training_data[2] =  ideo_scaler.fit_transform(training_data[2])
-
-		testing_data[0] = net_scaler.transform(testing_data[0])
-		testing_data[1] =  ill_scaler.transform(testing_data[1])
-		testing_data[2] =  ideo_scaler.transform(testing_data[2])
-
-		error_rate, (hp, hr, hf), (cp, cr, cf) = fusion('svm', svm_selected_for_features_fusion, training_data, training_targets, testing_data, testing_targets, fusion_algorithm, ind=True)
-
-	else:
-		print 'ERROR technique'	
-
-	print 'Final error %f' % error_rate
-	print 'Final accuracy %f' % (1 - error_rate)
-
-	print 'Highval precision %f' % hp
-	print 'Highval recall %f' % hr
-	print 'Highval f1 %f' % hf
-	print 'Civil precision %f' % cp
-	print 'Civil recall %f' % cr
-	print 'Civil f1 %f' % cf
+	error_rate, (hp, hr, hf), (cp, cr, cf) = new_data_theme_feture_selection(training_data, training_targets, testing_data, testing_targets, tech, fusion_algorithm)
+	
 
 

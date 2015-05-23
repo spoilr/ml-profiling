@@ -10,26 +10,12 @@ from cv import lr_one_fold_measures
 from cv import dt_one_fold_measures
 from cv import knn_one_fold_measures
 from replace_missing_values import *
+from save_output import save_output
 
 import numpy as np
 from sklearn.preprocessing import StandardScaler
 
-if __name__ == "__main__":
-
-	training_spreadsheet = Spreadsheet(project_data_file)
-	training_data = Data(training_spreadsheet)
-	training_targets = training_data.targets
-
-	testing_spreadsheet = Spreadsheet(addendum_data_file, upsampling=False)
-	testing_data = Data(testing_spreadsheet, upsampling=False)
-	testing_targets = testing_data.targets
-
-	[training_data, features] = parse_theme('all')
-	[testing_data, feats] = parse_theme_from_file('all', addendum_data_file)
-	assert features == feats
-
-	tech = raw_input("Enter algorithm. Choose between lr, dt, knn, svm")
-
+def new_data_single(training_data, training_targets, testing_data, testing_targets, tech):
 	[training_data, training_targets, unk] = split_dataset(training_data, training_targets)
 		
 	# standardize dataset - Gaussian with zero mean and unit variance
@@ -67,4 +53,25 @@ if __name__ == "__main__":
 	print 'Civil precision %f' % cp
 	print 'Civil recall %f' % cr
 	print 'Civil f1 %f' % cf
+
+	return error_rate, f1, model, (hp, hr, hf), (cp, cr, cf)
+
+if __name__ == "__main__":
+
+	training_spreadsheet = Spreadsheet(project_data_file)
+	training_data = Data(training_spreadsheet)
+	training_targets = training_data.targets
+
+	testing_spreadsheet = Spreadsheet(addendum_data_file, upsampling=False)
+	testing_data = Data(testing_spreadsheet, upsampling=False)
+	testing_targets = testing_data.targets
+
+	[training_data, features] = parse_theme('all')
+	[testing_data, feats] = parse_theme_from_file('all', addendum_data_file)
+	assert features == feats
+
+	tech = raw_input("Enter algorithm. Choose between lr, dt, knn, svm")
+	error_rate, f1, model, (hp, hr, hf), (cp, cr, cf) = new_data_single(training_data, training_targets, testing_data, testing_targets, tech)
+
+	
 
