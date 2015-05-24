@@ -77,7 +77,12 @@ if __name__ == "__main__":
 	assert features == feats
 
 	tech = raw_input("Enter algorithm. Choose between lr, dt, knn, svm")
-	error_rate, f1, model, (hp, hr, hf), (cp, cr, cf) = new_data_single_feature_selection(training_data, training_targets, testing_data, testing_targets, tech)
+
+	file_name = "new_single_ft" + tech + ".txt"
+	for i in range(100):
+		error_rate, f1, model, (hp, hr, hf), (cp, cr, cf) = new_data_single_feature_selection(training_data, training_targets, testing_data, testing_targets, tech)
+		save_output(file_name, error_rate, hp, hr, hf, cp, cr, cf, 1)
+
 	
 
 

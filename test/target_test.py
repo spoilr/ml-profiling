@@ -15,5 +15,5 @@ if __name__ == "__main__":
 	[dataset, features] = parse_theme('all')
 	[known_dataset, known_targets, unk] = split_dataset(dataset, targets)
 
-	print 'HIGHVAL %d' % len([x for x in known_targets if x==1])
-	print 'CIVIL %d' % len([x for x in known_targets if x==2])
+	print 'NEG %d' % len([x for x in known_targets if x==0])
+	print 'POS %d' % len([x for x in known_targets if x==1])

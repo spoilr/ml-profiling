@@ -47,9 +47,9 @@ def new_data_theme_feture_selection(training_data, training_targets, testing_dat
 		training_data[1] =  ill_scaler.fit_transform(training_data[1])
 		training_data[2] =  ideo_scaler.fit_transform(training_data[2])
 
-		testing_data[0] = net_scaler.transform(testing_data[0])
-		testing_data[1] =  ill_scaler.transform(testing_data[1])
-		testing_data[2] =  ideo_scaler.transform(testing_data[2])
+		# testing_data[0] = net_scaler.transform(testing_data[0])
+		# testing_data[1] =  ill_scaler.transform(testing_data[1])
+		# testing_data[2] =  ideo_scaler.transform(testing_data[2])
 
 		error_rate, (hp, hr, hf), (cp, cr, cf) = fusion('knn', knn, training_data, training_targets, testing_data, testing_targets, fusion_algorithm)
 
@@ -150,7 +150,9 @@ if __name__ == "__main__":
 
 	tech = raw_input("Enter algorithm. Choose between lr, dt, knn, svm")
 	fusion_algorithm = raw_input("Enter algorithm. Choose between maj, wmaj, svm, nn")
-	error_rate, (hp, hr, hf), (cp, cr, cf) = new_data_theme_feture_selection(training_data, training_targets, testing_data, testing_targets, tech, fusion_algorithm)
-	
+	file_name = "new_theme_ft_" + tech + fusion_algorithm + ".txt"
+	for i in range(100):
+		error_rate, (hp, hr, hf), (cp, cr, cf) = new_data_theme_feture_selection(training_data, training_targets, testing_data, testing_targets, tech, fusion_algorithm)
+		save_output(file_name, error_rate, hp, hr, hf, cp, cr, cf, 1)
 
 

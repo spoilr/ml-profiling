@@ -63,9 +63,9 @@ def fusion(training_data, training_data_scaled, training_targets, testing_data, 
 	models_knn.append(knn(training_data_scaled[2], training_targets))
 
 	models_svm = []
-	models_svm.append(svm_selected_net(training_data[0], training_targets))
-	models_svm.append(svm_selected_ill(training_data[1], training_targets))
-	models_svm.append(svm_selected_ideo(training_data[2], training_targets))
+	models_svm.append(svm_selected_net(training_data_scaled[0], training_targets))
+	models_svm.append(svm_selected_ill(training_data_scaled[1], training_targets))
+	models_svm.append(svm_selected_ideo(training_data_scaled[2], training_targets))
 
 	predictions_dt = []
 	predictions_knn = []

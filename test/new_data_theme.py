@@ -51,9 +51,9 @@ def new_data_theme(training_data, training_targets, testing_data, testing_target
 		training_data[1] =  ill_scaler.fit_transform(training_data[1])
 		training_data[2] =  ideo_scaler.fit_transform(training_data[2])
 
-		testing_data[0] = net_scaler.transform(testing_data[0])
-		testing_data[1] =  ill_scaler.transform(testing_data[1])
-		testing_data[2] =  ideo_scaler.transform(testing_data[2])
+		# testing_data[0] = net_scaler.transform(testing_data[0])
+		# testing_data[1] =  ill_scaler.transform(testing_data[1])
+		# testing_data[2] =  ideo_scaler.transform(testing_data[2])
 
 		error_rate, (hp, hr, hf), (cp, cr, cf) = fusion('knn', knn, training_data, training_targets, testing_data, testing_targets, fusion_algorithm)
 
