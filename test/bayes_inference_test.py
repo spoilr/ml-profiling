@@ -12,11 +12,19 @@ from project_data import *
 from copy import deepcopy
 import itertools
 
-net_evidence = ['InteractNet', 'RecruitNetGroup', 'OtherKnowledge', 'Involve', 'LiveAlone', 'WarningLettersStatements', 'TargetTyp', 'HighValueCivilian', 'FurtherAttacks']
+# net_evidence = ['InteractNet', 'RecruitNetGroup', 'OtherKnowledge', 'Involve', 'LiveAlone', 'WarningLettersStatements', 'TargetTyp', 'HighValueCivilian', 'FurtherAttacks']
 
-ill_evidence = ['AwareGriev', 'OtherKnowledge', 'Isolated', 'FurtherAttacks', 'WarningLettersStatements', 'LiveAlone', 'Stress', 'HighValueCivilian', 'Getaway', 'MentalIll']
+# ill_evidence = ['AwareGriev', 'OtherKnowledge', 'Isolated', 'FurtherAttacks', 'WarningLettersStatements', 'LiveAlone', 'Stress', 'HighValueCivilian', 'Getaway', 'MentalIll']
 
-ideo_evidence = ['ReligChangeInt', 'HighValueCivilian', 'RecruitNetGroup', 'Ideology', 'LiveAlone', 'TargetTyp', 'Propaganda', 'Legitimise', 'LocPubPriv', 'OtherKnowledge', 'IdeoChangeInt', 'AwareIdeo', 'Religion', 'FurtherAttacks']
+# ideo_evidence = ['ReligChangeInt', 'HighValueCivilian', 'RecruitNetGroup', 'Ideology', 'LiveAlone', 'TargetTyp', 'Propaganda', 'Legitimise', 'LocPubPriv', 'OtherKnowledge', 'IdeoChangeInt', 'AwareIdeo', 'Religion', 'FurtherAttacks']
+
+
+net_evidence = ['InteractNet', 'RecruitNetGroup', 'OtherKnowledge']
+
+ill_evidence = ['AwareGriev', 'OtherKnowledge', 'Isolated', 'Stress', 'MentalIll']
+
+ideo_evidence = ['ReligChangeInt', 'RecruitNetGroup', 'Ideology', 'Propaganda', 'OtherKnowledge', 'IdeoChangeInt', 'AwareIdeo', 'Religion']
+
 
 def likelihood_from_inference(inference):
 	inf = dict()
@@ -136,7 +144,7 @@ def propagate_evidence(bn, possible_evidence, features, file_name):
 				print '\nConnected nodes ' + str(nodes)
 				accuracy = inference_accuracy(dataset, nodes, features, inf)
 
-				if accuracy >= 0.6:
+				if accuracy >= 0.55:
 					save_evidence(file_name, accuracy, evidence)
 
 				print accuracy

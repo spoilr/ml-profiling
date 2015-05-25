@@ -1,10 +1,94 @@
 
 ##############################
-Evidence {'MentalIll': 1, 'OtherKnowledge': 1, 'AwareGriev': 1, 'LiveAlone': 1, 'WarningLettersStatements': 1}
-Accuracy 0.692308
+Evidence {'AwareGriev': 1}
+Accuracy 0.646154
 ##############################
-Evidence {'MentalIll': 1, 'Stress': 1, 'AwareGriev': 1, 'LiveAlone': 1, 'WarningLettersStatements': 1}
-Accuracy 0.661538
+Evidence {'OtherKnowledge': 1}
+Accuracy 0.630769
 ##############################
-Evidence {'MentalIll': 1, 'WarningLettersStatements': 1, 'LiveAlone': 1, 'Getaway': 1}
-Accuracy 0.661538
+Evidence {'Isolated': 1}
+Accuracy 0.646154
+##############################
+Evidence {'Stress': 1}
+Accuracy 0.600000
+##############################
+Evidence {'MentalIll': 1}
+Accuracy 0.646154
+##############################
+Evidence {'OtherKnowledge': 1, 'AwareGriev': 1}
+Accuracy 0.630769
+##############################
+Evidence {'AwareGriev': 1, 'Isolated': 1}
+Accuracy 0.646154
+##############################
+Evidence {'Stress': 1, 'AwareGriev': 1}
+Accuracy 0.600000
+##############################
+Evidence {'MentalIll': 1, 'AwareGriev': 1}
+Accuracy 0.646154
+##############################
+Evidence {'OtherKnowledge': 1, 'Isolated': 1}
+Accuracy 0.630769
+##############################
+Evidence {'Stress': 1, 'OtherKnowledge': 1}
+Accuracy 0.584615
+##############################
+Evidence {'MentalIll': 1, 'OtherKnowledge': 1}
+Accuracy 0.630769
+##############################
+Evidence {'Stress': 1, 'Isolated': 1}
+Accuracy 0.600000
+##############################
+Evidence {'MentalIll': 1, 'Isolated': 1}
+Accuracy 0.646154
+##############################
+Evidence {'MentalIll': 1, 'Stress': 1}
+Accuracy 0.600000
+##############################
+Evidence {'OtherKnowledge': 1, 'AwareGriev': 1, 'Isolated': 1}
+Accuracy 0.630769
+##############################
+Evidence {'Stress': 1, 'OtherKnowledge': 1, 'AwareGriev': 1}
+Accuracy 0.584615
+##############################
+Evidence {'MentalIll': 1, 'OtherKnowledge': 1, 'AwareGriev': 1}
+Accuracy 0.630769
+##############################
+Evidence {'Stress': 1, 'AwareGriev': 1, 'Isolated': 1}
+Accuracy 0.600000
+##############################
+Evidence {'MentalIll': 1, 'AwareGriev': 1, 'Isolated': 1}
+Accuracy 0.646154
+##############################
+Evidence {'MentalIll': 1, 'Stress': 1, 'AwareGriev': 1}
+Accuracy 0.600000
+##############################
+Evidence {'Stress': 1, 'OtherKnowledge': 1, 'Isolated': 1}
+Accuracy 0.584615
+##############################
+Evidence {'MentalIll': 1, 'OtherKnowledge': 1, 'Isolated': 1}
+Accuracy 0.630769
+##############################
+Evidence {'MentalIll': 1, 'Stress': 1, 'OtherKnowledge': 1}
+Accuracy 0.584615
+##############################
+Evidence {'MentalIll': 1, 'Stress': 1, 'Isolated': 1}
+Accuracy 0.600000
+##############################
+Evidence {'Stress': 1, 'OtherKnowledge': 1, 'AwareGriev': 1, 'Isolated': 1}
+Accuracy 0.584615
+##############################
+Evidence {'MentalIll': 1, 'OtherKnowledge': 1, 'AwareGriev': 1, 'Isolated': 1}
+Accuracy 0.630769
+##############################
+Evidence {'MentalIll': 1, 'Stress': 1, 'OtherKnowledge': 1, 'AwareGriev': 1}
+Accuracy 0.584615
+##############################
+Evidence {'MentalIll': 1, 'Stress': 1, 'AwareGriev': 1, 'Isolated': 1}
+Accuracy 0.600000
+##############################
+Evidence {'MentalIll': 1, 'Stress': 1, 'OtherKnowledge': 1, 'Isolated': 1}
+Accuracy 0.584615
+##############################
+Evidence {'MentalIll': 1, 'Stress': 1, 'OtherKnowledge': 1, 'AwareGriev': 1, 'Isolated': 1}
+Accuracy 0.584615

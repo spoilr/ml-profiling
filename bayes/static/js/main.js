@@ -70,6 +70,17 @@ var max_probabilities = function(inference) {
 	return max_probs
 }
 
+var get_evidence = function() {
+  evidence = []
+  var table = document.getElementById("bayes");
+  for (var i = 1, row; row = table.rows[i]; i++) {
+    if (row.cells[2].innerHTML.replace(/\s/g,'') != "n/a") {
+      evidence.push(row.cells[0].innerHTML.replace(/\s/g,''));
+    }
+  }
+  return evidence
+} 
+
 var render_network = function(info, percentage) {
 // set up SVG for D3
 var width = window.innerWidth;
@@ -77,9 +88,11 @@ var height= window.innerHeight;
 
 graph = info.net
 probs = max_probabilities(info.inf)
+evidence = get_evidence()
 
 var svg = d3.select('body')
   .append('svg')
+  .attr("id", "gr")
   .attr('width', width)
   .attr('height', height);
 
@@ -202,11 +215,17 @@ function restart() {
   // update existing nodes (reflexive & selected visual states)
   circle.selectAll('circle')
     .style('fill', function(d) { 
+
+      if (evidence.indexOf(d.id) >= 0) {
+        return d3.rgb("#AFD2E9");
+      }
+
     	if (d.likelihood != null && d.likelihood.prob > percentage) {
-  			return (d === selected_node) ? d3.rgb("#612940").brighter().toString() : d3.rgb("#612940"); 
+  			return (d === selected_node) ? d3.rgb("#7C5869").brighter().toString() : d3.rgb("#7C5869"); 
   		} else {
-  			return (d === selected_node) ? d3.rgb("#7A93AC").brighter().toString() : d3.rgb("#7A93AC"); 
+  			return (d === selected_node) ? d3.rgb("#9D96B8").brighter().toString() : d3.rgb("#9D96B8"); 
   		}
+
   	})
     .classed('reflexive', function(d) { return d.reflexive; });
 
@@ -217,11 +236,17 @@ function restart() {
     .attr('class', 'node')
     .attr('r', 12)
     .style('fill', function(d) { 
+
+      if (evidence.indexOf(d.id) >= 0) {
+        return d3.rgb("#AFD2E9");
+      }
+
     	if (d.likelihood != null && d.likelihood.prob > percentage) {
-  			return (d === selected_node) ? d3.rgb("#612940").brighter().toString() : d3.rgb("#612940"); 
+  			return (d === selected_node) ? d3.rgb("#7C5869").brighter().toString() : d3.rgb("#7C5869"); 
   		} else {
-  			return (d === selected_node) ? d3.rgb("#7A93AC").brighter().toString() : d3.rgb("#7A93AC"); 
+  			return (d === selected_node) ? d3.rgb("#9D96B8").brighter().toString() : d3.rgb("#9D96B8"); 
   		}
+
     })
     .style('stroke', function(d) { return d3.rgb("#C0C0C0").darker().toString(); })
     .classed('reflexive', function(d) { return d.reflexive; })
@@ -507,14 +532,13 @@ $("#original").click(function (e) {
       location.reload();
     }
   });
-});
+}); 
 
-	$(function() {
-	  $('#threshold').change(function(){
-	  	d3.select("svg")
-       .remove();
-      render_network(info, $(this).val().split(" ")[1])
-	  });
-	});
+$(function() {
+  $('#threshold').change(function(){
+    d3.select("#gr").remove();
+    render_network(info, $(this).val().split(" ")[1])
+  });
+});
 
 };

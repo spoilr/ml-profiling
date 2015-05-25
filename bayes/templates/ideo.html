@@ -28,7 +28,7 @@
 
       <div>
         <form action="{{ url_for('bayes_ideo') }}" method='post'>
-          <table>
+          <table id="bayes">
             <tr class="header">
               <td>Variables</td>
               <td>Values</td>
@@ -52,7 +52,7 @@
               <td>
                 {% if evidence is not none %}
                   {% if evidence[key] is not none %}
-                    {{ evidence[key] }}
+                    <strong>{{ evidence[key] }}</strong>
                   {% else %}
                     n/a  
                   {%endif %}  

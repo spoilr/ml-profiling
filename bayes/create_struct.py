@@ -16,7 +16,7 @@ from learning_data_ideo import data_ideo
 from learning_data_ill import data_ill
 from learning_data_net import data_net
 
-GIBBS_ITERATIONS = 1000
+GIBBS_ITERATIONS = 300
 
 def save_network(file_name, network, theme):
   open(file_name, "w").close() # erase prev contents
