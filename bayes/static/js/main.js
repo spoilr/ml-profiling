@@ -331,6 +331,15 @@ function restart() {
       .attr('class', 'id')
       .text(function(d) { return d.id; });
 
+  g.on("mouseover", function(d) {
+    d3.select(this).select("text")
+    .text(function(d){return d.id + "-" + d.likelihood.val + "-" + d.likelihood.prob;})
+  })
+  .on('mouseout', function(d) {
+    d3.select(this).select("text")
+    .text(function(d){return d.id;})
+  })
+
   // remove old nodes
   circle.exit().remove();
 
