@@ -74,7 +74,7 @@ var get_evidence = function() {
   evidence = []
   var table = document.getElementById("bayes");
   for (var i = 1, row; row = table.rows[i]; i++) {
-    if (row.cells[2].innerHTML.replace(/\s/g,'') != "n/a") {
+    if (row.cells[2].innerHTML.replace(/\s/g,'') != "n/a" && row.cells[2].innerHTML.replace(/\s/g,'') != "") {
       evidence.push(row.cells[0].innerHTML.replace(/\s/g,''));
     }
   }
@@ -216,7 +216,7 @@ function restart() {
   circle.selectAll('circle')
     .style('fill', function(d) { 
 
-      if (evidence.indexOf(d.id) >= 0) {
+      if (evidence.length != 0 && evidence.indexOf(d.id) >= 0) {
         return d3.rgb("#AFD2E9");
       }
 
@@ -237,7 +237,7 @@ function restart() {
     .attr('r', 12)
     .style('fill', function(d) { 
 
-      if (evidence.indexOf(d.id) >= 0) {
+      if (evidence.length != 0 && evidence.indexOf(d.id) >= 0) {
         return d3.rgb("#AFD2E9");
       }
 
