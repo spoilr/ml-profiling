@@ -30,6 +30,8 @@ text.active {
 
 <script>
 
+var colours = ["#22b8ce","#1ea5b9","#1b93a4","#178090","#146e7b","#115c67","#0d4952","#0a373d","#062429","#031214","#000000"]
+
 var create_nodes = function(nodes) {
   var d3_nodes = [];
   nodes.forEach(function(n) {
@@ -80,7 +82,7 @@ var svg = d3.select("body").append("svg")
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-d3.json("ideo.json", function(miserables) {
+d3.json("net.json", function(miserables) {
   var matrix = [],
       nodes = create_nodes(miserables.nodes),
       n = nodes.length;
@@ -161,7 +163,7 @@ d3.json("ideo.json", function(miserables) {
         .attr("height", x.rangeBand())
         .style("fill-opacity", function(d) { return z(d.z); })
         .style("fill", function(d) {
-          return matrix[d.x][d.y].z !== 0 ? matrix[d.x][d.y].z : null;
+          return matrix[d.x][d.y].z !== 0 ? colours[parseInt(matrix[d.x][d.y].z)] : null;
           // return nodes[d.x].group == nodes[d.y].group ? c(nodes[d.x].group) : null; 
         })
         .on("mouseover", mouseover)
