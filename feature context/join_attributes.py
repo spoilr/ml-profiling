@@ -104,7 +104,7 @@ def final_set_of_features(features, feature_gain_ratio, avg_gain_ratios, der_fea
 		if sorted_der_feats[i][1] - feature_gain_ratio[sorted_der_feats[i][0][0]] > avg_increase_difference and sorted_der_feats[i][1] - feature_gain_ratio[sorted_der_feats[i][0][1]] > avg_increase_difference:
 			selected_features_from_derived.append(features[sorted_der_feats[i][0][0]])
 			selected_features_from_derived.append(features[sorted_der_feats[i][0][1]])	
-			print "der %s with %s provides context" % (features[sorted_der_feats[i][0][0]], features[sorted_der_feats[i][0][1]])
+			print "der %s with %s provides context %f" % (features[sorted_der_feats[i][0][0]], features[sorted_der_feats[i][0][1]], sorted_der_feats[i][1])
 
 	#return set(selected_features_from_whole_set).union(selected_features_from_derived)	
 	return selected_features_from_derived
@@ -194,13 +194,13 @@ if __name__ == "__main__":
 	data = Data(spreadsheet, upsampling=False)
 	targets = data.targets
 
-	net = report_status_selection('net')
+	# net = report_status_selection('net')
 	ideo = report_status_selection('ideo')
-	ill = report_status_selection('ill')
-	al = report_status_selection('all')
+	# ill = report_status_selection('ill')
+	# al = report_status_selection('all')
 
-	common_selected_features = common_features(net, ideo, ill)
+	# common_selected_features = common_features(net, ideo, ill)
 
-	print 'Common selected features %d %s' % (len(common_selected_features), common_selected_features)
+	# print 'Common selected features %d %s' % (len(common_selected_features), common_selected_features)
 
 	#test_function()

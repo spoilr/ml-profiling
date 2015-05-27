@@ -1,4 +1,4 @@
-[
+max_learning_data = [
   
   {
     "RelatStat":0,
