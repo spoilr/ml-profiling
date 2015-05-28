@@ -8,6 +8,14 @@ form {padding-left: 10px}
 
 td {padding-right: 10px; font-family: sans-serif}
 
+#bayes {
+  min-width: 1000px;
+}
+
+.selector {
+  width: 100px;
+}
+
 .nav ul {
   list-style: none;
   background-color: #726E97;

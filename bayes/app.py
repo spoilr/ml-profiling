@@ -125,15 +125,15 @@ def create_inference(json_inf):
 		if key in inv_explanatory_data:
 			temp = dict()
 			for k, v in values.iteritems():
-				temp[inv_explanatory_data[key][int(k)]] = v
+				temp[inv_explanatory_data[key][int(k)]] = round(v,2)
 			inference[key] = temp
 		else:
 			temp = dict()
 			for k, v in values.iteritems():
 				if k == "0":
-					temp["no"] = v
+					temp["no"] = round(v,2)
 				elif k == "1":
-					temp["yes"] = v
+					temp["yes"] = round(v,2)
 			inference[key] = temp
 
 	for key, values in inference.iteritems():

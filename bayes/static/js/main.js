@@ -217,13 +217,13 @@ function restart() {
     .style('fill', function(d) { 
 
       if (evidence.length != 0 && evidence.indexOf(d.id) >= 0) {
-        return d3.rgb("#AFD2E9");
+        return d3.rgb("#DC9596");
       }
 
     	if (d.likelihood != null && d.likelihood.prob > percentage) {
-  			return (d === selected_node) ? d3.rgb("#7C5869").brighter().toString() : d3.rgb("#7C5869"); 
+  			return (d === selected_node) ? d3.rgb("#F0FFCE").brighter().toString() : d3.rgb("#F0FFCE"); 
   		} else {
-  			return (d === selected_node) ? d3.rgb("#9D96B8").brighter().toString() : d3.rgb("#9D96B8"); 
+  			return (d === selected_node) ? d3.rgb("#197BBD").brighter().toString() : d3.rgb("#197BBD"); 
   		}
 
   	})
@@ -238,13 +238,13 @@ function restart() {
     .style('fill', function(d) { 
 
       if (evidence.length != 0 && evidence.indexOf(d.id) >= 0) {
-        return d3.rgb("#AFD2E9");
+        return d3.rgb("#DC9596");
       }
 
     	if (d.likelihood != null && d.likelihood.prob > percentage) {
-  			return (d === selected_node) ? d3.rgb("#7C5869").brighter().toString() : d3.rgb("#7C5869"); 
+  			return (d === selected_node) ? d3.rgb("#F0FFCE").brighter().toString() : d3.rgb("#F0FFCE"); 
   		} else {
-  			return (d === selected_node) ? d3.rgb("#9D96B8").brighter().toString() : d3.rgb("#9D96B8"); 
+  			return (d === selected_node) ? d3.rgb("#197BBD").brighter().toString() : d3.rgb("#197BBD"); 
   		}
 
     })

@@ -42,7 +42,7 @@
                 {{ key }}
               </td>
               <td>
-                <select name="{{ key }}">
+                <select name="{{ key }}" class="selector">
                   <option selected="selected">None</option>
                   {% for k, v in value.iteritems() %}
                   <option>{{ v }}</option>
@@ -55,7 +55,9 @@
                     <strong>{{ evidence[key] }}</strong>
                   {% else %}
                     n/a  
-                  {%endif %}  
+                  {%endif %} 
+                {% else %}
+                  -
                 {%endif %}
               </td>
               <td>
