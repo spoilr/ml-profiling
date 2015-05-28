@@ -82,7 +82,7 @@ var svg = d3.select("body").append("svg")
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-d3.json("net.json", function(miserables) {
+d3.json("all.json", function(miserables) {
   var matrix = [],
       nodes = create_nodes(miserables.nodes),
       n = nodes.length;

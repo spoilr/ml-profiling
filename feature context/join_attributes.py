@@ -194,13 +194,13 @@ if __name__ == "__main__":
 	data = Data(spreadsheet, upsampling=False)
 	targets = data.targets
 
-	# net = report_status_selection('net')
+	net = report_status_selection('net')
 	ideo = report_status_selection('ideo')
-	# ill = report_status_selection('ill')
-	# al = report_status_selection('all')
+	ill = report_status_selection('ill')
+	al = report_status_selection('all')
 
-	# common_selected_features = common_features(net, ideo, ill)
+	common_selected_features = common_features(net, ideo, ill)
 
-	# print 'Common selected features %d %s' % (len(common_selected_features), common_selected_features)
+	print 'Common selected features %d %s' % (len(common_selected_features), common_selected_features)
 
 	#test_function()
