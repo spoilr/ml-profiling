@@ -5,6 +5,7 @@ from flask import request
 from flask import render_template
 from flask import url_for
 from create_struct import *
+from combine_networks import *
 from join_tree import *
 from urllib import urlopen
 from urllib import urlencode
@@ -29,7 +30,23 @@ def graph(nodes, edges, cpts):
 
 @app.route('/', methods=['GET'])
 def show():
-	return render_template('index.html')
+	# return render_template('index.html')
+	nodes = bn_combo.V
+	categs = get_categories(nodes)
+	while True:
+		try:
+			inference, evidence = create_evidence_and_inference(categs, "combo")
+			return render_template('combined.html', categs=categs, evidence=evidence, inference=inference)
+		except KeyError:
+			continue
+
+@app.route('/networks/combo.json', methods=['GET'])
+def combo_graph():
+	nodes = bn_combo.V
+	edges = bn_combo.E
+	cpts = bn_combo.Vdata
+	return graph(nodes, edges, cpts)
+		
 
 @app.route('/net', methods=['GET'])
 def show_net():
@@ -155,6 +172,7 @@ def ev_inf(evidence, encoded_evidence, theme, network):
 			return inf, encoded_evidence		
 	except ValueError:
 		inf = create_inference(jt_inference(network, evidence))
+		print 'here'
 		return inf, encoded_evidence	
 
 def create_evidence_and_inference(categs, theme):
@@ -169,6 +187,8 @@ def create_evidence_and_inference(categs, theme):
 			return ev_inf(evidence, encoded_evidence, theme, bn_ill)
 		elif theme == "ideo":
 			return ev_inf(evidence, encoded_evidence, theme, bn_ideo)
+		elif theme == "combo":
+			return ev_inf(evidence, encoded_evidence, theme, bn_combo)	
 		else:
 			print "ERROR"	
 
@@ -182,6 +202,17 @@ def get_categories(nodes):
 		else:
 			categs[n] = {0:"no", 1:"yes"}
 	return categs		
+
+@app.route('/bayes/combo', methods=['GET', 'POST'])
+def bayes_combo():
+	nodes = bn_net.V
+	categs = get_categories(nodes)
+	while True:
+		try:
+			inference, evidence = create_evidence_and_inference(categs, "combo")
+			return render_template('combined.html', categs=categs, evidence=evidence, inference=inference)
+		except KeyError:
+			continue
 
 @app.route('/bayes/net', methods=['GET', 'POST'])
 def bayes_net():
@@ -239,6 +270,13 @@ def ideo_inferences():
 	inf = inference(bn_ideo, evidence)
 	return inf	
 
+@app.route('/inference/combo', methods=['GET'])
+def combo_inferences():
+	evidence = request.args.to_dict()
+	evidence = dict((k,int(v)) for k,v in evidence.iteritems())
+	inf = inference(bn_combo, evidence)
+	return inf
+
 def shutdown_server():
     func = request.environ.get('werkzeug.server.shutdown')
     if func is None:
@@ -268,21 +306,30 @@ def original_ideo_graph():
 	bn_ideo.E = original_bn_ideo.E
 	bn_ideo.Vdata = original_bn_ideo.Vdata
 		
+@app.route('/originals/networks/combo.json', methods=['POST'])
+def original_combo_graph():
+	bn_combo.V = original_bn_combo.V
+	bn_combo.E = original_bn_combo.E
+	bn_combo.Vdata = original_bn_combo.Vdata		
 
 if __name__ == '__main__':
 	global bn_net
 	global bn_ill
 	global bn_ideo
+	global bn_combo
 	global cycles
 	cycles = dict()
 	cycles["net"] = False
 	cycles["ill"] = False
 	cycles["ideo"] = False
+	cycles["combo"] = False
 	bn_net = create_bayesian_network_structure('net')
 	bn_ill = create_bayesian_network_structure('ill')
 	bn_ideo = create_bayesian_network_structure('ideo')
+	bn_combo = combine_network(bn_net, bn_ill, bn_ideo)
 	original_bn_net = deepcopy(bn_net)
 	original_bn_ill = deepcopy(bn_ill)
 	original_bn_ideo = deepcopy(bn_ideo)
+	original_bn_combo = deepcopy(bn_combo)
 	app.run(debug=True, threaded=True)
 

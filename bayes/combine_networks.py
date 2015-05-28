@@ -5,11 +5,7 @@ import operator
 from collections import OrderedDict
 from copy import deepcopy
 
-def combine_network():
-	bn_net = create_bayesian_network_structure('net')
-	bn_ill = create_bayesian_network_structure('ill')
-	bn_ideo = create_bayesian_network_structure('ideo')
-
+def combine_network(bn_net, bn_ill, bn_ideo):
 	nodes = []
 	nodes += bn_net.V
 	nodes += bn_ill.V
@@ -34,6 +30,9 @@ def combine_network():
   	return bn
 
 if __name__ == "__main__":
-	bn = combine_network()
+	bn_net = create_bayesian_network_structure('net')
+	bn_ill = create_bayesian_network_structure('ill')
+	bn_ideo = create_bayesian_network_structure('ideo')
+	bn = combine_network(bn_net, bn_ill, bn_ideo)
 	print len(bn.V)
 	print len(bn.E)
