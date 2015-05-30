@@ -1,0 +1,82 @@
+
+##############################
+Evidence {'LettersPost': 1}
+Value [(1, 0.6307692307692309)]
+##############################
+Evidence {'Financial': 1}
+Value [(1, 0.5692307692307692)]
+##############################
+Evidence {'FurtherAttacks': 1}
+Value [(1, 0.6461538461538462)]
+##############################
+Evidence {'OtherKnowledge': 1}
+Value [(1, 0.6307692307692309)]
+##############################
+Evidence {'Stress': 1}
+Value [(1, 0.6)]
+##############################
+Evidence {'Getaway': 1}
+Value [(1, 0.6)]
+##############################
+Evidence {'HurtOthers': 1}
+Value [(1, 0.6461538461538462)]
+##############################
+Evidence {'DryRuns': 1}
+Value [(1, 0.5692307692307692)]
+##############################
+Evidence {'AwareGriev': 1}
+Value [(1, 0.6461538461538462)]
+##############################
+Evidence {'Interrupt': 1}
+Value [(1, 0.5384615384615385)]
+##############################
+Evidence {}
+Value [(1, 0.6461538461538462)]
+##############################
+Evidence {'NewMedia': 1}
+Value [(1, 0.6)]
+##############################
+Evidence {'WarningLettersStatements': 1}
+Value [(1, 0.6461538461538462)]
+##############################
+Evidence {'LettersPost': 1, 'Financial': 1, 'FurtherAttacks': 1, 'OtherKnowledge': 1, 'Stress': 1, 'Getaway': 1, 'Interrupt': 1, 'DryRuns': 1, 'AwareGriev': 1, 'HurtOthers': 1, 'NewMedia': 1}
+Value [(12, 0.24615384615384617)]
+##############################
+Evidence {'LettersPost': 1, 'Financial': 1, 'FurtherAttacks': 1, 'OtherKnowledge': 1, 'Stress': 1, 'Getaway': 1, 'Interrupt': 1, 'DryRuns': 1, 'AwareGriev': 1, 'HurtOthers': 1, 'WarningLettersStatements': 1}
+Value [(12, 0.24615384615384617)]
+##############################
+Evidence {'LettersPost': 1, 'Financial': 1, 'FurtherAttacks': 1, 'OtherKnowledge': 1, 'Stress': 1, 'Getaway': 1, 'Interrupt': 1, 'DryRuns': 1, 'AwareGriev': 1, 'HurtOthers': 1, 'NewMedia': 1, 'WarningLettersStatements': 1}
+Value [(12, 0.2)]
+##############################
+Evidence {'LettersPost': 1, 'Financial': 1, 'FurtherAttacks': 1, 'OtherKnowledge': 1, 'Stress': 1, 'Getaway': 1, 'DryRuns': 1, 'AwareGriev': 1, 'HurtOthers': 1, 'NewMedia': 1, 'WarningLettersStatements': 1}
+Value [(12, 0.26153846153846155)]
+##############################
+Evidence {'LettersPost': 1, 'Financial': 1, 'FurtherAttacks': 1, 'OtherKnowledge': 1, 'Stress': 1, 'Getaway': 1, 'Interrupt': 1, 'DryRuns': 1, 'HurtOthers': 1, 'NewMedia': 1, 'WarningLettersStatements': 1}
+Value [(12, 0.24615384615384617)]
+##############################
+Evidence {'LettersPost': 1, 'Financial': 1, 'FurtherAttacks': 1, 'OtherKnowledge': 1, 'Stress': 1, 'Getaway': 1, 'Interrupt': 1, 'NewMedia': 1, 'AwareGriev': 1, 'HurtOthers': 1, 'WarningLettersStatements': 1}
+Value [(12, 0.2)]
+##############################
+Evidence {'LettersPost': 1, 'Financial': 1, 'FurtherAttacks': 1, 'OtherKnowledge': 1, 'Stress': 1, 'Getaway': 1, 'DryRuns': 1, 'AwareGriev': 1, 'Interrupt': 1, 'NewMedia': 1, 'WarningLettersStatements': 1}
+Value [(12, 0.2)]
+##############################
+Evidence {'LettersPost': 1, 'Financial': 1, 'FurtherAttacks': 1, 'OtherKnowledge': 1, 'Stress': 1, 'Interrupt': 1, 'DryRuns': 1, 'AwareGriev': 1, 'HurtOthers': 1, 'NewMedia': 1, 'WarningLettersStatements': 1}
+Value [(12, 0.24615384615384617)]
+##############################
+Evidence {'LettersPost': 1, 'Financial': 1, 'FurtherAttacks': 1, 'OtherKnowledge': 1, 'Getaway': 1, 'Interrupt': 1, 'DryRuns': 1, 'AwareGriev': 1, 'HurtOthers': 1, 'NewMedia': 1, 'WarningLettersStatements': 1}
+Value [(12, 0.24615384615384617)]
+##############################
+Evidence {'LettersPost': 1, 'Financial': 1, 'FurtherAttacks': 1, 'Stress': 1, 'Getaway': 1, 'Interrupt': 1, 'DryRuns': 1, 'AwareGriev': 1, 'HurtOthers': 1, 'NewMedia': 1, 'WarningLettersStatements': 1}
+Value [(12, 0.21538461538461537)]
+##############################
+Evidence {'LettersPost': 1, 'Financial': 1, 'OtherKnowledge': 1, 'Stress': 1, 'Getaway': 1, 'Interrupt': 1, 'DryRuns': 1, 'AwareGriev': 1, 'HurtOthers': 1, 'NewMedia': 1, 'WarningLettersStatements': 1}
+Value [(12, 0.2)]
+##############################
+Evidence {'LettersPost': 1, 'FurtherAttacks': 1, 'OtherKnowledge': 1, 'Stress': 1, 'Getaway': 1, 'Interrupt': 1, 'DryRuns': 1, 'AwareGriev': 1, 'HurtOthers': 1, 'NewMedia': 1, 'WarningLettersStatements': 1}
+Value [(12, 0.27692307692307694)]
+##############################
+Evidence {'Stress': 1, 'Financial': 1, 'FurtherAttacks': 1, 'OtherKnowledge': 1, 'Getaway': 1, 'Interrupt': 1, 'DryRuns': 1, 'AwareGriev': 1, 'HurtOthers': 1, 'NewMedia': 1, 'WarningLettersStatements': 1}
+Value [(12, 0.27692307692307694)]
+##############################
+Evidence {'LettersPost': 1, 'Financial': 1, 'FurtherAttacks': 1, 'OtherKnowledge': 1, 'Stress': 1, 'Getaway': 1, 'Interrupt': 1, 'DryRuns': 1, 'AwareGriev': 1, 'HurtOthers': 1, 'NewMedia': 1, 'WarningLettersStatements': 1}
+Value [(13, 0.2)]
