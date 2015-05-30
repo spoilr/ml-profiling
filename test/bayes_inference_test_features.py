@@ -98,7 +98,7 @@ if __name__ == "__main__":
 	nodes = get_connected_nodes(bn)
 	print 'Connected nodes ' + str(nodes)
 	possible_evidence = evidence_from_theme(theme)
-	file_name = theme + "_evidence_feature.txt"
 	start = int(raw_input("Start Combinations nr.\n"))
+	file_name = theme + str(start) + "_evidence_feature.txt"
 	propagate_evidence(theme, bn, possible_evidence, features, file_name, start, nodes)
 	
