@@ -19,11 +19,17 @@ from bayes_inference_test import create_evidence_from_list
 from copy import deepcopy
 import itertools
 
-net_evidence = ["LettersPost", "Financial", "BombManuals", "LiveAlone", "RecruitNetGroup", "InteractNet", "HighValueCivilian", "Discriminate", "FurtherAttacks", "OtherKnowledge", "NotCareInjustice", "Getaway", "Involve", "TargetTyp", "Interrupt", "Education", "Stockpile", "WarningLettersStatements", "NewMedia", "DryRuns"]
+# net_evidence = ["LettersPost", "Financial", "BombManuals", "LiveAlone", "RecruitNetGroup", "InteractNet", "HighValueCivilian", "Discriminate", "FurtherAttacks", "OtherKnowledge", "NotCareInjustice", "Getaway", "Involve", "TargetTyp", "Interrupt", "Stockpile", "WarningLettersStatements", "NewMedia", "DryRuns"]
 
-ill_evidence = ["MentalIll", "Financial", "BombManuals", "LiveAlone", "LettersPost", "FurtherAttacks", "WarningLettersStatements", "NotCareInjustice", "Isolated", "HurtOthers", "OtherKnowledge", "AwareGriev", "NewMedia", "Stress", "HighValueCivilian", "Getaway", "DryRuns", "Interrupt", "Education"]
+# ill_evidence = ["MentalIll", "Financial", "BombManuals", "LiveAlone", "LettersPost", "FurtherAttacks", "WarningLettersStatements", "NotCareInjustice", "Isolated", "HurtOthers", "OtherKnowledge", "AwareGriev", "NewMedia", "Stress", "HighValueCivilian", "Getaway", "DryRuns", "Interrupt"]
 
-ideo_evidence = ["Discriminate", "NotCareInjustice", "FurtherAttacks", "Religion", "AwareIdeo", "RelatStat", "IdeoChangeInt", "Interrupt", "Contradict", "Getaway", "Ideology", "LiveAlone", "TargetTyp", "Propaganda", "Financial", "LocPubPriv", "Stockpile", "RecruitNetGroup", "HighValueCivilian", "ReligChangeInt", "LettersPost", "Legitimise", "OtherKnowledge", "BombManuals", "Education"]
+# ideo_evidence = ["Discriminate", "NotCareInjustice", "FurtherAttacks", "Religion", "AwareIdeo", "RelatStat", "IdeoChangeInt", "Interrupt", "Contradict", "Getaway", "Ideology", "LiveAlone", "TargetTyp", "Propaganda", "Financial", "LocPubPriv", "Stockpile", "RecruitNetGroup", "HighValueCivilian", "ReligChangeInt", "LettersPost", "Legitimise", "OtherKnowledge", "BombManuals"]
+
+net_evidence = ['BombManuals', 'LiveAlone', 'InteractNet', 'OtherKnowledge', 'FurtherAttacks', 'Involve', 'NewMedia', 'TargetTyp', 'DryRuns', 'RecruitNetGroup', 'Discriminate', 'Stockpile', 'WarningLettersStatements', 'HighValueCivilian']
+
+ill_evidence = ['LettersPost', 'Financial', 'FurtherAttacks', 'OtherKnowledge', 'Stress', 'Getaway', 'HurtOthers', 'DryRuns', 'AwareGriev', 'Interrupt', 'HighValueCivilian', 'NewMedia', 'WarningLettersStatements']
+
+ideo_evidence = ['LettersPost', 'BombManuals', 'Contradict', 'Legitimise', 'Ideology', 'RecruitNetGroup', 'Propaganda', 'Financial', 'LocPubPriv', 'LiveAlone', 'OtherKnowledge', 'ReligChangeInt', 'TargetTyp']
 
 def evidence_from_theme(theme):
 	if theme == 'net':
@@ -45,21 +51,21 @@ def save_evidence(file_name, accuracy, evidence, nr_values):
 	with open(file_name, "a") as myfile:	
 		myfile.write('\nValue %s' % str(value))
 
-def create_combinations_evidence(possible_evidence):
+def create_combinations_evidence(possible_evidence, start):
 	combinations_possible_evidence = []
 
 	# single elements
 	for x in possible_evidence:
 		combinations_possible_evidence.append([x])
 
-	for i in xrange(2,len(possible_evidence)+1):
+	for i in xrange(start,len(possible_evidence)+1):
 		combinations = list(itertools.combinations(possible_evidence,i))
 		combinations_possible_evidence = combinations_possible_evidence + (map(list,combinations))
 
 	return combinations_possible_evidence		
 
-def propagate_evidence(theme, bn, possible_evidence, features, file_name):
-	combinations_possible_evidence = create_combinations_evidence(possible_evidence)
+def propagate_evidence(theme, bn, possible_evidence, features, file_name, start, nodes):
+	combinations_possible_evidence = create_combinations_evidence(possible_evidence, start)
 	for x in combinations_possible_evidence:
 		evidences = create_evidence_from_list(x)
 		for evidence in evidences:
@@ -68,7 +74,6 @@ def propagate_evidence(theme, bn, possible_evidence, features, file_name):
 				inf = likelihood_from_inference(inf)
 				# print inf
 
-				nodes = get_connected_nodes(bn)
 				accuracy = inference_accuracy(dataset, nodes, features, inf)
 				save_evidence(file_name, accuracy, evidence, len(x))
 
@@ -90,7 +95,10 @@ if __name__ == "__main__":
 	features.append('HighValueCivilian')	# append target name in feature
 	assert dataset.shape[0] == len(targets)
 
+	nodes = get_connected_nodes(bn)
+	print 'Connected nodes ' + str(nodes)
 	possible_evidence = evidence_from_theme(theme)
 	file_name = theme + "_evidence_feature.txt"
-	propagate_evidence(theme, bn, possible_evidence, features, file_name)
+	start = int(raw_input("Start Combinations nr.\n"))
+	propagate_evidence(theme, bn, possible_evidence, features, file_name, start, nodes)
 	

@@ -51,11 +51,16 @@ def inference_accuracy(dataset, nodes, features, inf):
 
 def inference_accuracy_for_instance(nodes, features, inference, instance):
 	nrs = 0
+	opposite_nrs = 0
 	for key, (val, prob) in inference.iteritems():
-		if key in nodes:
-			index = features.index(key)
-			if instance[index] == int(val):
-				nrs+=1
+		assert key in nodes
+		index = features.index(key)
+		if instance[index] == int(val):
+			nrs+=1
+		else:
+			opposite_nrs+=1
+
+	assert nrs+opposite_nrs == len(nodes)
 
 	accuracy = float(nrs)/len(nodes)
 	# print 'Accuracy ' + str(accuracy)
