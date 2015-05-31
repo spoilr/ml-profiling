@@ -1,11 +1,9 @@
 python base/input_features.py
 Use features from SPSS
 
-
 Combine outputs of X classifiers.
 Methods: majority vote and weighted majority vote.
 Each classifier produces a class label.
-
 
 Binary classification measures.
 Includes precision, recall, f1, accuracy, and accuracy number.
@@ -15,39 +13,15 @@ Enter algorithm. Choose between lr, dt, knn, svm
 
 ########## HIGHVAL ##########
 ####### net FEATURES ####### 24 
-['WarningLettersStatements', 'Funds', 'Discriminate', 'FurtherAttacks', 'Implement', 
-'MultiEventTarget', 'Virtual', 'Stockpile', 'OtherKnowledge', 'InteractNet', 
-'TargetTyp', 'BombManuals', 'CrimCon', 'RelatStat', 'Violence', 'RecruitNetGroup', 
-'ClaimResp', 'LifeAspectChange', 'DryRuns','NotCareInjustice', 'OccCat', 'OtherInv', 
-'LettersPost', 'Involve']
+['WarningLettersStatements', 'Funds', 'Discriminate', 'FurtherAttacks', 'Implement', 'MultiEventTarget', 'Virtual', 'Stockpile', 'OtherKnowledge', 'InteractNet', 'TargetTyp', 'BombManuals', 'CrimCon', 'RelatStat', 'Violence', 'RecruitNetGroup', 'ClaimResp', 'LifeAspectChange', 'DryRuns','NotCareInjustice', 'OccCat', 'OtherInv', 'LettersPost', 'Involve']
 ####### ill FEATURES ####### 28 
-['WarningLettersStatements', 'Tipping', 'AwareGriev', 'Discriminate', 'MultiEventTarget', 
-'FurtherAttacks', 'Implement', 'HurtOthers', 'OtherKnowledge', 'Stockpile', 'MentalIll', 
-'CrimCon', 'BombManuals', 'ClaimResp', 'TargetTyp', 'Violence', 'NotCareInjustice', 
-'LiveAlone', 'Stress', 'Insanity', 'Isolated', 'DryRuns', 'Obsess', 'RelatStat', 
-'LifeAspectChange', 'OccCat', 'LettersPost', 'Children']
+['WarningLettersStatements', 'Tipping', 'AwareGriev', 'Discriminate', 'MultiEventTarget', 'FurtherAttacks', 'Implement', 'HurtOthers', 'OtherKnowledge', 'Stockpile', 'MentalIll', 'CrimCon', 'BombManuals', 'ClaimResp', 'TargetTyp', 'Violence', 'NotCareInjustice', 'LiveAlone', 'Stress', 'Insanity', 'Isolated', 'DryRuns', 'Obsess', 'RelatStat', 'LifeAspectChange', 'OccCat', 'LettersPost', 'Children']
 ####### ideo FEATURES ####### 33 
-['WarningLettersStatements', 'LocationNature', 'Discriminate', 'AwareIdeo', 'MultiEventTarget', 
-'ReligChangeInt','FurtherAttacks', 'Implement', 'Propaganda', 'Virtual', 'OtherKnowledge', 
-'IdeoChangeInt', 'CrimCon', 'Stockpile', 'MilExp', 'BombManuals', 'Adoption', 'RelatStat', 
-'RecruitNetGroup', 'Violence', 'TargetTyp', 'NotCareInjustice', 'LifeAspectChange', 'ClaimResp', 
-'DryRuns', 'Religion', 'Children', 'OccCat', 'Training', 'Ideology', 'LettersPost', 'ParRelatStat', 
-'WideGroup']
+['WarningLettersStatements', 'LocationNature', 'Discriminate', 'AwareIdeo', 'MultiEventTarget', 'ReligChangeInt','FurtherAttacks', 'Implement', 'Propaganda', 'Virtual', 'OtherKnowledge', 'IdeoChangeInt', 'CrimCon', 'Stockpile', 'MilExp', 'BombManuals', 'Adoption', 'RelatStat', 'RecruitNetGroup', 'Violence', 'TargetTyp', 'NotCareInjustice', 'LifeAspectChange', 'ClaimResp', 'DryRuns', 'Religion', 'Children', 'OccCat', 'Training', 'Ideology', 'LettersPost', 'ParRelatStat', 'WideGroup']
 ########## CIVIL ##########
 ####### net FEATURES ####### 24 
-['WarningLettersStatements', 'MultiEventTarget', 'RelatStat', 'Discriminate', 'Implement', 
-'TargetTyp', 'Funds', 'LifeAspectChange', 'Stockpile', 'FurtherAttacks', 'InteractNet', 
-'LiveAlone', 'RecruitNetGroup', 'OccCat', 'Virtual', 'Violence', 'LettersPost', 'ClaimResp', 
-'ParRelatStat', 'PersRelat', 'Involve', 'OtherKnowledge', 'Education', 'BombManuals']
+['WarningLettersStatements', 'MultiEventTarget', 'RelatStat', 'Discriminate', 'Implement', 'TargetTyp', 'Funds', 'LifeAspectChange', 'Stockpile', 'FurtherAttacks', 'InteractNet', 'LiveAlone', 'RecruitNetGroup', 'OccCat', 'Virtual', 'Violence', 'LettersPost', 'ClaimResp', 'ParRelatStat', 'PersRelat', 'Involve', 'OtherKnowledge', 'Education', 'BombManuals']
 ####### ill FEATURES ####### 28 
-['Implement', 'Tipping', 'AwareGriev', 'WarningLettersStatements', 'Isolated', 'TargetTyp', 
-'RelatStat', 'HurtOthers', 'Discriminate', 'FurtherAttacks', 'MultiEventTarget', 'ClaimResp', 
-'OccCat', 'Stockpile', 'LifeAspectChange', 'MentalIll', 'CrimCon', 'LiveAlone', 'Insanity', 
-'Education', 'Virtual', 'DryRuns', 'LettersPost', 'ParRelatStat', 'Violence', 'NewMedia', 
-'Obsess', 'SubAbuse']
+['Implement', 'Tipping', 'AwareGriev', 'WarningLettersStatements', 'Isolated', 'TargetTyp', 'RelatStat', 'HurtOthers', 'Discriminate', 'FurtherAttacks', 'MultiEventTarget', 'ClaimResp', 'OccCat', 'Stockpile', 'LifeAspectChange', 'MentalIll', 'CrimCon', 'LiveAlone', 'Insanity', 'Education', 'Virtual', 'DryRuns', 'LettersPost', 'ParRelatStat', 'Violence', 'NewMedia', 'Obsess', 'SubAbuse']
 ####### ideo FEATURES ####### 33 
-['WarningLettersStatements', 'AwareIdeo', 'Implement', 'Propaganda', 'MultiEventTarget', 
-'MilExp', 'TargetTyp', 'RelatStat', 'Stockpile', 'Discriminate', 'Religion', 'FurtherAttacks', 
-'RecruitNetGroup', 'LocationNature', 'LiveAlone', 'ReligChangeInt', 'CrimCon', 'WideGroup', 
-'Virtual', 'IdeoChangeInt', 'OccCat', 'LifeAspectChange', 'ParRelatStat', 'ClaimResp', 'Financial', 
-'LettersPost', 'Violence', 'Ideology', 'NewMedia', 'BombManuals', 'DryRuns', 'Education', 'Interrupt']
+['WarningLettersStatements', 'AwareIdeo', 'Implement', 'Propaganda', 'MultiEventTarget', 'MilExp', 'TargetTyp', 'RelatStat', 'Stockpile', 'Discriminate', 'Religion', 'FurtherAttacks', 'RecruitNetGroup', 'LocationNature', 'LiveAlone', 'ReligChangeInt', 'CrimCon', 'WideGroup', 'Virtual', 'IdeoChangeInt', 'OccCat', 'LifeAspectChange', 'ParRelatStat', 'ClaimResp', 'Financial', 'LettersPost', 'Violence', 'Ideology', 'NewMedia', 'BombManuals', 'DryRuns', 'Education', 'Interrupt']

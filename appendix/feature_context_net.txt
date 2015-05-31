@@ -1,11 +1,6 @@
 python feature\ context/join_attributes.py
 net
-set(['Discriminate', 'InteractNet', 'NotCareInjustice', 'FurtherAttacks', 
-'MultiAttackMeth', 'MultiEventTarget', 'RelatStat', 'DryRuns', 'ClaimResp', 
-'Interrupt', 'LifeAspectChange', 'WarningLettersStatements', 'LettersPost', 
-'Violence', 'BombManuals', 'ParRelatStat', 'Getaway', 'Stockpile', 'RecruitNetGroup', 
-'Implement', 'Financial', 'LiveAlone', 'CrimCon', 'OtherKnowledge', 'Involve', 
-'NewMedia', 'TargetTyp', 'Education', 'Children'])
+set(['Discriminate', 'InteractNet', 'NotCareInjustice', 'FurtherAttacks', 'MultiAttackMeth', 'MultiEventTarget', 'RelatStat', 'DryRuns', 'ClaimResp', 'Interrupt', 'LifeAspectChange', 'WarningLettersStatements', 'LettersPost', 'Violence', 'BombManuals', 'ParRelatStat', 'Getaway', 'Stockpile', 'RecruitNetGroup', 'Implement', 'Financial', 'LiveAlone', 'CrimCon', 'OtherKnowledge', 'Involve', 'NewMedia', 'TargetTyp', 'Education', 'Children'])
 Nr selected features 29
 Nr total features 35
 Features eliminated set(['Regret', 'Funds', 'Virtual', 'OtherInv', 'OccCat', 'PersRelat'])

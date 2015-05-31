@@ -1,28 +1,13 @@
 python base/single_input_features.py 'all'
 
 Use features from SPSS
-
-
 Binary classification measures.
 Includes precision, recall, f1, accuracy, and accuracy number.
-
 Enter algorithm. Choose between lr, dt, knn, svm
 
 ########## CIVIL ##########
 ####### FEATURES ####### 44
-['AwareGriev', 'WarningLettersStatements', 'HurtOthers', 'AwareIdeo', 'Religion', 
-'Discriminate', 'Propaganda', 'ReligChangeInt', 'TargetTyp', 'Implement', 
-'LifeAspectChange', 'MultiEventTarget', 'MilExp', 'RelatStat', 'Funds', 'FurtherAttacks', 
-'Stockpile', 'InteractNet', 'Isolated', 'LiveAlone', 'OccCat', 'MentalIll', 'RecruitNetGroup', 
-'Violence', 'Tipping', 'Virtual', 'Ideology', 'Insanity', 'ClaimResp', 'LettersPost', 
-'WideGroup', 'DryRuns', 'LocationNature', 'Stress', 'Education', 'PersRelat', 'Involve', 
-'ParRelatStat', 'Training', 'IdeoChangeInt', 'SubAbuse', 'OwnProp', 'Adoption', 'BombManuals']
+['AwareGriev', 'WarningLettersStatements', 'HurtOthers', 'AwareIdeo', 'Religion', 'Discriminate', 'Propaganda', 'ReligChangeInt', 'TargetTyp', 'Implement', 'LifeAspectChange', 'MultiEventTarget', 'MilExp', 'RelatStat', 'Funds', 'FurtherAttacks', 'Stockpile', 'InteractNet', 'Isolated', 'LiveAlone', 'OccCat', 'MentalIll', 'RecruitNetGroup',  'Violence', 'Tipping', 'Virtual', 'Ideology', 'Insanity', 'ClaimResp', 'LettersPost', 'WideGroup', 'DryRuns', 'LocationNature', 'Stress', 'Education', 'PersRelat', 'Involve', 'ParRelatStat', 'Training', 'IdeoChangeInt', 'SubAbuse', 'OwnProp', 'Adoption', 'BombManuals']
 ########## HIGHVAL ##########
 ####### FEATURES ####### 44
-['WarningLettersStatements', 'LocationNature', 'Tipping', 'AwareGriev', 'ReligChangeInt', 
-'Funds', 'AwareIdeo', 'FurtherAttacks', 'Discriminate', 'MultiEventTarget', 'HurtOthers', 
-'Propaganda', 'Implement', 'Virtual', 'OtherKnowledge', 'IdeoChangeInt', 'Stockpile', 
-'CrimCon', 'BombManuals', 'MentalIll', 'InteractNet', 'MilExp', 'RelatStat', 'Adoption', 
-'ClaimResp', 'Violence', 'NotCareInjustice', 'TargetTyp', 'RecruitNetGroup', 'LifeAspectChange', 
-'DryRuns', 'Stress', 'Religion', 'Obsess', 'Ideology', 'Training', 'OtherInv', 'PersRelat', 
-'Involve', 'LettersPost', 'OccCat', 'Isolated', 'Insanity', 'LocPubPriv']
+['WarningLettersStatements', 'LocationNature', 'Tipping', 'AwareGriev', 'ReligChangeInt', 'Funds', 'AwareIdeo', 'FurtherAttacks', 'Discriminate', 'MultiEventTarget', 'HurtOthers', 'Propaganda', 'Implement', 'Virtual', 'OtherKnowledge', 'IdeoChangeInt', 'Stockpile', 'CrimCon', 'BombManuals', 'MentalIll', 'InteractNet', 'MilExp', 'RelatStat', 'Adoption', 'ClaimResp', 'Violence', 'NotCareInjustice', 'TargetTyp', 'RecruitNetGroup', 'LifeAspectChange', 'DryRuns', 'Stress', 'Religion', 'Obsess', 'Ideology', 'Training', 'OtherInv', 'PersRelat', 'Involve', 'LettersPost', 'OccCat', 'Isolated', 'Insanity', 'LocPubPriv']

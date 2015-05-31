@@ -1,16 +1,6 @@
 python feature\ context/join_attributes.py
 all
-set(['MilExp', 'Discriminate', 'InteractNet', 'OtherKnowledge', 'FurtherAttacks', 
-'Isolated', 'Religion', 'OtherInv', 'AwareIdeo', 'MultiAttackMeth', 'Insanity', 
-'Obsess', 'Stress', 'MultiEventTarget', 'RelatStat', 'Denounce', 'IdeoChangeInt', 
-'ClaimResp', 'Interrupt', 'LifeAspectChange', 'WarningLettersStatements', 'MentalIll', 
-'LettersPost', 'Violence', 'Training', 'BombManuals', 'Contradict', 'ParRelatStat', 
-'Legitimise', 'Getaway', 'Ideology', 'HurtOthers', 'DryRuns', 'Stockpile', 
-'RecruitNetGroup', 'Implement', 'Propaganda', 'SubstanceUse', 'NewMedia', 'Financial', 
-'LocPubPriv', 'LiveAlone', 'CrimCon', 'WideGroup', 'NotCareInjustice', 'Involve', 
-'ReligChangeInt', 'TargetTyp', 'AwareGriev', 'Education', 'Children', 'BeliefChange'])
+set(['MilExp', 'Discriminate', 'InteractNet', 'OtherKnowledge', 'FurtherAttacks', 'Isolated', 'Religion', 'OtherInv', 'AwareIdeo', 'MultiAttackMeth', 'Insanity', 'Obsess', 'Stress', 'MultiEventTarget', 'RelatStat', 'Denounce', 'IdeoChangeInt', 'ClaimResp', 'Interrupt', 'LifeAspectChange', 'WarningLettersStatements', 'MentalIll', 'LettersPost', 'Violence', 'Training', 'BombManuals', 'Contradict', 'ParRelatStat', 'Legitimise', 'Getaway', 'Ideology', 'HurtOthers', 'DryRuns', 'Stockpile', 'RecruitNetGroup', 'Implement', 'Propaganda', 'SubstanceUse', 'NewMedia', 'Financial', 'LocPubPriv', 'LiveAlone', 'CrimCon', 'WideGroup', 'NotCareInjustice', 'Involve', 'ReligChangeInt', 'TargetTyp', 'AwareGriev', 'Education', 'Children', 'BeliefChange'])
 Nr selected features 52
 Nr total features 64
-Features eliminated set(['Regret', 'OccCat', 'OwnProp', 'Virtual', 'SubAbuse', 
-'LocationNature', 'Adoption', 'PossessStories', 'Funds', 'HarmVictimHelpless', 
-'PersRelat', 'Tipping'])
+Features eliminated set(['Regret', 'OccCat', 'OwnProp', 'Virtual', 'SubAbuse', 'LocationNature', 'Adoption', 'PossessStories', 'Funds', 'HarmVictimHelpless', 'PersRelat', 'Tipping'])
