@@ -58,7 +58,8 @@ def create_combinations_evidence(possible_evidence, start):
 	for x in possible_evidence:
 		combinations_possible_evidence.append([x])
 
-	for i in xrange(start,len(possible_evidence)+1):
+	# for i in xrange(start,len(possible_evidence)+1):
+	for i in xrange(start,start+1):
 		combinations = list(itertools.combinations(possible_evidence,i))
 		combinations_possible_evidence = combinations_possible_evidence + (map(list,combinations))
 

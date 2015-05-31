@@ -1,0 +1,313 @@
+
+##############################
+Evidence {'BombManuals': 1}
+Value [(1, 0.5214285714285714)]
+##############################
+Evidence {'LiveAlone': 1}
+Value [(1, 0.5785714285714286)]
+##############################
+Evidence {'InteractNet': 1}
+Value [(1, 0.6071428571428571)]
+##############################
+Evidence {'OtherKnowledge': 1}
+Value [(1, 0.5785714285714285)]
+##############################
+Evidence {'FurtherAttacks': 1}
+Value [(1, 0.5928571428571429)]
+##############################
+Evidence {'Involve': 1}
+Value [(1, 0.6071428571428571)]
+##############################
+Evidence {'NewMedia': 1}
+Value [(1, 0.5642857142857143)]
+##############################
+Evidence {}
+Value [(1, 0.5928571428571429)]
+##############################
+Evidence {'DryRuns': 1}
+Value [(1, 0.5214285714285715)]
+##############################
+Evidence {'RecruitNetGroup': 1}
+Value [(1, 0.5214285714285714)]
+##############################
+Evidence {'Discriminate': 1}
+Value [(1, 0.6071428571428571)]
+##############################
+Evidence {'Stockpile': 1}
+Value [(1, 0.5928571428571429)]
+##############################
+Evidence {'WarningLettersStatements': 1}
+Value [(1, 0.5928571428571429)]
+##############################
+Evidence {}
+Value [(1, 0.6642857142857141)]
+##############################
+Evidence {'LiveAlone': 1, 'BombManuals': 1}
+Value [(2, 0.5071428571428571)]
+##############################
+Evidence {'InteractNet': 1, 'BombManuals': 1}
+Value [(2, 0.5214285714285714)]
+##############################
+Evidence {'OtherKnowledge': 1, 'BombManuals': 1}
+Value [(2, 0.5071428571428571)]
+##############################
+Evidence {'FurtherAttacks': 1, 'BombManuals': 1}
+Value [(2, 0.5357142857142857)]
+##############################
+Evidence {'Involve': 1, 'BombManuals': 1}
+Value [(2, 0.5357142857142857)]
+##############################
+Evidence {'NewMedia': 1, 'BombManuals': 1}
+Value [(2, 0.47857142857142854)]
+##############################
+Evidence {'BombManuals': 1}
+Value [(2, 0.5357142857142858)]
+##############################
+Evidence {'DryRuns': 1, 'BombManuals': 1}
+Value [(2, 0.45)]
+##############################
+Evidence {'BombManuals': 1, 'RecruitNetGroup': 1}
+Value [(2, 0.5214285714285714)]
+##############################
+Evidence {'Discriminate': 1, 'BombManuals': 1}
+Value [(2, 0.5214285714285714)]
+##############################
+Evidence {'Stockpile': 1, 'BombManuals': 1}
+Value [(2, 0.5214285714285714)]
+##############################
+Evidence {'WarningLettersStatements': 1, 'BombManuals': 1}
+Value [(2, 0.5214285714285714)]
+##############################
+Evidence {'BombManuals': 1}
+Value [(2, 0.5357142857142858)]
+##############################
+Evidence {'InteractNet': 1, 'LiveAlone': 1}
+Value [(2, 0.5785714285714286)]
+##############################
+Evidence {'OtherKnowledge': 1, 'LiveAlone': 1}
+Value [(2, 0.5642857142857143)]
+##############################
+Evidence {'FurtherAttacks': 1, 'LiveAlone': 1}
+Value [(2, 0.5785714285714286)]
+##############################
+Evidence {'Involve': 1, 'LiveAlone': 1}
+Value [(2, 0.592857142857143)]
+##############################
+Evidence {'NewMedia': 1, 'LiveAlone': 1}
+Value [(2, 0.5357142857142857)]
+##############################
+Evidence {'LiveAlone': 1}
+Value [(2, 0.5785714285714286)]
+##############################
+Evidence {'DryRuns': 1, 'LiveAlone': 1}
+Value [(2, 0.5642857142857143)]
+##############################
+Evidence {'LiveAlone': 1, 'RecruitNetGroup': 1}
+Value [(2, 0.5071428571428571)]
+##############################
+Evidence {'Discriminate': 1, 'LiveAlone': 1}
+Value [(2, 0.5785714285714286)]
+##############################
+Evidence {'Stockpile': 1, 'LiveAlone': 1}
+Value [(2, 0.5785714285714286)]
+##############################
+Evidence {'WarningLettersStatements': 1, 'LiveAlone': 1}
+Value [(2, 0.5785714285714286)]
+##############################
+Evidence {'LiveAlone': 1}
+Value [(2, 0.5785714285714286)]
+##############################
+Evidence {'InteractNet': 1, 'OtherKnowledge': 1}
+Value [(2, 0.5785714285714285)]
+##############################
+Evidence {'InteractNet': 1, 'FurtherAttacks': 1}
+Value [(2, 0.6071428571428571)]
+##############################
+Evidence {'InteractNet': 1, 'Involve': 1}
+Value [(2, 0.5928571428571429)]
+##############################
+Evidence {'InteractNet': 1, 'NewMedia': 1}
+Value [(2, 0.5642857142857143)]
+##############################
+Evidence {'InteractNet': 1}
+Value [(2, 0.6071428571428571)]
+##############################
+Evidence {'InteractNet': 1, 'DryRuns': 1}
+Value [(2, 0.5214285714285714)]
+##############################
+Evidence {'InteractNet': 1, 'RecruitNetGroup': 1}
+Value [(2, 0.5214285714285714)]
+##############################
+Evidence {'InteractNet': 1, 'Discriminate': 1}
+Value [(2, 0.6071428571428571)]
+##############################
+Evidence {'InteractNet': 1, 'Stockpile': 1}
+Value [(2, 0.5928571428571429)]
+##############################
+Evidence {'InteractNet': 1, 'WarningLettersStatements': 1}
+Value [(2, 0.5928571428571429)]
+##############################
+Evidence {'InteractNet': 1}
+Value [(2, 0.5928571428571429)]
+##############################
+Evidence {'FurtherAttacks': 1, 'OtherKnowledge': 1}
+Value [(2, 0.592857142857143)]
+##############################
+Evidence {'Involve': 1, 'OtherKnowledge': 1}
+Value [(2, 0.5785714285714285)]
+##############################
+Evidence {'NewMedia': 1, 'OtherKnowledge': 1}
+Value [(2, 0.55)]
+##############################
+Evidence {'OtherKnowledge': 1}
+Value [(2, 0.5928571428571429)]
+##############################
+Evidence {'OtherKnowledge': 1, 'RecruitNetGroup': 1}
+Value [(2, 0.5785714285714285)]
+##############################
+Evidence {'Discriminate': 1, 'OtherKnowledge': 1}
+Value [(2, 0.5785714285714285)]
+##############################
+Evidence {'Stockpile': 1, 'OtherKnowledge': 1}
+Value [(2, 0.5928571428571427)]
+##############################
+Evidence {'OtherKnowledge': 1, 'WarningLettersStatements': 1}
+Value [(2, 0.5785714285714285)]
+##############################
+Evidence {'OtherKnowledge': 1}
+Value [(2, 0.5928571428571427)]
+##############################
+Evidence {'Involve': 1, 'FurtherAttacks': 1}
+Value [(2, 0.6071428571428571)]
+##############################
+Evidence {'NewMedia': 1, 'FurtherAttacks': 1}
+Value [(2, 0.5499999999999999)]
+##############################
+Evidence {'FurtherAttacks': 1}
+Value [(2, 0.5928571428571429)]
+##############################
+Evidence {'DryRuns': 1, 'FurtherAttacks': 1}
+Value [(2, 0.5214285714285714)]
+##############################
+Evidence {'FurtherAttacks': 1, 'RecruitNetGroup': 1}
+Value [(2, 0.5928571428571429)]
+##############################
+Evidence {'FurtherAttacks': 1, 'Discriminate': 1}
+Value [(2, 0.6071428571428571)]
+##############################
+Evidence {'FurtherAttacks': 1, 'Stockpile': 1}
+Value [(2, 0.5928571428571429)]
+##############################
+Evidence {'FurtherAttacks': 1, 'WarningLettersStatements': 1}
+Value [(2, 0.5928571428571429)]
+##############################
+Evidence {'FurtherAttacks': 1}
+Value [(2, 0.5928571428571429)]
+##############################
+Evidence {'Involve': 1, 'NewMedia': 1}
+Value [(2, 0.55)]
+##############################
+Evidence {'Involve': 1}
+Value [(2, 0.5785714285714286)]
+##############################
+Evidence {'Involve': 1, 'DryRuns': 1}
+Value [(2, 0.5214285714285715)]
+##############################
+Evidence {'Involve': 1, 'RecruitNetGroup': 1}
+Value [(2, 0.5214285714285715)]
+##############################
+Evidence {'Involve': 1, 'Discriminate': 1}
+Value [(2, 0.5928571428571429)]
+##############################
+Evidence {'Involve': 1, 'Stockpile': 1}
+Value [(2, 0.6071428571428571)]
+##############################
+Evidence {'Involve': 1, 'WarningLettersStatements': 1}
+Value [(2, 0.5928571428571427)]
+##############################
+Evidence {'Involve': 1}
+Value [(2, 0.5928571428571429)]
+##############################
+Evidence {'NewMedia': 1}
+Value [(2, 0.5499999999999999)]
+##############################
+Evidence {'NewMedia': 1, 'DryRuns': 1}
+Value [(2, 0.4785714285714285)]
+##############################
+Evidence {'NewMedia': 1, 'RecruitNetGroup': 1}
+Value [(2, 0.47857142857142854)]
+##############################
+Evidence {'NewMedia': 1, 'Discriminate': 1}
+Value [(2, 0.5499999999999999)]
+##############################
+Evidence {'NewMedia': 1, 'Stockpile': 1}
+Value [(2, 0.5499999999999999)]
+##############################
+Evidence {'NewMedia': 1, 'WarningLettersStatements': 1}
+Value [(2, 0.5499999999999999)]
+##############################
+Evidence {'NewMedia': 1}
+Value [(2, 0.55)]
+##############################
+Evidence {'DryRuns': 1}
+Value [(2, 0.5214285714285714)]
+##############################
+Evidence {'RecruitNetGroup': 1}
+Value [(2, 0.5928571428571429)]
+##############################
+Evidence {'Discriminate': 1}
+Value [(2, 0.5928571428571429)]
+##############################
+Evidence {'Stockpile': 1}
+Value [(2, 0.5928571428571429)]
+##############################
+Evidence {'WarningLettersStatements': 1}
+Value [(2, 0.607142857142857)]
+##############################
+Evidence {}
+Value [(2, 0.6071428571428571)]
+##############################
+Evidence {'DryRuns': 1, 'RecruitNetGroup': 1}
+Value [(2, 0.5071428571428571)]
+##############################
+Evidence {'DryRuns': 1, 'Discriminate': 1}
+Value [(2, 0.5214285714285714)]
+##############################
+Evidence {'DryRuns': 1, 'Stockpile': 1}
+Value [(2, 0.5214285714285714)]
+##############################
+Evidence {'DryRuns': 1, 'WarningLettersStatements': 1}
+Value [(2, 0.5214285714285716)]
+##############################
+Evidence {'DryRuns': 1}
+Value [(2, 0.5214285714285715)]
+##############################
+Evidence {'Discriminate': 1, 'RecruitNetGroup': 1}
+Value [(2, 0.5928571428571429)]
+##############################
+Evidence {'Stockpile': 1, 'RecruitNetGroup': 1}
+Value [(2, 0.5214285714285714)]
+##############################
+Evidence {'WarningLettersStatements': 1, 'RecruitNetGroup': 1}
+Value [(2, 0.5928571428571429)]
+##############################
+Evidence {'RecruitNetGroup': 1}
+Value [(2, 0.5928571428571429)]
+##############################
+Evidence {'Stockpile': 1, 'Discriminate': 1}
+Value [(2, 0.6071428571428571)]
+##############################
+Evidence {'Discriminate': 1, 'WarningLettersStatements': 1}
+Value [(2, 0.5928571428571429)]
+##############################
+Evidence {'Discriminate': 1}
+Value [(2, 0.6071428571428571)]
+##############################
+Evidence {'Stockpile': 1, 'WarningLettersStatements': 1}
+Value [(2, 0.5928571428571429)]
+##############################
+Evidence {'Stockpile': 1}
+Value [(2, 0.5928571428571429)]
+##############################
+Evidence {'WarningLettersStatements': 1}
+Value [(2, 0.6071428571428571)]
