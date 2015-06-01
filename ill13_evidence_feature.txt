@@ -1,4 +1,0 @@
-
-##############################
-Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Stress': 0, 'Getaway': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
-Value [(13, 0.8307692307692308)]

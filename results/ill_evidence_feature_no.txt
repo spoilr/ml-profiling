@@ -1,0 +1,1686 @@
+
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Stress': 0, 'Getaway': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(13, 0.8307692307692308)]
+
+
+
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Stress': 0, 'Getaway': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(12, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Stress': 0, 'Getaway': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(12, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Stress': 0, 'Getaway': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(12, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Stress': 0, 'Getaway': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(12, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Stress': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(12, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(12, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'Stress': 0, 'Getaway': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(12, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Stress': 0, 'Getaway': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(12, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(12, 0.8307692307692308)]
+
+
+
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Stress': 0, 'Getaway': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(11, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Stress': 0, 'Getaway': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(11, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Stress': 0, 'Getaway': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(11, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Stress': 0, 'Getaway': 0, 'Interrupt': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(11, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Stress': 0, 'Getaway': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(11, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Stress': 0, 'Getaway': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(11, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Stress': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(11, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Stress': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(11, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Stress': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(11, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Stress': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(11, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(11, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(11, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(11, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(11, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'NewMedia': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(11, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'Stress': 0, 'Getaway': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(11, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'Stress': 0, 'Getaway': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(11, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'Stress': 0, 'Getaway': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(11, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'Stress': 0, 'Getaway': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(11, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'Stress': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(11, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(11, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'OtherKnowledge': 0, 'Stress': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(11, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(11, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Stress': 0, 'Getaway': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(11, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Stress': 0, 'Getaway': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(11, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Stress': 0, 'Getaway': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(11, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Stress': 0, 'Getaway': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(11, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Stress': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(11, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(11, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'Stress': 0, 'Getaway': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(11, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(11, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(11, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(11, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(11, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'NewMedia': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(11, 0.8307692307692308)]
+##############################
+Evidence {'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(11, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'Financial': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(11, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(11, 0.8307692307692308)]
+
+
+
+
+
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Stress': 0, 'Getaway': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Stress': 0, 'Getaway': 0, 'Interrupt': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Stress': 0, 'Getaway': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Stress': 0, 'Getaway': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Stress': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Stress': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Stress': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Stress': 0, 'Interrupt': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Stress': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Stress': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'Interrupt': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'NewMedia': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'NewMedia': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'Stress': 0, 'Getaway': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'Stress': 0, 'Getaway': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'Stress': 0, 'Getaway': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'Stress': 0, 'Getaway': 0, 'Interrupt': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'Stress': 0, 'Getaway': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'Stress': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'Stress': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'Stress': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'Stress': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'NewMedia': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Stress': 0, 'Getaway': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Stress': 0, 'Getaway': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Stress': 0, 'Getaway': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Stress': 0, 'Getaway': 0, 'Interrupt': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Stress': 0, 'Getaway': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Stress': 0, 'Getaway': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Stress': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Stress': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Stress': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Stress': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'NewMedia': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'Stress': 0, 'Getaway': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'Stress': 0, 'Getaway': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'Stress': 0, 'Getaway': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'Stress': 0, 'Getaway': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'Stress': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Stress': 0, 'Getaway': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'Interrupt': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'NewMedia': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'NewMedia': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'NewMedia': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'Financial': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'Financial': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'Financial': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'Financial': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'Financial': 0, 'FurtherAttacks': 0, 'NewMedia': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'Financial': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'NewMedia': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(10, 0.8307692307692308)]
+
+
+
+
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Stress': 0, 'Getaway': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Stress': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Stress': 0, 'Interrupt': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Stress': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Stress': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'Interrupt': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'NewMedia': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Interrupt': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'Stress': 0, 'Getaway': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'Stress': 0, 'Getaway': 0, 'Interrupt': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'Stress': 0, 'Getaway': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'Stress': 0, 'Getaway': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'Stress': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'Stress': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'Stress': 0, 'Interrupt': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'Stress': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'Stress': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'Interrupt': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'NewMedia': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'NewMedia': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'Stress': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Stress': 0, 'Getaway': 0, 'Interrupt': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Stress': 0, 'Getaway': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Stress': 0, 'Getaway': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Stress': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Stress': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Stress': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Stress': 0, 'Interrupt': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Stress': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Stress': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'Interrupt': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'NewMedia': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'NewMedia': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'Stress': 0, 'Getaway': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'Stress': 0, 'Getaway': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'Stress': 0, 'Getaway': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'Stress': 0, 'Getaway': 0, 'Interrupt': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'Stress': 0, 'Getaway': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'Stress': 0, 'Getaway': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'Stress': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'Stress': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'Stress': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'Stress': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'NewMedia': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'OtherKnowledge': 0, 'NewMedia': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'Interrupt': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'NewMedia': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Interrupt': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'Interrupt': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'NewMedia': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'NewMedia': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'Financial': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'Financial': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'Financial': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'Financial': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'Interrupt': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'Financial': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'Financial': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'Financial': 0, 'FurtherAttacks': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'Financial': 0, 'FurtherAttacks': 0, 'NewMedia': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'Financial': 0, 'FurtherAttacks': 0, 'NewMedia': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'Financial': 0, 'FurtherAttacks': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'Financial': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'Financial': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'Financial': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'Financial': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'Financial': 0, 'FurtherAttacks': 0, 'NewMedia': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'Financial': 0, 'OtherKnowledge': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'Interrupt': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'NewMedia': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'NewMedia': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'FurtherAttacks': 0, 'OtherKnowledge': 0, 'NewMedia': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'FurtherAttacks': 0, 'NewMedia': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'FurtherAttacks': 0, 'Getaway': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'OtherKnowledge': 0, 'NewMedia': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+##############################
+Evidence {'OtherKnowledge': 0, 'Getaway': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(9, 0.8307692307692308)]
+
+
+
+
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Interrupt': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'Stress': 0, 'Getaway': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'Stress': 0, 'Interrupt': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'Stress': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'Stress': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'Interrupt': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'NewMedia': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'Interrupt': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'NewMedia': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Stress': 0, 'Getaway': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Stress': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Stress': 0, 'Interrupt': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Stress': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Stress': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'Interrupt': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'NewMedia': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Interrupt': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'Stress': 0, 'Getaway': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'Stress': 0, 'Getaway': 0, 'Interrupt': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'Stress': 0, 'Getaway': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'Stress': 0, 'Getaway': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'Stress': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'Stress': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'Stress': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'Stress': 0, 'Interrupt': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'Stress': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'Stress': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'Interrupt': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'NewMedia': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'DryRuns': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'OtherKnowledge': 0, 'Stress': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'DryRuns': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Interrupt': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'Interrupt': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'NewMedia': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Interrupt': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'Financial': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'Financial': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'Interrupt': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'Financial': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'Financial': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'Financial': 0, 'FurtherAttacks': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'Financial': 0, 'FurtherAttacks': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'Financial': 0, 'FurtherAttacks': 0, 'NewMedia': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'Financial': 0, 'FurtherAttacks': 0, 'Interrupt': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'Financial': 0, 'FurtherAttacks': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'Financial': 0, 'FurtherAttacks': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'Financial': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'Financial': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'Financial': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'Financial': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'Interrupt': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'Financial': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'Financial': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'Financial': 0, 'FurtherAttacks': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'Financial': 0, 'FurtherAttacks': 0, 'NewMedia': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'Financial': 0, 'FurtherAttacks': 0, 'DryRuns': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'Financial': 0, 'FurtherAttacks': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'Financial': 0, 'NewMedia': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'Financial': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+Value [(8, 0.8)]
+##############################
+Evidence {'Financial': 0, 'NewMedia': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'Interrupt': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'NewMedia': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Interrupt': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'Interrupt': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'FurtherAttacks': 0, 'OtherKnowledge': 0, 'NewMedia': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'FurtherAttacks': 0, 'OtherKnowledge': 0, 'DryRuns': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'Interrupt': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'FurtherAttacks': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'FurtherAttacks': 0, 'NewMedia': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'FurtherAttacks': 0, 'DryRuns': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'FurtherAttacks': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'FurtherAttacks': 0, 'Getaway': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'FurtherAttacks': 0, 'Getaway': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'NewMedia': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'FurtherAttacks': 0, 'DryRuns': 0, 'Getaway': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'FurtherAttacks': 0, 'Getaway': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'FurtherAttacks': 0, 'NewMedia': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'OtherKnowledge': 0, 'NewMedia': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(8, 0.8307692307692308)]
+
+
+
+
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'Stress': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'Interrupt': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Stress': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Interrupt': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'Stress': 0, 'Getaway': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'Stress': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'Stress': 0, 'Interrupt': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'Stress': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'Stress': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'Interrupt': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'DryRuns': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'Interrupt': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'OtherKnowledge': 0, 'Interrupt': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'DryRuns': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Interrupt': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'Financial': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'Financial': 0, 'FurtherAttacks': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'Financial': 0, 'FurtherAttacks': 0, 'Interrupt': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'Financial': 0, 'FurtherAttacks': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'Financial': 0, 'FurtherAttacks': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'Financial': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'Financial': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'Interrupt': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'Financial': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'Financial': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'Financial': 0, 'FurtherAttacks': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'Financial': 0, 'FurtherAttacks': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'Financial': 0, 'FurtherAttacks': 0, 'DryRuns': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'Financial': 0, 'FurtherAttacks': 0, 'Interrupt': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'Financial': 0, 'FurtherAttacks': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'Financial': 0, 'FurtherAttacks': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'Financial': 0, 'NewMedia': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Interrupt': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'Interrupt': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'FurtherAttacks': 0, 'OtherKnowledge': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'FurtherAttacks': 0, 'OtherKnowledge': 0, 'DryRuns': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Interrupt': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'FurtherAttacks': 0, 'OtherKnowledge': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'Interrupt': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'FurtherAttacks': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'FurtherAttacks': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'FurtherAttacks': 0, 'DryRuns': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'FurtherAttacks': 0, 'Interrupt': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'FurtherAttacks': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'FurtherAttacks': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'FurtherAttacks': 0, 'Getaway': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'FurtherAttacks': 0, 'Getaway': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'FurtherAttacks': 0, 'DryRuns': 0, 'Getaway': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'FurtherAttacks': 0, 'Getaway': 0, 'Interrupt': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'FurtherAttacks': 0, 'Getaway': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'FurtherAttacks': 0, 'Getaway': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'FurtherAttacks': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'FurtherAttacks': 0, 'NewMedia': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'FurtherAttacks': 0, 'DryRuns': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'FurtherAttacks': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'OtherKnowledge': 0, 'NewMedia': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+##############################
+Evidence {'Getaway': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(7, 0.8307692307692308)]
+
+
+
+
+
+##############################
+Evidence {'LettersPost': 0, 'Financial': 0, 'FurtherAttacks': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(6, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(6, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'Stress': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(6, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(6, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(6, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'Interrupt': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(6, 0.8307692307692308)]
+##############################
+Evidence {'HurtOthers': 0, 'LettersPost': 0, 'FurtherAttacks': 0, 'AwareGriev': 0, 'WarningLettersStatements': 0}
+Value [(6, 0.8307692307692308)]
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(6, 0.8307692307692308)]
+##############################
+Evidence {'Financial': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(6, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'Financial': 0, 'FurtherAttacks': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(6, 0.8307692307692308)]
+##############################
+Evidence {'Financial': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(6, 0.8307692307692308)]
+##############################
+Evidence {'Financial': 0, 'FurtherAttacks': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(6, 0.8307692307692308)]
+##############################
+Evidence {'Financial': 0, 'FurtherAttacks': 0, 'Interrupt': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(6, 0.8307692307692308)]
+##############################
+Evidence {'HurtOthers': 0, 'FurtherAttacks': 0, 'Financial': 0, 'AwareGriev': 0, 'WarningLettersStatements': 0}
+Value [(6, 0.8307692307692308)]
+##############################
+Evidence {'Financial': 0, 'FurtherAttacks': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(6, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(6, 0.8307692307692308)]
+##############################
+Evidence {'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Getaway': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(6, 0.8307692307692308)]
+##############################
+Evidence {'FurtherAttacks': 0, 'OtherKnowledge': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(6, 0.8307692307692308)]
+##############################
+Evidence {'FurtherAttacks': 0, 'OtherKnowledge': 0, 'Interrupt': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(6, 0.8307692307692308)]
+##############################
+Evidence {'HurtOthers': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'AwareGriev': 0, 'WarningLettersStatements': 0}
+Value [(6, 0.8307692307692308)]
+##############################
+Evidence {'FurtherAttacks': 0, 'OtherKnowledge': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(6, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(6, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'FurtherAttacks': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(6, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'FurtherAttacks': 0, 'Interrupt': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(6, 0.8307692307692308)]
+##############################
+Evidence {'HurtOthers': 0, 'Stress': 0, 'FurtherAttacks': 0, 'AwareGriev': 0, 'WarningLettersStatements': 0}
+Value [(6, 0.8307692307692308)]
+##############################
+Evidence {'Stress': 0, 'FurtherAttacks': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(6, 0.8307692307692308)]
+##############################
+Evidence {'FurtherAttacks': 0, 'Getaway': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(6, 0.8307692307692308)]
+##############################
+Evidence {'FurtherAttacks': 0, 'Getaway': 0, 'Interrupt': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(6, 0.8307692307692308)]
+##############################
+Evidence {'HurtOthers': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'WarningLettersStatements': 0, 'AwareGriev': 0}
+Value [(6, 0.8307692307692308)]
+##############################
+Evidence {'FurtherAttacks': 0, 'Getaway': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(6, 0.8307692307692308)]
+##############################
+Evidence {'FurtherAttacks': 0, 'Interrupt': 0, 'DryRuns': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(6, 0.8307692307692308)]
+##############################
+Evidence {'HurtOthers': 0, 'DryRuns': 0, 'FurtherAttacks': 0, 'AwareGriev': 0, 'WarningLettersStatements': 0}
+Value [(6, 0.8307692307692308)]
+##############################
+Evidence {'FurtherAttacks': 0, 'DryRuns': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(6, 0.8307692307692308)]
+##############################
+Evidence {'HurtOthers': 0, 'Interrupt': 0, 'FurtherAttacks': 0, 'AwareGriev': 0, 'WarningLettersStatements': 0}
+Value [(6, 0.8307692307692308)]
+##############################
+Evidence {'FurtherAttacks': 0, 'Interrupt': 0, 'NewMedia': 0, 'AwareGriev': 0, 'HurtOthers': 0, 'WarningLettersStatements': 0}
+Value [(6, 0.8307692307692308)]
+##############################
+Evidence {'HurtOthers': 0, 'NewMedia': 0, 'FurtherAttacks': 0, 'AwareGriev': 0, 'WarningLettersStatements': 0}
+Value [(6, 0.8307692307692308)]
+
+
+
+
+##############################
+Evidence {'HurtOthers': 0, 'LettersPost': 0, 'FurtherAttacks': 0, 'AwareGriev': 0, 'WarningLettersStatements': 0}
+Value [(5, 0.8307692307692308)]
+##############################
+Evidence {'HurtOthers': 0, 'FurtherAttacks': 0, 'Financial': 0, 'AwareGriev': 0, 'WarningLettersStatements': 0}
+Value [(5, 0.8307692307692308)]
+##############################
+Evidence {'HurtOthers': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'AwareGriev': 0, 'WarningLettersStatements': 0}
+Value [(5, 0.8307692307692308)]
+##############################
+Evidence {'HurtOthers': 0, 'Stress': 0, 'FurtherAttacks': 0, 'AwareGriev': 0, 'WarningLettersStatements': 0}
+Value [(5, 0.8307692307692308)]
+##############################
+Evidence {'HurtOthers': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'WarningLettersStatements': 0, 'AwareGriev': 0}
+Value [(5, 0.8307692307692308)]
+##############################
+Evidence {'HurtOthers': 0, 'DryRuns': 0, 'FurtherAttacks': 0, 'AwareGriev': 0, 'WarningLettersStatements': 0}
+Value [(5, 0.8307692307692308)]
+##############################
+Evidence {'HurtOthers': 0, 'Interrupt': 0, 'FurtherAttacks': 0, 'AwareGriev': 0, 'WarningLettersStatements': 0}
+Value [(5, 0.8307692307692308)]
+##############################
+Evidence {'HurtOthers': 0, 'FurtherAttacks': 0, 'AwareGriev': 0, 'WarningLettersStatements': 0}
+Value [(5, 0.8307692307692308)]
+##############################
+Evidence {'HurtOthers': 0, 'NewMedia': 0, 'FurtherAttacks': 0, 'AwareGriev': 0, 'WarningLettersStatements': 0}
+Value [(5, 0.8307692307692308)]
+
+
+
+
+##############################
+Evidence {'LettersPost': 0, 'FurtherAttacks': 0, 'AwareGriev': 0, 'WarningLettersStatements': 0}
+Value [(4, 0.8)]
+##############################
+Evidence {'FurtherAttacks': 0, 'Financial': 0, 'AwareGriev': 0, 'WarningLettersStatements': 0}
+Value [(4, 0.8)]
+##############################
+Evidence {'FurtherAttacks': 0, 'OtherKnowledge': 0, 'AwareGriev': 0, 'WarningLettersStatements': 0}
+Value [(4, 0.8)]
+##############################
+Evidence {'Stress': 0, 'FurtherAttacks': 0, 'AwareGriev': 0, 'WarningLettersStatements': 0}
+Value [(4, 0.8)]
+##############################
+Evidence {'WarningLettersStatements': 0, 'FurtherAttacks': 0, 'Getaway': 0, 'AwareGriev': 0}
+Value [(4, 0.8)]
+##############################
+Evidence {'HurtOthers': 0, 'FurtherAttacks': 0, 'AwareGriev': 0, 'WarningLettersStatements': 0}
+Value [(4, 0.8307692307692308)]
+##############################
+Evidence {'DryRuns': 0, 'FurtherAttacks': 0, 'AwareGriev': 0, 'WarningLettersStatements': 0}
+Value [(4, 0.8)]
+##############################
+Evidence {'Interrupt': 0, 'FurtherAttacks': 0, 'AwareGriev': 0, 'WarningLettersStatements': 0}
+Value [(4, 0.8)]
+##############################
+Evidence {'FurtherAttacks': 0, 'AwareGriev': 0, 'WarningLettersStatements': 0}
+Value [(4, 0.8)]
+##############################
+Evidence {'NewMedia': 0, 'FurtherAttacks': 0, 'AwareGriev': 0, 'WarningLettersStatements': 0}
+Value [(4, 0.8)]
+
+
+
+
+##############################
+Evidence {'FurtherAttacks': 0, 'AwareGriev': 0, 'WarningLettersStatements': 0}
+Value [(3, 0.8)]
+
+
+##############################
+Evidence {'FurtherAttacks': 0, 'AwareGriev': 0}
+Value [(2, 0.7538461538461538)]
+##############################
+Evidence {'FurtherAttacks': 0, 'WarningLettersStatements': 0}
+Value [(2, 0.7538461538461538)]
+##############################
+Evidence {'Interrupt': 0, 'WarningLettersStatements': 0}
+Value [(2, 0.7538461538461538)]
+
+
+
+##############################
+Evidence {'FurtherAttacks': 0}
+Value [(1, 0.7076923076923077)]
+##############################
+Evidence {'HurtOthers': 0}
+Value [(1, 0.7384615384615385)]
+##############################
+Evidence {}
+Value [(1, 0.7076923076923077)]
+
+
+
+
