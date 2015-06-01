@@ -1,0 +1,4 @@
+
+##############################
+Evidence {'Discriminate': 0, 'BombManuals': 0, 'LiveAlone': 0, 'InteractNet': 0, 'FurtherAttacks': 0, 'OtherKnowledge': 0, 'DryRuns': 0, 'Involve': 0, 'NewMedia': 0, 'Stockpile': 0, 'RecruitNetGroup': 0, 'WarningLettersStatements': 0}
+Value [(14, 0.6642857142857143)]
