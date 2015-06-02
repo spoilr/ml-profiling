@@ -67,7 +67,7 @@ def create_combinations_evidence(possible_evidence, start):
 
 	return combinations_possible_evidence		
 
-def propagate_evidence(theme, bn, possible_evidence, features, file_name, start, nodes):
+def propagate_evidence(theme, bn, possible_evidence, features, file_name, start, threhshold, nodes):
 	combinations_possible_evidence = create_combinations_evidence(possible_evidence, start)
 	for x in combinations_possible_evidence:
 		evidences = create_evidence_from_list(x)
@@ -77,7 +77,7 @@ def propagate_evidence(theme, bn, possible_evidence, features, file_name, start,
 				inf = likelihood_from_inference(inf)
 				# print inf
 
-				accuracy = inference_accuracy(dataset, nodes, features, inf)
+				accuracy = inference_accuracy(dataset, nodes, features, inf, threhshold)
 				save_evidence(file_name, accuracy, evidence, len(x))
 
 				print accuracy
@@ -102,6 +102,7 @@ if __name__ == "__main__":
 	print 'Connected nodes ' + str(nodes)
 	possible_evidence = evidence_from_theme(theme)
 	start = int(raw_input("Start Combinations nr.\n"))
+	threshold = float(raw_input("Threshold nr.\n"))
 	file_name = theme + str(start) + "_evidence_feature.txt"
-	propagate_evidence(theme, bn, possible_evidence, features, file_name, start, nodes)
+	propagate_evidence(theme, bn, possible_evidence, features, file_name, start, threshold, nodes)
 	

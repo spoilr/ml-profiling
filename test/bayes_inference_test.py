@@ -43,26 +43,33 @@ def evidence_from_theme(theme):
 	else:
 		print 'ERROR'	
 
-def inference_accuracy(dataset, nodes, features, inf):
+def inference_accuracy(dataset, nodes, features, inf, threshold):
 	accuracy = 0
 	for instance in dataset:
-		accuracy += inference_accuracy_for_instance(nodes, features, inf, instance)
+		accuracy += inference_accuracy_for_instance(nodes, features, inf, instance, threshold)
 	return float(accuracy) / len(dataset)	
 
-def inference_accuracy_for_instance(nodes, features, inference, instance):
+def inference_accuracy_for_instance(nodes, features, inference, instance, threshold):
 	nrs = 0
 	opposite_nrs = 0
+	nrs_above_threshold = 0
 	for key, (val, prob) in inference.iteritems():
 		if key in nodes:
-			index = features.index(key)
-			if instance[index] == int(val):
-				nrs+=1
+			if prob >= threshold:
+				nrs_above_threshold+=1
+				index = features.index(key)
+
+				if instance[index] == int(val):
+					nrs+=1
+				else:
+					opposite_nrs+=1
 			else:
-				opposite_nrs+=1
+				opposite_nrs+=1		
 
 	assert nrs+opposite_nrs == len(nodes)
-
-	accuracy = float(nrs)/len(nodes)
+	if nrs_above_threshold == 0:
+		return 0
+	accuracy = float(nrs)/nrs_above_threshold
 	# print 'Accuracy ' + str(accuracy)
 	return accuracy
 
@@ -152,7 +159,7 @@ def propagate_evidence(bn, possible_evidence, features, file_name):
 				if accuracy >= 0.55:
 					save_evidence(file_name, accuracy, evidence)
 
-				print accuracy
+				# print accuracy
 			except Exception:
 				print 'Exception ' + str(evidence)
 
