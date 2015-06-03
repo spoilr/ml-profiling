@@ -55,7 +55,7 @@ def combine_network(bn_net, bn_ill, bn_ideo):
 	edges += bn_net.E
 	nodes = set(nodes)
 
-	edges = set_of_edges(create_graph(edges, nodes)))
+	edges = set_of_edges(create_graph(edges, nodes))
 	
 	skel = GraphSkeleton()
 	skel.load_skel(nodes, edges)
