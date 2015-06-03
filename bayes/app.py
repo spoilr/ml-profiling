@@ -274,7 +274,7 @@ def ideo_inferences():
 def combo_inferences():
 	evidence = request.args.to_dict()
 	evidence = dict((k,int(v)) for k,v in evidence.iteritems())
-	inf = inference(bn_combo, evidence)
+	inf = create_inference(jt_inference(bn_combo, evidence))
 	return inf
 
 def shutdown_server():
@@ -322,7 +322,7 @@ if __name__ == '__main__':
 	cycles["net"] = False
 	cycles["ill"] = False
 	cycles["ideo"] = False
-	cycles["combo"] = False
+	cycles["combo"] = True
 	bn_net = create_bayesian_network_structure('net')
 	bn_ill = create_bayesian_network_structure('ill')
 	bn_ideo = create_bayesian_network_structure('ideo')
