@@ -23,15 +23,15 @@ import itertools
 # ill_evidence = ["MentalIll", "Financial", "BombManuals", "LiveAlone", "LettersPost", "FurtherAttacks", "WarningLettersStatements", "NotCareInjustice", "Isolated", "HurtOthers", "OtherKnowledge", "AwareGriev", "NewMedia", "Stress", "HighValueCivilian", "Getaway", "DryRuns", "Interrupt"]
 # ideo_evidence = ["Discriminate", "NotCareInjustice", "FurtherAttacks", "Religion", "AwareIdeo", "RelatStat", "IdeoChangeInt", "Interrupt", "Contradict", "Getaway", "Ideology", "LiveAlone", "TargetTyp", "Propaganda", "Financial", "LocPubPriv", "Stockpile", "RecruitNetGroup", "HighValueCivilian", "ReligChangeInt", "LettersPost", "Legitimise", "OtherKnowledge", "BombManuals"]
 
-net_evidence = ['BombManuals', 'LiveAlone', 'InteractNet', 'OtherKnowledge', 'FurtherAttacks', 'Involve', 'NewMedia', 'TargetTyp', 'DryRuns', 'RecruitNetGroup', 'Discriminate', 'Stockpile', 'WarningLettersStatements', 'HighValueCivilian']
-ill_evidence = ['LettersPost', 'Financial', 'FurtherAttacks', 'OtherKnowledge', 'Stress', 'Getaway', 'HurtOthers', 'DryRuns', 'AwareGriev', 'Interrupt', 'HighValueCivilian', 'NewMedia', 'WarningLettersStatements']
-ideo_evidence = ['LettersPost', 'BombManuals', 'Contradict', 'Legitimise', 'Ideology', 'RecruitNetGroup', 'Propaganda', 'Financial', 'LocPubPriv', 'LiveAlone', 'OtherKnowledge', 'ReligChangeInt', 'TargetTyp']
+# net_evidence = ['BombManuals', 'LiveAlone', 'InteractNet', 'OtherKnowledge', 'FurtherAttacks', 'Involve', 'NewMedia', 'TargetTyp', 'DryRuns', 'RecruitNetGroup', 'Discriminate', 'Stockpile', 'WarningLettersStatements', 'HighValueCivilian']
+# ill_evidence = ['LettersPost', 'Financial', 'FurtherAttacks', 'OtherKnowledge', 'Stress', 'Getaway', 'HurtOthers', 'DryRuns', 'AwareGriev', 'Interrupt', 'HighValueCivilian', 'NewMedia', 'WarningLettersStatements']
+# ideo_evidence = ['LettersPost', 'BombManuals', 'Contradict', 'Legitimise', 'Ideology', 'RecruitNetGroup', 'Propaganda', 'Financial', 'LocPubPriv', 'LiveAlone', 'OtherKnowledge', 'ReligChangeInt', 'TargetTyp']
 
-# net_evidence = ['InteractNet', 'OtherKnowledge', 'Involve', 'NewMedia', 'RecruitNetGroup', 'WarningLettersStatements']
+net_evidence = ['InteractNet', 'OtherKnowledge', 'Involve', 'NewMedia', 'RecruitNetGroup', 'WarningLettersStatements']
 
-# ill_evidence = ['Financial', 'OtherKnowledge', 'Stress', 'AwareGriev', 'NewMedia', 'WarningLettersStatements']
+ill_evidence = ['Financial', 'OtherKnowledge', 'Stress', 'AwareGriev', 'NewMedia', 'WarningLettersStatements']
 
-# ideo_evidence = ['Legitimise', 'RecruitNetGroup', 'Propaganda', 'Financial', 'OtherKnowledge', 'ReligChangeInt']
+ideo_evidence = ['Legitimise', 'RecruitNetGroup', 'Propaganda', 'Financial', 'OtherKnowledge', 'ReligChangeInt']
 
 def evidence_from_theme(theme):
 	if theme == 'net':
