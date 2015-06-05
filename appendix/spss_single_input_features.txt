@@ -1,9 +1,5 @@
 python base/single_input_features.py 'all'
-
 Use features from SPSS
-Binary classification measures.
-Includes precision, recall, f1, accuracy, and accuracy number.
-Enter algorithm. Choose between lr, dt, knn, svm
 
 ########## CIVIL ##########
 ####### FEATURES ####### 44

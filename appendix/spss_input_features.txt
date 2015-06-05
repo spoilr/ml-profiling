@@ -1,16 +1,6 @@
 python base/input_features.py
 Use features from SPSS
 
-Combine outputs of X classifiers.
-Methods: majority vote and weighted majority vote.
-Each classifier produces a class label.
-
-Binary classification measures.
-Includes precision, recall, f1, accuracy, and accuracy number.
-
-Enter algorithm. Choose between maj, wmaj, svm, nn
-Enter algorithm. Choose between lr, dt, knn, svm
-
 ########## HIGHVAL ##########
 ####### net FEATURES ####### 24 
 ['WarningLettersStatements', 'Funds', 'Discriminate', 'FurtherAttacks', 'Implement', 'MultiEventTarget', 'Virtual', 'Stockpile', 'OtherKnowledge', 'InteractNet', 'TargetTyp', 'BombManuals', 'CrimCon', 'RelatStat', 'Violence', 'RecruitNetGroup', 'ClaimResp', 'LifeAspectChange', 'DryRuns','NotCareInjustice', 'OccCat', 'OtherInv', 'LettersPost', 'Involve']
