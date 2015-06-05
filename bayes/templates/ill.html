@@ -101,6 +101,9 @@
             main("ill", {{ inference|tojson }})
           });
         </script>
+        <div class="legend">
+          <script src={{ url_for('static', filename='js/legend.js') }}></script>
+        </div>
       </div>
     </body>
 </html>

@@ -24,7 +24,7 @@
           </div>
         </header>
 
-      <h1>Network features</h1>  
+      <h1>Combined features</h1>  
 
       <div>
         <form action="{{ url_for('bayes_combo') }}" method='post'>
@@ -101,6 +101,9 @@
             main("combo", {{ inference|tojson }})
           });
         </script>
+        <div class="legend">
+          <script src={{ url_for('static', filename='js/legend.js') }}></script>
+        </div>
       </div>
 
     </body>

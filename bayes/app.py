@@ -168,11 +168,12 @@ def ev_inf(evidence, encoded_evidence, theme, network):
 
 			return inference, encoded_evidence
 		else:
+			evidence = dict((k,str(v)) for k,v in evidence.iteritems())
 			inf = create_inference(jt_inference(network, evidence))
 			return inf, encoded_evidence		
 	except ValueError:
+		evidence = dict((k,str(v)) for k,v in evidence.iteritems())
 		inf = create_inference(jt_inference(network, evidence))
-		print 'here'
 		return inf, encoded_evidence	
 
 def create_evidence_and_inference(categs, theme):
@@ -205,7 +206,7 @@ def get_categories(nodes):
 
 @app.route('/bayes/combo', methods=['GET', 'POST'])
 def bayes_combo():
-	nodes = bn_net.V
+	nodes = bn_combo.V
 	categs = get_categories(nodes)
 	while True:
 		try:

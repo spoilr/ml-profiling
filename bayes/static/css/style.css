@@ -8,6 +8,11 @@ form {padding-left: 10px}
 
 td {padding-right: 10px; font-family: sans-serif}
 
+.legend {
+  position: absolute;
+  right: 0px;
+}
+
 #bayes {
   min-width: 1000px;
 }
@@ -46,12 +51,12 @@ td {padding-right: 10px; font-family: sans-serif}
 }
 
 .nav a:hover {
-  background-color: #846FB4;
+  background-color: #724F8A;
 }
 
 .nav a.active {
-  background-color: #846FB4;
-  color: #444;
+  background-color: #724F8A;
+  color: #fff;
   cursor: default;
 }
 
