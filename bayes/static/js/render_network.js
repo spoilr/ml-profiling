@@ -221,15 +221,20 @@ function restart() {
       // add link to graph (update if exists)
       // NB: links are strictly source < target; arrows separately specified by booleans
       var source, target, direction;
-      if(mousedown_node.id < mouseup_node.id) {
-        source = mousedown_node;
-        target = mouseup_node;
-        direction = 'right';
-      } else {
-        source = mouseup_node;
-        target = mousedown_node;
-        direction = 'left';
-      }
+      // if(mousedown_node.id < mouseup_node.id) {
+      //   source = mousedown_node;
+      //   target = mouseup_node;
+      //   direction = 'right';
+      // } else {
+      //   source = mouseup_node;
+      //   target = mousedown_node;
+      //   direction = 'left';
+      // }
+
+      source = mousedown_node;
+      target = mouseup_node;
+      direction = 'right';
+
 
       var link;
       link = links.filter(function(l) {
