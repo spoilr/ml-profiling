@@ -220,7 +220,7 @@ function restart() {
         return d3.rgb("#DC9596");
       }
 
-    	if (d.likelihood != null && d.likelihood.prob > percentage) {
+    	if (d.likelihood != null && d.likelihood.prob >= percentage) {
   			return (d === selected_node) ? d3.rgb("#F0FFCE").brighter().toString() : d3.rgb("#F0FFCE"); 
   		} else {
   			return (d === selected_node) ? d3.rgb("#197BBD").brighter().toString() : d3.rgb("#197BBD"); 
@@ -241,7 +241,7 @@ function restart() {
         return d3.rgb("#DC9596");
       }
 
-    	if (d.likelihood != null && d.likelihood.prob > percentage) {
+    	if (d.likelihood != null && d.likelihood.prob >= percentage) {
   			return (d === selected_node) ? d3.rgb("#F0FFCE").brighter().toString() : d3.rgb("#F0FFCE"); 
   		} else {
   			return (d === selected_node) ? d3.rgb("#197BBD").brighter().toString() : d3.rgb("#197BBD"); 

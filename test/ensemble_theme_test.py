@@ -106,6 +106,13 @@ def fusion(training_data, training_data_scaled, training_targets, testing_data, 
 		data = Counter([combined_predictions_dt[i], combined_predictions_knn[i], combined_predictions_svm[i]])
 		combined_predictions.append(data.most_common(1)[0][0])	
 	
+	print 'predictions DT ' + str(predictions_dt) 	
+	print 'combined predictions DT ' + str(combined_predictions_dt) 	
+	print 'predictions KNN ' + str(predictions_knn) 	
+	print 'combined predictions KNN ' + str(combined_predictions_knn)
+	print 'predictions SVM ' + str(predictions_svm) 	
+	print 'combined predictions SVM ' + str(combined_predictions_svm)
+
 	print 'PRED ' + str(combined_predictions)
 	print 'TEST ' + str(testing_targets)	
 	
@@ -122,6 +129,7 @@ def weighted_majority_theme(theme, predictions):
 		weights = get_knn_weights()		
 	elif theme == 'svm':
 		weights = get_svm_weights()	
+	print 'WEIGHTS ' + theme + str(weights)
 	combined_predictions = weigh(weights, predictions)
 	return combined_predictions
 
