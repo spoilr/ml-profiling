@@ -29,31 +29,41 @@ def svm_for_features_fusion(dataset, targets):
 	return model
 
 def svm_selected_net(dataset, targets):
-	model = SVC(class_weight='auto', C=1.9, gamma=0.1)	#90
+	# model = SVC(class_weight='auto', C=1.9, gamma=0.1)	#90
 	# model = SVC(class_weight='auto', C=1.3, gamma=0.3)	#70
 	# model = SVC(class_weight='auto', C=1.5, gamma=0.1)	#50
 
 	# model = SVC(class_weight='auto', C=0.80000000000000004, gamma=0.30000000000000004) #all
 
+	# model = SVC(class_weight='auto', C=1.6, gamma=3.7) # 90
+
+	model = SVC(class_weight='auto', C=0.9, gamma=3.3) # 90
+
 	model.fit(dataset, targets)
 	return model
 
 def svm_selected_ill(dataset, targets):
-	model = SVC(class_weight='auto', C=6.9, gamma=0.7)	#90
+	# model = SVC(class_weight='auto', C=6.9, gamma=0.7)	#90
 	# model = SVC(class_weight='auto', C=1.5, gamma=0.1)	#70
 	# model = SVC(class_weight='auto', C=7.1, gamma=0.3)	#50
 
 	# model = SVC(class_weight='auto', C=0.80000000000000004, gamma=0.10000000000000001)	#all
 
+	model = SVC(class_weight='auto', C=2.2, gamma=5.2) # 90
+
 	model.fit(dataset, targets)
 	return model
 
 def svm_selected_ideo(dataset, targets):
-	model = SVC(class_weight='auto', C=1.5, gamma=0.1)	#90
+	# model = SVC(class_weight='auto', C=1.5, gamma=0.1)	#90
 	# model = SVC(class_weight='auto', C=0.5, gamma=0.1)	#70
 	# model = SVC(class_weight='auto', C=0.5, gamma=0.1)	#50
 
 	# model = SVC(class_weight='auto', C=0.90000000000000002, gamma=0.10000000000000001)	#all
+
+	# model = SVC(class_weight='auto', C=1, gamma=1.6) # 90
+
+	model = SVC(class_weight='auto', C=0.8, gamma=1.6) # 90
 
 	model.fit(dataset, targets)
 	return model	

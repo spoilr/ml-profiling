@@ -9,7 +9,7 @@ START_EXAMPLE_ROW = 1
 
 class Data:
 
-	def __init__(self, spreadsheet, upsampling=True):
+	def __init__(self, spreadsheet, upsampling=False):
 		self.upsampling = upsampling
 		self.spreadsheet = spreadsheet
 		self.features = spreadsheet.features
@@ -96,7 +96,7 @@ class Spreadsheet:
 
 	SHEET = 'Sheet1'
 
-	def __init__(self, url, upsampling=True):
+	def __init__(self, url, upsampling=False):
 		self.upsampling = upsampling
 		self.workbook = xlrd.open_workbook(url)
 		self.worksheet = self.workbook.sheet_by_name(self.SHEET)

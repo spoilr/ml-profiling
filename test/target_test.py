@@ -17,6 +17,3 @@ if __name__ == "__main__":
 
 	print 'NEG %d' % len([x for x in known_targets if x==0])
 	print 'POS %d' % len([x for x in known_targets if x==1])
-
-	print 'HIGHVAL %d' % len([x for x in known_targets if x==1])
-	print 'CIVIL %d' % len([x for x in known_targets if x==2])

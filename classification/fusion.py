@@ -362,5 +362,6 @@ def combine_predictions_one_fold_using_majority(known_dataset, known_targets, tr
 		misclassified_ids += add_misclassified_ids(model, test_index, known_dataset[i], known_targets, ids)
 	
 	predictions = np.array((predictions[0], predictions[1], predictions[2]), dtype=float)
+	print "%s \n vs %s \n\n" % (str(predictions), str(y_test))
 	return predictions, y_test, accuracies, misclassified_ids
 

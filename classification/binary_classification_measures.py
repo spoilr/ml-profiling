@@ -15,18 +15,18 @@ from sklearn.metrics import classification_report
 ### None - scores for each class are returned
 
 def tp(y_true, y_pred):
-	highval_tp = len([1 for (a,b) in zip(y_true, y_pred) if a == b and a == 1])
-	civil_tp = len([1 for (a,b) in zip(y_true, y_pred) if a == b and a == 2])
+	highval_tp = len([1 for (a,b) in zip(y_true, y_pred) if a == b and a == 0])
+	civil_tp = len([1 for (a,b) in zip(y_true, y_pred) if a == b and a == 1])
 	return highval_tp, civil_tp
 
 def fn(y_true, y_pred):
-	highval_fn = len([1 for (a,b) in zip(y_true, y_pred) if a == 1 and b == 2])
-	civil_fn = len([1 for (a,b) in zip(y_true, y_pred) if a == 2 and b == 1])
+	highval_fn = len([1 for (a,b) in zip(y_true, y_pred) if a == 0 and b == 1])
+	civil_fn = len([1 for (a,b) in zip(y_true, y_pred) if a == 1 and b == 0])
 	return highval_fn, civil_fn
 
 def fp(y_true, y_pred):
-	highval_fp = len([1 for (a,b) in zip(y_true, y_pred) if a == 2 and b == 1])
-	civil_fp = len([1 for (a,b) in zip(y_true, y_pred) if a == 1 and b == 2])
+	highval_fp = len([1 for (a,b) in zip(y_true, y_pred) if a == 1 and b == 0])
+	civil_fp = len([1 for (a,b) in zip(y_true, y_pred) if a == 0 and b == 1])
 	return highval_fp, civil_fp
 
 def precision(y_true, y_pred):
