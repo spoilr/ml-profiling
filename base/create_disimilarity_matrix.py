@@ -1,15 +1,10 @@
 import sys
 sys.path.insert(0, 'utils/')
 from load_data import *
-from project_data import highval_binary_all_data
-from project_data import highval_binary_ideo_data
-from project_data import highval_binary_ill_data
-from project_data import highval_binary_net_data
-
-from project_data import civil_binary_all_data
-from project_data import civil_binary_ideo_data
-from project_data import civil_binary_ill_data
-from project_data import civil_binary_net_data
+from project_data import binary_all
+from project_data import binary_ideo
+from project_data import binary_ill
+from project_data import binary_net
 
 import numpy as np
 import csv
@@ -29,11 +24,15 @@ def load_and_save(data_file):
 	data = Data(spreadsheet, upsampling=False)
 	targets = data.targets
 	data = data.examples
-	nr_features = len(spreadsheet.features) + 1
-	assert sum(targets) == len(targets) # all 1s for SPSS
+	nr_features = len(spreadsheet.features) + 2
 
-	# append targets to data for SPSS - targests are all 1s
-	data = np.hstack((data, np.ones((data.shape[0], 1))))
+	val_civil = targets
+	val_highvalue = [1-x for x in targets]
+
+	print data.shape
+
+	data = np.hstack((data, np.array(val_civil).reshape(-1, 1)))
+	data = np.hstack((data, np.array(val_highvalue).reshape(-1, 1)))
 
 	print data.shape
 	disimilarity_matrix = create_matrix(data, nr_features)
@@ -48,7 +47,7 @@ def load_and_save(data_file):
 	fl.close()
 
 if __name__ == "__main__":
-	files = [highval_binary_all_data, highval_binary_ideo_data, highval_binary_ill_data, highval_binary_net_data, civil_binary_all_data, civil_binary_ideo_data, civil_binary_ill_data, civil_binary_net_data]
+	files = [binary_all, binary_ideo, binary_ill, binary_net]
 	for f in files:
 		load_and_save(f)
 
